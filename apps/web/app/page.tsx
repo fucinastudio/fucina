@@ -181,33 +181,6 @@ const dataSelect = [
   },
 ];
 
-const presets = [
-  {
-    label: "Today",
-    date: new Date(),
-  },
-  {
-    label: "Tomorrow",
-    date: new Date(new Date().setDate(new Date().getDate() + 1)),
-  },
-  {
-    label: "A week from now",
-    date: new Date(new Date().setDate(new Date().getDate() + 7)),
-  },
-  {
-    label: "A month from now",
-    date: new Date(new Date().setMonth(new Date().getMonth() + 1)),
-  },
-  {
-    label: "6 months from now",
-    date: new Date(new Date().setMonth(new Date().getMonth() + 6)),
-  },
-  {
-    label: "A year from now",
-    date: new Date(new Date().setFullYear(new Date().getFullYear() + 1)),
-  },
-];
-
 const data: Array<{
   id: number;
   name: string;
@@ -269,7 +242,6 @@ const tags = Array.from({ length: 50 }).map((_, i, a) => `v1.2.0-beta.${a.length
 type Checked = DropdownMenuCheckboxItemProps["checked"];
 
 export default function Home() {
-  const [date, setDate] = React.useState<Date | undefined>(undefined);
   const [open, setOpen] = React.useState(false);
   React.useEffect(() => {
     const down = (e: KeyboardEvent) => {
@@ -289,7 +261,7 @@ export default function Home() {
   const [showPanel, setShowPanel] = React.useState<Checked>(false);
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between gap-3 p-24">
+    <main className="flex flex-col justify-between items-center gap-3 p-24 min-h-screen">
       <div className="flex flex-col gap-4">
         <Alert variant="default" title="Default Variant">
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
@@ -358,20 +330,20 @@ export default function Home() {
       </div>
 
       <Checkbox />
-      <div className="flex items-center justify-center gap-2">
+      <div className="flex justify-center items-center gap-2">
         <Checkbox disabled id="r1" />
         <Label disabled htmlFor="r1">
           I&apos;d like to be notified by SMS.
         </Label>
       </div>
-      <div className="flex items-center justify-center gap-2">
+      <div className="flex justify-center items-center gap-2">
         <Checkbox id="r3" checked="indeterminate" />
         <Label htmlFor="r3">Select all rows</Label>
       </div>
       <>
         <p className="text-muted-foreground text-sm">
           Press{" "}
-          <kbd className="border-default bg-muted text-muted-foreground pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded border px-1.5 font-mono text-[10px] font-medium opacity-100">
+          <kbd className="inline-flex items-center gap-1 border-default bg-muted opacity-100 px-1.5 border rounded h-5 font-medium font-mono text-[10px] text-muted-foreground pointer-events-none select-none">
             <span className="text-xs">⌘</span>J
           </kbd>
         </p>
@@ -414,7 +386,7 @@ export default function Home() {
           </CommandList>
         </CommandDialog>
       </>
-      <Command className="border-default rounded-lg border shadow-md">
+      <Command className="border-default shadow-md border rounded-lg">
         <CommandInput placeholder="Type a command or search..." />
         <CommandList>
           <CommandEmpty>No results found.</CommandEmpty>
@@ -453,7 +425,7 @@ export default function Home() {
         </CommandList>
       </Command>
       <ContextMenu>
-        <ContextMenuTrigger className="flex h-[150px] w-[300px] items-center justify-center rounded-md border border-dashed text-sm">
+        <ContextMenuTrigger className="flex justify-center items-center border border-dashed rounded-md w-[300px] h-[150px] text-sm">
           Right click here
         </ContextMenuTrigger>
         <ContextMenuContent className="w-64">
@@ -486,7 +458,7 @@ export default function Home() {
           </ContextMenuRadioGroup>
         </ContextMenuContent>
       </ContextMenu>
-      <div className="flex items-center justify-center gap-2">
+      <div className="flex justify-center items-center gap-2">
         <Dialog>
           <DialogTrigger asChild>
             <Button variant="secondary">Open Dialog</Button>
@@ -505,7 +477,7 @@ export default function Home() {
             </div>
             <DialogFooter className="mt-6">
               <DialogClose asChild>
-                <Button className="mt-2 w-full sm:mt-0 sm:w-fit" variant="secondary">
+                <Button className="mt-2 sm:mt-0 w-full sm:w-fit" variant="secondary">
                   Go back
                 </Button>
               </DialogClose>
@@ -530,13 +502,13 @@ export default function Home() {
               </DropdownMenuItem>
               <DropdownMenuItem disabled shortcut="⌘B">
                 <span className="flex items-center gap-x-2">
-                  <Bold className="size-4 text-inherit" />
+                  <Bold className="text-inherit size-4" />
                   <span>Billing</span>
                 </span>
               </DropdownMenuItem>
               <DropdownMenuItem shortcut="⌘S">
                 <span className="flex items-center gap-x-2">
-                  <Bold className="size-4 text-inherit" />
+                  <Bold className="text-inherit size-4" />
 
                   <span>Account Settings</span>
                 </span>
@@ -559,7 +531,7 @@ export default function Home() {
                 <DropdownMenuSubMenuContent>
                   <DropdownMenuItem>
                     <span className="flex items-center gap-x-2">
-                      <Bold className="size-4 text-inherit" />
+                      <Bold className="text-inherit size-4" />
                       <span>Email</span>
                     </span>
                   </DropdownMenuItem>
@@ -567,32 +539,32 @@ export default function Home() {
                   <DropdownMenuSubMenu>
                     <DropdownMenuSubMenuTrigger>
                       <span className="flex items-center gap-x-2">
-                        <Italic className="size-4 text-inherit" />
+                        <Italic className="text-inherit size-4" />
                         <span>Message</span>
                       </span>
                     </DropdownMenuSubMenuTrigger>
                     <DropdownMenuSubMenuContent>
                       <DropdownMenuItem>
                         <span className="flex items-center gap-x-2">
-                          <Bold className="size-4 text-inherit" />
+                          <Bold className="text-inherit size-4" />
                           <span>Whatsapp</span>
                         </span>
                       </DropdownMenuItem>
                       <DropdownMenuItem>
                         <span className="flex items-center gap-x-2">
-                          <Underline className="size-4 text-inherit" />
+                          <Underline className="text-inherit size-4" />
                           <span>Telegram</span>
                         </span>
                       </DropdownMenuItem>
                       <DropdownMenuItem>
                         <span className="flex items-center gap-x-2">
-                          <Italic className="size-4 text-inherit" />
+                          <Italic className="text-inherit size-4" />
                           <span>Discord</span>
                         </span>
                       </DropdownMenuItem>
                       <DropdownMenuItem>
                         <span className="flex items-center gap-x-2">
-                          <Bold className="size-4 text-inherit" />
+                          <Bold className="text-inherit size-4" />
                           <span>Slack</span>
                         </span>
                       </DropdownMenuItem>
@@ -601,7 +573,7 @@ export default function Home() {
                   <DropdownMenuSeparator />
                   <DropdownMenuItem>
                     <span className="flex items-center gap-x-2">
-                      <Underline className="size-4 text-inherit" />
+                      <Underline className="text-inherit size-4" />
                       <span>More...</span>
                     </span>
                   </DropdownMenuItem>
@@ -609,7 +581,7 @@ export default function Home() {
               </DropdownMenuSubMenu>
               <DropdownMenuItem shortcut="⌘T">
                 <span className="flex items-center gap-x-2">
-                  <Bold className="size-4 text-inherit" />
+                  <Bold className="text-inherit size-4" />
                   <span>New Workspace</span>
                 </span>
               </DropdownMenuItem>
@@ -619,13 +591,13 @@ export default function Home() {
 
             <DropdownMenuItem>
               <span className="flex items-center gap-x-2">
-                <Bold className="size-4 text-inherit" />
+                <Bold className="text-inherit size-4" />
                 <span>Support</span>
               </span>
             </DropdownMenuItem>
             <DropdownMenuItem shortcut="⇧⌘Q">
               <span className="flex items-center gap-x-2">
-                <Italic className="size-4 text-inherit" />
+                <Italic className="text-inherit size-4" />
                 <span>Sign out</span>
               </span>
             </DropdownMenuItem>
@@ -722,7 +694,7 @@ export default function Home() {
         <NavigationMenuList orientation="vertical">
           <NavigationMenuItem className="w-full">
             <Link href="/docs" legacyBehavior passHref>
-              <NavigationMenuLink active={true} className="w-full justify-start">
+              <NavigationMenuLink active={true} className="justify-start w-full">
                 <Bold />
                 Ideas
               </NavigationMenuLink>
@@ -730,7 +702,7 @@ export default function Home() {
           </NavigationMenuItem>
           <NavigationMenuItem className="w-full">
             <Link href="/docs" legacyBehavior passHref>
-              <NavigationMenuLink className="w-full justify-start">
+              <NavigationMenuLink className="justify-start w-full">
                 <Italic />
                 Roadmap
               </NavigationMenuLink>
@@ -738,7 +710,7 @@ export default function Home() {
           </NavigationMenuItem>
           <NavigationMenuItem className="w-full">
             <Link href="/docs" legacyBehavior passHref>
-              <NavigationMenuLink className="w-full justify-start">
+              <NavigationMenuLink className="justify-start w-full">
                 <Underline />
                 Community
               </NavigationMenuLink>
@@ -789,21 +761,21 @@ export default function Home() {
           <Button variant="secondary">Open popover</Button>
         </PopoverTrigger>
         <PopoverContent className="w-80">
-          <div className="grid gap-4">
-            <div className="grid gap-2">
-              <div className="grid grid-cols-3 items-center gap-4">
+          <div className="gap-4 grid">
+            <div className="gap-2 grid">
+              <div className="items-center gap-4 grid grid-cols-3">
                 <Label htmlFor="width">Width</Label>
                 <Input id="width" defaultValue="100%" className="col-span-2" />
               </div>
-              <div className="grid grid-cols-3 items-center gap-4">
+              <div className="items-center gap-4 grid grid-cols-3">
                 <Label htmlFor="maxWidth">Max. width</Label>
                 <Input id="maxWidth" defaultValue="300px" className="col-span-2" />
               </div>
-              <div className="grid grid-cols-3 items-center gap-4">
+              <div className="items-center gap-4 grid grid-cols-3">
                 <Label htmlFor="height">Height</Label>
                 <Input id="height" defaultValue="25px" className="col-span-2" />
               </div>
-              <div className="grid grid-cols-3 items-center gap-4">
+              <div className="items-center gap-4 grid grid-cols-3">
                 <Label htmlFor="maxHeight">Max. height</Label>
                 <Input id="maxHeight" defaultValue="none" className="col-span-2" />
               </div>
@@ -835,9 +807,9 @@ export default function Home() {
           </div>
         </RadioGroup>
       </div>
-      <ResizablePanelGroup direction="horizontal" className="border-default max-w-md rounded-lg border">
+      <ResizablePanelGroup direction="horizontal" className="border-default border rounded-lg max-w-md">
         <ResizablePanel defaultSize={50}>
-          <div className="flex h-[200px] items-center justify-center p-6">
+          <div className="flex justify-center items-center p-6 h-[200px]">
             <span className="font-semibold">One</span>
           </div>
         </ResizablePanel>
@@ -845,22 +817,22 @@ export default function Home() {
         <ResizablePanel defaultSize={50}>
           <ResizablePanelGroup direction="vertical">
             <ResizablePanel defaultSize={25}>
-              <div className="flex h-full items-center justify-center p-6">
+              <div className="flex justify-center items-center p-6 h-full">
                 <span className="font-semibold">Two</span>
               </div>
             </ResizablePanel>
             <ResizableHandle />
             <ResizablePanel defaultSize={75}>
-              <div className="flex h-full items-center justify-center p-6">
+              <div className="flex justify-center items-center p-6 h-full">
                 <span className="font-semibold">Three</span>
               </div>
             </ResizablePanel>
           </ResizablePanelGroup>
         </ResizablePanel>
       </ResizablePanelGroup>
-      <ScrollArea className="border-default h-72 w-48 rounded border">
+      <ScrollArea className="border-default border rounded w-48 h-72">
         <div className="p-4">
-          <h4 className="text-description mb-4 font-medium leading-none">Tags</h4>
+          <h4 className="mb-4 font-medium text-description leading-none">Tags</h4>
           {tags.map((tag) => (
             <>
               <div key={tag}>{tag}</div>
@@ -1266,7 +1238,7 @@ export default function Home() {
           <TableBody>
             {data.map((item) => (
               <TableRow key={item.id}>
-                <TableCell className="flex h-12 items-center">
+                <TableCell className="flex items-center h-12">
                   <Checkbox />
                 </TableCell>
                 <TableCell>{item.name}</TableCell>
@@ -1293,8 +1265,8 @@ export default function Home() {
           </TableFooter>
         </Table>
       </TableRoot>
-      <h1 className="font-logo text-brand text-7xl font-semibold">FUCINA</h1>
-      <h1 className="bg-chart-brand font-brand text-7xl font-medium">Design system</h1>
+      <h1 className="font-logo font-semibold text-7xl text-brand">FUCINA</h1>
+      <h1 className="bg-chart-brand font-brand font-medium text-7xl">Design system</h1>
       <div className="flex justify-center">
         <Tooltip side="left" content={<div>Fuck</div>}>
           <Button variant="secondary" icon={true}>
