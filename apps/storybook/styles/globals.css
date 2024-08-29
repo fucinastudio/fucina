@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import "@fucina/tailwind/theme/shared-globals.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: "Inter";
+
+  }
+}
+
+input {
+  @apply border-default bg-card text-md ring-offset-background file:text-md-medium file:text placeholder:text-placeholder focus-visible:border-default focus-visible:ring-brand focus-visible:ring-offset-background disabled:opacity-50 flex h-9 w-full rounded border px-3 py-1 file:border-0 file:bg-transparent file:py-[2px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed !important;
+}
+
+

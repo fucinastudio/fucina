@@ -1,0 +1,63 @@
+{
+  "name": "fucina",
+  "description": "Open source product foundry",
+  "license": "AGPL-3.0-or-later",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "build:web": "turbo run build --filter=@fucina/web",
+    "build:design": "turbo run build --filter=@fucina/design",
+    "build:storybook": "turbo run build --filter=@fucina/storybook",
+    "build:docs": "turbo run build --filter=@fucina/docs",
+    "build:ui": "turbo run build --filter=@fucina/ui",
+    "build:utils": "turbo run build --filter=@fucina/utils",
+    "build:visualizations": "turbo run build --filter=@fucina/visualizations",
+    "deploy": "turbo run deploy",
+    "dev": "turbo run dev",
+    "dev:web": "turbo dev --filter=@fucina/web",
+    "dev:design": "turbo dev --filter=@fucina/design",
+    "dev:storybook": "turbo dev --filter=@fucina/storybook",
+    "dev:docs": "turbo dev --filter=@fucina/docs",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "prettier-check": "prettier --check \"**/*.{ts,tsx,md}\"",
+    "lint": "turbo run lint",
+    "clean": "turbo run clean",
+    "start": "turbo run start",
+    "check-types": "tsc --noEmit",
+    "publish-tailwind": "turbo run build --filter='@fucina/tailwind' && cd packages/tailwind && npm publish && cd ../../",
+    "publish-ui": "turbo build --filter='@fucina/ui' && cd packages/ui && npm publish && cd ../../",
+    "publish-utils": "turbo build --filter='@fucina/utils' && cd packages/utils && npm publish && cd ../../",
+    "publish-visualizations": "turbo build --filter='@fucina/visualizations' && cd packages/visualizations && npm publish && cd ../../"
+  },
+  "devDependencies": {
+    "@fucina/config": "*",
+    "eslint": "^8.48.0",
+    "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.6",
+    "turbo": "^2.0.1",
+    "typescript": "^4.9.4"
+  },
+  "engines": {
+    "bun": ">=1.0.0",
+    "node": ">=20.0.0"
+  },
+  "resolutions": {
+    "@types/react": "18.0.26",
+    "@types/react-dom": "^18.0.9",
+    "jackspeak": "2.1.1"
+  },
+  "lint-staged": {
+    "(apps|packages)/**/*.{js,ts,jsx,tsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.json": [
+      "prettier --write"
+    ]
+  },
+  "packageManager": "bun@1.1.3"
+}

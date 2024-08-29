@@ -1,0 +1,37 @@
+{
+  "name": "@fucina/tailwind",
+  "description": "Tailwindcss config for Fucina",
+  "version": "0.0.5",
+  "author": "Federico Kratter Thaler <kkratterf@gmail.com>",
+  "homepage": "https://fucina.studio",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fucinastudio/fucina.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fucinastudio/fucina/issues"
+  },
+  "main": "index.ts",
+  "types": "index.ts",
+  "devDependencies": {
+    "tailwindcss": "^3.4.4"
+  },
+  "dependencies": {
+    "@tailwindcss/forms": "^0.5.2",
+    "@tailwindcss/line-clamp": "^0.4.0",
+    "@tailwindcss/typography": "^0.5.4",
+    "autoprefixer": "^10.4.16",
+    "tailwind-merge": "^1.12.0",
+    "tailwind-scrollbar": "^2.0.1",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "keywords": [
+    "fucina",
+    "fucina.studio",
+    "tailwind",
+    "tailwindcss"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}

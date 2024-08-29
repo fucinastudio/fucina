@@ -1,0 +1,38 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalEnv": ["NEXT_PUBLIC_BASE_URL", "NEXT_PUBLIC_VERCEL_ENV", "NEXT_PUBLIC_VERCEL_URL"],
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**", ".next/**", "!.next/cache/**"]
+    },
+    "@fucina/storybook#build": {
+      "dependsOn": ["^build"],
+      "outputs": ["storybook-static/**", "!storybook-static/cache/**"]
+    },
+    "preview": {
+      "outputs": ["dist/**", ".next/**"],
+      "cache": false
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "lint": {
+      "dependsOn": ["^lint"]
+    },
+    "start": {
+      "dependsOn": ["^build"]
+    },
+    "clean": {
+      "cache": false
+    },
+    "test": {
+      "cache": false,
+      "outputs": []
+    },
+    "check-types": {
+      "dependsOn": ["^check-types"]
+    }
+  }
+}

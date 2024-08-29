@@ -1,0 +1,11 @@
+{
+  "name": "@fucina/tsconfig",
+  "version": "0.0.0",
+  "private": true,
+  "devDependencies": {
+    "tsconfig-paths": "^4.1.0"
+  },
+  "publishConfig": {
+      "access": "public"
+  }
+}

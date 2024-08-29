@@ -1,0 +1,56 @@
+{
+  "name": "@fucina/utils",
+  "description": "Utility functions and constants for Fucina",
+  "version": "0.0.5",
+  "sideEffects": false,
+  "author": "Federico Kratter Thaler <kkratterf@gmail.com>",
+  "homepage": "https://fucina.studio",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fucinastudio/fucina.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fucinastudio/fucina/issues"
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "lint": "eslint src/",
+    "dev": "tsup --watch",
+    "check-types": "tsc --noEmit"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^2.4.0"
+  },
+  "devDependencies": {
+    "@types/ms": "^0.7.31",
+    "@types/node": "18.11.9",
+    "@types/punycode": "^2.1.4",
+    "@types/react": "^18.2.5",
+    "next": "^14.2.0",
+    "react": "^18.2.0",
+    "@fucina/tsconfig": "*",
+    "tsup": "^6.1.3",
+    "typescript": "^5.1.6"
+  },
+  "peerDependencies": {
+    "next": "^14.2.0",
+    "react": "^18.2.0"
+  },
+  "keywords": [
+    "fucina",
+    "fucina.studio",
+    "utils",
+    "utility",
+    "functions"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
