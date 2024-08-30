@@ -1,16 +1,28 @@
 "use client";
 
-// Import core
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
-// Import customs
-import Preview from "@components/preview/preview";
-import { Label } from "@feely/ui/components/label";
-import { RadioGroup, RadioGroupItem } from "@feely/ui/components/radio-group";
-import { Button } from "@feely/ui/components/button";
-import { toast } from "@feely/ui/components/toast";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@feely/ui/components/form";
+
+import Preview from "@/components/preview/preview";
+import {
+  //Button
+  Button,
+  //Label
+  Label,
+  //RadioGroup
+  RadioGroup,
+  RadioGroupItem,
+  //Form
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+  //Toast
+  toast,
+} from "@fucina/ui";
 
 const FormSchema = z.object({
   type: z.enum(["all", "mentions", "none"], {
@@ -26,7 +38,7 @@ const RadioGroupForm = () => {
   function onSubmit(data: z.infer<typeof FormSchema>) {
     toast("You submitted the following values:", {
       description: (
-        <pre className="bg-subtle border-default mt-2 w-[340px] rounded border p-4">
+        <pre className="border-default bg-subtle mt-2 w-[340px] rounded border p-4">
           <code className="text">{JSON.stringify(data, null, 2)}</code>
         </pre>
       ),

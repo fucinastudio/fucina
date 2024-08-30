@@ -1,6 +1,5 @@
 "use client";
 
-// Import core
 import * as React from "react";
 import {
   ColumnDef,
@@ -14,11 +13,17 @@ import {
   getSortedRowModel,
   useReactTable,
 } from "@tanstack/react-table";
-// Import customs
-import Preview from "@components/preview/preview";
-import { Button } from "@feely/ui/components/button";
-import { Checkbox } from "@feely/ui/components/checkbox";
+import { ArrowUpDown, ChevronDown, MoreHorizontal } from "lucide-react";
+
+import Preview from "@/components/preview/preview";
 import {
+  //Button
+  Button,
+  //Input
+  Input,
+  //Checkbox
+  Checkbox,
+  //DropdownMenu
   DropdownMenu,
   DropdownMenuCheckboxItem,
   DropdownMenuContent,
@@ -26,10 +31,14 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@feely/ui/components/dropdown-menu";
-import { Input } from "@feely/ui/components/input";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@feely/ui/components/table";
-import { ArrowUpDown, ChevronDown, MoreHorizontal } from "@feely/ui/components/icon";
+  //Table
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@fucina/ui";
 
 const data: Payment[] = [
   {
@@ -80,8 +89,8 @@ export const columns: ColumnDef<Payment>[] = [
           table.getIsAllPageRowsSelected()
             ? true
             : table.getIsSomePageRowsSelected()
-            ? "indeterminate"
-            : false
+              ? "indeterminate"
+              : false
         }
         onCheckedChange={(value) => table.toggleAllPageRowsSelected(!!value)}
         aria-label="Select all"
@@ -256,7 +265,7 @@ export function DataTableDemo() {
         </Table>
       </div>
       <div className="flex items-center justify-end space-x-2 py-4">
-        <div className="text-md text-description flex-1">
+        <div className="text-description text-md flex-1">
           {table.getFilteredSelectedRowModel().rows.length} of {table.getFilteredRowModel().rows.length}{" "}
           row(s) selected.
         </div>

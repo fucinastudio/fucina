@@ -1,10 +1,5 @@
-// Import core
-// Import customs
-import Preview from "@components/preview/preview";
-import { Button } from "@feely/ui/components/button";
-import { Input } from "@feely/ui/components/input";
-import { Label } from "@feely/ui/components/label";
-import { Popover, PopoverContent, PopoverTrigger } from "@feely/ui/components/popover";
+import Preview from "@/components/preview/preview";
+import { Button, Input, Label, Popover, PopoverContent, PopoverTrigger } from "@fucina/ui";
 
 export const PopoverPreview = () => (
   <Preview>

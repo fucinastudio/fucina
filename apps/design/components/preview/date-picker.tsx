@@ -1,16 +1,13 @@
 "use client";
 
-// Import core
-// Import customs
-import Preview from "@components/preview/preview";
 import * as React from "react";
 import { addDays, format } from "date-fns";
-import { Calendar as CalendarIcon } from "@feely/ui/components/icon";
 import { DateRange } from "react-day-picker";
-import { cn } from "@feely/lib/twMerge";
-import { Button } from "@feely/ui/components/button";
-import { Calendar } from "@feely/ui/components/calendar";
-import { Popover, PopoverContent, PopoverTrigger } from "@feely/ui/components/popover";
+import { CalendarIcon } from "lucide-react";
+
+import Preview from "@/components/preview/preview";
+import { cn } from "@fucina/utils";
+import { Button, Calendar, Popover, PopoverContent, PopoverTrigger } from "@fucina/ui";
 
 export const DatePickerPreview = () => {
   const [date, setDate] = React.useState<Date | undefined>(new Date());

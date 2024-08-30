@@ -1,6 +1,4 @@
-// Import core
-// Import customs
-import Preview from "@components/preview/preview";
+import Preview from "@/components/preview/preview";
 import {
   Table,
   TableBody,
@@ -10,7 +8,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@feely/ui/components/table";
+} from "@fucina/ui";
 
 const invoices = [
   {

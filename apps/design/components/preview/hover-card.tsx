@@ -1,9 +1,13 @@
-// Import core
-// Import customs
-import Preview from "@components/preview/preview";
-import { Avatar, AvatarFallback, AvatarImage } from "@feely/ui/components/avatar";
-import { Button } from "@feely/ui/components/button";
-import { HoverCard, HoverCardContent, HoverCardTrigger } from "@feely/ui/components/hover-card";
+import Preview from "@/components/preview/preview";
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+  Button,
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@fucina/ui";
 
 export const HoverCardPreview = () => (
   <Preview>

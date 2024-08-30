@@ -1,23 +1,15 @@
 "use client";
 
-// Import core
 import Link from "next/link";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
-// Import customs
-import Preview from "@components/preview/preview";
+
+import Preview from "@/components/preview/preview";
 import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectLabel,
-  SelectTrigger,
-  SelectValue,
-} from "@feely/ui/components/select";
-import { Button } from "@feely/ui/components/button";
-import {
+  //Button
+  Button,
+  //Form
   Form,
   FormControl,
   FormDescription,
@@ -25,8 +17,17 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@feely/ui/components/form";
-import { toast } from "@feely/ui/components/toast";
+  //Toast
+  toast,
+  //Select
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectGroupLabel,
+  SelectTrigger,
+  SelectValue,
+} from "@fucina/ui";
 
 const FormSchema = z.object({
   email: z
@@ -44,7 +45,7 @@ const SelectForm = () => {
   function onSubmit(data: z.infer<typeof FormSchema>) {
     toast("You submitted the following values:", {
       description: (
-        <pre className="bg-subtle border-default mt-2 w-[340px] rounded border p-4">
+        <pre className="border-default bg-subtle mt-2 w-[340px] rounded border p-4">
           <code className="text-white">{JSON.stringify(data, null, 2)}</code>
         </pre>
       ),
@@ -93,7 +94,7 @@ export const SelectPreview = () => (
       </SelectTrigger>
       <SelectContent>
         <SelectGroup>
-          <SelectLabel>Fruits</SelectLabel>
+          <SelectGroupLabel>Fruits</SelectGroupLabel>
           <SelectItem value="apple">Apple</SelectItem>
           <SelectItem value="banana">Banana</SelectItem>
           <SelectItem value="blueberry">Blueberry</SelectItem>
@@ -113,7 +114,7 @@ export const SelectScrollable = () => (
       </SelectTrigger>
       <SelectContent>
         <SelectGroup>
-          <SelectLabel>North America</SelectLabel>
+          <SelectGroupLabel>North America</SelectGroupLabel>
           <SelectItem value="est">Eastern Standard Time (EST)</SelectItem>
           <SelectItem value="cst">Central Standard Time (CST)</SelectItem>
           <SelectItem value="mst">Mountain Standard Time (MST)</SelectItem>
@@ -122,7 +123,7 @@ export const SelectScrollable = () => (
           <SelectItem value="hst">Hawaii Standard Time (HST)</SelectItem>
         </SelectGroup>
         <SelectGroup>
-          <SelectLabel>Europe & Africa</SelectLabel>
+          <SelectGroupLabel>Europe & Africa</SelectGroupLabel>
           <SelectItem value="gmt">Greenwich Mean Time (GMT)</SelectItem>
           <SelectItem value="cet">Central European Time (CET)</SelectItem>
           <SelectItem value="eet">Eastern European Time (EET)</SelectItem>
@@ -131,7 +132,7 @@ export const SelectScrollable = () => (
           <SelectItem value="eat">East Africa Time (EAT)</SelectItem>
         </SelectGroup>
         <SelectGroup>
-          <SelectLabel>Asia</SelectLabel>
+          <SelectGroupLabel>Asia</SelectGroupLabel>
           <SelectItem value="msk">Moscow Time (MSK)</SelectItem>
           <SelectItem value="ist">India Standard Time (IST)</SelectItem>
           <SelectItem value="cst_china">China Standard Time (CST)</SelectItem>
@@ -140,7 +141,7 @@ export const SelectScrollable = () => (
           <SelectItem value="ist_indonesia">Indonesia Central Standard Time (WITA)</SelectItem>
         </SelectGroup>
         <SelectGroup>
-          <SelectLabel>Australia & Pacific</SelectLabel>
+          <SelectGroupLabel>Australia & Pacific</SelectGroupLabel>
           <SelectItem value="awst">Australian Western Standard Time (AWST)</SelectItem>
           <SelectItem value="acst">Australian Central Standard Time (ACST)</SelectItem>
           <SelectItem value="aest">Australian Eastern Standard Time (AEST)</SelectItem>
@@ -148,7 +149,7 @@ export const SelectScrollable = () => (
           <SelectItem value="fjt">Fiji Time (FJT)</SelectItem>
         </SelectGroup>
         <SelectGroup>
-          <SelectLabel>South America</SelectLabel>
+          <SelectGroupLabel>South America</SelectGroupLabel>
           <SelectItem value="art">Argentina Time (ART)</SelectItem>
           <SelectItem value="bot">Bolivia Time (BOT)</SelectItem>
           <SelectItem value="brt">Brasilia Time (BRT)</SelectItem>

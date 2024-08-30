@@ -3,9 +3,9 @@ title: Tooltip
 ---
 
 import { Tabs, Cards, Card } from "nextra/components";
-import { AccessibilityTable } from "@components/accessibility/accessibility-table.mdx";
-import { tooltipAccessibilityData } from "@components/accessibility/tooltip.tsx";
-import { TooltipPreview, TooltipOutline, TooltipFilled, TooltipSide } from "@components/preview/tooltip.tsx";
+import { AccessibilityTable } from "@/components/accessibility/accessibility-table.mdx";
+import { tooltipAccessibilityData } from "@/components/accessibility/tooltip.tsx";
+import { TooltipPreview, TooltipSide } from "@/components/preview/tooltip.tsx";
 
 # 💠 Tooltip
 
@@ -62,15 +62,15 @@ Additionally, refrain from using Tooltips to provide instructions that are compl
 
 ## Examples
 
-### Outline
+### Default
 
 <Tabs items={['Preview', 'Code']}>
   <Tabs.Tab>
-    <TooltipOutline />
+    <TooltipPreview />
   </Tabs.Tab>
   <Tabs.Tab>
-    ```js copy {12} /type="outline"/ filename="tooltip.tsx"
-    import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@feely/ui/components/tooltip"
+    ```js copy filename="tooltip.tsx"
+    import { Tooltip } from "@feely/ui/components/tooltip"
     import { Button } from "@feely/ui/components/button"
     import { FilePlus } from "@feely/ui/components/icon"
 
@@ -82,37 +82,6 @@ Additionally, refrain from using Tooltips to provide instructions that are compl
               <Button variant="secondary" icon={true}><FilePlus /></Button>
             </TooltipTrigger>
             <TooltipContent type="outline">
-              <p>Add to library</p>
-            </TooltipContent>
-          </Tooltip>
-        </TooltipProvider>
-      )
-    }
-    ```
-
-  </Tabs.Tab>
-</Tabs>
-
-### Fill
-
-<Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <TooltipFilled />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy {12} /type="fill"/ filename="tooltip.tsx"
-    import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@feely/ui/components/tooltip"
-    import { Button } from "@feely/ui/components/button"
-    import { FilePlus } from "@feely/ui/components/icon"
-
-    export function TooltipDemo() {
-      return (
-        <TooltipProvider>
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <Button variant="secondary" icon={true}><FilePlus /></Button>
-            </TooltipTrigger>
-            <TooltipContent type="fill">
               <p>Add to library</p>
             </TooltipContent>
           </Tooltip>

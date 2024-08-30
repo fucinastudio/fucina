@@ -1,7 +1,5 @@
-// Import core
-// Import customs
-import Preview from "@components/preview/preview";
-import { Progress } from "@feely/ui/components/progress";
+import Preview from "@/components/preview/preview";
+import { Progress } from "@fucina/ui";
 
 export const ProgressPreview = () => (
   <Preview>
@@ -11,24 +9,24 @@ export const ProgressPreview = () => (
 
 export const ProgressDefault = () => (
   <Preview>
-    <Progress status="default" value={33} className="w-3/5" />
+    <Progress variant="default" value={33} className="w-3/5" />
   </Preview>
 );
 
 export const ProgressBrand = () => (
   <Preview>
-    <Progress status="brand" value={33} className="w-3/5" />
+    <Progress variant="brand" value={33} className="w-3/5" />
   </Preview>
 );
 
 export const ProgressDanger = () => (
   <Preview>
-    <Progress status="danger" value={33} className="w-3/5" />
+    <Progress variant="danger" value={33} className="w-3/5" />
   </Preview>
 );
 
 export const ProgressWarning = () => (
   <Preview>
-    <Progress status="warning" value={33} className="w-3/5" />
+    <Progress variant="warning" value={33} className="w-3/5" />
   </Preview>
 );

@@ -1,8 +1,7 @@
-// Import core
-// Import customs
-import Preview from "@components/preview/preview";
-import { Tag } from "@feely/ui/components/tag";
-import { TagIcon } from "@feely/ui/components/icon";
+import { TagIcon } from "lucide-react";
+
+import Preview from "@/components/preview/preview";
+import { Tag } from "@fucina/ui";
 
 export const TagPreview = () => (
   <Preview>
@@ -13,18 +12,27 @@ export const TagPreview = () => (
   </Preview>
 );
 
-export const TagRed = () => (
+export const TagBrand = () => (
   <Preview>
-    <Tag colors="red">
+    <Tag variant="brand">
       <TagIcon />
       Markup
     </Tag>
   </Preview>
 );
 
-export const TagOrange = () => (
+export const TagNeutral = () => (
   <Preview>
-    <Tag colors="orange">
+    <Tag variant="neutral">
+      <TagIcon />
+      Markup
+    </Tag>
+  </Preview>
+);
+
+export const TagRed = () => (
+  <Preview>
+    <Tag variant="red">
       <TagIcon />
       Markup
     </Tag>
@@ -33,34 +41,7 @@ export const TagOrange = () => (
 
 export const TagAmber = () => (
   <Preview>
-    <Tag colors="amber">
-      <TagIcon />
-      Markup
-    </Tag>
-  </Preview>
-);
-
-export const TagYellow = () => (
-  <Preview>
-    <Tag colors="yellow">
-      <TagIcon />
-      Markup
-    </Tag>
-  </Preview>
-);
-
-export const TagLime = () => (
-  <Preview>
-    <Tag colors="lime">
-      <TagIcon />
-      Markup
-    </Tag>
-  </Preview>
-);
-
-export const TagGreen = () => (
-  <Preview>
-    <Tag colors="green">
+    <Tag variant="amber">
       <TagIcon />
       Markup
     </Tag>
@@ -69,7 +50,7 @@ export const TagGreen = () => (
 
 export const TagEmerald = () => (
   <Preview>
-    <Tag colors="emerald">
+    <Tag variant="emerald">
       <TagIcon />
       Markup
     </Tag>
@@ -78,7 +59,7 @@ export const TagEmerald = () => (
 
 export const TagTeal = () => (
   <Preview>
-    <Tag colors="teal">
+    <Tag variant="teal">
       <TagIcon />
       Markup
     </Tag>
@@ -87,16 +68,7 @@ export const TagTeal = () => (
 
 export const TagCyan = () => (
   <Preview>
-    <Tag colors="cyan">
-      <TagIcon />
-      Markup
-    </Tag>
-  </Preview>
-);
-
-export const TagSky = () => (
-  <Preview>
-    <Tag colors="sky">
+    <Tag variant="cyan">
       <TagIcon />
       Markup
     </Tag>
@@ -105,25 +77,7 @@ export const TagSky = () => (
 
 export const TagBlue = () => (
   <Preview>
-    <Tag colors="blue">
-      <TagIcon />
-      Markup
-    </Tag>
-  </Preview>
-);
-
-export const TagIndigo = () => (
-  <Preview>
-    <Tag colors="indigo">
-      <TagIcon />
-      Markup
-    </Tag>
-  </Preview>
-);
-
-export const TagViolet = () => (
-  <Preview>
-    <Tag colors="violet">
+    <Tag variant="blue">
       <TagIcon />
       Markup
     </Tag>
@@ -132,16 +86,7 @@ export const TagViolet = () => (
 
 export const TagPurple = () => (
   <Preview>
-    <Tag colors="purple">
-      <TagIcon />
-      Markup
-    </Tag>
-  </Preview>
-);
-
-export const TagFuchsia = () => (
-  <Preview>
-    <Tag colors="fuchsia">
+    <Tag variant="purple">
       <TagIcon />
       Markup
     </Tag>
@@ -150,16 +95,7 @@ export const TagFuchsia = () => (
 
 export const TagPink = () => (
   <Preview>
-    <Tag colors="pink">
-      <TagIcon />
-      Markup
-    </Tag>
-  </Preview>
-);
-
-export const TagRose = () => (
-  <Preview>
-    <Tag colors="rose">
+    <Tag variant="pink">
       <TagIcon />
       Markup
     </Tag>

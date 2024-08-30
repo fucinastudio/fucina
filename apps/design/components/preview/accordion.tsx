@@ -1,7 +1,5 @@
-// Import core
-// Import customs
-import Preview from "@components/preview/preview";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@feely/ui/components/accordion";
+import Preview from "@/components/preview/preview";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@fucina/ui";
 
 export const AccordionPreview = () => (
   <Preview>

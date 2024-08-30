@@ -1,21 +1,19 @@
-// Import core
-// Import customs
-import Preview from "@components/preview/preview";
-import { cn } from "@feely/lib/twMerge";
-import { Switch } from "@feely/ui/components/switch";
-import { Button } from "@feely/ui/components/button";
-import { Input } from "@feely/ui/components/input";
-import { Label } from "@feely/ui/components/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@feely/ui/components/select";
+import Preview from "@/components/preview/preview";
+import { BellRing, Check } from "lucide-react";
+
+import { cn } from "@fucina/utils";
 import {
+  Button,
+  Input,
+  Label,
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
   Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@feely/ui/components/card";
-import { BellRing, Check } from "@feely/ui/components/icon";
+  Switch,
+} from "@fucina/ui";
 
 const notifications = [
   {
@@ -37,16 +35,16 @@ type CardProps = React.ComponentProps<typeof Card>;
 const CardDemo = ({ className, ...props }: CardProps) => {
   return (
     <Card className={cn("w-[460px]", className)} {...props}>
-      <CardHeader>
-        <CardTitle>Notifications</CardTitle>
-        <CardDescription>You have 3 unread messages.</CardDescription>
-      </CardHeader>
-      <CardContent className="grid gap-4">
-        <div className=" border-default flex items-center space-x-4 rounded border p-4">
+      <div>
+        <h3>Notifications</h3>
+        <p>You have 3 unread messages.</p>
+      </div>
+      <div className="grid gap-4">
+        <div className="border-default flex items-center space-x-4 rounded border p-4">
           <BellRing />
           <div className="flex-1 space-y-1">
             <p className="text-md-medium leading-none">Push Notifications</p>
-            <p className="text-md text-description">Send notifications to device.</p>
+            <p className="text-description text-md">Send notifications to device.</p>
           </div>
           <Switch />
         </div>
@@ -56,17 +54,17 @@ const CardDemo = ({ className, ...props }: CardProps) => {
               <span className="bg-brand flex size-2 translate-y-1 rounded-full" />
               <div className="space-y-1">
                 <p className="text-md-medium leading-none">{notification.title}</p>
-                <p className="text-md text-description">{notification.description}</p>
+                <p className="text-description text-md">{notification.description}</p>
               </div>
             </div>
           ))}
         </div>
-      </CardContent>
-      <CardFooter>
+      </div>
+      <div>
         <Button className="w-full">
           <Check /> Mark all as read
         </Button>
-      </CardFooter>
+      </div>
     </Card>
   );
 };
@@ -74,11 +72,11 @@ const CardDemo = ({ className, ...props }: CardProps) => {
 export const CardPreview = () => (
   <Preview>
     <Card className="w-96">
-      <CardHeader>
-        <CardTitle>Create project</CardTitle>
-        <CardDescription>Deploy your new project in one-click.</CardDescription>
-      </CardHeader>
-      <CardContent>
+      <div>
+        <h3>Create project</h3>
+        <p>Deploy your new project in one-click.</p>
+      </div>
+      <div>
         <form>
           <div className="grid w-full items-center gap-4">
             <div className="flex flex-col space-y-3">
@@ -101,11 +99,11 @@ export const CardPreview = () => (
             </div>
           </div>
         </form>
-      </CardContent>
-      <CardFooter className="flex justify-between">
+      </div>
+      <div className="flex justify-between">
         <Button variant="secondary">Cancel</Button>
         <Button>Deploy</Button>
-      </CardFooter>
+      </div>
     </Card>
   </Preview>
 );

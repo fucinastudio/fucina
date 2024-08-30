@@ -1,8 +1,7 @@
-// Import core
-// Import customs
-import Preview from "@components/preview/preview";
-import { Toggle } from "@feely/ui/components/toggle";
-import { Bold } from "@feely/ui/components/icon";
+import { Bold } from "lucide-react";
+
+import Preview from "@/components/preview/preview";
+import { Toggle } from "@fucina/ui";
 
 export const TogglePreview = () => (
   <Preview>
@@ -14,15 +13,7 @@ export const TogglePreview = () => (
 
 export const ToggleDefault = () => (
   <Preview>
-    <Toggle aria-label="Toggle bold" variant="default">
-      <Bold />
-    </Toggle>
-  </Preview>
-);
-
-export const ToggleOutline = () => (
-  <Preview>
-    <Toggle aria-label="Toggle bold" variant="outline">
+    <Toggle aria-label="Toggle bold">
       <Bold />
     </Toggle>
   </Preview>

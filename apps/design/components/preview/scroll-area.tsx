@@ -1,10 +1,8 @@
-// Import core
 import * as React from "react";
 import Image from "next/image";
-// Import customs
-import Preview from "@components/preview/preview";
-import { ScrollArea, ScrollBar } from "@feely/ui/components/scroll-area";
-import { Separator } from "@feely/ui/components/separator";
+
+import Preview from "@/components/preview/preview";
+import { Separator, ScrollArea, ScrollBar } from "@fucina/ui";
 
 const tags = Array.from({ length: 50 }).map((_, i, a) => `v1.2.0-beta.${a.length - i}`);
 

@@ -1,17 +1,20 @@
 "use client";
 
-// Import core
 import * as React from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { format } from "date-fns";
 import { useForm } from "react-hook-form";
+import { CalendarIcon } from "lucide-react";
 import * as z from "zod";
-// Import customs
-import Preview from "@components/preview/preview";
-import { Calendar } from "@feely/ui/components/calendar";
-import { cn } from "@feely/lib/twMerge";
-import { Button } from "@feely/ui/components/button";
+
+import Preview from "@/components/preview/preview";
+import { cn } from "@fucina/utils";
 import {
+  //Button
+  Button,
+  //Calendar
+  Calendar,
+  //Form
   Form,
   FormControl,
   FormDescription,
@@ -19,10 +22,13 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@feely/ui/components/form";
-import { Popover, PopoverContent, PopoverTrigger } from "@feely/ui/components/popover";
-import { toast } from "@feely/ui/components/toast";
-import { CalendarIcon } from "@feely/ui/components/icon";
+  //Popover
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+  //Toast
+  toast,
+} from "@fucina/ui";
 
 const FormSchema = z.object({
   dob: z.date({
@@ -38,7 +44,7 @@ const CalendarForm = () => {
   function onSubmit(data: z.infer<typeof FormSchema>) {
     toast("You submitted the following values:", {
       description: (
-        <pre className="bg-subtle border-default mt-2 w-[340px] rounded border p-4">
+        <pre className="border-default bg-subtle mt-2 w-[340px] rounded border p-4">
           <code className="text">{JSON.stringify(data, null, 2)}</code>
         </pre>
       ),

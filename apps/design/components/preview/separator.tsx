@@ -1,14 +1,12 @@
-// Import core
-// Import customs
-import Preview from "@components/preview/preview";
-import { Separator } from "@feely/ui/components/separator";
+import Preview from "@/components/preview/preview";
+import { Separator } from "@fucina/ui";
 
 export const SeparatorPreview = () => (
   <Preview>
     <div>
       <div className="space-y-1">
         <h4 className="text-lg-semibold leading-none">Feely Design System</h4>
-        <p className="text-md text-description">Crafting inclusive experiences for everyone</p>
+        <p className="text-description text-md">Crafting inclusive experiences for everyone</p>
       </div>
       <Separator className="my-4" />
       <div className="text-md flex h-5 items-center space-x-4">
@@ -27,7 +25,7 @@ export const SeparatorHorizontal = () => (
     <div>
       <h4 className="text-lg-semibold leading-none">Feely Design System</h4>
       <Separator className="my-4" />
-      <p className="text-md text-description">Crafting inclusive experiences for everyone</p>
+      <p className="text-description text-md">Crafting inclusive experiences for everyone</p>
     </div>
   </Preview>
 );

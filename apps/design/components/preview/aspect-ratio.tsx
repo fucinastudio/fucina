@@ -1,8 +1,7 @@
-// Import core
 import Image from "next/image";
-// Import customs
-import Preview from "@components/preview/preview";
-import { AspectRatio } from "@feely/ui/components/aspect-ratio";
+
+import Preview from "@/components/preview/preview";
+import { AspectRatio } from "@fucina/ui";
 
 export const AspectRatioPreview = () => (
   <Preview>

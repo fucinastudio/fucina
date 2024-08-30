@@ -1,7 +1,8 @@
-// Import core
-// Import customs
-import Preview from "@components/preview/preview";
+import Preview from "@/components/preview/preview";
 import {
+  //Button
+  Button,
+  //Alert
   AlertDialog,
   AlertDialogAction,
   AlertDialogCancel,
@@ -11,8 +12,7 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from "@feely/ui/components/alert-dialog";
-import { Button } from "@feely/ui/components/button";
+} from "@fucina/ui";
 
 export const AlertDialogPreview = () => (
   <Preview>

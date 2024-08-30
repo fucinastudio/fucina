@@ -1,28 +1,7 @@
 "use client";
 
-// Import core
 import * as React from "react";
 import { DropdownMenuCheckboxItemProps } from "@radix-ui/react-dropdown-menu";
-// Import customs
-import Preview from "@components/preview/preview";
-import { Button } from "@feely/ui/components/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuGroup,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuPortal,
-  DropdownMenuSeparator,
-  DropdownMenuShortcut,
-  DropdownMenuSub,
-  DropdownMenuSubContent,
-  DropdownMenuSubTrigger,
-  DropdownMenuTrigger,
-  DropdownMenuCheckboxItem,
-  DropdownMenuRadioGroup,
-  DropdownMenuRadioItem,
-} from "@feely/ui/components/dropdown-menu";
 import {
   Cloud,
   CreditCard,
@@ -38,7 +17,25 @@ import {
   User,
   UserPlus,
   Users,
-} from "@feely/ui/components/icon";
+} from "lucide-react";
+
+import Preview from "@/components/preview/preview";
+import {
+  Button,
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuSubMenu,
+  DropdownMenuSubMenuContent,
+  DropdownMenuSubMenuTrigger,
+  DropdownMenuTrigger,
+  DropdownMenuCheckboxItem,
+  DropdownMenuRadioGroup,
+  DropdownMenuRadioItem,
+} from "@fucina/ui";
 
 type Checked = DropdownMenuCheckboxItemProps["checked"];
 
@@ -100,25 +97,21 @@ export const DropdownMenuPreview = () => (
         <DropdownMenuLabel>My Account</DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
-          <DropdownMenuItem>
+          <DropdownMenuItem shortcut="⇧⌘P">
             <User />
             <span>Profile</span>
-            <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
           </DropdownMenuItem>
-          <DropdownMenuItem>
+          <DropdownMenuItem shortcut="⌘B">
             <CreditCard />
             <span>Billing</span>
-            <DropdownMenuShortcut>⌘B</DropdownMenuShortcut>
           </DropdownMenuItem>
-          <DropdownMenuItem>
+          <DropdownMenuItem shortcut="⌘S">
             <Settings />
             <span>Settings</span>
-            <DropdownMenuShortcut>⌘S</DropdownMenuShortcut>
           </DropdownMenuItem>
-          <DropdownMenuItem>
+          <DropdownMenuItem shortcut="⌘K">
             <Keyboard />
             <span>Keyboard shortcuts</span>
-            <DropdownMenuShortcut>⌘K</DropdownMenuShortcut>
           </DropdownMenuItem>
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
@@ -127,33 +120,30 @@ export const DropdownMenuPreview = () => (
             <Users />
             <span>Team</span>
           </DropdownMenuItem>
-          <DropdownMenuSub>
-            <DropdownMenuSubTrigger>
+          <DropdownMenuSubMenu>
+            <DropdownMenuSubMenuTrigger>
               <UserPlus />
               <span>Invite users</span>
-            </DropdownMenuSubTrigger>
-            <DropdownMenuPortal>
-              <DropdownMenuSubContent>
-                <DropdownMenuItem>
-                  <Mail />
-                  <span>Email</span>
-                </DropdownMenuItem>
-                <DropdownMenuItem>
-                  <MessageSquare />
-                  <span>Message</span>
-                </DropdownMenuItem>
-                <DropdownMenuSeparator />
-                <DropdownMenuItem>
-                  <PlusCircle />
-                  <span>More...</span>
-                </DropdownMenuItem>
-              </DropdownMenuSubContent>
-            </DropdownMenuPortal>
-          </DropdownMenuSub>
-          <DropdownMenuItem>
+            </DropdownMenuSubMenuTrigger>
+            <DropdownMenuSubMenuContent>
+              <DropdownMenuItem>
+                <Mail />
+                <span>Email</span>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <MessageSquare />
+                <span>Message</span>
+              </DropdownMenuItem>
+              <DropdownMenuSeparator />
+              <DropdownMenuItem>
+                <PlusCircle />
+                <span>More...</span>
+              </DropdownMenuItem>
+            </DropdownMenuSubMenuContent>
+          </DropdownMenuSubMenu>
+          <DropdownMenuItem shortcut="⌘+T">
             <Plus />
             <span>New Team</span>
-            <DropdownMenuShortcut>⌘+T</DropdownMenuShortcut>
           </DropdownMenuItem>
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
@@ -170,10 +160,9 @@ export const DropdownMenuPreview = () => (
           <span>API</span>
         </DropdownMenuItem>
         <DropdownMenuSeparator />
-        <DropdownMenuItem>
+        <DropdownMenuItem shortcut="⇧⌘Q">
           <LogOut />
           <span>Log out</span>
-          <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

@@ -1,7 +1,5 @@
-// Import core
-// Import customs
-import Preview from "@components/preview/preview";
-import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from "@feely/ui/components/resizable";
+import Preview from "@/components/preview/preview";
+import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from "@fucina/ui";
 
 export const ResizablePreview = () => (
   <Preview>

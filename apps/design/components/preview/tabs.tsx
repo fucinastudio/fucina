@@ -1,19 +1,16 @@
-// Import core
-// Import customs
-import Preview from "@components/preview/preview";
-import { Button } from "@feely/ui/components/button";
+import { User, Lock } from "lucide-react";
+
+import Preview from "@/components/preview/preview";
 import {
+  Button,
+  Input,
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+  Label,
   Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@feely/ui/components/card";
-import { Input } from "@feely/ui/components/input";
-import { Label } from "@feely/ui/components/label";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@feely/ui/components/tabs";
-import { User, Lock } from "@feely/ui/components/icon";
+} from "@fucina/ui";
 
 export const TabsPreview = () => (
   <Preview>
@@ -26,7 +23,7 @@ export const TabsPreview = () => (
         <div className="mt-2 space-y-2">
           <div className="space-y-2">
             <p className="text-heading-subsection">Account</p>
-            <p className="text-md text-description">
+            <p className="text-description text-md">
               Make changes to your account here. Click save when you&apos;re done.
             </p>
           </div>
@@ -49,7 +46,7 @@ export const TabsPreview = () => (
         <div className="mt-2 space-y-2">
           <div className="space-y-2">
             <p className="text-heading-subsection">Password</p>
-            <p className="text-md text-description">
+            <p className="text-description text-md">
               Change your password here. After saving, you&apos;ll be logged out.
             </p>
           </div>
@@ -141,13 +138,13 @@ export const TabsWithCard = () => (
       </TabsList>
       <TabsContent value="account">
         <Card>
-          <CardHeader>
-            <CardTitle>Account</CardTitle>
-            <CardDescription>
+          <div>
+            <h3>Account</h3>
+            <p>
               Make changes to your account here. Click save when you&apos;re done.
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="space-y-2">
+            </p>
+          </div>
+          <div className="space-y-2">
             <div className="space-y-1">
               <Label htmlFor="name">Name</Label>
               <Input id="name" defaultValue="Michael Scott" className="input-docs" />
@@ -156,21 +153,21 @@ export const TabsWithCard = () => (
               <Label htmlFor="username">Username</Label>
               <Input id="username" defaultValue="@mscott" className="input-docs" />
             </div>
-          </CardContent>
-          <CardFooter>
+          </div>
+          <div>
             <Button>Save</Button>
-          </CardFooter>
+          </div>
         </Card>
       </TabsContent>
       <TabsContent value="password">
         <Card>
-          <CardHeader>
-            <CardTitle>Password</CardTitle>
-            <CardDescription>
+          <div>
+            <h3>Password</h3>
+            <p>
               Change your password here. After saving, you&apos;ll be logged out.
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="space-y-2">
+            </p>
+          </div>
+          <div className="space-y-2">
             <div className="space-y-1">
               <Label htmlFor="current">Current password</Label>
               <Input id="current" type="password" className="input-docs" />
@@ -179,10 +176,10 @@ export const TabsWithCard = () => (
               <Label htmlFor="new">New password</Label>
               <Input id="new" type="password" className="input-docs" />
             </div>
-          </CardContent>
-          <CardFooter>
+          </div>
+          <div>
             <Button>Save</Button>
-          </CardFooter>
+          </div>
         </Card>
       </TabsContent>
     </Tabs>

@@ -1,14 +1,21 @@
 "use client";
 
-// Import core
 import * as React from "react";
-// Import customs
-import Preview from "@components/preview/preview";
-import { cn } from "@feely/lib/twMerge";
-import { Button } from "@feely/ui/components/button";
-import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem } from "@feely/ui/components/command";
-import { Popover, PopoverContent, PopoverTrigger } from "@feely/ui/components/popover";
-import { Check, ChevronsUpDown } from "@feely/ui/components/icon";
+import { Check, ChevronsUpDown } from "lucide-react";
+
+import Preview from "@/components/preview/preview";
+import { cn } from "@fucina/utils";
+import {
+  Button,
+  Command,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@fucina/ui";
 
 const frameworks = [
   {

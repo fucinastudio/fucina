@@ -1,8 +1,7 @@
-// Import core
-// Import customs
-import Preview from "@components/preview/preview";
-import { Segmented, SegmentedContent, SegmentedList, SegmentedTrigger } from "@feely/ui/components/segmented";
-import { Grid, List } from "@feely/ui/components/icon";
+import { Grid, List } from "lucide-react";
+
+import Preview from "@/components/preview/preview";
+import { Segmented, SegmentedContent, SegmentedList, SegmentedTrigger } from "@fucina/ui";
 
 export const SegmentedPreview = () => (
   <Preview>

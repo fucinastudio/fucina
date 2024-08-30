@@ -1,6 +1,4 @@
-// Import core
-// Import customs
-import Preview from "@components/preview/preview";
+import Preview from "@/components/preview/preview";
 import {
   ContextMenu,
   ContextMenuCheckboxItem,
@@ -10,12 +8,11 @@ import {
   ContextMenuRadioGroup,
   ContextMenuRadioItem,
   ContextMenuSeparator,
-  ContextMenuShortcut,
-  ContextMenuSub,
-  ContextMenuSubContent,
+  ContextMenuSubMenu,
+  ContextMenuSubMenuContent,
   ContextMenuSubTrigger,
   ContextMenuTrigger,
-} from "@feely/ui/components/context-menu";
+} from "@fucina/ui";
 
 export const ContextMenuPreview = () => (
   <Preview>
@@ -24,41 +21,29 @@ export const ContextMenuPreview = () => (
         Right click here
       </ContextMenuTrigger>
       <ContextMenuContent className="w-64">
-        <ContextMenuItem inset>
-          Back
-          <ContextMenuShortcut>⌘[</ContextMenuShortcut>
-        </ContextMenuItem>
-        <ContextMenuItem inset disabled>
+        <ContextMenuItem shortcut="⌘[">Back</ContextMenuItem>
+        <ContextMenuItem shortcut="⌘]" disabled>
           Forward
-          <ContextMenuShortcut>⌘]</ContextMenuShortcut>
         </ContextMenuItem>
-        <ContextMenuItem inset>
-          Reload
-          <ContextMenuShortcut>⌘R</ContextMenuShortcut>
-        </ContextMenuItem>
-        <ContextMenuSub>
-          <ContextMenuSubTrigger inset>More Tools</ContextMenuSubTrigger>
-          <ContextMenuSubContent className="w-48">
-            <ContextMenuItem>
-              Save Page As...
-              <ContextMenuShortcut>⇧⌘S</ContextMenuShortcut>
-            </ContextMenuItem>
+        <ContextMenuItem shortcut="⌘R">Reload</ContextMenuItem>
+        <ContextMenuSubMenu>
+          <ContextMenuSubTrigger>More Tools</ContextMenuSubTrigger>
+          <ContextMenuSubMenuContent className="w-48">
+            <ContextMenuItem shortcut="⇧⌘S">Save Page As...</ContextMenuItem>
             <ContextMenuItem>Create Shortcut...</ContextMenuItem>
             <ContextMenuItem>Name Window...</ContextMenuItem>
             <ContextMenuSeparator />
             <ContextMenuItem>Developer Tools</ContextMenuItem>
-          </ContextMenuSubContent>
-        </ContextMenuSub>
+          </ContextMenuSubMenuContent>
+        </ContextMenuSubMenu>
         <ContextMenuSeparator />
-        <ContextMenuCheckboxItem checked>
+        <ContextMenuCheckboxItem shortcut="⌘⇧B" checked>
           Show Bookmarks Bar
-          <ContextMenuShortcut>⌘⇧B</ContextMenuShortcut>
         </ContextMenuCheckboxItem>
         <ContextMenuCheckboxItem>Show Full URLs</ContextMenuCheckboxItem>
         <ContextMenuSeparator />
         <ContextMenuRadioGroup value="michael">
-          <ContextMenuLabel inset>People</ContextMenuLabel>
-          <ContextMenuSeparator />
+          <ContextMenuLabel>People</ContextMenuLabel>
           <ContextMenuRadioItem value="michael">Michael Scott</ContextMenuRadioItem>
           <ContextMenuRadioItem value="dwight">Dwight Schrute</ContextMenuRadioItem>
         </ContextMenuRadioGroup>

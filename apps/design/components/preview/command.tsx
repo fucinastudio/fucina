@@ -1,9 +1,9 @@
 "use client";
 
-// Import core
 import * as React from "react";
-// Import customs
-import Preview from "@components/preview/preview";
+import { Calculator, Calendar, CreditCard, Settings, Smile, User } from "lucide-react";
+
+import Preview from "@/components/preview/preview";
 import {
   Command,
   CommandEmpty,
@@ -14,8 +14,7 @@ import {
   CommandSeparator,
   CommandShortcut,
   CommandDialog,
-} from "@feely/ui/components/command";
-import { Calculator, Calendar, CreditCard, Settings, Smile, User } from "@feely/ui/components/icon";
+} from "@fucina/ui";
 
 const CommandDialogDemo = () => {
   const [open, setOpen] = React.useState(false);
@@ -35,7 +34,7 @@ const CommandDialogDemo = () => {
     <>
       <p className="text-description text-sm">
         Press{" "}
-        <kbd className="border-default bg-muted text-description opacity-visible pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded border px-1.5 font-mono text-[10px] font-medium">
+        <kbd className="border-default bg-muted opacity-visible text-description pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded border px-1.5 font-mono text-[10px] font-medium">
           <span className="text-sm">⌘</span>K
         </kbd>
       </p>

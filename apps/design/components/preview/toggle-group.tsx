@@ -1,26 +1,9 @@
-// Import core
-// Import customs
-import Preview from "@components/preview/preview";
-import { ToggleGroup, ToggleGroupItem } from "@feely/ui/components/toggle-group";
-import { Bold, Italic, Underline } from "@feely/ui/components/icon";
+import { Bold, Italic, Underline } from "lucide-react";
+
+import Preview from "@/components/preview/preview";
+import { ToggleGroup, ToggleGroupItem } from "@fucina/ui";
 
 export const ToggleGroupPreview = () => (
-  <Preview>
-    <ToggleGroup type="multiple">
-      <ToggleGroupItem value="bold" aria-label="Toggle bold">
-        <Bold />
-      </ToggleGroupItem>
-      <ToggleGroupItem value="italic" aria-label="Toggle italic">
-        <Italic />
-      </ToggleGroupItem>
-      <ToggleGroupItem value="strikethrough" aria-label="Toggle strikethrough">
-        <Underline />
-      </ToggleGroupItem>
-    </ToggleGroup>
-  </Preview>
-);
-
-export const ToggleGroupOutlined = () => (
   <Preview>
     <ToggleGroup type="multiple">
       <ToggleGroupItem value="bold" aria-label="Toggle bold">

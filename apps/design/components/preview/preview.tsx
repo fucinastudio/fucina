@@ -1,6 +1,4 @@
-// Import core
 import React, { ReactNode } from "react";
-// Import customs
 
 type PreviewProps = {
   children: ReactNode;
@@ -8,7 +6,7 @@ type PreviewProps = {
 
 const Preview: React.FC<PreviewProps> = ({ children }) => {
   return (
-    <div className="bg-background nx-border nx-border-gray-200 dark:nx-border-neutral-800 nx-mb-4 nx-overflow-x-auto nx-rounded-xl nx-subpixel-antialiased contrast-more:nx-border contrast-more:nx-border-primary-900/20 contrast-more:nx-contrast-150 contrast-more:dark:nx-border-primary-100/40 nx-py-4 flex justify-center px-10 py-20">
+    <div className="nx-border-gray-200 contrast-more:nx-border-primary-900/20 dark:nx-border-neutral-800 contrast-more:dark:nx-border-primary-100/40 bg-background nx-mb-4 nx-py-4 nx-border contrast-more:nx-border nx-rounded-xl nx-subpixel-antialiased nx-overflow-x-auto contrast-more:nx-contrast-150 flex justify-center px-10 py-20">
       {children}
     </div>
   );

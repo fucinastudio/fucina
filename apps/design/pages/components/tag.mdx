@@ -5,24 +5,17 @@ title: Tag
 import { Tabs, Cards, Card } from "nextra/components";
 import {
   TagPreview,
+  TagBrand,
+  TagNeutral,
   TagRed,
-  TagOrange,
   TagAmber,
-  TagYellow,
-  TagLime,
-  TagGreen,
   TagEmerald,
   TagTeal,
   TagCyan,
-  TagSky,
   TagBlue,
-  TagIndigo,
-  TagViolet,
   TagPurple,
-  TagFuchsia,
   TagPink,
-  TagRose,
-} from "@components/preview/tag.tsx";
+} from "@/components/preview/tag.tsx";
 
 # 💠 Tag
 
@@ -66,6 +59,50 @@ Avoid using Tags for long or complex information that would be better served by 
 
 ## Examples
 
+### Brand
+
+<Tabs items={['Preview', 'Code']}>
+  <Tabs.Tab>
+    <TagBrand />
+  </Tabs.Tab>
+  <Tabs.Tab>
+    ```js copy {6} /variant="brand"/ filename="tag.tsx"
+    import { Tag } from "@feely/ui/components/tag";
+    import { TagIcon } from 'lucide-react';
+
+    export function TagDemo() {
+        return (
+            <Tag variant="brand">
+                <TagIcon /> Markup
+            </Tag>
+        );
+    }
+    ```
+  </Tabs.Tab>
+</Tabs>
+
+### Neutral
+
+<Tabs items={['Preview', 'Code']}>
+  <Tabs.Tab>
+    <TagNeutral />
+  </Tabs.Tab>
+  <Tabs.Tab>
+    ```js copy {6} /variant="neutral"/ filename="tag.tsx"
+    import { Tag } from "@feely/ui/components/tag";
+    import { TagIcon } from 'lucide-react';
+
+    export function TagDemo() {
+        return (
+            <Tag variant="neutral">
+                <TagIcon /> Markup
+            </Tag>
+        );
+    }
+    ```
+  </Tabs.Tab>
+</Tabs>
+
 ### Red
 
 <Tabs items={['Preview', 'Code']}>
@@ -73,36 +110,13 @@ Avoid using Tags for long or complex information that would be better served by 
     <TagRed />
   </Tabs.Tab>
   <Tabs.Tab>
-    ```js copy {6} /colors="red"/ filename="tag.tsx"
+    ```js copy {6} /variant="red"/ filename="tag.tsx"
     import { Tag } from "@feely/ui/components/tag";
     import { TagIcon } from 'lucide-react';
 
     export function TagDemo() {
         return (
-            <Tag colors="red">
-                <TagIcon /> Markup
-            </Tag>
-        );
-    }
-    ```
-
-  </Tabs.Tab>
-</Tabs>
-
-### Orange
-
-<Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <TagOrange />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy {6} /colors="orange"/ filename="tag.tsx"
-    import { Tag } from "@feely/ui/components/tag";
-    import { TagIcon } from 'lucide-react';
-
-    export function TagDemo() {
-        return (
-            <Tag colors="orange">
+            <Tag variant="red">
                 <TagIcon /> Markup
             </Tag>
         );
@@ -119,82 +133,13 @@ Avoid using Tags for long or complex information that would be better served by 
     <TagAmber />
   </Tabs.Tab>
   <Tabs.Tab>
-    ```js copy {6} /colors="amber"/ filename="tag.tsx"
+    ```js copy {6} /variant="amber"/ filename="tag.tsx"
     import { Tag } from "@feely/ui/components/tag";
     import { TagIcon } from 'lucide-react';
 
     export function TagDemo() {
         return (
-            <Tag colors="amber">
-                <TagIcon /> Markup
-            </Tag>
-        );
-    }
-    ```
-
-  </Tabs.Tab>
-</Tabs>
-
-### Yellow
-
-<Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <TagYellow />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy {6} /colors="yellow"/ filename="tag.tsx"
-    import { Tag } from "@feely/ui/components/tag";
-    import { TagIcon } from 'lucide-react';
-
-    export function TagDemo() {
-        return (
-            <Tag colors="yellow">
-                <TagIcon /> Markup
-            </Tag>
-        );
-    }
-    ```
-
-  </Tabs.Tab>
-</Tabs>
-
-### Lime
-
-<Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <TagLime />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy {6} /colors="lime"/ filename="tag.tsx"
-    import { Tag } from "@feely/ui/components/tag";
-    import { TagIcon } from 'lucide-react';
-
-    export function TagDemo() {
-        return (
-            <Tag colors="lime">
-                <TagIcon /> Markup
-            </Tag>
-        );
-    }
-    ```
-
-  </Tabs.Tab>
-</Tabs>
-
-### Green
-
-<Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <TagGreen />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy {6} /colors="green"/ filename="tag.tsx"
-    import { Tag } from "@feely/ui/components/tag";
-    import { TagIcon } from 'lucide-react';
-
-    export function TagDemo() {
-        return (
-            <Tag colors="green">
+            <Tag variant="amber">
                 <TagIcon /> Markup
             </Tag>
         );
@@ -211,13 +156,13 @@ Avoid using Tags for long or complex information that would be better served by 
     <TagEmerald />
   </Tabs.Tab>
   <Tabs.Tab>
-    ```js copy {6} /colors="emerald"/ filename="tag.tsx"
+    ```js copy {6} /variant="emerald"/ filename="tag.tsx"
     import { Tag } from "@feely/ui/components/tag";
     import { TagIcon } from 'lucide-react';
 
     export function TagDemo() {
         return (
-            <Tag colors="emerald">
+            <Tag variant="emerald">
                 <TagIcon /> Markup
             </Tag>
         );
@@ -234,13 +179,13 @@ Avoid using Tags for long or complex information that would be better served by 
     <TagTeal />
   </Tabs.Tab>
   <Tabs.Tab>
-    ```js copy {6} /colors="teal"/ filename="tag.tsx"
+    ```js copy {6} /variant="teal"/ filename="tag.tsx"
     import { Tag } from "@feely/ui/components/tag";
     import { TagIcon } from 'lucide-react';
 
     export function TagDemo() {
         return (
-            <Tag colors="teal">
+            <Tag variant="teal">
                 <TagIcon /> Markup
             </Tag>
         );
@@ -257,36 +202,13 @@ Avoid using Tags for long or complex information that would be better served by 
     <TagCyan />
   </Tabs.Tab>
   <Tabs.Tab>
-    ```js copy {6} /colors="cyan"/ filename="tag.tsx"
+    ```js copy {6} /variant="cyan"/ filename="tag.tsx"
     import { Tag } from "@feely/ui/components/tag";
     import { TagIcon } from 'lucide-react';
 
     export function TagDemo() {
         return (
-            <Tag colors="cyan">
-                <TagIcon /> Markup
-            </Tag>
-        );
-    }
-    ```
-
-  </Tabs.Tab>
-</Tabs>
-
-### Sky
-
-<Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <TagSky />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy {6} /colors="sky"/ filename="tag.tsx"
-    import { Tag } from "@feely/ui/components/tag";
-    import { TagIcon } from 'lucide-react';
-
-    export function TagDemo() {
-        return (
-            <Tag colors="sky">
+            <Tag variant="cyan">
                 <TagIcon /> Markup
             </Tag>
         );
@@ -303,59 +225,13 @@ Avoid using Tags for long or complex information that would be better served by 
     <TagBlue />
   </Tabs.Tab>
   <Tabs.Tab>
-    ```js copy {6} /colors="blue"/ filename="tag.tsx"
+    ```js copy {6} /variant="blue"/ filename="tag.tsx"
     import { Tag } from "@feely/ui/components/tag";
     import { TagIcon } from 'lucide-react';
 
     export function TagDemo() {
         return (
-            <Tag colors="blue">
-                <TagIcon /> Markup
-            </Tag>
-        );
-    }
-    ```
-
-  </Tabs.Tab>
-</Tabs>
-
-### Indigo
-
-<Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <TagIndigo />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy {6} /colors="indigo"/ filename="tag.tsx"
-    import { Tag } from "@feely/ui/components/tag";
-    import { TagIcon } from 'lucide-react';
-
-    export function TagDemo() {
-        return (
-            <Tag colors="indigo">
-                <TagIcon /> Markup
-            </Tag>
-        );
-    }
-    ```
-
-  </Tabs.Tab>
-</Tabs>
-
-### Violet
-
-<Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <TagViolet />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy {6} /colors="violet"/ filename="tag.tsx"
-    import { Tag } from "@feely/ui/components/tag";
-    import { TagIcon } from 'lucide-react';
-
-    export function TagDemo() {
-        return (
-            <Tag colors="violet">
+            <Tag variant="blue">
                 <TagIcon /> Markup
             </Tag>
         );
@@ -372,36 +248,13 @@ Avoid using Tags for long or complex information that would be better served by 
     <TagPurple />
   </Tabs.Tab>
   <Tabs.Tab>
-    ```js copy {6} /colors="purple"/ filename="tag.tsx"
+    ```js copy {6} /variant="purple"/ filename="tag.tsx"
     import { Tag } from "@feely/ui/components/tag";
     import { TagIcon } from 'lucide-react';
 
     export function TagDemo() {
         return (
-            <Tag colors="purple">
-                <TagIcon /> Markup
-            </Tag>
-        );
-    }
-    ```
-
-  </Tabs.Tab>
-</Tabs>
-
-### Fuchsia
-
-<Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <TagFuchsia />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy {6} /colors="fuchsia"/ filename="tag.tsx"
-    import { Tag } from "@feely/ui/components/tag";
-    import { TagIcon } from 'lucide-react';
-
-    export function TagDemo() {
-        return (
-            <Tag colors="fuchsia">
+            <Tag variant="purple">
                 <TagIcon /> Markup
             </Tag>
         );
@@ -418,36 +271,13 @@ Avoid using Tags for long or complex information that would be better served by 
     <TagPink />
   </Tabs.Tab>
   <Tabs.Tab>
-    ```js copy {6} /colors="pink"/ filename="tag.tsx"
+    ```js copy {6} /variant="pink"/ filename="tag.tsx"
     import { Tag } from "@feely/ui/components/tag";
     import { TagIcon } from 'lucide-react';
 
     export function TagDemo() {
         return (
-            <Tag colors="pink">
-                <TagIcon /> Markup
-            </Tag>
-        );
-    }
-    ```
-
-  </Tabs.Tab>
-</Tabs>
-
-### Rose
-
-<Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <TagRose />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy {6} /colors="rose"/ filename="tag.tsx"
-    import { Tag } from "@feely/ui/components/tag";
-    import { TagIcon } from 'lucide-react';
-
-    export function TagDemo() {
-        return (
-            <Tag colors="rose">
+            <Tag variant="pink">
                 <TagIcon /> Markup
             </Tag>
         );
@@ -462,10 +292,7 @@ Avoid using Tags for long or complex information that would be better served by 
 **Here you go!** Here are all the resources you might need if you are a designer, a developer or a content manager:
 
 <Cards className="mt-8">
-  <Card
-    title="🤖 Storybook"
-    href="https://www.stories.feely.so/?path=/docs/components-tag--documentation"
-  />
+  <Card title="🤖 Storybook" href="https://www.stories.feely.so/?path=/docs/components-tag--documentation" />
   <Card
     title="🪄 Figma"
     href="https://www.figma.com/design/Jfto7FUoU7mSpnv9uESD60/%F0%9F%9F%A0-feely---design-system?node-id=635-3323&t=nua4UmG9Iu1hfUAm-1"
