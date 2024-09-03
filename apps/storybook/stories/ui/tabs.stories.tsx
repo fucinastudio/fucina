@@ -61,15 +61,15 @@ export const Default: Story = {
           Password
         </TabsTrigger>
       </TabsList>
-      <TabsContent value="account" className="space-y-4 w-full">
-        <div className="space-y-2 mt-2">
-          <div className="space-y-2">
+      <TabsContent value="account" className="w-full space-y-4">
+        <div className="mt-2 space-y-2">
+          <div className="space-y-1">
             <p className="text-heading-subsection">Account</p>
             <p className="text-description text-md">
               Make changes to your account here. Click save when you&apos;re done.
             </p>
           </div>
-          <div className="gap-2 grid py-4">
+          <div className="grid gap-3 py-4">
             <div className="space-y-1">
               <Label htmlFor="name">Name</Label>
               <Input id="name" defaultValue="Michael Scott" />
@@ -84,15 +84,15 @@ export const Default: Story = {
           <Button>Save</Button>
         </div>
       </TabsContent>
-      <TabsContent value="password" className="space-y-4 w-full">
-        <div className="space-y-2 mt-2">
-          <div className="space-y-2">
+      <TabsContent value="password" className="w-full space-y-4">
+        <div className="mt-2 space-y-2">
+          <div className="space-y-1">
             <p className="text-heading-subsection">Password</p>
             <p className="text-description text-md">
               Change your password here. After saving, you&apos;ll be logged out.
             </p>
           </div>
-          <div className="gap-2 grid py-4">
+          <div className="grid gap-3 py-4">
             <div className="space-y-1">
               <Label htmlFor="current">Current password</Label>
               <Input id="current" type="password" />
@@ -193,15 +193,15 @@ export const WithCard: Story = {
         <TabsTrigger value="account">Account</TabsTrigger>
         <TabsTrigger value="password">Password</TabsTrigger>
       </TabsList>
-      <TabsContent value="account">
+      <TabsContent value="account" className="px-0">
         <Card>
-          <div className="pb-6">
+          <div className="flex flex-col gap-1 pb-6">
             <h3 className="text-heading-subsection">Account</h3>
             <p className="text-description">
               Make changes to your account here. Click save when you&apos;re done.
             </p>
           </div>
-          <div className="space-y-2">
+          <div className="space-y-3">
             <div className="space-y-1">
               <Label htmlFor="name">Name</Label>
               <Input id="name" defaultValue="Michael Scott" />
@@ -211,20 +211,20 @@ export const WithCard: Story = {
               <Input id="username" defaultValue="@mscott" />
             </div>
           </div>
-          <div>
+          <div className="flex justify-end pt-6">
             <Button>Save</Button>
           </div>
         </Card>
       </TabsContent>
-      <TabsContent value="password">
+      <TabsContent value="password" className="px-0">
         <Card>
-          <div>
+          <div className="flex flex-col gap-1 pb-6">
             <h3 className="text-heading-subsection">Password</h3>
             <p className="text-description">
               Change your password here. After saving, you&apos;ll be logged out.
             </p>
           </div>
-          <div className="space-y-2">
+          <div className="space-y-3">
             <div className="space-y-1">
               <Label htmlFor="current">Current password</Label>
               <Input id="current" type="password" />
@@ -234,7 +234,7 @@ export const WithCard: Story = {
               <Input id="new" type="password" />
             </div>
           </div>
-          <div>
+          <div className="flex justify-end pt-6">
             <Button>Save</Button>
           </div>
         </Card>

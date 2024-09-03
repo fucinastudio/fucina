@@ -3,6 +3,7 @@ title: Welcome
 ---
 
 import { Cards, Card } from "nextra/components";
+import { Rocket } from "lucide-react";
 
 # 👋 Hey you
 
@@ -31,11 +32,11 @@ Let’s cook together an outstanding user journey for everyone that will experie
 This is your starting point to unravel the recipes of our design philosophy and create beautiful, consistent, and accessible experiences. Dive in and unlock the potential of our design system.
 
 <Cards className="mt-8">
-  <Card title="🚀 Get Started" href="/get-started" />
-  <Card title="🏠 Foundations" href="/foundations" />
-  <Card title="🔗 Tokens" href="/tokens" />
-  <Card title="💠 Components" href="/components" />
-  <Card title="✍️ Content" href="/content" />
+  <Card icon={<span>🚀</span>} title="Get Started" href="/get-started" />
+  <Card icon={<span>🏠</span>} title="Foundations" href="/foundations" />
+  <Card icon={<span>🔗</span>} title="Tokens" href="/tokens" />
+  <Card icon={<span>💠</span>} title="Components" href="/components" />
+  <Card icon={<span>✍️</span>} title="Content" href="/content" />
 </Cards>
 
 ## Release

@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import { Meta, StoryObj } from "@storybook/react";
+import { action } from "@storybook/addon-actions";
 import Link from "next/link";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -43,17 +44,14 @@ const SelectForm = () => {
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
     toast("You submitted the following values:", {
-      description: (
-        <pre className="border-default bg-subtle mt-2 p-4 border rounded w-[340px]">
-          <code className="text">{JSON.stringify(data, null, 2)}</code>
-        </pre>
-      ),
+      description: JSON.stringify(data, null, 2),
     });
+    action("onSubmit")(data);
   }
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 w-2/3">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="w-2/3 space-y-6">
         <FormField
           control={form.control}
           name="email"
@@ -166,7 +164,7 @@ export const Scrollable: Story = {
 
 export const WithForm: Story = {
   render: () => (
-    <div className="gap-3 grid w-[460px]">
+    <div className="mx-auto grid w-[460px] gap-3">
       <SelectForm />
       <ToastProvider />
     </div>

@@ -71,7 +71,7 @@ const SelectScrollUpButton = React.forwardRef<
     ref={forwardedRef}
     className={cn("group flex cursor-default items-center justify-center pb-2 pt-1", className)}
     {...props}>
-    <ChevronUp className="group-hover:stroke-icon-hover shrink-0 size-4 stroke-icon" aria-hidden="true" />
+    <ChevronUp className="group-hover:stroke-icon-hover stroke-icon size-4 shrink-0" aria-hidden="true" />
   </SelectPrimitives.ScrollUpButton>
 ));
 SelectScrollUpButton.displayName = SelectPrimitives.ScrollUpButton.displayName;
@@ -84,7 +84,7 @@ const SelectScrollDownButton = React.forwardRef<
     ref={forwardedRef}
     className={cn("group flex cursor-default items-center justify-center pb-1 pt-2", className)}
     {...props}>
-    <ChevronDown className="group-hover:stroke-icon-hover shrink-0 size-4 stroke-icon" aria-hidden="true" />
+    <ChevronDown className="group-hover:stroke-icon-hover stroke-icon size-4 shrink-0" aria-hidden="true" />
   </SelectPrimitives.ScrollDownButton>
 ));
 SelectScrollDownButton.displayName = SelectPrimitives.ScrollDownButton.displayName;
@@ -181,11 +181,9 @@ const SelectItem = React.forwardRef<
         className
       )}
       {...props}>
-      <SelectPrimitives.ItemText className="flex-1 truncate">
-        {children}
-      </SelectPrimitives.ItemText>
+      <SelectPrimitives.ItemText className="flex-1 truncate">{children}</SelectPrimitives.ItemText>
       <SelectPrimitives.ItemIndicator>
-        <Check className="shrink-0 size-4 stroke-icon-brand" aria-hidden="true" />
+        <Check className="stroke-icon-brand size-4 shrink-0" aria-hidden="true" />
       </SelectPrimitives.ItemIndicator>
     </SelectPrimitives.Item>
   );

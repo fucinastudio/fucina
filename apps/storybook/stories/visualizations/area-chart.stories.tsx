@@ -132,6 +132,7 @@ const meta: Meta<typeof AreaChart> = {
   component: AreaChart,
   args: { data: chartdata, index: "date", categories: ["SolarCells", "Glass"] },
   parameters: {
+    layout: "centered",
     docs: {
       description: {
         component:
@@ -146,24 +147,35 @@ type Story = StoryObj<typeof AreaChart>;
 
 export const Default: Story = {
   render: () => (
-    <AreaChart data-testid="area-chart" data={chartdata} index="date" categories={["SolarCells", "Glass"]} />
+    <AreaChart
+      className="h-96 w-full"
+      colors={["teal", "purple"]}
+      data-testid="area-chart"
+      data={chartdata}
+      index="date"
+      categories={["SolarCells", "Glass"]}
+      enableLegendSlider
+    />
   ),
 };
 
 export const DefaultNegative: Story = {
   args: {
+    colors: ["teal", "purple"],
     categories: ["SolarCells", "Adhesive"],
   },
 };
 
 export const WithValueFormatter: Story = {
   args: {
+    colors: ["teal", "purple"],
     valueFormatter: (v) => `$${Intl.NumberFormat("us").format(v).toString()}`,
   },
 };
 
 export const WithAxisLabels: Story = {
   args: {
+    colors: ["teal", "purple"],
     xAxisLabel: "Month of Year",
     yAxisLabel: "Revenue",
   },
@@ -171,12 +183,14 @@ export const WithAxisLabels: Story = {
 
 export const WithMinValue: Story = {
   args: {
+    colors: ["teal", "purple"],
     autoMinValue: true,
   },
 };
 
 export const WithMinAndMaxValue: Story = {
   args: {
+    colors: ["teal", "purple"],
     maxValue: 5000,
     minValue: -3000,
   },
@@ -192,19 +206,22 @@ export const AllColors: Story = {
 
 export const WithLegendLeft: Story = {
   args: {
+    colors: ["teal", "purple"],
     legendPosition: "left",
   },
 };
 
 export const WithLegendCenter: Story = {
   args: {
+    colors: ["teal", "purple"],
     legendPosition: "center",
   },
 };
 
 export const WithLegendSlider: Story = {
   args: {
-    className: "max-w-md",
+    colors: ["teal", "purple"],
+    className: "max-w-md m-auto",
     data: chartdata,
     index: "date",
     categories: ["SolarCells", "Glass", "Encapsulant", "BackSheet", "Frame", "JunctionBox", "Adhesive"],
@@ -248,12 +265,14 @@ export const WithConnectNullsFalse: Story = {
 
 export const WithStartEndOnly: Story = {
   args: {
+    colors: ["teal", "purple"],
     startEndOnly: true,
   },
 };
 
 export const WithNoAxis: Story = {
   args: {
+    colors: ["teal", "purple"],
     showXAxis: false,
     showYAxis: false,
   },
@@ -261,74 +280,85 @@ export const WithNoAxis: Story = {
 
 export const WithNoGridlines: Story = {
   args: {
+    colors: ["teal", "purple"],
     showGridLines: false,
   },
 };
 
 export const WithNoLegend: Story = {
   args: {
+    colors: ["teal", "purple"],
     showLegend: false,
   },
 };
 
 export const WithNoTooltip: Story = {
   args: {
+    colors: ["teal", "purple"],
     showTooltip: false,
   },
 };
 
 export const WithOnValueChange: Story = {
   args: {
+    colors: ["teal", "purple"],
     onValueChange: (v) => console.log(v),
   },
 };
 
-export const WithTooltipCallback: Story = {
-  render: () => {
-    const [callback, setCallBack] = React.useState<TooltipProps | null>(null);
-    const [checked, setChecked] = React.useState(true);
-    return (
-      <>
-        <div className="flex items-center gap-3">
-          <Label htmlFor="a">showTooltip</Label>
-          <Switch id="a" checked={checked} onCheckedChange={setChecked} />
-        </div>
+function WithTooltipCallbackExample() {
+  const [callback, setCallBack] = React.useState<AreaChartTooltipProps | null>(null);
+  const [checked, setChecked] = React.useState(true);
+  return (
+    <>
+      <div className="flex items-center gap-3">
+        <Label htmlFor="a">showTooltip</Label>
+        <Switch id="a" checked={checked} onCheckedChange={setChecked} />
+      </div>
+      <AreaChart
+        className="h-96 w-full"
+        colors={["teal", "purple"]}
+        data={chartdata}
+        index="date"
+        categories={["SolarCells", "Glass"]}
+        tooltipCallback={(tooltipContent) => setCallBack(tooltipContent)}
+        showTooltip={checked}
+      />
+      <pre>{JSON.stringify(callback, null, 2)}</pre>
+    </>
+  );
+}
 
-        <AreaChart
-          data={chartdata}
-          index="date"
-          categories={["SolarCells", "Glass"]}
-          tooltipCallback={(cooltipContent) => setCallBack(cooltipContent)}
-          showTooltip={checked}
-        />
-        <pre>{JSON.stringify(callback, null, 2)}</pre>
-      </>
-    );
-  },
+export const WithTooltipCallback: Story = {
+  render: () => <WithTooltipCallbackExample />,
 };
 
 export const WithLargeTickGap: Story = {
   args: {
+    colors: ["teal", "purple"],
     tickGap: 300,
   },
 };
 
 export const WithTypePercent: Story = {
-  render: () => (
-    <AreaChart data={chartdata} index="date" categories={["SolarCells", "Glass"]} type="percent" />
-  ),
+  args: {
+    colors: ["teal", "purple"],
+    type: "percent",
+  },
 };
 
 export const WithTypeStacked: Story = {
-  render: () => (
-    <AreaChart data={chartdata} index="date" categories={["SolarCells", "Glass"]} type="stacked" />
-  ),
+  args: {
+    colors: ["teal", "purple"],
+    type: "stacked",
+  },
 };
 
 export const OneDataValue: Story = {
   args: {
     data: chartdata.slice(0, 1),
     index: "date",
+    colors: ["teal", "purple"],
     categories: ["SolarCells", "Glass"],
     onValueChange: (v) => console.log(v),
   },
@@ -336,17 +366,22 @@ export const OneDataValue: Story = {
 
 export const WithFillSolid: Story = {
   args: {
+    colors: ["teal", "purple"],
     fill: "solid",
   },
 };
 
 export const WithFillNone: Story = {
   args: {
+    colors: ["teal", "purple"],
     fill: "none",
   },
 };
 
 export const CustomTooltip: Story = {
+  render: (args) => (
+    <AreaChart className="h-96 w-full" colors={["teal", "purple"]} data-testid="area-chart" {...args} />
+  ),
   args: {
     categories: ["SolarCells"],
     yAxisWidth: 65,
@@ -354,14 +389,14 @@ export const CustomTooltip: Story = {
       const { payload, active, label } = props;
       if (!active || !payload || payload.length === 0) return null;
       return (
-        <div className="bg-white shadow-sm p-2 border rounded-md w-56 text-sm">
+        <div className="w-56 rounded-md border bg-white p-2 text-sm shadow-sm">
           <div className="flex flex-1 space-x-2.5">
             <div className={`bg- flex w-1.5 flex-col${payload[0].color}-500 rounded`} />
             <div className="w-full">
               <p className="font-medium text-gray-900">{label}</p>
-              <div className="flex justify-between items-center space-x-8">
-                <p className="text-right text-gray-700 whitespace-nowrap">{payload[0].category}</p>
-                <p className="text-right font-medium text-gray-900 whitespace-nowrap">{payload[0].value}</p>
+              <div className="flex items-center justify-between space-x-8">
+                <p className="whitespace-nowrap text-right text-gray-700">{payload[0].category}</p>
+                <p className="whitespace-nowrap text-right font-medium text-gray-900">{payload[0].value}</p>
               </div>
             </div>
           </div>

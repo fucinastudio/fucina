@@ -1,4 +1,3 @@
-// Import core
 import * as React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
@@ -19,6 +18,8 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
+  toast,
+  ToastProvider,
 } from "@fucina/ui";
 
 const meta: Meta<typeof Form> = {
@@ -53,11 +54,12 @@ const ProfileForm = (args: Story["args"]) => {
     },
   });
   function onSubmit(values: z.infer<typeof formSchema>) {
+    toast("Profile updated!");
     action("onSubmit")(values);
   }
   return (
     <Form {...args} {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 w-80">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="w-80 space-y-8">
         <FormField
           control={form.control}
           name="username"
@@ -79,6 +81,11 @@ const ProfileForm = (args: Story["args"]) => {
 };
 
 export const Base: Story = {
-  render: (args) => <ProfileForm {...args} />,
+  render: (args) => (
+    <>
+      <ProfileForm {...args} />
+      <ToastProvider />
+    </>
+  ),
   args: {},
 };

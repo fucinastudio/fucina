@@ -5,7 +5,7 @@ import { cn } from "@fucina/utils";
 
 const tagVariants = tv({
   base: cn(
-    "inline-flex h-6 items-center gap-1 whitespace-nowrap rounded border px-2 py-1 text-sm font-medium [&>svg]:size-4 [&>svg]:stroke-2"
+    "inline-flex h-6 items-center gap-1 whitespace-nowrap rounded border px-2 py-1 text-sm font-medium [&>svg]:size-[14px] [&>svg]:stroke-2"
   ),
   variants: {
     variant: {

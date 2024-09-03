@@ -1,16 +1,16 @@
 "use client";
 
 import { useTheme } from "next-themes";
-import { Toaster as Sonner } from "sonner";
+import { toast, Toaster } from "sonner";
 import { CircleCheckBig, TriangleAlert, OctagonX } from "lucide-react";
 
-type ToasterProps = React.ComponentProps<typeof Sonner>;
+type ToasterProps = React.ComponentProps<typeof Toaster>;
 
 const ToastProvider = ({ ...props }: ToasterProps) => {
   const { theme = "system" } = useTheme();
 
   return (
-    <Sonner
+    <Toaster
       richColors
       gap={12}
       theme={theme as ToasterProps["theme"]}
@@ -35,4 +35,4 @@ const ToastProvider = ({ ...props }: ToasterProps) => {
   );
 };
 
-export { ToastProvider };
+export { toast, ToastProvider };

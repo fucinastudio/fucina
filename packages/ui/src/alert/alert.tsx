@@ -32,10 +32,10 @@ const Alert = React.forwardRef<HTMLDivElement, AlertProps>(
         tremor-id="tremor-raw"
         {...props}>
         <div className={cn("flex items-center justify-start")}>
-          {Icon && <Icon className={cn("mr-2 size-5 shrink-0")} aria-hidden="true" />}
+          {Icon && <Icon className={cn("mr-1.5 size-5 shrink-0")} aria-hidden="true" />}
           <span className={cn("text-lg font-medium")}>{title}</span>
         </div>
-        <div className={cn("overflow-y-auto", children ? "mt-2" : "")}>{children}</div>
+        <div className={cn("overflow-y-auto", children ? "mt-1" : "")}>{children}</div>
       </div>
     );
   }

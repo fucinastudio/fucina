@@ -44,8 +44,8 @@ export const Base: Story = {
             <AvatarFallback>VC</AvatarFallback>
           </Avatar>
           <div className="space-y-1">
-            <h4 className="text-md-semibold">@nextjs</h4>
-            <p className="text-md">The React Framework – created and maintained by @vercel.</p>
+            <h4 className="text-lg font-semibold">Next JS</h4>
+            <p>The React Framework – created and maintained by @vercel.</p>
             <div className="flex items-center pt-2">
               <span className="text-description text-sm">Joined December 2021</span>
             </div>

@@ -38,7 +38,7 @@ export const Default: Story = {
   render: (...args) => (
     <AlertDialog {...args}>
       <AlertDialogTrigger asChild>
-        <Button variant="secondary">Delete account</Button>
+        <Button variant="secondary" className="mx-auto">Delete account</Button>
       </AlertDialogTrigger>
       <AlertDialogContent>
         <AlertDialogHeader>

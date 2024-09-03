@@ -6,10 +6,10 @@ const config: Pick<Config, "presets"> = {
     {
       ...sharedConfig,
       content: [
-        "./app/**/*.{js,ts,jsx,tsx}",
-        "./ui/**/*.{js,ts,jsx,tsx}",
-        "../../packages/ui/src/**/*{.js,.ts,.jsx,.tsx}",
-        "../../packages/ui/src/**/*.stories.tsx",
+        "./stories/**/*.stories.tsx",
+        "../../packages/ui/src/**/*.tsx",
+        "../../packages/visualizations/src/**/*.tsx",
+        "../../packages/utils/src/**/*.ts",
       ],
       theme: {
         extend: {

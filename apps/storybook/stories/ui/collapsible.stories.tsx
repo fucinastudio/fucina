@@ -25,9 +25,9 @@ const CollapsibleDemo = ({ open, onOpenChange, ...restArgs }: CollapsibleDemoPro
   };
 
   return (
-    <Collapsible open={isOpen} onOpenChange={handleOpenChange} className="space-y-2 w-[340px]" {...restArgs}>
-      <div className="flex justify-between items-center space-x-4 px-4">
-        <p className="text-md-semibold">@kkratterf starred 3 repositories</p>
+    <Collapsible open={isOpen} onOpenChange={handleOpenChange} className="w-[340px] space-y-2" {...restArgs}>
+      <div className="flex items-center justify-between space-x-4 px-4">
+        <p className="font-medium">@kkratterf starred 3 repositories</p>
         <CollapsibleTrigger asChild>
           <Button variant="text" icon={true}>
             <ChevronsUpDown />
@@ -35,13 +35,15 @@ const CollapsibleDemo = ({ open, onOpenChange, ...restArgs }: CollapsibleDemoPro
           </Button>
         </CollapsibleTrigger>
       </div>
-      <div className="border-default px-4 py-3 border rounded font-mono text-md">
+      <div className="border-default text-md rounded border px-4 py-3 font-mono shadow-sm">
         @design-system/foundations
       </div>
       <CollapsibleContent className="space-y-2">
-        <div className="border-default px-4 py-3 border rounded font-mono text-md">@design-system/tokens</div>
-        <div className="border-default px-4 py-3 border rounded font-mono text-md">@feely/ui</div>
-        <div className="border-default px-4 py-3 border rounded font-mono text-md">
+        <div className="border-default text-md rounded border px-4 py-3 font-mono shadow-sm">
+          @design-system/tokens
+        </div>
+        <div className="border-default text-md rounded border px-4 py-3 font-mono shadow-sm">@feely/ui</div>
+        <div className="border-default text-md rounded border px-4 py-3 font-mono shadow-sm">
           @design-system/visualizations
         </div>
       </CollapsibleContent>

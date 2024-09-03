@@ -13,6 +13,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
+  SheetBody,
 } from "@fucina/ui";
 
 const meta: Meta<typeof Sheet> = {
@@ -31,11 +32,7 @@ const meta: Meta<typeof Sheet> = {
 };
 export default meta;
 
-type SheetCustomProps = {
-  side?: "top" | "bottom" | "left" | "right";
-};
-
-type Story = StoryObj<SheetCustomProps>;
+type Story = StoryObj<typeof Sheet>;
 
 export const Default: Story = {
   render: () => (
@@ -48,37 +45,24 @@ export const Default: Story = {
           <SheetTitle>Edit profile</SheetTitle>
           <SheetDescription>Make changes to your profile here. Click save when youre done.</SheetDescription>
         </SheetHeader>
-        <div className="gap-4 grid py-4">
-          <div className="items-center gap-4 grid grid-cols-4">
-            <Label htmlFor="name" className="text-right">
-              Name
-            </Label>
+        <SheetBody className="flex w-full flex-col items-start gap-4 py-4">
+          <div className="flex w-full flex-col justify-start gap-2">
+            <Label htmlFor="name">Name</Label>
             <Input id="name" value="Michael Scott" className="col-span-3" />
           </div>
-          <div className="items-center gap-4 grid grid-cols-4">
-            <Label htmlFor="username" className="text-right">
-              Username
-            </Label>
+          <div className="flex w-full flex-col justify-start gap-2">
+            <Label htmlFor="username">Username</Label>
             <Input id="username" value="@mscott" className="col-span-3" />
           </div>
-        </div>
+        </SheetBody>
         <SheetFooter>
           <SheetClose asChild>
-            <Button type="submit">Save changes</Button>
+            <Button variant="secondary">Cancel</Button>
           </SheetClose>
+          <Button type="submit">Save changes</Button>
         </SheetFooter>
       </SheetContent>
     </Sheet>
   ),
-  argTypes: {
-    side: {
-      control: "select",
-      options: ["top", "bottom", "left", "right"],
-      description: "Define the direction in which the sheet will open",
-      table: {
-        defaultValue: { summary: "right" },
-        type: { summary: null },
-      },
-    },
-  },
+  argTypes: {},
 };

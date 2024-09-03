@@ -60,7 +60,7 @@ SheetOverlay.displayName = "SheetOverlay";
 const SheetContent = React.forwardRef<
   React.ElementRef<typeof SheetPrimitives.Content>,
   React.ComponentPropsWithoutRef<typeof SheetPrimitives.Content>
->(({ className, ...props }, forwardedRef) => {
+>(({ className, children, ...props }, forwardedRef) => {
   return (
     <SheetPortal>
       <SheetOverlay>
@@ -78,8 +78,9 @@ const SheetContent = React.forwardRef<
             focusRing,
             className
           )}
-          {...props}
-        />
+          {...props}>
+          {children}
+        </SheetPrimitives.Content>
       </SheetOverlay>
     </SheetPortal>
   );

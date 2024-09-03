@@ -41,7 +41,7 @@ const DropdownMenuSubMenuTrigger = React.forwardRef<
     {...props}>
     {children}
     <ChevronRight
-      className="stroke-icon data-[disabled]:stroke-icon-disabled ml-auto shrink-0 size-4"
+      className="stroke-icon data-[disabled]:stroke-icon-disabled ml-auto size-4 shrink-0"
       aria-hidden="true"
     />
   </DropdownMenuPrimitives.SubTrigger>
@@ -171,9 +171,9 @@ const DropdownMenuCheckboxItem = React.forwardRef<
     )}
     checked={checked}
     {...props}>
-    <span className="left-2 absolute flex justify-center items-center size-4">
+    <span className="absolute left-2 flex size-4 items-center justify-center">
       <DropdownMenuPrimitives.ItemIndicator>
-        <Check aria-hidden="true" className="text-brand shrink-0 size-full" />
+        <Check aria-hidden="true" className="text-brand size-full shrink-0" />
       </DropdownMenuPrimitives.ItemIndicator>
     </span>
     {children}
@@ -208,10 +208,10 @@ const DropdownMenuRadioItem = React.forwardRef<
       className
     )}
     {...props}>
-    <span className="left-3 absolute flex justify-center items-center size-2">
+    <span className="absolute left-3 flex size-2 items-center justify-center">
       <Circle
         aria-hidden="true"
-        className="group-data-[state=checked]/DropdownMenuRadioItem:flex group-data-[state=unchecked]/DropdownMenuRadioItem:hidden text-brand fill-current shrink-0 size-full"
+        className="text-brand size-full shrink-0 fill-current group-data-[state=checked]/DropdownMenuRadioItem:flex group-data-[state=unchecked]/DropdownMenuRadioItem:hidden"
       />
     </span>
     {children}

@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import { Meta, StoryObj } from "@storybook/react";
+import { action } from "@storybook/addon-actions";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
@@ -39,24 +40,21 @@ const FormSchema = z.object({
     }),
 });
 
-const TextareaFormDemo = (args: any) => {
+const TextareaFormDemo = (args) => {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
   });
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
     toast("You submitted the following values:", {
-      description: (
-        <pre className="border-default bg-subtle mt-2 p-4 border rounded w-[340px]">
-          <code className="text">{JSON.stringify(data, null, 2)}</code>
-        </pre>
-      ),
+      description: JSON.stringify(data, null, 2),
     });
+    action("onSubmit")(data);
   }
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-10 w-full">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="w-full space-y-10">
         <div className="space-y-6">
           <FormItem className="space-y-3">
             <FormLabel>Name</FormLabel>
@@ -132,9 +130,18 @@ export const Disabled: Story = {
   },
 };
 
+export const WithError: Story = {
+  render: (args) => <Textarea {...args} />,
+  args: {
+    ...Default.args,
+    hasError: true,
+    disabled: false,
+  },
+};
+
 export const WithText: Story = {
   render: (args) => (
-    <div className="gap-3 grid w-full">
+    <div className="grid w-full gap-3">
       <Label htmlFor="message">Bio</Label>
       <Textarea {...args} id="message" />
       <p className="text-description text-md">You can @mention other users and organizations.</p>
@@ -145,7 +152,7 @@ export const WithText: Story = {
 
 export const WithForm: Story = {
   render: (args) => (
-    <div className="gap-3 grid w-full">
+    <div className="grid w-full gap-3">
       <TextareaFormDemo {...args} />
       <ToastProvider />
     </div>

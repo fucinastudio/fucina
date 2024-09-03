@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import { Meta, StoryObj } from "@storybook/react";
+import { action } from "@storybook/addon-actions";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
@@ -35,25 +36,22 @@ const SwitchFormDemo = () => {
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
     toast("You submitted the following values:", {
-      description: (
-        <pre className="border-default bg-subtle mt-2 p-4 border rounded w-[340px]">
-          <code className="text">{JSON.stringify(data, null, 2)}</code>
-        </pre>
-      ),
+      description: JSON.stringify(data, null, 2),
     });
+    action("onSubmit")(data);
   }
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 w-full">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="w-full space-y-6">
         <div>
-          <h3 className="mb-4 text-heading-body">Email Notifications</h3>
+          <h3 className="text-heading-body mb-4">Email Notifications</h3>
           <div className="space-y-4">
             <FormField
               control={form.control}
               name="marketing_emails"
               render={({ field }) => (
-                <FormItem className="flex flex-row justify-between items-center gap-4 border-default p-4 border rounded-lg">
+                <FormItem className="border-default flex items-center justify-between gap-4 rounded-lg border p-4 shadow-sm">
                   <div className="space-y-0.5">
                     <FormLabel className="text-lg">Marketing emails</FormLabel>
                     <FormDescription>Receive emails about new products, features, and more.</FormDescription>
@@ -68,7 +66,7 @@ const SwitchFormDemo = () => {
               control={form.control}
               name="security_emails"
               render={({ field }) => (
-                <FormItem className="flex flex-row justify-between items-center gap-4 border-default p-4 border rounded-lg">
+                <FormItem className="border-default flex items-center justify-between gap-4 rounded-lg border p-4 shadow-sm">
                   <div className="space-y-0.5">
                     <FormLabel className="text-lg">Security emails</FormLabel>
                     <FormDescription>Receive emails about your account security.</FormDescription>

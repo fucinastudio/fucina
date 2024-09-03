@@ -85,3 +85,35 @@ export const Ratio3x2: Story = {
     ratio: 3 / 2,
   },
 };
+
+export const Ratio9x16: Story = {
+  render: (args) => (
+    <AspectRatio {...args}>
+      <Image
+        src="https://images.unsplash.com/photo-1576075796033-848c2a5f3696?w=800&dpr=2&q=80"
+        alt="Photo by Alvaro Pinot"
+        fill
+        className="bg-subtle rounded object-cover"
+      />
+    </AspectRatio>
+  ),
+  args: {
+    ratio: 9 / 16,
+  },
+};
+
+export const Ratio3x4: Story = {
+  render: (args) => (
+    <AspectRatio {...args}>
+      <Image
+        src="https://images.unsplash.com/photo-1576075796033-848c2a5f3696?w=800&dpr=2&q=80"
+        alt="Photo by Alvaro Pinot"
+        fill
+        className="bg-subtle rounded object-cover"
+      />
+    </AspectRatio>
+  ),
+  args: {
+    ratio: 3 / 4,
+  },
+};

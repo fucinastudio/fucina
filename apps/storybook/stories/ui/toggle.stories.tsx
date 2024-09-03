@@ -46,6 +46,18 @@ export const Default: Story = {
   },
 };
 
+export const Small: Story = {
+  render: (args) => (
+    <Toggle {...args} aria-label="Toggle bold">
+      <Bold />
+    </Toggle>
+  ),
+  args: {
+    disabled: false,
+    size: "small",
+  },
+};
+
 export const WithText: Story = {
   render: (args) => (
     <Toggle {...args} aria-label="Toggle bold">

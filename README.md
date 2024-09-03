@@ -1,3 +1,3 @@
 # Fucina
 
-Coming soon...
+Open source product foundry

@@ -50,14 +50,14 @@ export const Default: Story = {
             Make changes to your profile here. Click save when you&apos;re done.
           </DialogDescription>
         </DialogHeader>
-        <div className="gap-4 grid py-4">
-          <div className="items-center gap-4 grid grid-cols-4">
+        <div className="grid gap-4 py-4">
+          <div className="grid grid-cols-4 items-center gap-4">
             <Label htmlFor="name" className="text-right">
               Name
             </Label>
             <Input id="name" value="Michael Scott" className="col-span-3" />
           </div>
-          <div className="items-center gap-4 grid grid-cols-4">
+          <div className="grid grid-cols-4 items-center gap-4">
             <Label htmlFor="username" className="text-right">
               Username
             </Label>
@@ -65,6 +65,7 @@ export const Default: Story = {
           </div>
         </div>
         <DialogFooter>
+          <Button variant="secondary">Cancel</Button>
           <Button type="submit">Save changes</Button>
         </DialogFooter>
       </DialogContent>

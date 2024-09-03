@@ -1,7 +1,8 @@
-
 import * as React from "react";
 import { Meta, StoryObj } from "@storybook/react";
+import { action } from "@storybook/addon-actions";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { CalendarIcon } from "lucide-react";
 import { format } from "date-fns";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
@@ -28,7 +29,6 @@ import {
   ToastProvider,
   toast,
 } from "@fucina/ui";
-import { CalendarIcon } from "lucide-react";
 
 const meta: Meta<typeof Calendar> = {
   title: "Components/Calendar",
@@ -56,6 +56,7 @@ const FormSchema = z.object({
 });
 
 export const Default: Story = {
+  render: (args) => <Calendar {...args} />,
   args: {
     mode: "single",
     className: "rounded border border-default w-fit",
@@ -77,12 +78,9 @@ const ExampleCalendarForm = (args: Story["args"]) => {
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
     toast("You submitted the following values:", {
-      description: (
-        <pre className="border-default bg-subtle mt-2 p-4 border rounded w-[340px]">
-          <code className="text">{JSON.stringify(data, null, 2)}</code>
-        </pre>
-      ),
+      description: JSON.stringify(data, null, 2),
     });
+    action("onSubmit")(data);
   }
 
   return (
@@ -109,7 +107,7 @@ const ExampleCalendarForm = (args: Story["args"]) => {
                       </Button>
                     </FormControl>
                   </PopoverTrigger>
-                  <PopoverContent className="p-0 w-auto" align="start">
+                  <PopoverContent className="w-auto p-0" align="start">
                     <Calendar
                       {...args}
                       mode="single"

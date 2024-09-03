@@ -38,7 +38,7 @@ type Story = StoryObj<typeof Badge>;
 
 export const Default: Story = {
   render: (args) => (
-    <div className="sm:flex justify-items-center gap-3 grid">
+    <div className="grid justify-center gap-2 sm:flex">
       <Badge {...args}>
         <Activity />
         Active
@@ -58,7 +58,7 @@ export const Default: Story = {
 
 export const Brand: Story = {
   render: (args) => (
-    <div className="sm:flex justify-items-center gap-3 grid">
+    <div className="grid justify-center gap-2 sm:flex">
       <Badge {...args}>
         <Info />
         Information
@@ -78,7 +78,7 @@ export const Brand: Story = {
 
 export const Danger: Story = {
   render: (args) => (
-    <div className="sm:flex justify-items-center gap-3 grid">
+    <div className="grid justify-center gap-2 sm:flex">
       <Badge {...args}>
         <XCircle />
         Error
@@ -98,7 +98,7 @@ export const Danger: Story = {
 
 export const Warning: Story = {
   render: (args) => (
-    <div className="sm:flex justify-items-center gap-3 grid">
+    <div className="grid justify-center gap-2 sm:flex">
       <Badge {...args}>
         <AlertTriangle />
         Caution

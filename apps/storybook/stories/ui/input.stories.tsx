@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import { Meta, StoryObj } from "@storybook/react";
+import { action } from "@storybook/addon-actions";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
@@ -32,7 +33,7 @@ const FormSchema = z.object({
   }),
 });
 
-const InputFormDemo = (args: any) => {
+const InputFormDemo = (args) => {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
@@ -42,17 +43,14 @@ const InputFormDemo = (args: any) => {
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
     toast("You submitted the following values:", {
-      description: (
-        <pre className="border-default bg-subtle mt-2 p-4 border rounded w-[340px]">
-          <code className="text">{JSON.stringify(data, null, 2)}</code>
-        </pre>
-      ),
+      description: JSON.stringify(data, null, 2),
     });
+    action("onSubmit")(data);
   }
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 w-[340px]">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="w-[340px] space-y-6">
         <FormField
           control={form.control}
           name="username"
@@ -80,7 +78,7 @@ const meta: Meta<typeof Input> = {
   argTypes: {
     type: {
       control: "select",
-      options: ["text", "password", "email", "number", "date", "time", "url", "search", "tel", "file"],
+      options: ["text", "password", "email", "number", "url", "search", "tel", "file"],
       description: "Define how the input element behaves and appears in the form.",
       table: {
         defaultValue: { summary: "text" },
@@ -121,6 +119,29 @@ export const Default: Story = {
   },
 };
 
+export const Password: Story = {
+  render: (args) => <Input {...args} className="w-[340px]" />,
+  args: {
+    type: "password",
+    disabled: false,
+  },
+};
+
+export const Search: Story = {
+  render: (args) => <Input {...args} className="w-[340px]" />,
+  args: {
+    type: "search",
+    disabled: false,
+  },
+};
+
+export const Number: Story = {
+  render: (args) => <Input {...args} className="w-[340px]" />,
+  args: {
+    type: "number",
+    disabled: false,
+  },
+};
 export const File: Story = {
   render: (args) => <Input {...args} className="w-[340px]" />,
   args: {
@@ -134,9 +155,14 @@ export const Disabled: Story = {
   args: { ...Default.args, disabled: true },
 };
 
+export const WithError: Story = {
+  render: (args) => <Input hasError {...args} className="w-[340px]" />,
+  args: { ...Default.args, disabled: false },
+};
+
 export const WithLabel: Story = {
   render: (args) => (
-    <div className="items-center gap-2 grid w-[340px] max-w-sm">
+    <div className="grid w-[340px] max-w-sm items-center gap-2">
       <Label htmlFor="email">{args.placeholder}</Label>
       <Input {...args} id="email" />
     </div>
@@ -146,7 +172,7 @@ export const WithLabel: Story = {
 
 export const WithButton: Story = {
   render: (args) => (
-    <div className="flex items-center space-x-2 w-[340px] max-w-sm">
+    <div className="flex w-[340px] max-w-sm items-center space-x-2">
       <Input {...args} />
       <Button type="submit">Subscribe</Button>
     </div>
@@ -156,7 +182,7 @@ export const WithButton: Story = {
 
 export const WithForm: Story = {
   render: (args) => (
-    <div className="gap-3 grid w-full">
+    <div className="mx-auto grid gap-3">
       <InputFormDemo {...args} />
       <ToastProvider />
     </div>

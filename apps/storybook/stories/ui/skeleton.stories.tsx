@@ -1,4 +1,3 @@
-
 import * as React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
@@ -33,7 +32,7 @@ type Story = StoryObj<typeof Skeleton>;
 
 export const Circle: Story = {
   render: (args) => (
-    <div className="flex justify-center items-center w-[320px] h-24">
+    <div className="flex h-24 w-80 items-center justify-center">
       <Skeleton {...args} />
     </div>
   ),
@@ -44,7 +43,7 @@ export const Circle: Story = {
 
 export const Line: Story = {
   render: (args) => (
-    <div className="flex justify-center items-center w-[320px] h-24">
+    <div className="flex h-24 w-80 items-center justify-center">
       <Skeleton {...args} />
     </div>
   ),
@@ -55,12 +54,12 @@ export const Line: Story = {
 
 export const WithCard: Story = {
   render: () => (
-    <Card>
+    <Card className="mx-auto max-w-96">
       <div className="flex items-center space-x-4">
         <Skeleton shape="circle" />
         <div className="space-y-2">
-          <Skeleton shape="line" className="w-[250px]" />
-          <Skeleton shape="line" className="w-[200px]" />
+          <Skeleton shape="line" className="w-60" />
+          <Skeleton shape="line" className="w-48" />
         </div>
       </div>
     </Card>

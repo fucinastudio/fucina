@@ -2,7 +2,7 @@ import { create } from "@storybook/theming/create";
 
 export default create({
   base: "dark",
-  brandTitle: "fucina.studio",
-  brandUrl: "https://fucina.studio",
+  brandTitle: "🔥 Fucina",
+  brandUrl: "https://github.com/fucinastudio/fucina",
   brandTarget: "_self",
 });

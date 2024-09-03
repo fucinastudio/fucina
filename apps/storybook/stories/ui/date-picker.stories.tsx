@@ -15,12 +15,12 @@ const DatePickerDemo = () => {
       <PopoverTrigger asChild>
         <Button
           variant={"secondary"}
-          className={cn("w-72 justify-start text-left font-normal", !date && "text-description")}>
-          <CalendarIcon />
+          className={cn("w-60 justify-start gap-1.5 text-left font-normal", !date && "text-placeholder")}>
+          <CalendarIcon className="stroke-icon size-4 !stroke-2" />
           {date ? format(date, "PPP") : <span>Pick a date</span>}
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="p-0 w-auto">
+      <PopoverContent align="start" className="w-auto p-0">
         <Calendar mode="single" selected={date} onSelect={setDate} initialFocus />
       </PopoverContent>
     </Popover>
@@ -40,8 +40,8 @@ const DatePickerWithRange = ({ className }: React.HTMLAttributes<HTMLDivElement>
           <Button
             id="date"
             variant={"secondary"}
-            className={cn("w-[320px] justify-start text-left font-normal", !date && "text-description")}>
-            <CalendarIcon />
+            className={cn("w-72 justify-start gap-1.5 text-left font-normal", !date && "text-description")}>
+            <CalendarIcon className="stroke-icon size-4 !stroke-2" />
             {date?.from ? (
               date.to ? (
                 <>
@@ -55,7 +55,7 @@ const DatePickerWithRange = ({ className }: React.HTMLAttributes<HTMLDivElement>
             )}
           </Button>
         </PopoverTrigger>
-        <PopoverContent className="p-0 w-auto" align="start">
+        <PopoverContent className="w-auto p-0" align="start">
           <Calendar
             initialFocus
             mode="range"

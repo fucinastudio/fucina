@@ -11,18 +11,7 @@ const meta: Meta<typeof Tag> = {
   argTypes: {
     variant: {
       control: "select",
-      options: [
-        "brand",
-        "neutral",
-        "red",
-        "amber",
-        "emerald",
-        "teal",
-        "cyan",
-        "blue",
-        "purple",
-        "pink",
-      ],
+      options: ["brand", "neutral", "red", "amber", "emerald", "teal", "cyan", "blue", "purple", "pink"],
       description: "Define the color of message communicated by the badge",
       table: {
         defaultValue: { summary: "blue" },

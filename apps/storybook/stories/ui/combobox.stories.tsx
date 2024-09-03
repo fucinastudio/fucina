@@ -54,28 +54,35 @@ const Combobox = () => {
           variant="secondary"
           role="combobox"
           aria-expanded={open}
-          className="justify-between w-[240px]">
+          className={cn(
+            "placeholder:text-placeholder w-[240px] justify-between font-normal",
+            value ? frameworks.find((framework) => framework.value === value)?.label : "text-placeholder"
+          )}>
           {value ? frameworks.find((framework) => framework.value === value)?.label : "Select framework..."}
-          <ChevronsUpDown className="opacity-disabled ml-2 shrink-0" />
+          <ChevronsUpDown className="stroke-icon ml-2 size-4 shrink-0 !stroke-2" />
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="p-0 w-[240px]">
+      <PopoverContent className="w-[240px] p-0">
         <Command>
           <CommandInput placeholder="Search framework..." />
           <CommandEmpty>No framework found.</CommandEmpty>
           <CommandGroup>
             {frameworks.map((framework) => (
               <CommandItem
+                className="flex items-center justify-between gap-2"
                 key={framework.value}
                 value={framework.value}
                 onSelect={(currentValue) => {
                   setValue(currentValue === value ? "" : currentValue);
                   setOpen(false);
                 }}>
+                <span className={cn(value === framework.value ? "text-brand" : "")}>{framework.label}</span>
                 <Check
-                  className={cn("mr-2", value === framework.value ? "opacity-visible" : "opacity-invisible")}
+                  className={cn(
+                    "stroke-icon-brand ml-2 size-4",
+                    value === framework.value ? "opacity-100" : "opacity-0"
+                  )}
                 />
-                {framework.label}
               </CommandItem>
             ))}
           </CommandGroup>

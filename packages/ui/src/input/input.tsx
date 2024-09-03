@@ -77,7 +77,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
               // base
               "pointer-events-none absolute bottom-0 left-3 flex h-full items-center justify-center"
             )}>
-            <Search className="shrink-0 size-4 stroke-icon" aria-hidden="true" />
+            <Search className="stroke-icon size-4 shrink-0" aria-hidden="true" />
           </div>
         )}
         {isPassword && (
@@ -95,9 +95,9 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
               }}>
               <span className="sr-only">{typeState === "password" ? "Show password" : "Hide password"}</span>
               {typeState === "password" ? (
-                <Eye aria-hidden="true" className="stroke-icon hover:stroke-icon-hover shrink-0 size-4" />
+                <Eye aria-hidden="true" className="stroke-icon hover:stroke-icon-hover size-4 shrink-0" />
               ) : (
-                <EyeOff aria-hidden="true" className="stroke-icon hover:stroke-icon-hover shrink-0 size-4" />
+                <EyeOff aria-hidden="true" className="stroke-icon hover:stroke-icon-hover size-4 shrink-0" />
               )}
             </button>
           </div>

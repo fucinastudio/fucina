@@ -148,5 +148,5 @@ export {
   AlertDialogTitle,
   AlertDialogTrigger,
   AlertDialogAction,
-  AlertDialogCancel
+  AlertDialogCancel,
 };

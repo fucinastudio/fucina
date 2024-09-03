@@ -1,5 +1,3 @@
-// Tremor Raw Button [v0.1.1]
-
 import React from "react";
 import { Slot } from "@radix-ui/react-slot";
 import { LoaderCircle } from "lucide-react";
@@ -10,7 +8,7 @@ import { cn, focusRing } from "@fucina/utils";
 const buttonVariants = tv({
   base: [
     // base
-    "relative inline-flex  items-center justify-center whitespace-nowrap rounded border py-1 text-center font-medium shadow-sm transition-all duration-100 ease-in-out",
+    "relative flex items-center justify-center whitespace-nowrap [&>svg]:stroke-[2.5px] [&>svg]:size-4 gap-1 rounded border text-center font-medium shadow-sm transition-all duration-100 ease-in-out",
     // disabled
     "disabled:pointer-events-none disabled:shadow-none",
     // focus
@@ -143,8 +141,8 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         disabled={disabled || isLoading}
         {...props}>
         {isLoading ? (
-          <span className="flex justify-center items-center gap-1 pointer-events-none shrink-0">
-            <LoaderCircle className="animate-spin shrink-0 size-4" aria-hidden="true" />
+          <span className="pointer-events-none flex shrink-0 items-center justify-center gap-1">
+            <LoaderCircle className="size-4 shrink-0 animate-spin" aria-hidden="true" />
             {!icon && <span className="sr-only">{loadingText ? loadingText : "Loading"}</span>}
             {!icon && (loadingText ? loadingText : children)}
           </span>

@@ -8,6 +8,7 @@ const config: Pick<Config, "presets"> = {
       content: [
         "./pages/**/*.{js,ts,jsx,tsx,mdx}",
         "./components/**/*.{js,ts,jsx,tsx,mdx}",
+        "./theme.config.jsx",
         "../../packages/ui/src/**/*{.js,.ts,.jsx,.tsx}",
         "../../packages/visualizations/src/**/*{.js,.ts,.jsx,.tsx}",
         "../../packages/utils/src/**/*{.js,.ts,.jsx,.tsx}",

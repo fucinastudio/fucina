@@ -8,7 +8,7 @@ import "../styles/globals.css";
 const preview: Preview = {
   decorators: [
     (Story: any) => (
-      <div className="bg-background font-sans text">
+      <div className="flex justify-center items-center bg-background w-full font-sans text">
         <Story />
       </div>
     ),
@@ -22,7 +22,7 @@ const preview: Preview = {
   ],
   parameters: {
     backgrounds: {
-      disable: true,
+      disable: false,
     },
     nextjs: {
       appDirectory: true,

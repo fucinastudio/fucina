@@ -56,19 +56,19 @@ const notifications = [
 
 export const WithForm: Story = {
   render: (args) => (
-    <Card {...args} className="w-[340px]">
+    <Card {...args} className="w-[380px]">
       <div className="flex flex-col justify-center gap-1 pb-6">
         <h1 className="text-heading-subsection">Create project</h1>
         <p className="text-description">Deploy your new project in one-click.</p>
       </div>
       <div>
         <form>
-          <div className="items-center gap-4 grid w-full">
-            <div className="flex flex-col space-y-2">
+          <div className="flex w-full flex-col items-center justify-center gap-4">
+            <div className="flex w-full flex-col space-y-2">
               <Label htmlFor="name">Name</Label>
               <Input id="name" placeholder="Name of your project" />
             </div>
-            <div className="flex flex-col space-y-2">
+            <div className="flex w-full flex-col space-y-2">
               <Label htmlFor="framework">Framework</Label>
               <Select>
                 <SelectTrigger id="framework">
@@ -85,7 +85,7 @@ export const WithForm: Story = {
           </div>
         </form>
       </div>
-      <div className="flex justify-end items-center gap-2 pt-6">
+      <div className="flex items-center justify-end gap-2 pt-6">
         <Button variant="secondary">Cancel</Button>
         <Button>Deploy</Button>
       </div>
@@ -96,13 +96,13 @@ export const WithForm: Story = {
 
 export const WithMapping: Story = {
   render: (args) => (
-    <Card className="w-[420px]" {...args}>
+    <Card className="w-[380px]" {...args}>
       <div className="flex flex-col justify-center gap-1 pb-6">
         <h1 className="text-heading-subsection">Create project</h1>
         <p className="text-description">Deploy your new project in one-click.</p>
       </div>
-      <div className="gap-4 grid">
-        <div className="flex items-center space-x-4 border-default p-4 border rounded">
+      <div className="grid gap-4">
+        <div className="border-default flex items-center space-x-4 rounded border p-4">
           <BellRing />
           <div className="flex-1 space-y-1">
             <p className="text-md-medium leading-none">Push Notifications</p>
@@ -112,8 +112,8 @@ export const WithMapping: Story = {
         </div>
         <div className="p-4">
           {notifications.map((notification, index) => (
-            <div key={index} className="items-start grid grid-cols-[25px_1fr] mb-2 last:mb-0 pb-4 last:pb-0">
-              <span className="flex bg-brand rounded-full translate-y-1 size-2" />
+            <div key={index} className="mb-2 grid grid-cols-[25px_1fr] items-start pb-4 last:mb-0 last:pb-0">
+              <span className="bg-brand flex size-2 translate-y-1 rounded-full" />
               <div className="space-y-1">
                 <p className="text-md-medium leading-none">{notification.title}</p>
                 <p className="text-description text-md">{notification.description}</p>
@@ -122,7 +122,7 @@ export const WithMapping: Story = {
           ))}
         </div>
       </div>
-      <div className="pt-6 w-full">
+      <div className="w-full pt-6">
         <Button className="w-full">
           <Check /> Mark all as read
         </Button>

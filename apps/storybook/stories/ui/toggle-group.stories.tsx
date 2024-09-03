@@ -64,6 +64,26 @@ export const Default: Story = {
   },
 };
 
+export const Small: Story = {
+  render: (args) => (
+    <ToggleGroup {...args}>
+      <ToggleGroupItem value="a">
+        <Bold />
+      </ToggleGroupItem>
+      <ToggleGroupItem value="b">
+        <Italic />
+      </ToggleGroupItem>
+      <ToggleGroupItem value="c">
+        <Underline />
+      </ToggleGroupItem>
+    </ToggleGroup>
+  ),
+  args: {
+    type: "multiple",
+    size: "small",
+  },
+};
+
 export const Single: Story = {
   render: (args) => (
     <ToggleGroup {...args}>

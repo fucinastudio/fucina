@@ -26,9 +26,9 @@ type Story = StoryObj<typeof ScrollArea>;
 
 export const Default: Story = {
   render: (args) => (
-    <ScrollArea {...args} className="border-default border rounded w-48 h-40">
+    <ScrollArea {...args} className="border-default h-72 w-56 rounded border">
       <div className="p-4">
-        <h4 className="mb-4 text-md-medium leading-none">Tags</h4>
+        <h4 className="text-md mb-4 font-medium leading-none">Tags</h4>
         {Array.from({ length: 50 })
           .map((_, i, a) => `v1.2.0-beta.${a.length - i}`)
           .map((tag) => (
@@ -67,21 +67,21 @@ const works: Artwork[] = [
 
 export const Horizontal: Story = {
   render: (args) => (
-    <ScrollArea {...args} className="border-default border rounded w-96 whitespace-nowrap">
-      <div className="flex space-x-4 p-4 w-max">
+    <ScrollArea {...args} className="border-default w-96 whitespace-nowrap rounded border">
+      <div className="flex w-max space-x-4 p-4">
         {works.map((artwork) => (
           <figure key={artwork.artist} className="shrink-0">
-            <div className="rounded overflow-hidden">
+            <div className="overflow-hidden rounded">
               <Image
                 src={artwork.art}
                 alt={`Photo by ${artwork.artist}`}
-                className="aspect-[3/4] object-cover size-fit"
+                className="aspect-[3/4] size-fit object-cover"
                 width={300}
                 height={400}
               />
             </div>
-            <figcaption className="pt-2 text-description text-sm">
-              Photo by <span className="font-semibold text">{artwork.artist}</span>
+            <figcaption className="text-description pt-2 text-sm">
+              Photo by <span className="text font-semibold">{artwork.artist}</span>
             </figcaption>
           </figure>
         ))}

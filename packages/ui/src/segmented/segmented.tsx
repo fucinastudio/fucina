@@ -27,7 +27,7 @@ const SegmentedTrigger = React.forwardRef<
   <TabsPrimitive.Trigger
     ref={ref}
     className={cn(
-      "text-description gap-1 hover:text data-[state=active]:text data-[state=active]:bg-item disabled:text-disabled disabled:stroke-icon-disabled flex h-full items-center justify-center whitespace-nowrap rounded-sm px-3 py-1 font-medium transition-all disabled:pointer-events-none disabled:shadow-none data-[state=active]:shadow-sm [&>svg]:size-4",
+      "text-description hover:text data-[state=active]:text data-[state=active]:bg-item disabled:text-disabled disabled:stroke-icon-disabled flex h-full items-center justify-center gap-1 whitespace-nowrap rounded-sm px-3 py-1 font-medium transition-all disabled:pointer-events-none disabled:shadow-none data-[state=active]:shadow-sm [&>svg]:size-4",
       focusRing,
       className
     )}

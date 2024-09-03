@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
+import { action } from "@storybook/addon-actions";
 import Link from "next/link";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -68,12 +69,9 @@ const CheckboxReactHookFormSingle = () => {
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
     toast("You submitted the following values:", {
-      description: (
-        <pre className="border-default bg-subtle mt-2 p-4 border rounded w-[340px]">
-          <code className="text">{JSON.stringify(data, null, 2)}</code>
-        </pre>
-      ),
+      description: JSON.stringify(data, null, 2),
     });
+    action("onSubmit")(data);
   }
 
   return (
@@ -83,7 +81,7 @@ const CheckboxReactHookFormSingle = () => {
           control={form.control}
           name="mobile"
           render={({ field }) => (
-            <FormItem className="flex flex-row items-start space-x-3 space-y-0 border-default p-4 border rounded">
+            <FormItem className="border-default flex flex-row items-start space-x-3 space-y-0 rounded border p-4">
               <FormControl>
                 <Checkbox checked={field.value} onCheckedChange={field.onChange} />
               </FormControl>
@@ -119,17 +117,14 @@ const CheckboxReactHookFormMultiple = () => {
 
   function onSubmit(data: z.infer<typeof FormSchemaMultiple>) {
     toast("You submitted the following values:", {
-      description: (
-        <pre className="border-default bg-subtle mt-2 p-4 border rounded w-[340px]">
-          <code className="text">{JSON.stringify(data, null, 2)}</code>
-        </pre>
-      ),
+      description: JSON.stringify(data, null, 2),
     });
+    action("onSubmit")(data);
   }
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="m-auto space-y-8">
         <FormField
           control={form.control}
           name="items"
@@ -215,6 +210,11 @@ export const Default: Story = {
   },
 };
 
+export const Indeterminate: Story = {
+  render: (args) => <Checkbox checked="indeterminate" id="terms-disabled" {...args} />,
+  args: {},
+};
+
 export const Disabled: Story = {
   render: (args) => <Checkbox id="terms-disabled" {...args} />,
   args: {
@@ -236,7 +236,7 @@ export const WithLabel: Story = {
 
 export const WithFormSingle: Story = {
   render: (args) => (
-    <div className="gap-3 grid w-full">
+    <div className="grid w-full gap-3">
       <CheckboxReactHookFormSingle {...args} />
       <ToastProvider />
     </div>
@@ -250,7 +250,7 @@ export const WithFormSingle: Story = {
 
 export const WithFormMultiple: Story = {
   render: (args) => (
-    <div className="gap-3 grid w-full">
+    <div className="grid w-full gap-3">
       <CheckboxReactHookFormMultiple {...args} />
       <ToastProvider />
     </div>

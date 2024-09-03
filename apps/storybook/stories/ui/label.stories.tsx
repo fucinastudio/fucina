@@ -56,7 +56,7 @@ export const WithCheckbox: Story = {
 
 export const WithInput: Story = {
   render: (args) => (
-    <div className="items-center gap-3 grid w-[320px] max-w-sm">
+    <div className="grid w-[320px] max-w-sm items-center gap-3">
       <Label htmlFor={args.htmlFor}>{args.label}</Label>
       <Input type="email" id={args.htmlFor} placeholder="Email" />
     </div>
@@ -69,7 +69,7 @@ export const WithInput: Story = {
 
 export const WithTextarea: Story = {
   render: (args) => (
-    <div className="gap-3 grid w-[320px]">
+    <div className="grid w-[320px] gap-3">
       <Label htmlFor={args.htmlFor}>{args.label}</Label>
       <Textarea placeholder="Once upon a time..." id={args.htmlFor} />
     </div>

@@ -1,4 +1,3 @@
-
 import * as React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 
@@ -39,7 +38,7 @@ type Story = StoryObj<typeof ContextMenu>;
 export const Default: Story = {
   render: (args) => (
     <ContextMenu {...args}>
-      <ContextMenuTrigger className="flex justify-center items-center border-default border border-dashed rounded w-[320px] h-[160px] text-md">
+      <ContextMenuTrigger className="border-default text-md flex h-[160px] w-[320px] items-center justify-center rounded-lg border border-dashed">
         Right click here
       </ContextMenuTrigger>
       <ContextMenuContent className="w-64">

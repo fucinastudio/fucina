@@ -52,7 +52,7 @@ type Story = StoryObj<typeof Accordion>;
 
 export const Single: Story = {
   render: (args) => (
-    <Accordion {...args}>
+    <Accordion {...args} className="w-full">
       <AccordionItem value="item-1">
         <AccordionTrigger>Is it accessible?</AccordionTrigger>
         <AccordionContent>Yes. It adheres to the WAI-ARIA design pattern.</AccordionContent>
@@ -78,7 +78,7 @@ export const Single: Story = {
 
 export const Multiple: Story = {
   render: (args) => (
-    <Accordion {...args}>
+    <Accordion {...args} className="w-full">
       <AccordionItem value="item-1">
         <AccordionTrigger>Is it accessible?</AccordionTrigger>
         <AccordionContent>Yes. It adheres to the WAI-ARIA design pattern.</AccordionContent>
@@ -102,7 +102,7 @@ export const Multiple: Story = {
 
 export const Collapsible: Story = {
   render: (args) => (
-    <Accordion {...args}>
+    <Accordion {...args} className="w-full">
       <AccordionItem value="item-1">
         <AccordionTrigger>Is it accessible?</AccordionTrigger>
         <AccordionContent>Yes. It adheres to the WAI-ARIA design pattern.</AccordionContent>
@@ -127,7 +127,7 @@ export const Collapsible: Story = {
 
 export const DefaultValue: Story = {
   render: (args) => (
-    <Accordion {...args}>
+    <Accordion {...args} className="w-full">
       <AccordionItem value="item-1">
         <AccordionTrigger>Is it accessible?</AccordionTrigger>
         <AccordionContent>Yes. It adheres to the WAI-ARIA design pattern.</AccordionContent>

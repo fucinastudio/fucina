@@ -45,7 +45,7 @@ const RadioGroupItem = React.forwardRef<
     <RadioGroupPrimitives.Item
       ref={forwardedRef}
       className={cn(
-        "group rounded-full relative flex size-4 appearance-none items-center justify-center outline-none",
+        "group relative flex size-4 appearance-none items-center justify-center rounded-full outline-none",
         focusRing,
         className
         
@@ -60,7 +60,7 @@ const RadioGroupItem = React.forwardRef<
           // background color
           "bg-item",
           // checked
-          "group-data-[state=checked]:border-0 group-data-[state=checked]:border-transparent group-data-[state=checked]:bg-brand",
+          "group-data-[state=checked]:bg-brand group-data-[state=checked]:border-0 group-data-[state=checked]:border-transparent",
           // disabled
           "group-data-[disabled]:border",
           "group-data-[disabled]:border-disabled group-data-[disabled]:bg-neutral-disabled group-data-[disabled]:text-disabled",

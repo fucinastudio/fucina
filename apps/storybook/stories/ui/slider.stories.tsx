@@ -84,7 +84,7 @@ type Story = StoryObj<typeof Slider>;
 
 export const Default: Story = {
   render: (args) => (
-    <div className="flex justify-items-center items-center p-10 w-full h-40">
+    <div className="flex h-40 w-full items-center justify-items-center p-10">
       <Slider {...args} />
     </div>
   ),
@@ -100,7 +100,7 @@ export const Default: Story = {
 
 export const Range: Story = {
   render: (args) => (
-    <div className="flex justify-items-center items-center p-10 w-full h-40">
+    <div className="flex h-40 w-full items-center justify-items-center p-10">
       <Slider {...args} />
     </div>
   ),
@@ -116,7 +116,7 @@ export const Range: Story = {
 
 export const StepSize: Story = {
   render: (args) => (
-    <div className="flex justify-items-center items-center p-10 w-full h-40">
+    <div className="flex h-40 w-full items-center justify-items-center p-10">
       <Slider {...args} />
     </div>
   ),
@@ -132,7 +132,7 @@ export const StepSize: Story = {
 
 export const PreventThumbOverlap: Story = {
   render: (args) => (
-    <div className="flex justify-items-center items-center p-10 w-full h-40">
+    <div className="flex h-40 w-full items-center justify-items-center p-10">
       <Slider {...args} />
     </div>
   ),

@@ -25,6 +25,15 @@ const meta: Meta<typeof Button> = {
         type: { summary: null },
       },
     },
+    size: {
+      control: "select",
+      options: ["default", "small"],
+      description: "Define the size of the button",
+      table: {
+        defaultValue: { summary: "primary" },
+        type: { summary: null },
+      },
+    },
     icon: {
       control: "boolean",
       description: "Display an icon button",
@@ -32,6 +41,11 @@ const meta: Meta<typeof Button> = {
         defaultValue: { summary: false },
         type: { summary: null },
       },
+    },
+    isLoading: {
+      control: "boolean",
+      description:
+        "When the button is loading",
     },
     asChild: {
       control: "boolean",
@@ -64,37 +78,83 @@ export default meta;
 type Story = StoryObj<typeof Button>;
 
 export const Primary: Story = {
+  render: (args) => (
+    <Button {...args} size={args.size} variant={args.variant}>
+      {args.title}
+    </Button>
+  ),
   args: {
     title: "Primary",
     variant: "primary",
+    size: "default",
   },
 };
 
 export const Secondary: Story = {
+  render: (args) => (
+    <Button {...args} size={args.size} variant={args.variant}>
+      {args.title}
+    </Button>
+  ),
   args: {
     title: "Secondary",
     variant: "secondary",
+    size: "default",
+  },
+  argTypes: {
+    icon: { table: { disable: true } },
+    asChild: { table: { disable: true } },
   },
 };
 
 export const Text: Story = {
+  render: (args) => (
+    <Button {...args} size={args.size} variant={args.variant}>
+      {args.title}
+    </Button>
+  ),
   args: {
     title: "Text",
     variant: "text",
+    size: "default",
+  },
+  argTypes: {
+    icon: { table: { disable: true } },
+    asChild: { table: { disable: true } },
   },
 };
 
 export const Link: Story = {
+  render: (args) => (
+    <Button {...args} size={args.size} variant={args.variant}>
+      {args.title}
+    </Button>
+  ),
   args: {
     title: "Link",
     variant: "link",
+    size: "default",
+  },
+  argTypes: {
+    icon: { table: { disable: true } },
+    asChild: { table: { disable: true } },
   },
 };
 
 export const Danger: Story = {
+  render: (args) => (
+    <Button {...args} size={args.size} variant={args.variant}>
+      {args.title}
+    </Button>
+  ),
   args: {
     title: "Danger",
     variant: "danger",
+    size: "default",
+  },
+  argTypes: {
+    icon: { table: { disable: true } },
+    asChild: { table: { disable: true } },
   },
 };
 
@@ -107,6 +167,7 @@ export const WithIcon: Story = {
   ),
   args: {
     variant: "primary",
+    size: "default",
   },
   argTypes: {
     title: { table: { disable: true } },
@@ -129,6 +190,26 @@ export const Icon: Story = {
   },
   argTypes: {
     title: { table: { disable: true } },
+    asChild: { table: { disable: true } },
+  },
+};
+
+export const IsLoading: Story = {
+  render: (args) => (
+    <Button {...args} size={args.size} variant={args.variant}>
+      <DownloadIcon />
+      Download
+    </Button>
+  ),
+  args: {
+    isLoading: true,
+    loadingText: "Wait a sec...",
+    variant: "primary",
+    size: "default",
+  },
+  argTypes: {
+    title: { table: { disable: true } },
+    icon: { table: { disable: true } },
     asChild: { table: { disable: true } },
   },
 };
