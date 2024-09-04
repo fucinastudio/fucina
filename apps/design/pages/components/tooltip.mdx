@@ -3,6 +3,7 @@ title: Tooltip
 ---
 
 import { Tabs, Cards, Card } from "nextra/components";
+
 import { AccessibilityTable } from "@/components/accessibility/accessibility-table.mdx";
 import { tooltipAccessibilityData } from "@/components/accessibility/tooltip.tsx";
 import { TooltipPreview, TooltipSide } from "@/components/preview/tooltip.tsx";
@@ -17,9 +18,9 @@ A floating, non-actionable label used to explain a user interface element or fea
   </Tabs.Tab>
   <Tabs.Tab>
     ```js copy filename="tooltip.tsx"
-    import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@feely/ui/components/tooltip"
-    import { Button } from "@feely/ui/components/button"
-    import { FilePlus } from "@feely/ui/components/icon"
+    import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@fucina/ui/components/tooltip"
+    import { Button } from "@fucina/ui/components/button"
+    import { FilePlus } from "@fucina/ui/components/icon"
 
     export function TooltipDemo() {
       return (
@@ -70,9 +71,9 @@ Additionally, refrain from using Tooltips to provide instructions that are compl
   </Tabs.Tab>
   <Tabs.Tab>
     ```js copy filename="tooltip.tsx"
-    import { Tooltip } from "@feely/ui/components/tooltip"
-    import { Button } from "@feely/ui/components/button"
-    import { FilePlus } from "@feely/ui/components/icon"
+    import { Tooltip } from "@fucina/ui/components/tooltip"
+    import { Button } from "@fucina/ui/components/button"
+    import { FilePlus } from "@fucina/ui/components/icon"
 
     export function TooltipDemo() {
       return (
@@ -101,9 +102,9 @@ Additionally, refrain from using Tooltips to provide instructions that are compl
   </Tabs.Tab>
   <Tabs.Tab>
     ```js copy {13, 23, 33, 43} /side/ filename="tooltip.tsx"
-    import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@feely/ui/components/tooltip"
-    import { Button } from "@feely/ui/components/button"
-    import { FilePlus } from "@feely/ui/components/icon"
+    import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@fucina/ui/components/tooltip"
+    import { Button } from "@fucina/ui/components/button"
+    import { FilePlus } from "@fucina/ui/components/icon"
 
     export function TooltipDemo() {
       return (
@@ -163,7 +164,7 @@ Additionally, refrain from using Tooltips to provide instructions that are compl
 <Cards className="mt-8">
   <Card
     title="🤖 Storybook"
-    href="https://www.stories.feely.so/?path=/docs/components-tooltip--documentation"
+    href="https://fucina-storybook.vercel.app/?path=/docs/components-tooltip--documentation"
   />
   <Card
     title="🪄 Figma"

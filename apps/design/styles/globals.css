@@ -33,6 +33,7 @@
 }
 
 /* FIX NEXTRA */
+
 .nx-px-2 {
   @apply px-4 !important;
 }
@@ -51,6 +52,14 @@
 
 tr:is(html[class~="dark"] .even\:dark\:nx-bg-gray-600\/20):nth-child(2n) {
   background-color: transparent !important;
+}
+
+.alert-success {
+  @apply border-emerald-200 bg-emerald-50 text-emerald-800 dark:border-emerald-800 dark:bg-emerald-950 dark:text-emerald-300;
+}
+
+.patch-input > input {
+  @apply focus:border-brand focus:ring-brand-subtlest text border-item bg-item placeholder:text-placeholder disabled:border-disabled disabled:bg-neutral-disabled disabled:text-disabled h-9 w-full rounded shadow-sm focus:ring-1 !important;
 }
 
 /* TABLES FIX */
@@ -146,7 +155,7 @@ tr:is(html[class~="dark"] .even\:dark\:nx-bg-gray-600\/20):nth-child(2n) {
   @apply bg-brand h-8 w-24 rounded;
 }
 
-.cell-preview-breakpoints {
+.cell-preview-screen {
   @apply bg-brand h-8 rounded-sm;
 }
 

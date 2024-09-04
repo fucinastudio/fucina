@@ -57,6 +57,12 @@ export const ButtonIcon = () => (
   </Preview>
 );
 
+export const ButtonSize = () => (
+  <Preview>
+    <Button size="small">Small</Button>
+  </Preview>
+);
+
 export const ButtonAsChild = () => (
   <Preview>
     <Button variant="secondary" asChild>

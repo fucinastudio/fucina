@@ -35,16 +35,16 @@ const CollapsibleDemo = ({ open, onOpenChange, ...restArgs }: CollapsibleDemoPro
           </Button>
         </CollapsibleTrigger>
       </div>
-      <div className="border-default text-md rounded border px-4 py-3 font-mono shadow-sm">
-        @design-system/foundations
-      </div>
+      <div className="border-default text-md rounded border px-4 py-3 font-mono shadow-sm">@fucina/ui</div>
       <CollapsibleContent className="space-y-2">
         <div className="border-default text-md rounded border px-4 py-3 font-mono shadow-sm">
-          @design-system/tokens
+          @fucina/visualizations
         </div>
-        <div className="border-default text-md rounded border px-4 py-3 font-mono shadow-sm">@feely/ui</div>
         <div className="border-default text-md rounded border px-4 py-3 font-mono shadow-sm">
-          @design-system/visualizations
+          @fucina/tailwind
+        </div>
+        <div className="border-default text-md rounded border px-4 py-3 font-mono shadow-sm">
+          @fucina/utils
         </div>
       </CollapsibleContent>
     </Collapsible>

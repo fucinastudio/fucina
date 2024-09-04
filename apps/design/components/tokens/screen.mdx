@@ -1,4 +1,4 @@
-import breakpoints from "@/tokens/tokens";
+import screen from "@/tokens/tokens";
 
 export const TokensScreen = () => (
   <>
@@ -16,11 +16,11 @@ export const TokensScreen = () => (
           </tr>
         </thead>
         <tbody>
-          {Object.entries(breakpoints.tokens.light.breakpoint).map(([tokenName, tokenInfo]) => (
+          {Object.entries(screen.tokens.light.screen).map(([tokenName, tokenInfo]) => (
             <tr key={tokenName}>
               <td className="w-full">
                 <div className="cell-tokens-name">
-                  <code className="font-medium">breakpoint-{tokenName}</code>
+                  <code className="font-medium">screen-{tokenName}</code>
                   <div className="cell-description-tokens">{tokenInfo.description}</div>
                 </div>
               </td>
@@ -31,7 +31,7 @@ export const TokensScreen = () => (
               </td>
               <td className="hidden sm:table-cell">
                 <div
-                  className="cell-preview-breakpoints"
+                  className="cell-preview-screen"
                   style={{ width: `${parseInt(tokenInfo.value) / 4}px` }}></div>
               </td>
             </tr>

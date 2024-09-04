@@ -5,10 +5,7 @@
     "skipLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@/pages/*": ["pages/*"],
-      "@/components/*": ["components/*"],
-      "@/styles/*": ["styles/*"],
-      "@/tokens/*": ["tokens/*"]
+      "@/*": ["./*"]
     },
     "strictNullChecks": true,
     "experimentalDecorators": true,

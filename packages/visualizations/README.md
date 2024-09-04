@@ -7,5 +7,5 @@
 To install the package, run:
 
 ```bash
-bun install @fucina/visualizations
+bun add @fucina/visualizations
 ```

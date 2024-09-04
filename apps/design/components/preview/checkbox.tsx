@@ -61,11 +61,7 @@ const CheckboxReactHookFormSingle = () => {
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
     toast("You submitted the following values:", {
-      description: (
-        <pre className="border-default bg-subtle mt-2 w-[340px] rounded border p-4">
-          <code className="text">{JSON.stringify(data, null, 2)}</code>
-        </pre>
-      ),
+      description: JSON.stringify(data, null, 2),
     });
   }
 
@@ -112,11 +108,7 @@ const CheckboxReactHookFormMultiple = () => {
 
   function onSubmit(data: z.infer<typeof FormSchemaMultiple>) {
     toast("You submitted the following values:", {
-      description: (
-        <pre className="border-default bg-subtle mt-2 w-[340px] rounded border p-4">
-          <code className="text">{JSON.stringify(data, null, 2)}</code>
-        </pre>
-      ),
+      description: JSON.stringify(data, null, 2),
     });
   }
 
@@ -180,6 +172,12 @@ export const CheckboxDisabled = () => (
       <Checkbox id="terms-3" />
       <Checkbox id="terms-4" disabled />
     </div>
+  </Preview>
+);
+
+export const CheckboxIndeterminate = () => (
+  <Preview>
+    <Checkbox id="terms-1" checked="indeterminate" />
   </Preview>
 );
 

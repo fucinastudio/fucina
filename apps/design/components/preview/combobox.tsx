@@ -51,26 +51,38 @@ const ComboboxDemo = () => {
           variant="secondary"
           role="combobox"
           aria-expanded={open}
-          className="w-[240px] justify-between">
+          className={cn(
+            "placeholder:text-placeholder w-[240px] justify-between font-normal",
+            value ? frameworks.find((framework) => framework.value === value)?.label : "text-placeholder"
+          )}>
           {value ? frameworks.find((framework) => framework.value === value)?.label : "Select framework..."}
-          <ChevronsUpDown />
+          <ChevronsUpDown className="stroke-icon ml-2 size-4 shrink-0 !stroke-2" />
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-[240px] p-0">
         <Command>
-          <CommandInput placeholder="Search framework..." />
+          <CommandInput
+            placeholder="Search framework..."
+            className="!bg-item h-9 focus:!ring-0 focus:!ring-offset-0 focus:!ring-offset-transparent"
+          />
           <CommandEmpty>No framework found.</CommandEmpty>
           <CommandGroup>
             {frameworks.map((framework) => (
               <CommandItem
+                className="flex items-center justify-between gap-2"
                 key={framework.value}
                 value={framework.value}
                 onSelect={(currentValue) => {
                   setValue(currentValue === value ? "" : currentValue);
                   setOpen(false);
                 }}>
-                <Check className={cn("mr-2", value === framework.value ? "opacity-100" : "opacity-0")} />
-                {framework.label}
+                <span className={cn(value === framework.value ? "text-brand" : "")}>{framework.label}</span>
+                <Check
+                  className={cn(
+                    "stroke-icon-brand ml-2 size-4",
+                    value === framework.value ? "opacity-100" : "opacity-0"
+                  )}
+                />
               </CommandItem>
             ))}
           </CommandGroup>

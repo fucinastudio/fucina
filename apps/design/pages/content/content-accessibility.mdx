@@ -2,11 +2,11 @@
 title: Content accessibility
 ---
 
-import { Callout } from "nextra/components";
+import { Alert } from "@fucina/ui";
 
 # 🫂 Content accessibility
 
-We at **feely** give you all the tools to create **design products for everyone**. That means all the people can use your product and feel welcome, understood and valued. Here’s how.
+We at **Fucina** give you all the tools to create **design products for everyone**. That means all the people can use your product and feel welcome, understood and valued. Here’s how.
 
 ## POUR principle
 
@@ -23,49 +23,41 @@ All users will be able to **perceive the information** presented in your design 
 
 That means a large use of **empathy**. Also, keep in mind that people **will read your content on screen** - seems obvious, but sometimes it’s not. Timing, colors, size, spacing and a lot of other aspects are essential.
 
-Take care of each of them - some users can’t see or hear, have low vision or are color blind. **All the people need to have access to your content 🧡**.
+Take care of each of them - some users can’t see or hear, have low vision or are color blind. **All the people need to have access to your content 💞**.
 
-<div className="grid w-full grid-cols-1 gap-x-6 gap-y-0 sm:grid-cols-2">
-  <Callout type="info" emoji="💚">
-    **DO**<br></br>
+<div className="mt-8 grid w-full grid-cols-1 gap-x-3 gap-y-5 sm:grid-cols-2">
+  <Alert title="💚 DO" className="alert-success">
     Use captions and subtitles for videos.
-  </Callout>
-  <Callout type="error" emoji="💔">
-    **DON'T**<br></br>
+  </Alert>
+  <Alert title="💔 DON'T" variant="danger">
     Don’t publish videos without context, subtitles or saying who is talking.
-  </Callout>
-  <Callout type="info" emoji="💚">
-    **DO**<br></br>
+  </Alert>
+  <Alert title="💚 DO" className="alert-success">
     Make sure your [links are meaningful and precise](), and stand out from the text.
-  </Callout>
-  <Callout type="error" emoji="💔">
-    **DON'T**<br></br>
+  </Alert>
+  <Alert title="💔 DON'T" variant="danger">
     Avoid generic links as [click here]().
-  </Callout>
-  <Callout type="info" emoji="💚">
-    **DO**<br></br>
+  </Alert>
+  <Alert title="💚 DO" className="alert-success">
     Keep in mind that **font face, size and weight** should be nice and readable.
-  </Callout>
-  <Callout type="error" emoji="💔">
-    **DON'T**<br></br>
+  </Alert>
+  <Alert title="💔 DON'T" variant="danger">
     Avoid fonts that are cute but hard to read.
-  </Callout>
-  <Callout type="info" emoji="💚">
-    **DO**<br></br>
+  </Alert>
+  <Alert title="💚 DO" className="alert-success">
     **Be careful with the emojis** - they can add value but the sentence must be readable without them
     (example: “What a nice unicorn! 🦄”).
-  </Callout>
-  <Callout type="error" emoji="💔">
-    **DON'T**<br></br>
+  </Alert>
+  <Alert title="💔 DON'T" variant="danger">
     Do not use an emoji in place of a word (example: “What a nice 🦄!”).
-  </Callout>
+  </Alert>
 </div>
 
 ### Operable
 
 All users will be able to **operate your interface**: content must be meaningful and navigation must be simple.
 Keep in mind that the experience shouldn’t require too much effort and users should have **enough time to read** what you’re telling them.
-Use **vampa** components and follow these principles:
+Use **Fucina** components and follow these principles:
 
 - When you write your content, think about **how much time a person would take to read it** and match it with the timing on screen: is it enough?
 - Consider **splitting your content** in different paragraphs, web pages or app screens in order to be more clear
@@ -76,37 +68,31 @@ Use **vampa** components and follow these principles:
 Users need to **understand and memorize your content** easily.
 Focus people attention, keep it short and simple and, if you need to go deeper, use a meaningful **information hierarchy**.
 
-Follow **feely** do’s and dont’s to design a fully understandable product.
+Follow **Fucina** do’s and dont’s to design a fully understandable product.
 
-<div className="grid w-full grid-cols-1 gap-x-6 gap-y-0 sm:grid-cols-2">
-  <Callout type="info" emoji="💚">
-    **DO**<br></br>
+<div className="mt-8 grid w-full grid-cols-1 gap-x-3 gap-y-5 sm:grid-cols-2">
+  <Alert title="💚 DO" className="alert-success">
     Try to keep your sentences up to **20 words** long.
-  </Callout>
-  <Callout type="error" emoji="💔">
-    **DON'T**<br></br>
+  </Alert>
+  <Alert title="💔 DON'T" variant="danger">
     Do not write long sentences without using paragraphs, spacing, headers or bullet points.
-  </Callout>
-  <Callout type="info" emoji="💚">
-    **DO**<br></br>
+  </Alert>
+  <Alert title="💚 DO" className="alert-success">
     Try to always **read your content out loud**: how does it sound? Good? Some users will hear it - and even
     those who will read it, they will appreciate your effort to make it more clear.
-  </Callout>
-  <Callout type="error" emoji="💔">
-    **DON'T**<br></br>
+  </Alert>
+  <Alert title="💔 DON'T" variant="danger">
     Don’t presume that it doesn’t matter if the content is long, because people can skip it: put more effort
     so they can put none.
-  </Callout>
-  <Callout type="info" emoji="💚">
-    **DO**<br></br>
+  </Alert>
+  <Alert title="💚 DO" className="alert-success">
     **Imagine that you’re writing for a kid**, in terms of readability: [WCAG
     guidelines](https://www.w3.org/WAI/WCAG22/Understanding/reading-level.html) suggest us to aim to lower
     secondary education level - our [readability guideline](#readability) show you how.
-  </Callout>
-  <Callout type="error" emoji="💔">
-    **DON'T**<br></br>
+  </Alert>
+  <Alert title="💔 DON'T" variant="danger">
     Avoid complex words and chose simpler ones when possible.
-  </Callout>
+  </Alert>
 </div>
 
 ### Robust
@@ -117,7 +103,7 @@ Test your product to see if every aspect of your content is good for different b
 
 ## Readability
 
-We at **feely** help you write **compelling yet simple and accessible content**.
+We at **Fucina** help you write **compelling yet simple and accessible content**.
 Keep these two goals in mind. Readability plays a huge role. Your content should be accessible to people from 9 to 15 years old. And it’s **good for everyone**:
 
 - It’s easier to understand by non-native speakers
@@ -142,69 +128,59 @@ Moreover, let’s consider:
 
 Keep your sentences **up to 20 words**
 
-<div className="grid w-full grid-cols-1 gap-x-6 gap-y-0 sm:grid-cols-2">
-  <Callout type="info" emoji="💚">
-    **DO**<br></br>
+<div className="mt-8 grid w-full grid-cols-1 gap-x-3 gap-y-5 sm:grid-cols-2">
+  <Alert title="💚 DO" className="alert-success">
     We’ve being doing this for 20 years so we are trained to be your assistants. (15 words)
-  </Callout>
-  <Callout type="error" emoji="💔">
-    **DON'T**<br></br>
+  </Alert>
+  <Alert title="💔 DON'T" variant="danger">
     Our deep experience of the complex and diverse maket has granted us to be the best player in town to offer
     our clients the best assistance they need. (28 words)
-  </Callout>
+  </Alert>
 </div>
 
 #### Shorter synonym
 
 When in doubt, **chose a shorter synonym**
 
-<div className="grid w-full grid-cols-1 gap-x-6 gap-y-0 sm:grid-cols-2">
-  <Callout type="info" emoji="💚">
-    **DO**<br></br>
+<div className="mt-8 grid w-full grid-cols-1 gap-x-3 gap-y-5 sm:grid-cols-2">
+  <Alert title="💚 DO" className="alert-success">
     Use
-  </Callout>
-  <Callout type="error" emoji="💔">
-    **DON'T**<br></br>
+  </Alert>
+  <Alert title="💔 DON'T" variant="danger">
     Utilize
-  </Callout>
+  </Alert>
 </div>
 
 #### Unnecessary words
 
 **Avoid unnecessary words** and be careful with **prepositions**
 
-<div className="grid w-full grid-cols-1 gap-x-6 gap-y-0 sm:grid-cols-2">
-  <Callout type="info" emoji="💚">
-    **DO**<br></br>
+<div className="mt-8 grid w-full grid-cols-1 gap-x-3 gap-y-5 sm:grid-cols-2">
+  <Alert title="💚 DO" className="alert-success">
     Now
-  </Callout>
-  <Callout type="error" emoji="💔">
-    **DON'T**<br></br>
+  </Alert>
+  <Alert title="💔 DON'T" variant="danger">
     At the moment
-  </Callout>
-  <Callout type="info" emoji="💚">
-    **DO**<br></br>
+  </Alert>
+  <Alert title="💚 DO" className="alert-success">
     We offer you an experience
-  </Callout>
-  <Callout type="error" emoji="💔">
-    **DON'T**<br></br>
+  </Alert>
+  <Alert title="💔 DON'T" variant="danger">
     We intend to offer you an experience
-  </Callout>
+  </Alert>
 </div>
 
 #### Concrete and precise
 
 Be **concrete and precise**, avoid vague expressions: people are more and more surrounded by **“empty words”** and do not pay attention
 
-<div className="grid w-full grid-cols-1 gap-x-6 gap-y-0 sm:grid-cols-2">
-  <Callout type="info" emoji="💚">
-    **DO**<br></br>
+<div className="mt-8 grid w-full grid-cols-1 gap-x-3 gap-y-5 sm:grid-cols-2">
+  <Alert title="💚 DO" className="alert-success">
     Our product is 100% organic cotton and has a three-year warranty.
-  </Callout>
-  <Callout type="error" emoji="💔">
-    **DON'T**<br></br>
+  </Alert>
+  <Alert title="💔 DON'T" variant="danger">
     Our product is innovative, competitive, efficient, unique, reliable and has extraordinary features.
-  </Callout>
+  </Alert>
 </div>
 
 ### Use plain language
@@ -220,114 +196,95 @@ Users need to feel understood and guided. Your content must do that.
 
 **Don’t be robotic**: your content speaks as a human being
 
-<div className="grid w-full grid-cols-1 gap-x-6 gap-y-0 sm:grid-cols-2">
-  <Callout type="info" emoji="💚">
-    **DO**<br></br>
+<div className="mt-8 grid w-full grid-cols-1 gap-x-3 gap-y-5 sm:grid-cols-2">
+  <Alert title="💚 DO" className="alert-success">
     Something went wrong
-  </Callout>
-  <Callout type="error" emoji="💔">
-    **DON'T**<br></br>
+  </Alert>
+  <Alert title="💔 DON'T" variant="danger">
     Error detected
-  </Callout>
+  </Alert>
 </div>
 
 #### Active verbs
 
 **Use active verbs** and keep it conversational: active voice makes it clear who needs to do what and leave no ambiguity about who is responsible for an action.
 
-<div className="grid w-full grid-cols-1 gap-x-6 gap-y-0 sm:grid-cols-2">
-  <Callout type="info" emoji="💚">
-    **DO**<br></br>
+<div className="mt-8 grid w-full grid-cols-1 gap-x-3 gap-y-5 sm:grid-cols-2">
+  <Alert title="💚 DO" className="alert-success">
     Create a new password
-  </Callout>
-  <Callout type="error" emoji="💔">
-    **DON'T**<br></br>A new password is required
-  </Callout>
-  <Callout type="info" emoji="💚">
-    **DO**<br></br>
+  </Alert>
+  <Alert title="💔 DON'T" variant="danger">
+    A new password is required
+  </Alert>
+  <Alert title="💚 DO" className="alert-success">
     Pay now
-  </Callout>
-  <Callout type="error" emoji="💔">
-    **DON'T**<br></br>
+  </Alert>
+  <Alert title="💔 DON'T" variant="danger">
     Payment needed
-  </Callout>
+  </Alert>
 </div>
 
 #### Sentence case
 
 **Write in sentence case**. Use capital letters only for proper nouns and for the first word. That makes your content scannable and easier to read
 
-<div className="grid w-full grid-cols-1 gap-x-6 gap-y-0 sm:grid-cols-2">
-  <Callout type="info" emoji="💚">
-    **DO**<br></br>
+<div className="mt-8 grid w-full grid-cols-1 gap-x-3 gap-y-5 sm:grid-cols-2">
+  <Alert title="💚 DO" className="alert-success">
     Fill the form
-  </Callout>
-  <Callout type="error" emoji="💔">
-    **DON'T**<br></br>
+  </Alert>
+  <Alert title="💔 DON'T" variant="danger">
     Fill the Form
-  </Callout>
-  <Callout type="info" emoji="💚">
-    **DO**<br></br>
+  </Alert>
+  <Alert title="💚 DO" className="alert-success">
     How to reach new clients
-  </Callout>
-  <Callout type="error" emoji="💔">
-    **DON'T**<br></br>
+  </Alert>
+  <Alert title="💔 DON'T" variant="danger">
     How to reach New Clients
-  </Callout>
+  </Alert>
 </div>
 
 #### Simple words
 
 Always prefer simple words (they’re quite often the shorter ones too)
 
-<div className="grid w-full grid-cols-1 gap-x-6 gap-y-0 sm:grid-cols-2">
-  <Callout type="info" emoji="💚">
-    **DO**<br></br>
+<div className="mt-8 grid w-full grid-cols-1 gap-x-3 gap-y-5 sm:grid-cols-2">
+  <Alert title="💚 DO" className="alert-success">
     Help
-  </Callout>
-  <Callout type="error" emoji="💔">
-    **DON'T**<br></br>
+  </Alert>
+  <Alert title="💔 DON'T" variant="danger">
     Assistance
-  </Callout>
-  <Callout type="info" emoji="💚">
-    **DO**<br></br>
+  </Alert>
+  <Alert title="💚 DO" className="alert-success">
     Need
-  </Callout>
-  <Callout type="error" emoji="💔">
-    **DON'T**<br></br>
+  </Alert>
+  <Alert title="💔 DON'T" variant="danger">
     Necessitate
-  </Callout>
-  <Callout type="info" emoji="💚">
-    **DO**<br></br>
+  </Alert>
+  <Alert title="💚 DO" className="alert-success">
     Before
-  </Callout>
-  <Callout type="error" emoji="💔">
-    **DON'T**<br></br>
+  </Alert>
+  <Alert title="💔 DON'T" variant="danger">
     Previously
-  </Callout>
+  </Alert>
 </div>
 
 #### Nominalizations
 
 **Avoid nominalizations** (verbs that becomes nouns)
 
-<div className="grid w-full grid-cols-1 gap-x-6 gap-y-0 sm:grid-cols-2">
-  <Callout type="info" emoji="💚">
-    **DO**<br></br>
+<div className="mt-8 grid w-full grid-cols-1 gap-x-3 gap-y-5 sm:grid-cols-2">
+  <Alert title="💚 DO" className="alert-success">
     To finalize your account
-  </Callout>
-  <Callout type="error" emoji="💔">
-    **DON'T**<br></br>
+  </Alert>
+  <Alert title="💔 DON'T" variant="danger">
     In order to proceed with the finalization of your account
-  </Callout>
-  <Callout type="info" emoji="💚">
-    **DO**<br></br>
+  </Alert>
+  <Alert title="💚 DO" className="alert-success">
     Your must apply for this feature
-  </Callout>
-  <Callout type="error" emoji="💔">
-    **DON'T**<br></br>
+  </Alert>
+  <Alert title="💔 DON'T" variant="danger">
     You must make an application for this feature
-  </Callout>
+  </Alert>
 </div>
 
 #### Conversational
@@ -335,15 +292,13 @@ Always prefer simple words (they’re quite often the shorter ones too)
 **Conversational** is always better.
 Headings are part of the conversation with your audience as well. Make clear why is important for them to do the things you’re telling them to do. That’s the case you need to work with balance between keeping it short and being exhaustive at the same time.
 
-<div className="grid w-full grid-cols-1 gap-x-6 gap-y-0 sm:grid-cols-2">
-  <Callout type="info" emoji="💚">
-    **DO**<br></br>
+<div className="mt-8 grid w-full grid-cols-1 gap-x-3 gap-y-5 sm:grid-cols-2">
+  <Alert title="💚 DO" className="alert-success">
     Sign these documents to secure your account even better
-  </Callout>
-  <Callout type="error" emoji="💔">
-    **DON'T**<br></br>
+  </Alert>
+  <Alert title="💔 DON'T" variant="danger">
     Important! Signature needed
-  </Callout>
+  </Alert>
 </div>
 
 ### Organize the information
@@ -356,16 +311,14 @@ _What do they need? What do they think when using your product? What’s their e
 
 We tend to write the way we think, keeping our background and our goals in mind. We might confuse the readers because we put the key point at the end of our paragraph. Let’s **move it up front** and be clear about what we want them to do or know.
 
-<div className="grid w-full grid-cols-1 gap-x-6 gap-y-0 sm:grid-cols-2">
-  <Callout type="info" emoji="💚">
-    **DO**<br></br>
+<div className="mt-8 grid w-full grid-cols-1 gap-x-3 gap-y-5 sm:grid-cols-2">
+  <Alert title="💚 DO" className="alert-success">
     Upload your documents way sooner than the due date.
-  </Callout>
-  <Callout type="error" emoji="💔">
-    **DON'T**<br></br>
+  </Alert>
+  <Alert title="💔 DON'T" variant="danger">
     In order to avoid delays due to server overload, **you shouldn’t upload your documents too much close to
     the due date**.
-  </Callout>
+  </Alert>
 </div>
 
 #### Keep it easy to follow
@@ -374,18 +327,16 @@ People want answers and they hate loosing their time: who doesn’t?
 Let’s guide them with our content.
 Use chronological order and bullet points to better process information.
 
-<div className="grid w-full grid-cols-1 gap-x-6 gap-y-0 sm:grid-cols-2">
-  <Callout type="info" emoji="💚">
-    **DO**<br></br>
+<div className="mt-8 grid w-full grid-cols-1 gap-x-3 gap-y-5 sm:grid-cols-2">
+  <Alert title="💚 DO" className="alert-success">
     Three steps to open your bank account: 1. Upload your ID (your passport is fine!) 2. Take a picture of
     yourself 3. Fill the form with your contact information
-  </Callout>
-  <Callout type="error" emoji="💔">
-    **DON'T**<br></br>
+  </Alert>
+  <Alert title="💔 DON'T" variant="danger">
     Opening your new bank account is easy! First you need to upload and ID document (your passport is fine as
     well), then take a picture of yourself and last but not least remember to fill the form with your contact
     information.
-  </Callout>
+  </Alert>
 </div>
 
 ### Design for readers
@@ -399,49 +350,43 @@ Who’s afraid of walls of text? Everyone.
 Even if they’re small walls.
 Use headlines and spacing to provide clear content.
 
-<div className="grid w-full grid-cols-1 gap-x-6 gap-y-0 sm:grid-cols-2">
-  <Callout type="info" emoji="💚">
-    **DO**<br></br>
+<div className="mt-8 grid w-full grid-cols-1 gap-x-3 gap-y-5 sm:grid-cols-2">
+  <Alert title="💚 DO" className="alert-success">
     **Here are your examples**: - **Use headlines** They focus the attention - **Use spacing** They make
     people read better
-  </Callout>
-  <Callout type="error" emoji="💔">
-    **DON'T**<br></br>
+  </Alert>
+  <Alert title="💔 DON'T" variant="danger">
     Explaining that walls of text don’t work is useless if we don’t make examples. That’s why we are writing
     this paragraph and we are showing you how to write. Use headlines and spacing because that way it would be
     easier.
-  </Callout>
+  </Alert>
 </div>
 
 #### Use formatting wisely
 
-**Be bold** when you want to emphasize something.
-Do not [underline it]() if it's not a [link](). It confuses people.
-Use _italic_ mainly when you're quoting someone.
-CAPS LOCK IS TOO LOUD FOR LONG SENTENCES.
-**BOLD CAPS LOCK IS WAY TOO MUCH FOR EVERYTHING**.
+- **Be bold** when you want to emphasize something.
+- Do not [underline it]() if it's not a [link](). It confuses people.
+- Use _italic_ mainly when you're quoting someone.
+- CAPS LOCK IS TOO LOUD FOR LONG SENTENCES.
+- **BOLD CAPS LOCK IS WAY TOO MUCH FOR EVERYTHING**.
 
 Use these tools wisely: they are made to stand out information, keep the rhythm, make it easy to follow. If we abuse them, they won’t work anymore.
 
-<div className="grid w-full grid-cols-1 gap-x-6 gap-y-0 sm:grid-cols-2">
-  <Callout type="info" emoji="💚">
-    **DO**<br></br>
+<div className="mt-8 grid w-full grid-cols-1 gap-x-3 gap-y-5 sm:grid-cols-2">
+  <Alert title="💚 DO" className="alert-success">
     The exhibition is designed **for grownups and children** and it will be great for you to experience it
     from different points of view.
-  </Callout>
-  <Callout type="error" emoji="💔">
-    **DON'T**<br></br>
+  </Alert>
+  <Alert title="💔 DON'T" variant="danger">
     **The exhibition is designed for grownups and children** and it will be great for you **to experience it
     from different points of view**.
-  </Callout>
-  <Callout type="info" emoji="💚">
-    **DO**<br></br>
+  </Alert>
+  <Alert title="💚 DO" className="alert-success">
     HERE’S YOUR E-TICKET You just need to show it at the entrance.
-  </Callout>
-  <Callout type="error" emoji="💔">
-    **DON'T**<br></br>
+  </Alert>
+  <Alert title="💔 DON'T" variant="danger">
     HERE’S YOUR E-TICKET YOU JUST NEED TO SHOW IT AT THE ENTRANCE.
-  </Callout>
+  </Alert>
 </div>
 
 ### Readability scores
@@ -473,28 +418,24 @@ Moreover, it displays on page if the image fails to load and it’s indexed by s
 
 Always remember to keep your content conversational and be specific about the description:
 
-<div className="grid w-full grid-cols-1 gap-x-6 gap-y-0 sm:grid-cols-2">
-  <Callout type="info" emoji="💚">
-    **DO**<br></br>
+<div className="mt-8 grid w-full grid-cols-1 gap-x-3 gap-y-5 sm:grid-cols-2">
+  <Alert title="💚 DO" className="alert-success">
     Paying with xyz credit card makes it easier, you can do it in a bit like the woman in the picture is doing
-  </Callout>
-  <Callout type="error" emoji="💔">
-    **DON'T**<br></br>
+  </Alert>
+  <Alert title="💔 DON'T" variant="danger">
     Woman paying with a credit card
-  </Callout>
+  </Alert>
 </div>
 
 ### Describe and be concrete
 
 Don’t be vague and don’t fill the alt text with keywords for the search engines: alt text is indexed but it has the **main purpose to guide people**. Always write for them.
 
-<div className="grid w-full grid-cols-1 gap-x-6 gap-y-0 sm:grid-cols-2">
-  <Callout type="info" emoji="💚">
-    **DO**<br></br>
+<div className="mt-8 grid w-full grid-cols-1 gap-x-3 gap-y-5 sm:grid-cols-2">
+  <Alert title="💚 DO" className="alert-success">
     Cardless payments make your day flawless: you can use your phone like the woman in this picture
-  </Callout>
-  <Callout type="error" emoji="💔">
-    **DON'T**<br></br>
+  </Alert>
+  <Alert title="💔 DON'T" variant="danger">
     Credit card online banking cardless payments
-  </Callout>
+  </Alert>
 </div>

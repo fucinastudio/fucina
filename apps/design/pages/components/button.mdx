@@ -3,6 +3,7 @@ title: Button
 ---
 
 import { Tabs, Cards, Card } from "nextra/components";
+
 import {
   ButtonPreview,
   ButtonPrimary,
@@ -12,6 +13,7 @@ import {
   ButtonDanger,
   ButtonWithIcon,
   ButtonIcon,
+  ButtonSize,
   ButtonAsChild,
 } from "@/components/preview/button.tsx";
 
@@ -20,19 +22,18 @@ import {
 Triggers an event or action. They let users know what will happen next.
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <ButtonPreview />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy filename="button.tsx"
-    import { Button } from "@feely/ui/components/button"
+<Tabs.Tab>
+<ButtonPreview />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy filename="button.tsx"
+import { Button } from "@fucina/ui"
 
-    export function ButtonDemo() {
-        return <Button>Button</Button>
-    }
-    ```
-
-  </Tabs.Tab>
+export function ButtonDemo() {
+  return <Button>Button</Button>
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ## Usage
@@ -57,161 +58,170 @@ Avoid using Buttons for non-interactive elements, such as status indicators or b
 ### Primary
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <ButtonPrimary />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy {4} /variant="primary"/ filename="button.tsx"
-    import { Button } from "@feely/ui/components/button"
+<Tabs.Tab>
+<ButtonPrimary />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy {4} /variant="primary"/ filename="button.tsx"
+import { Button } from "@fucina/ui"
 
-    export function ButtonDemo() {
-        return <Button variant="primary">Primary</Button>
-    }
-    ```
-
-  </Tabs.Tab>
+export function ButtonDemo() {
+    return <Button variant="primary">Primary</Button>
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ### Secondary
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <ButtonSecondary />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy {4} /variant="secondary"/ filename="button.tsx"
-    import { Button } from "@feely/ui/components/button"
+<Tabs.Tab>
+<ButtonSecondary />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy {4} /variant="secondary"/ filename="button.tsx"
+import { Button } from "@fucina/ui"
 
-    export function ButtonDemo() {
-        return <Button variant="secondary">Secondary</Button>
-    }
-    ```
-
-  </Tabs.Tab>
+export function ButtonDemo() {
+  return <Button variant="secondary">Secondary</Button>
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ### Text
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <ButtonText />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy {4} /variant="text"/ filename="button.tsx"
-    import { Button } from "@feely/ui/components/button"
+<Tabs.Tab>
+<ButtonText />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy {4} /variant="text"/ filename="button.tsx"
+import { Button } from "@fucina/ui"
 
-    export function ButtonDemo() {
-        return <Button variant="text">Text</Button>
-    }
-    ```
-
-  </Tabs.Tab>
+export function ButtonDemo() {
+  return <Button variant="text">Text</Button>
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ### Link
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <ButtonLink />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy {4} /variant="link"/ filename="button.tsx"
-    import { Button } from "@feely/ui/components/button"
+<Tabs.Tab>
+<ButtonLink />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy {4} /variant="link"/ filename="button.tsx"
+import { Button } from "@fucina/ui"
 
-    export function ButtonDemo() {
-        return <Button variant="link">Link</Button>
-    }
-    ```
-
-  </Tabs.Tab>
+export function ButtonDemo() {
+  return <Button variant="link">Link</Button>
+}
+```
+ </Tabs.Tab>
 </Tabs>
 
 ### Danger
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <ButtonDanger />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy {4} /variant="danger"/ filename="button.tsx"
-    import { Button } from "@feely/ui/components/button"
+<Tabs.Tab>
+<ButtonDanger />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy {4} /variant="danger"/ filename="button.tsx"
+import { Button } from "@fucina/ui"
 
-    export function ButtonDemo() {
-        return <Button variant="danger">Danger</Button>
-    }
-    ```
-
-  </Tabs.Tab>
+export function ButtonDemo() {
+  return <Button variant="danger">Danger</Button>
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ### With Icon
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <ButtonWithIcon />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy {2,7} /Download/ filename="button.tsx"
-    import { Button } from "@feely/ui/components/button"
-    import { Download } from 'lucide-react';
+<Tabs.Tab>
+<ButtonWithIcon />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy {2,7} /Download/ filename="button.tsx"
+import { Button } from "@fucina/ui"
+import { Download } from 'lucide-react'
 
-    export function ButtonDemo() {
-        return (
-          <Button variant="primary">
-            <Download />
-            Button
-          </Button>
-        );
-    }
-    ```
-
-  </Tabs.Tab>
+export function ButtonDemo() {
+    return (
+      <Button variant="primary">
+        <Download />
+        Button
+      </Button>
+    );
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ### Icon
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <ButtonIcon />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy {6} /icon={true}/ filename="button.tsx"
-    import { Button } from "@feely/ui/components/button"
-    import { Search } from 'lucide-react';
+<Tabs.Tab>
+<ButtonIcon />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy {6} /icon={true}/ filename="button.tsx"
+import { Button } from "@fucina/ui"
+import { Search } from 'lucide-react'
 
-    export function ButtonDemo() {
-        return (
-          <Button variant="secondary" icon={true}>
-            <Search/>
-          </Button>
-        );
-    }
-    ```
+export function ButtonDemo() {
+    return (
+      <Button variant="secondary" icon={true}>
+        <Search/>
+      </Button>
+    );
+}
+```
+</Tabs.Tab>
+</Tabs>
 
-  </Tabs.Tab>
+### Size
+
+<Tabs items={['Preview', 'Code']}>
+<Tabs.Tab>
+<ButtonSize />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy {4} /size="small"/ filename="button.tsx"
+import { Button } from "@fucina/ui"
+
+export function ButtonDemo() {
+    return <Button size="small" variant="primary">Small</Button>
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ### As child
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <ButtonAsChild />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy {6} /asChild/ filename="button.tsx"
-    import { Button } from "@feely/ui/components/button"
-    import Link from "next/link"
+<Tabs.Tab>
+<ButtonAsChild />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy {6} /asChild/ filename="button.tsx"
+import { Button } from "@fucina/ui"
+import Link from "next/link"
 
-    export function ButtonDemo() {
-        return (
-          <Button variant="secondary" asChild>
-            <Link href="/login">Login</Link>
-          </Button>
-        );
-    }
-    ```
-
-  </Tabs.Tab>
+export function ButtonDemo() {
+  return (
+    <Button variant="secondary" asChild>
+      <Link href="/login">Login</Link>
+    </Button>
+  );
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ## Useful links
@@ -221,10 +231,10 @@ Avoid using Buttons for non-interactive elements, such as status indicators or b
 <Cards className="mt-8">
   <Card
     title="🤖 Storybook"
-    href="https://www.stories.feely.so/?path=/docs/components-button--documentation"
+    href="https://fucina-storybook.vercel.app/?path=/docs/components-button--documentation"
   />
   <Card
     title="🪄 Figma"
-    href="https://www.figma.com/design/Jfto7FUoU7mSpnv9uESD60/%F0%9F%9F%A0-feely---design-system?node-id=119-6&t=nua4UmG9Iu1hfUAm-1"
+    href="https://www.figma.com/design/Jfto7FUoU7mSpnv9uESD60/%F0%9F%94%A5-Fucina---Design-System?node-id=639-9194&t=djNmFHh9aJkVZtk7-1"
   />
 </Cards>

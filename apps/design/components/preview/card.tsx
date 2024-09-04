@@ -34,10 +34,10 @@ type CardProps = React.ComponentProps<typeof Card>;
 
 const CardDemo = ({ className, ...props }: CardProps) => {
   return (
-    <Card className={cn("w-[460px]", className)} {...props}>
-      <div>
-        <h3>Notifications</h3>
-        <p>You have 3 unread messages.</p>
+    <Card className={cn("w-[380px]", className)} {...props}>
+      <div className="flex flex-col justify-center gap-1 pb-6">
+        <h1 className="text-heading-subsection">Create project</h1>
+        <p className="text-description">Deploy your new project in one-click.</p>
       </div>
       <div className="grid gap-4">
         <div className="border-default flex items-center space-x-4 rounded border p-4">
@@ -60,7 +60,7 @@ const CardDemo = ({ className, ...props }: CardProps) => {
           ))}
         </div>
       </div>
-      <div>
+      <div className="w-full pt-6">
         <Button className="w-full">
           <Check /> Mark all as read
         </Button>
@@ -71,19 +71,19 @@ const CardDemo = ({ className, ...props }: CardProps) => {
 
 export const CardPreview = () => (
   <Preview>
-    <Card className="w-96">
-      <div>
-        <h3>Create project</h3>
-        <p>Deploy your new project in one-click.</p>
+    <Card className="w-[380px]">
+      <div className="flex flex-col justify-center gap-1 pb-6">
+        <h1 className="text-heading-subsection">Create project</h1>
+        <p className="text-description">Deploy your new project in one-click.</p>
       </div>
       <div>
         <form>
-          <div className="grid w-full items-center gap-4">
-            <div className="flex flex-col space-y-3">
+          <div className="flex w-full flex-col items-center justify-center gap-4">
+            <div className="flex w-full flex-col space-y-2">
               <Label htmlFor="name">Name</Label>
-              <Input id="name" placeholder="Name of your project" className="input-docs" />
+              <Input id="name" className="patch-input" placeholder="Name of your project" />
             </div>
-            <div className="flex flex-col space-y-3">
+            <div className="flex w-full flex-col space-y-2">
               <Label htmlFor="framework">Framework</Label>
               <Select>
                 <SelectTrigger id="framework">
@@ -100,7 +100,7 @@ export const CardPreview = () => (
           </div>
         </form>
       </div>
-      <div className="flex justify-between">
+      <div className="flex items-center justify-end gap-2 pt-6">
         <Button variant="secondary">Cancel</Button>
         <Button>Deploy</Button>
       </div>

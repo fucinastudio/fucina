@@ -3,6 +3,7 @@ title: Accordion
 ---
 
 import { Tabs, Cards, Card } from "nextra/components";
+
 import { AccessibilityTable } from "@/components/accessibility/accessibility-table.mdx";
 import { accordionAccessibilityData } from "@/components/accessibility/accordion";
 import {
@@ -18,45 +19,34 @@ import {
 A vertically stacked set of interactive headings that each reveal a section of content.
 
 <Tabs items={['Preview', 'Code']} className="my-8">
-  <Tabs.Tab>
-    <AccordionPreview />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy filename="accordion.tsx"
-    import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@feely/ui/components/accordion"
+<Tabs.Tab>
+<AccordionPreview />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy filename="accordion.tsx"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@fucina/ui";
 
-    export function AccordionDemo() {
-        return (
-          <Accordion type="single" collapsible className="w-full">
-            <AccordionItem value="item-1">
-              <AccordionTrigger>
-                Is it accessible?
-              </AccordionTrigger>
-              <AccordionContent>
-                Yes. It adheres to the WAI-ARIA design pattern.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-2">
-              <AccordionTrigger>
-                Is it styled?
-              </AccordionTrigger>
-              <AccordionContent>
-                Yes. It comes with default styles that matches the other components&apos; aesthetic.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-3">
-              <AccordionTrigger>
-                Is it animated?
-              </AccordionTrigger>
-              <AccordionContent>
-                Yes. It&apos;s animated by default.
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
-        )
-    }
-    ```
-
+export function AccordionDemo() {
+  return (
+    <Accordion type="single" collapsible className="w-full">
+      <AccordionItem value="item-1">
+        <AccordionTrigger>Is it accessible?</AccordionTrigger>
+        <AccordionContent>Yes. It adheres to the WAI-ARIA design pattern.</AccordionContent>
+      </AccordionItem>
+      <AccordionItem value="item-2">
+        <AccordionTrigger>Is it styled?</AccordionTrigger>
+        <AccordionContent>
+          Yes. It comes with default styles that matches the other components&apos; aesthetic.
+        </AccordionContent>
+      </AccordionItem>
+      <AccordionItem value="item-3">
+        <AccordionTrigger>Is it animated?</AccordionTrigger>
+        <AccordionContent>Yes. It&apos;s animated by default.</AccordionContent>
+      </AccordionItem>
+    </Accordion>
+  );
+}
+```
   </Tabs.Tab>
 </Tabs>
 
@@ -79,40 +69,35 @@ Accordions enhance information processing and discovery, optimizing effectivenes
 Set the `type` property to `single` to enable only one item to open at a time.
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <AccordionSingle />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy {5} /single/ filename="accordion.tsx"
-    import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@feely/ui/components/accordion"
+<Tabs.Tab>
+<AccordionSingle />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy {5} /single/ filename="accordion.tsx"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@fucina/ui"
 
-    export function AccordionDemo() {
-      return (
-        <Accordion type="single" className="w-full">
-          <AccordionItem value="item-1">
-            <AccordionTrigger>Is it accessible?</AccordionTrigger>
-            <AccordionContent>
-              Yes. It adheres to the WAI-ARIA design pattern.
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem value="item-2">
-            <AccordionTrigger>Is it styled?</AccordionTrigger>
-            <AccordionContent>
-              Yes. It comes with default styles that matches the other components&apos; aesthetic.
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem value="item-3">
-            <AccordionTrigger>Is it animated?</AccordionTrigger>
-            <AccordionContent>
-              Yes. It&apos;s animated by default.
-            </AccordionContent>
-          </AccordionItem>
-        </Accordion>
-      )
-    }
-    ```
-
-  </Tabs.Tab>
+export function AccordionDemo() {
+  return (
+    <Accordion type="single" className="w-full">
+      <AccordionItem value="item-1">
+        <AccordionTrigger>Is it accessible?</AccordionTrigger>
+        <AccordionContent>Yes. It adheres to the WAI-ARIA design pattern.</AccordionContent>
+      </AccordionItem>
+      <AccordionItem value="item-2">
+        <AccordionTrigger>Is it styled?</AccordionTrigger>
+        <AccordionContent>
+          Yes. It comes with default styles that matches the other components&apos; aesthetic.
+        </AccordionContent>
+      </AccordionItem>
+      <AccordionItem value="item-3">
+        <AccordionTrigger>Is it animated?</AccordionTrigger>
+        <AccordionContent>Yes. It&apos;s animated by default.</AccordionContent>
+      </AccordionItem>
+    </Accordion>
+  );
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ### Multiple items open at the same time
@@ -120,40 +105,39 @@ Set the `type` property to `single` to enable only one item to open at a time.
 Set the `type` prop to `multiple` to enable opening multiple items at once.
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <AccordionMultiple />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy {5} /multiple/ filename="accordion.tsx"
-    import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@feely/ui/components/accordion"
+<Tabs.Tab>
+<AccordionMultiple />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy {5} /multiple/ filename="accordion.tsx"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@fucina/ui"
 
-    export function AccordionDemo() {
-      return (
-        <Accordion type="multiple" className="w-full">
-          <AccordionItem value="item-1">
-            <AccordionTrigger>Is it accessible?</AccordionTrigger>
-            <AccordionContent>
-              Yes. It adheres to the WAI-ARIA design pattern.
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem value="item-2">
-            <AccordionTrigger>Is it styled?</AccordionTrigger>
-            <AccordionContent>
-              Yes. It comes with default styles that matches the other components&apos; aesthetic.
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem value="item-3">
-            <AccordionTrigger>Is it animated?</AccordionTrigger>
-            <AccordionContent>
-              Yes. It&apos;s animated by default.
-            </AccordionContent>
-          </AccordionItem>
-        </Accordion>
-      )
-    }
-    ```
-
-  </Tabs.Tab>
+export function AccordionDemo() {
+  return (
+    <Accordion type="multiple" className="w-full">
+      <AccordionItem value="item-1">
+        <AccordionTrigger>Is it accessible?</AccordionTrigger>
+        <AccordionContent>
+          Yes. It adheres to the WAI-ARIA design pattern.
+        </AccordionContent>
+      </AccordionItem>
+      <AccordionItem value="item-2">
+        <AccordionTrigger>Is it styled?</AccordionTrigger>
+        <AccordionContent>
+          Yes. It comes with default styles that matches the other components&apos; aesthetic.
+        </AccordionContent>
+      </AccordionItem>
+      <AccordionItem value="item-3">
+        <AccordionTrigger>Is it animated?</AccordionTrigger>
+        <AccordionContent>
+          Yes. It&apos;s animated by default.
+        </AccordionContent>
+      </AccordionItem>
+    </Accordion>
+  )
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ### Allow collapsing all items
@@ -161,40 +145,35 @@ Set the `type` prop to `multiple` to enable opening multiple items at once.
 Use the `collapsible` prop to allow all items to close.
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <AccordionCollapsible />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy {5} /collapsible/ filename="accordion.tsx"
-    import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@feely/ui/components/accordion"
+<Tabs.Tab>
+<AccordionCollapsible />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy {5} /collapsible/ filename="accordion.tsx"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@fucina/ui"
 
-    export function AccordionDemo() {
-      return (
-        <Accordion type="single" collapsible className="w-full">
-          <AccordionItem value="item-1">
-            <AccordionTrigger>Is it accessible?</AccordionTrigger>
-            <AccordionContent>
-              Yes. It adheres to the WAI-ARIA design pattern.
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem value="item-2">
-            <AccordionTrigger>Is it styled?</AccordionTrigger>
-            <AccordionContent>
-              Yes. It comes with default styles that matches the other components&apos; aesthetic.
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem value="item-3">
-            <AccordionTrigger>Is it animated?</AccordionTrigger>
-            <AccordionContent>
-              Yes. It&apos;s animated by default.
-            </AccordionContent>
-          </AccordionItem>
-        </Accordion>
-      )
-    }
-    ```
-
-  </Tabs.Tab>
+export function AccordionDemo() {
+  return (
+    <Accordion type="single" collapsible className="w-full">
+      <AccordionItem value="item-1">
+        <AccordionTrigger>Is it accessible?</AccordionTrigger>
+        <AccordionContent>Yes. It adheres to the WAI-ARIA design pattern.</AccordionContent>
+      </AccordionItem>
+      <AccordionItem value="item-2">
+        <AccordionTrigger>Is it styled?</AccordionTrigger>
+        <AccordionContent>
+          Yes. It comes with default styles that matches the other components&apos; aesthetic.
+        </AccordionContent>
+      </AccordionItem>
+      <AccordionItem value="item-3">
+        <AccordionTrigger>Is it animated?</AccordionTrigger>
+        <AccordionContent>Yes. It&apos;s animated by default.</AccordionContent>
+      </AccordionItem>
+    </Accordion>
+  );
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ### Default value
@@ -202,40 +181,35 @@ Use the `collapsible` prop to allow all items to close.
 Use the `defaultValue` prop to define the open item by default.
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <AccordionDefaultValue />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy {5} /defaultValue/ filename="accordion.tsx"
-    import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@feely/ui/components/accordion"
+<Tabs.Tab>
+<AccordionDefaultValue />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy {5} /defaultValue/ filename="accordion.tsx"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@fucina/ui"
 
-    export function AccordionDemo() {
-      return (
-        <Accordion type="single" collapsible className="w-full" defaultValue="item-2">
-          <AccordionItem value="item-1">
-            <AccordionTrigger>Is it accessible?</AccordionTrigger>
-            <AccordionContent>
-              Yes. It adheres to the WAI-ARIA design pattern.
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem value="item-2">
-            <AccordionTrigger>Is it styled?</AccordionTrigger>
-            <AccordionContent>
-              Yes. It comes with default styles that matches the other components&apos; aesthetic.
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem value="item-3">
-            <AccordionTrigger>Is it animated?</AccordionTrigger>
-            <AccordionContent>
-              Yes. It&apos;s animated by default.
-            </AccordionContent>
-          </AccordionItem>
-        </Accordion>
-      )
-    }
-    ```
-
-  </Tabs.Tab>
+export function AccordionDemo() {
+  return (
+    <Accordion type="single" collapsible className="w-full" defaultValue="item-2">
+      <AccordionItem value="item-1">
+        <AccordionTrigger>Is it accessible?</AccordionTrigger>
+        <AccordionContent>Yes. It adheres to the WAI-ARIA design pattern.</AccordionContent>
+      </AccordionItem>
+      <AccordionItem value="item-2">
+        <AccordionTrigger>Is it styled?</AccordionTrigger>
+        <AccordionContent>
+          Yes. It comes with default styles that matches the other components&apos; aesthetic.
+        </AccordionContent>
+      </AccordionItem>
+      <AccordionItem value="item-3">
+        <AccordionTrigger>Is it animated?</AccordionTrigger>
+        <AccordionContent>Yes. It&apos;s animated by default.</AccordionContent>
+      </AccordionItem>
+    </Accordion>
+  );
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ## Useful links
@@ -245,11 +219,11 @@ Use the `defaultValue` prop to define the open item by default.
 <Cards className="mt-8">
   <Card
     title="🤖 Storybook"
-    href="https://www.stories.feely.so/?path=/docs/components-accordion--documentation"
+    href="https://fucina-storybook.vercel.app/?path=/docs/components-accordion--documentation"
   />
   <Card
     title="🪄 Figma"
-    href="https://www.figma.com/design/Jfto7FUoU7mSpnv9uESD60/%F0%9F%9F%A0-feely---design-system?node-id=233-748&t=nua4UmG9Iu1hfUAm-1"
+    href="https://www.figma.com/design/Jfto7FUoU7mSpnv9uESD60/%F0%9F%94%A5-Fucina---Design-System?node-id=612-22584&t=djNmFHh9aJkVZtk7-1"
   />
   <Card
     title="🐝 API Reference"

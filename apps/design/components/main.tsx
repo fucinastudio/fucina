@@ -1,4 +1,5 @@
 import React, { ReactNode } from "react";
+
 import { sans, brand, logo } from "@/styles/fonts/font";
 
 type MainProps = {

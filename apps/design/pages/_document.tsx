@@ -1,4 +1,5 @@
 import { Html, Head, Main, NextScript } from "next/document";
+
 import { sans, brand, logo } from "@/styles/fonts/font";
 
 export default function Document() {

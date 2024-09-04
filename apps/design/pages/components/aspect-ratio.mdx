@@ -3,11 +3,14 @@ title: Aspect Ratio
 ---
 
 import { Tabs, Cards, Card } from "nextra/components";
+
 import {
   AspectRatioPreview,
   AspectRatio16x9,
   AspectRatio4x3,
   AspectRatio3x2,
+  AspectRatio9x16,
+  AspectRatio3x4,
 } from "@/components/preview/aspect-ratio.tsx";
 
 # 💠 Aspect Ratio
@@ -15,29 +18,28 @@ import {
 Displays content within a desired ratio.
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <AspectRatioPreview />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy filename="aspect-ratio.tsx"
-    import { AspectRatio } from "@feely/ui/components/aspect-ratio"
-    import Image from "next/image"
+<Tabs.Tab>
+<AspectRatioPreview />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy filename="aspect-ratio.tsx"
+import Image from "next/image"
+import { AspectRatio } from "@fucina/ui"
 
-    export function AspectRatioDemo() {
-      return (
-        <AspectRatio ratio={16 / 9} className="bg-muted">
-          <Image
-            src="https://images.unsplash.com/photo-1576075796033-848c2a5f3696?w=800&dpr=2&q=80"
-            alt="Photo by Alvaro Pinot"
-            fill
-            className="rounded object-cover"
-          />
-        </AspectRatio>
-      )
-    }
-    ```
-
-  </Tabs.Tab>
+export function AspectRatioDemo() {
+  return (
+    <AspectRatio ratio={16 / 9} className="bg-muted">
+      <Image
+        src="https://images.unsplash.com/photo-1576075796033-848c2a5f3696?w=800&dpr=2&q=80"
+        alt="Photo by Alvaro Pinot"
+        fill
+        className="rounded object-cover"
+      />
+    </AspectRatio>
+  );
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ## Usage
@@ -62,85 +64,136 @@ Avoid using the Aspect Ratio component for content that needs to dynamically fil
 ### Ratio 16/9
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <AspectRatio16x9 />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy {6} /ratio/ filename="aspect-ratio.tsx"
-    import { AspectRatio } from "@feely/ui/components/aspect-ratio"
-    import Image from "next/image"
+<Tabs.Tab>
+<AspectRatio16x9 />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy {6} /ratio/ filename="aspect-ratio.tsx"
+import Image from "next/image"
+import { AspectRatio } from "@fucina/ui"
 
-    export function AspectRatioDemo() {
-      return (
-        <AspectRatio ratio={16 / 9} className="bg-muted">
-          <Image
-            src="https://images.unsplash.com/photo-1576075796033-848c2a5f3696?w=800&dpr=2&q=80"
-            alt="Photo by Alvaro Pinot"
-            fill
-            className="rounded object-cover"
-          />
-        </AspectRatio>
-      )
-    }
-    ```
-
-  </Tabs.Tab>
+export function AspectRatioDemo() {
+  return (
+    <AspectRatio ratio={16 / 9} className="bg-muted">
+      <Image
+        src="https://images.unsplash.com/photo-1576075796033-848c2a5f3696?w=800&dpr=2&q=80"
+        alt="Photo by Alvaro Pinot"
+        fill
+        className="rounded object-cover"
+      />
+    </AspectRatio>
+  )
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ### Ratio 4/3
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <AspectRatio4x3 />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy {6} /ratio/ filename="aspect-ratio.tsx"
-    import { AspectRatio } from "@feely/ui/components/aspect-ratio"
-    import Image from "next/image"
+<Tabs.Tab>
+<AspectRatio4x3 />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy {6} /ratio/ filename="aspect-ratio.tsx"
+import Image from "next/image"
+import { AspectRatio } from "@fucina/ui"
 
-    export function AspectRatioDemo() {
-      return (
-        <AspectRatio ratio={4 / 3} className="bg-muted">
-          <Image
-            src="https://images.unsplash.com/photo-1576075796033-848c2a5f3696?w=800&dpr=2&q=80"
-            alt="Photo by Alvaro Pinot"
-            fill
-            className="rounded object-cover"
-          />
-        </AspectRatio>
-      )
-    }
-    ```
-
-  </Tabs.Tab>
+export function AspectRatioDemo() {
+  return (
+    <AspectRatio ratio={4 / 3} className="bg-muted">
+      <Image
+        src="https://images.unsplash.com/photo-1576075796033-848c2a5f3696?w=800&dpr=2&q=80"
+        alt="Photo by Alvaro Pinot"
+        fill
+        className="rounded object-cover"
+      />
+    </AspectRatio>
+  )
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ### Ratio 3/2
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <AspectRatio3x2 />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy {6} /ratio/ filename="aspect-ratio.tsx"
-    import { AspectRatio } from "@feely/ui/components/aspect-ratio"
-    import Image from "next/image"
+<Tabs.Tab>
+<AspectRatio3x2 />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy {6} /ratio/ filename="aspect-ratio.tsx"
+import Image from "next/image"
+import { AspectRatio } from "@fucina/ui"
 
-    export function AspectRatioDemo() {
-      return (
-        <AspectRatio ratio={3 / 2} className="bg-muted">
-          <Image
-            src="https://images.unsplash.com/photo-1576075796033-848c2a5f3696?w=800&dpr=2&q=80"
-            alt="Photo by Alvaro Pinot"
-            fill
-            className="rounded object-cover"
-          />
-        </AspectRatio>
-      )
-    }
-    ```
+export function AspectRatioDemo() {
+  return (
+    <AspectRatio ratio={3 / 2} className="bg-muted">
+      <Image
+        src="https://images.unsplash.com/photo-1576075796033-848c2a5f3696?w=800&dpr=2&q=80"
+        alt="Photo by Alvaro Pinot"
+        fill
+        className="rounded object-cover"
+      />
+    </AspectRatio>
+  )
+}
+```
+</Tabs.Tab>
+</Tabs>
 
-  </Tabs.Tab>
+### Ratio 9/16
+
+<Tabs items={['Preview', 'Code']}>
+<Tabs.Tab>
+<AspectRatio9x16 />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy {6} /ratio/ filename="aspect-ratio.tsx"
+import Image from "next/image"
+import { AspectRatio } from "@fucina/ui"
+
+export function AspectRatioDemo() {
+  return (
+    <AspectRatio ratio={9 / 16} className="bg-muted">
+      <Image
+        src="https://images.unsplash.com/photo-1576075796033-848c2a5f3696?w=800&dpr=2&q=80"
+        alt="Photo by Alvaro Pinot"
+        fill
+        className="rounded object-cover"
+      />
+    </AspectRatio>
+  )
+}
+```
+</Tabs.Tab>
+</Tabs>
+
+### Ratio 3/4
+
+<Tabs items={['Preview', 'Code']}>
+<Tabs.Tab>
+<AspectRatio3x4 />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy {6} /ratio/ filename="aspect-ratio.tsx"
+import Image from "next/image"
+import { AspectRatio } from "@fucina/ui"
+
+export function AspectRatioDemo() {
+  return (
+    <AspectRatio ratio={3 / 4} className="bg-muted">
+      <Image
+        src="https://images.unsplash.com/photo-1576075796033-848c2a5f3696?w=800&dpr=2&q=80"
+        alt="Photo by Alvaro Pinot"
+        fill
+        className="rounded object-cover"
+      />
+    </AspectRatio>
+  )
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ## Useful links
@@ -150,11 +203,11 @@ Avoid using the Aspect Ratio component for content that needs to dynamically fil
 <Cards className="mt-8">
   <Card
     title="🤖 Storybook"
-    href="https://www.stories.feely.so/?path=/docs/components-aspectratio--documentation"
+    href="https://fucina-storybook.vercel.app/?path=/docs/components-aspectratio--documentation"
   />
   <Card
     title="🪄 Figma"
-    href="https://www.figma.com/design/Jfto7FUoU7mSpnv9uESD60/%F0%9F%9F%A0-feely---design-system?node-id=164-294&t=nua4UmG9Iu1hfUAm-1"
+    href="https://www.figma.com/design/Jfto7FUoU7mSpnv9uESD60/%F0%9F%94%A5-Fucina---Design-System?node-id=639-4766&t=djNmFHh9aJkVZtk7-1"
   />
   <Card
     title="🐝 API Reference"

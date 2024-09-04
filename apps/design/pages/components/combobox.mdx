@@ -10,93 +10,100 @@ import { ComboboxPreview } from "@/components/preview/combobox.tsx";
 Autocomplete input and command palette with a list of suggestions.
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <ComboboxPreview />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy filename="combobox.tsx"
-    "use client"
+<Tabs.Tab>
+<ComboboxPreview />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy filename="combobox.tsx"
+"use client"
 
-    import * as React from "react"
-    import { Check, ChevronsUpDown } from "@feely/ui/components/icon"
-    import { Button } from "@feely/ui/components/button"
-    import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem } from "@feely/ui/components/command"
-    import { Popover, PopoverContent, PopoverTrigger } from "@feely/ui/components/popover"
+import * as React from "react";
+import { Check, ChevronsUpDown } from "lucide-react";
 
-    const frameworks = [
-      {
-        value: "next.js",
-        label: "Next.js",
-      },
-      {
-        value: "sveltekit",
-        label: "SvelteKit",
-      },
-      {
-        value: "nuxt.js",
-        label: "Nuxt.js",
-      },
-      {
-        value: "remix",
-        label: "Remix",
-      },
-      {
-        value: "astro",
-        label: "Astro",
-      },
-    ]
+import {
+  Button,
+  Command,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@fucina/ui";
 
-    export function ComboboxDemo() {
-      const [open, setOpen] = React.useState(false)
-      const [value, setValue] = React.useState("")
+const frameworks = [
+{
+value: "next.js",
+label: "Next.js",
+},
+{
+value: "sveltekit",
+label: "SvelteKit",
+},
+{
+value: "nuxt.js",
+label: "Nuxt.js",
+},
+{
+value: "remix",
+label: "Remix",
+},
+{
+value: "astro",
+label: "Astro",
+},
+]
 
-      return (
-        <Popover open={open} onOpenChange={setOpen}>
-          <PopoverTrigger asChild>
-            <Button
-              variant="secondary"
-              role="combobox"
-              aria-expanded={open}
-              className="w-[240px] justify-between"
-            >
-              {value
-                ? frameworks.find((framework) => framework.value === value)?.label
-                : 'Select framework...'}
-              <ChevronsUpDown />
-            </Button>
-          </PopoverTrigger>
-          <PopoverContent className="w-[240px] p-0">
-            <Command>
-              <CommandInput placeholder="Search framework..." />
-              <CommandEmpty>No framework found.</CommandEmpty>
-              <CommandGroup>
-                {frameworks.map((framework) => (
-                  <CommandItem
-                    key={framework.value}
-                    value={framework.value}
-                    onSelect={(currentValue) => {
-                      setValue(currentValue === value ? '' : currentValue);
-                      setOpen(false);
-                    }}
-                  >
-                    <Check
-                      className={cn(
-                        'mr-2',
-                        value === framework.value ? 'opacity-visible' : 'opacity-invisible'
-                      )}
-                    />
-                    {framework.label}
-                  </CommandItem>
-                ))}
-              </CommandGroup>
-            </Command>
-          </PopoverContent>
-        </Popover>
-      )
-    }
-    ```
-
-  </Tabs.Tab>
+export function ComboboxDemo() {
+  const [open, setOpen] = React.useState(false);
+  const [value, setValue] = React.useState("");
+  return (
+    <Popover open={open} onOpenChange={setOpen}>
+      <PopoverTrigger asChild>
+        <Button
+          variant="secondary"
+          role="combobox"
+          aria-expanded={open}
+          className={cn(
+            "placeholder:text-placeholder w-[240px] justify-between font-normal",
+            value ? frameworks.find((framework) => framework.value === value)?.label : "text-placeholder"
+          )}>
+          {value ? frameworks.find((framework) => framework.value === value)?.label : "Select framework..."}
+          <ChevronsUpDown className="stroke-icon ml-2 size-4 shrink-0 !stroke-2" />
+        </Button>
+      </PopoverTrigger>
+      <PopoverContent className="w-[240px] p-0">
+        <Command>
+          <CommandInput placeholder="Search framework..." />
+          <CommandEmpty>No framework found.</CommandEmpty>
+          <CommandGroup>
+            {frameworks.map((framework) => (
+              <CommandItem
+                className="flex items-center justify-between gap-2"
+                key={framework.value}
+                value={framework.value}
+                onSelect={(currentValue) => {
+                  setValue(currentValue === value ? "" : currentValue);
+                  setOpen(false);
+                }}>
+                <span className={cn(value === framework.value ? "text-brand" : "")}>{framework.label}</span>
+                <Check
+                  className={cn(
+                    "stroke-icon-brand ml-2 size-4",
+                    value === framework.value ? "opacity-100" : "opacity-0"
+                  )}
+                />
+              </CommandItem>
+            ))}
+          </CommandGroup>
+        </Command>
+      </PopoverContent>
+    </Popover>
+  );
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ## Usage
@@ -127,93 +134,100 @@ See installation instructions for the [Popover](/components/popover) and the [Co
 ### Default
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <ComboboxPreview />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy filename="combobox.tsx"
-    "use client"
+<Tabs.Tab>
+<ComboboxPreview />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy filename="combobox.tsx"
+"use client"
 
-    import * as React from "react"
-    import { Check, ChevronsUpDown } from "@feely/ui/components/icon"
-    import { Button } from "@feely/ui/components/button"
-    import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem } from "@feely/ui/components/command"
-    import { Popover, PopoverContent, PopoverTrigger } from "@feely/ui/components/popover"
+import * as React from "react";
+import { Check, ChevronsUpDown } from "lucide-react";
 
-    const frameworks = [
-      {
-        value: "next.js",
-        label: "Next.js",
-      },
-      {
-        value: "sveltekit",
-        label: "SvelteKit",
-      },
-      {
-        value: "nuxt.js",
-        label: "Nuxt.js",
-      },
-      {
-        value: "remix",
-        label: "Remix",
-      },
-      {
-        value: "astro",
-        label: "Astro",
-      },
-    ]
+import {
+  Button,
+  Command,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@fucina/ui";
 
-    export function ComboboxDemo() {
-      const [open, setOpen] = React.useState(false)
-      const [value, setValue] = React.useState("")
+const frameworks = [
+{
+value: "next.js",
+label: "Next.js",
+},
+{
+value: "sveltekit",
+label: "SvelteKit",
+},
+{
+value: "nuxt.js",
+label: "Nuxt.js",
+},
+{
+value: "remix",
+label: "Remix",
+},
+{
+value: "astro",
+label: "Astro",
+},
+]
 
-      return (
-        <Popover open={open} onOpenChange={setOpen}>
-          <PopoverTrigger asChild>
-            <Button
-              variant="secondary"
-              role="combobox"
-              aria-expanded={open}
-              className="w-[240px] justify-between"
-            >
-              {value
-                ? frameworks.find((framework) => framework.value === value)?.label
-                : 'Select framework...'}
-              <ChevronsUpDown />
-            </Button>
-          </PopoverTrigger>
-          <PopoverContent className="w-[240px] p-0">
-            <Command>
-              <CommandInput placeholder="Search framework..." />
-              <CommandEmpty>No framework found.</CommandEmpty>
-              <CommandGroup>
-                {frameworks.map((framework) => (
-                  <CommandItem
-                    key={framework.value}
-                    value={framework.value}
-                    onSelect={(currentValue) => {
-                      setValue(currentValue === value ? '' : currentValue);
-                      setOpen(false);
-                    }}
-                  >
-                    <Check
-                      className={cn(
-                        'mr-2',
-                        value === framework.value ? 'opacity-visible' : 'opacity-invisible'
-                      )}
-                    />
-                    {framework.label}
-                  </CommandItem>
-                ))}
-              </CommandGroup>
-            </Command>
-          </PopoverContent>
-        </Popover>
-      )
-    }
-    ```
-
-  </Tabs.Tab>
+export function ComboboxDemo() {
+  const [open, setOpen] = React.useState(false);
+  const [value, setValue] = React.useState("");
+  return (
+    <Popover open={open} onOpenChange={setOpen}>
+      <PopoverTrigger asChild>
+        <Button
+          variant="secondary"
+          role="combobox"
+          aria-expanded={open}
+          className={cn(
+            "placeholder:text-placeholder w-[240px] justify-between font-normal",
+            value ? frameworks.find((framework) => framework.value === value)?.label : "text-placeholder"
+          )}>
+          {value ? frameworks.find((framework) => framework.value === value)?.label : "Select framework..."}
+          <ChevronsUpDown className="stroke-icon ml-2 size-4 shrink-0 !stroke-2" />
+        </Button>
+      </PopoverTrigger>
+      <PopoverContent className="w-[240px] p-0">
+        <Command>
+          <CommandInput placeholder="Search framework..." />
+          <CommandEmpty>No framework found.</CommandEmpty>
+          <CommandGroup>
+            {frameworks.map((framework) => (
+              <CommandItem
+                className="flex items-center justify-between gap-2"
+                key={framework.value}
+                value={framework.value}
+                onSelect={(currentValue) => {
+                  setValue(currentValue === value ? "" : currentValue);
+                  setOpen(false);
+                }}>
+                <span className={cn(value === framework.value ? "text-brand" : "")}>{framework.label}</span>
+                <Check
+                  className={cn(
+                    "stroke-icon-brand ml-2 size-4",
+                    value === framework.value ? "opacity-100" : "opacity-0"
+                  )}
+                />
+              </CommandItem>
+            ))}
+          </CommandGroup>
+        </Command>
+      </PopoverContent>
+    </Popover>
+  );
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ## Useful links
@@ -223,10 +237,10 @@ See installation instructions for the [Popover](/components/popover) and the [Co
 <Cards className="mt-8">
   <Card
     title="🤖 Storybook"
-    href="https://www.stories.feely.so/?path=/docs/components-combobox--documentation"
+    href="https://fucina-storybook.vercel.app/?path=/docs/components-combobox--documentation"
   />
   <Card
     title="🪄 Figma"
-    href="https://www.figma.com/design/Jfto7FUoU7mSpnv9uESD60/%F0%9F%9F%A0-feely---design-system?node-id=233-755&t=nua4UmG9Iu1hfUAm-1"
+    href="https://www.figma.com/design/Jfto7FUoU7mSpnv9uESD60/%F0%9F%94%A5-Fucina---Design-System?node-id=233-755&t=djNmFHh9aJkVZtk7-1"
   />
 </Cards>

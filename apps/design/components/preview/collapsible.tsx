@@ -19,16 +19,16 @@ export const CollapsiblePreview = () => {
             </Button>
           </CollapsibleTrigger>
         </div>
-        <div className="border-default text-md rounded border px-4 py-3 font-mono">
-          @design-system/foundations
-        </div>
+        <div className="border-default text-md rounded border px-4 py-3 font-mono shadow-sm">@fucina/ui</div>
         <CollapsibleContent className="space-y-2">
-          <div className="border-default text-md rounded border px-4 py-3 font-mono">
-            @design-system/tokens
+          <div className="border-default text-md rounded border px-4 py-3 font-mono shadow-sm">
+            @fucina/visualizations
           </div>
-          <div className="border-default text-md rounded border px-4 py-3 font-mono">@feely/ui</div>
-          <div className="border-default text-md rounded border px-4 py-3 font-mono">
-            @design-system/visualizations
+          <div className="border-default text-md rounded border px-4 py-3 font-mono shadow-sm">
+            @fucina/tailwind
+          </div>
+          <div className="border-default text-md rounded border px-4 py-3 font-mono shadow-sm">
+            @fucina/utils
           </div>
         </CollapsibleContent>
       </Collapsible>

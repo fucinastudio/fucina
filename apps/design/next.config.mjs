@@ -8,7 +8,6 @@ const withNextra = nextra({
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  transpilePackages: ["geist", "@feely/ui", "@feely/lib"],
   images: {
     domains: ["images.unsplash.com"],
   },
