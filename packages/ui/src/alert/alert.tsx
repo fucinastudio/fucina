@@ -26,16 +26,12 @@ interface AlertProps extends React.ComponentPropsWithoutRef<"div">, VariantProps
 const Alert = React.forwardRef<HTMLDivElement, AlertProps>(
   ({ title, icon: Icon, className, variant, children, ...props }: AlertProps, forwardedRef) => {
     return (
-      <div
-        ref={forwardedRef}
-        className={cn(alertVariants({ variant }), className)}
-        tremor-id="tremor-raw"
-        {...props}>
+      <div ref={forwardedRef} className={cn(alertVariants({ variant }), className)} {...props}>
         <div className={cn("flex items-center justify-start")}>
           {Icon && <Icon className={cn("mr-1.5 size-5 shrink-0")} aria-hidden="true" />}
           <span className={cn("text-lg font-medium")}>{title}</span>
         </div>
-        <div className={cn("overflow-y-auto", children ? "mt-1" : "")}>{children}</div>
+        <div className={cn("text-md overflow-y-auto", children ? "mt-1" : "")}>{children}</div>
       </div>
     );
   }

@@ -9,7 +9,7 @@ import { cn, focusRing } from "@fucina/utils";
 const toggleVariants = tv({
   base: [
     // base
-    "text bg-item border border-item shadow-sm inline-flex items-center justify-center gap-1 rounded px-2 transition-colors",
+    "text text-md bg-item border border-item shadow-sm inline-flex items-center justify-center gap-1 rounded px-2 transition-colors",
     // icon
     "[&>svg]:h-4 [&>svg]:w-4 [&>svg]:stroke-icon-active",
     // hover

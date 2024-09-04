@@ -17,10 +17,13 @@ const ToastProvider = ({ ...props }: ToasterProps) => {
       className="toaster"
       toastOptions={{
         classNames: {
-          toast: "bg-elevated !border border-default !text !text-md !font-medium !gap-2 !rounded-lg !shadow-lg",
-          description: "!font-regular [data-type=error]:!text-danger-strong [data-type=warning]:!text-warning-strong",
-          actionButton: "!bg-neutral !text-inverse !text-sm !font-medium !flex !h-8 !items-center !px-2" ,
-          closeButton: "!bg-elevated !text-description !border-default hover:!text hover:!border-item hover:!bg-item-active",
+          toast:
+            "bg-elevated !border border-default !text !text-md !font-medium !gap-2 !rounded-lg !shadow-lg",
+          description:
+            "!font-regular !text-md [data-type=error]:!text-danger-strong [data-type=warning]:!text-warning-strong",
+          actionButton: "!bg-neutral !text-inverse !text-sm !font-medium !flex !h-8 !items-center !px-2",
+          closeButton:
+            "!bg-elevated !text-description !border-default hover:!text hover:!border-item hover:!bg-item-active",
           error: "!bg-danger-subtlest !border-danger-subtlest !text-danger-strong",
           warning: "!bg-warning-subtlest !border-warning-subtlest !text-warning-strong",
         },

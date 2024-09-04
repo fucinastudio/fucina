@@ -26,7 +26,7 @@ const ContextMenuSubTrigger = React.forwardRef<
     ref={ref}
     className={cn(
       // base
-      "data-[state=checked]:text-brand relative flex h-9 cursor-default select-none items-center gap-2 rounded-sm py-1 pl-3 pr-1.5 outline-none transition-colors [&>svg]:size-4",
+      "data-[state=checked]:text-brand text-md relative flex h-9 cursor-default select-none items-center gap-2 rounded-sm py-1 pl-3 pr-1.5 outline-none transition-colors [&>svg]:size-4",
       // disabled
       "data-[disabled]:text-disabled data-[disabled]:pointer-events-none data-[disabled]:hover:bg-none",
       // focus
@@ -56,7 +56,7 @@ const ContextMenuSubMenuContent = React.forwardRef<
       collisionPadding={collisionPadding}
       className={cn(
         // base
-        "relative z-50 overflow-hidden rounded border p-1 shadow-xl",
+        "text-md relative z-50 overflow-hidden rounded border p-1 shadow-xl",
         // widths
         "min-w-32",
         // heights
@@ -89,7 +89,7 @@ const ContextMenuContent = React.forwardRef<
       ref={ref}
       className={cn(
         // base
-        "relative z-50 overflow-hidden rounded border p-1 shadow-lg",
+        "text-md relative z-50 overflow-hidden rounded border p-1 shadow-lg",
         // widths
         "min-w-48",
         // heights
@@ -121,7 +121,7 @@ const ContextMenuItem = React.forwardRef<
     ref={ref}
     className={cn(
       // base
-      "group/DropdownMenuItem data-[state=checked]:text-brand relative flex h-9 cursor-pointer select-none items-center gap-2 rounded-sm py-1 pl-3 pr-1.5 outline-none transition-colors [&>svg]:size-4",
+      "group/DropdownMenuItem text-md data-[state=checked]:text-brand relative flex h-9 cursor-pointer select-none items-center gap-2 rounded-sm py-1 pl-3 pr-1.5 outline-none transition-colors [&>svg]:size-4",
       // disabled
       "data-[disabled]:text-disabled data-[disabled]:pointer-events-none data-[disabled]:hover:bg-none",
       // focus
@@ -151,7 +151,7 @@ const ContextMenuCheckboxItem = React.forwardRef<
     ref={forwardedRef}
     className={cn(
       // base
-      "data-[state=checked]:text-brand relative flex h-9 cursor-pointer select-none items-center gap-2 rounded-sm py-1 pl-8 pr-1.5 outline-none transition-colors [&>svg]:size-4",
+      "data-[state=checked]:text-brand text-md relative flex h-9 cursor-pointer select-none items-center gap-2 rounded-sm py-1 pl-8 pr-1.5 outline-none transition-colors [&>svg]:size-4",
       // disabled
       "data-[disabled]:text-disabled data-[disabled]:pointer-events-none data-[disabled]:hover:bg-none",
       // focus
@@ -189,7 +189,7 @@ const ContextMenuRadioItem = React.forwardRef<
     ref={forwardedRef}
     className={cn(
       // base
-      "group/ContextMenuRadioItem data-[state=checked]:text-brand relative flex h-9 cursor-pointer select-none items-center gap-2 rounded-sm py-1 pl-8 pr-1.5 outline-none transition-colors [&>svg]:size-4",
+      "group/ContextMenuRadioItem text-md data-[state=checked]:text-brand relative flex h-9 cursor-pointer select-none items-center gap-2 rounded-sm py-1 pl-8 pr-1.5 outline-none transition-colors [&>svg]:size-4",
       // disabled
       "data-[disabled]:text-disabled data-[disabled]:pointer-events-none data-[disabled]:hover:bg-none",
       // focus
@@ -224,7 +224,7 @@ const ContextMenuLabel = React.forwardRef<
     ref={forwardedRef}
     className={cn(
       // base
-      "text-description flex h-9 items-center justify-start px-3 font-medium tracking-wide",
+      "text-description text-md flex h-9 items-center justify-start px-3 font-medium tracking-wide",
       className
     )}
     {...props}
@@ -238,7 +238,7 @@ const ContextMenuSeparator = React.forwardRef<
 >(({ className, ...props }, forwardedRef) => (
   <ContextMenuPrimitive.Separator
     ref={forwardedRef}
-    className={cn("border-default -mx-1 my-1 h-px border-t", className)}
+    className={cn("border-default text-md -mx-1 my-1 h-px border-t", className)}
     {...props}
   />
 ));

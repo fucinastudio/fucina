@@ -49,7 +49,7 @@ const TimeSegment = ({ segment, state }: TimeSegmentProps) => {
       ref={ref}
       className={cn(
         // base
-        "relative block w-full appearance-none rounded-md border px-2.5 py-1.5 text-left uppercase tabular-nums shadow-sm outline-none transition sm:text-sm",
+        "text-md relative block w-full appearance-none rounded-md border px-2.5 py-1.5 text-left uppercase tabular-nums shadow-sm outline-none transition sm:text-sm",
         // border color
         "border-item",
         // background color
@@ -59,16 +59,15 @@ const TimeSegment = ({ segment, state }: TimeSegmentProps) => {
         // invalid (optional)
         "invalid:border-danger invalid:ring-danger-subtlest group-aria-[invalid=true]/time-input:border-danger group-aria-[invalid=true]/time-input:ring-danger-subtlest invalid:ring-2 group-aria-[invalid=true]/time-input:ring-2",
         {
-          "!w-fit border-none bg-transparent px-0 text-placeholder shadow-none": isDecorator,
+          "text-placeholder !w-fit border-none bg-transparent px-0 shadow-none": isDecorator,
           hidden: isSpace,
-          "border-disabled bg-neutral-disabled text-disabled":
-            state.isDisabled,
-          "!bg-transparent !text-placeholder": !segment.isEditable,
+          "border-disabled bg-neutral-disabled text-disabled": state.isDisabled,
+          "!text-placeholder !bg-transparent": !segment.isEditable,
         }
       )}>
       <span
         aria-hidden="true"
-        className={cn("text-description pointer-events-none block w-full text-left", {
+        className={cn("text-description text-md pointer-events-none block w-full text-left", {
           hidden: !segment.isPlaceholder,
           "h-0": !segment.isPlaceholder,
         })}>
@@ -127,7 +126,7 @@ TimeInput.displayName = "TimeInput";
 const triggerStyles = tv({
   base: [
     // base
-    "peer flex w-full cursor-pointer appearance-none items-center gap-x-2 truncate rounded border px-3 py-1 h-9 shadow-sm outline-none transition-all",
+    "peer flex w-full text-md cursor-pointer appearance-none items-center gap-x-2 truncate rounded border px-3 py-1 h-9 shadow-sm outline-none transition-all",
     // background color
     "bg-item",
     // border color
@@ -138,7 +137,7 @@ const triggerStyles = tv({
     "hover:bg-item-hover",
     // disabled
     "disabled:pointer-events-none",
-    "disabled:bg-neutral-disabled disabled:border-disabled disabled:text-disabled",    // focus
+    "disabled:bg-neutral-disabled disabled:border-disabled disabled:text-disabled", // focus
     focusInput,
     // invalid (optional)
     // "aria-[invalid=true]:dark:ring-red-400/20 aria-[invalid=true]:ring-2 aria-[invalid=true]:ring-red-200 aria-[invalid=true]:border-red-500 invalid:ring-2 invalid:ring-red-200 invalid:border-red-500"
@@ -160,7 +159,7 @@ const Trigger = React.forwardRef<HTMLButtonElement, TriggerProps>(
       <PopoverPrimitives.Trigger asChild>
         <button ref={forwardedRef} className={cn(triggerStyles({ hasError }), className)} {...props}>
           <Calendar className="stroke-icon size-4 shrink-0 stroke-2" />
-          <span className="text flex-1 truncate text-left">
+          <span className="text-md text flex-1 truncate text-left">
             {children ? (
               children
             ) : placeholder ? (
@@ -194,7 +193,7 @@ const CalendarPopover = React.forwardRef<
         onOpenAutoFocus={(e) => e.preventDefault()}
         className={cn(
           // base
-          "relative z-50 w-fit rounded border shadow-lg",
+          "text-md relative z-50 w-fit rounded border shadow-lg",
           // widths
           "min-w-[calc(var(--radix-select-trigger-width)-2px)] max-w-[95vw]",
           // border color
@@ -320,7 +319,7 @@ const PresetContainer = <TPreset extends Preset, TValue>({
   };
 
   return (
-    <ul className="flex items-start gap-x-2 sm:flex-col">
+    <ul className="text-md flex items-start gap-x-2 sm:flex-col">
       {presets.map((preset, index) => {
         return (
           <li key={index} className="sm:w-full sm:py-px">
@@ -549,7 +548,7 @@ const SingleDatePicker = ({
   }, [value, defaultValue]);
 
   return (
-    <PopoverPrimitives.Root tremor-id="tremor-raw" open={open} onOpenChange={onOpenChange}>
+    <PopoverPrimitives.Root open={open} onOpenChange={onOpenChange}>
       <Trigger
         placeholder={placeholder}
         disabled={disabled}
@@ -563,7 +562,7 @@ const SingleDatePicker = ({
       </Trigger>
       <CalendarPopover align={align}>
         <div className="flex">
-          <div className="flex flex-col sm:flex-row sm:items-start">
+          <div className="text-md flex flex-col sm:flex-row sm:items-start">
             {presets && presets.length > 0 && (
               <div
                 className={cn(
@@ -601,7 +600,7 @@ const SingleDatePicker = ({
                   />
                 </div>
               )}
-              <div className="border-default flex items-center gap-x-2 border-t p-3">
+              <div className="border-default text-md flex items-center gap-x-2 border-t p-3">
                 <Button variant="secondary" size="small" className="w-full" type="button" onClick={onCancel}>
                   {translations?.cancel ?? "Cancel"}
                 </Button>
@@ -824,7 +823,7 @@ const RangeDatePicker = ({
   };
 
   return (
-    <PopoverPrimitives.Root tremor-id="tremor-raw" open={open} onOpenChange={onOpenChange}>
+    <PopoverPrimitives.Root open={open} onOpenChange={onOpenChange}>
       <Trigger
         placeholder={placeholder}
         disabled={disabled}
@@ -838,7 +837,7 @@ const RangeDatePicker = ({
       </Trigger>
       <CalendarPopover align={align}>
         <div className="flex">
-          <div className="flex flex-col overflow-x-scroll sm:flex-row sm:items-start">
+          <div className="text-md flex flex-col overflow-x-scroll sm:flex-row sm:items-start">
             {presets && presets.length > 0 && (
               <div
                 className={cn(
@@ -909,7 +908,12 @@ const RangeDatePicker = ({
                     onClick={onCancel}>
                     {translations?.cancel ?? "Cancel"}
                   </Button>
-                  <Button variant="primary" size="small" className="w-full sm:w-fit" type="button" onClick={onApply}>
+                  <Button
+                    variant="primary"
+                    size="small"
+                    className="w-full sm:w-fit"
+                    type="button"
+                    onClick={onApply}>
                     {translations?.apply ?? "Apply"}
                   </Button>
                 </div>

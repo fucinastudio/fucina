@@ -24,14 +24,7 @@ interface BadgeProps extends React.ComponentPropsWithoutRef<"span">, VariantProp
 
 const Badge = React.forwardRef<HTMLSpanElement, BadgeProps>(
   ({ className, variant, ...props }: BadgeProps, forwardedRef) => {
-    return (
-      <span
-        ref={forwardedRef}
-        className={cn(badgeVariants({ variant }), className)}
-        tremor-id="tremor-raw"
-        {...props}
-      />
-    );
+    return <span ref={forwardedRef} className={cn(badgeVariants({ variant }), className)} {...props} />;
   }
 );
 

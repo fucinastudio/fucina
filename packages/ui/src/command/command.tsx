@@ -14,7 +14,7 @@ const Command = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <CommandPrimitive
     ref={ref}
-    className={cn("bg-card flex size-full flex-col overflow-hidden rounded-lg", className)}
+    className={cn("bg-card text-md flex size-full flex-col overflow-hidden rounded-lg", className)}
     {...props}
   />
 ));
@@ -23,7 +23,7 @@ Command.displayName = CommandPrimitive.displayName;
 const CommandDialog = ({ children, ...props }: DialogProps) => {
   return (
     <Dialog {...props}>
-      <DialogContent className="overflow-hidden rounded-lg p-0 shadow-lg [&>svg]:size-4">
+      <DialogContent className="text-md overflow-hidden rounded-lg p-0 shadow-lg [&>svg]:size-4">
         <Command className="[&_[cmdk-group-heading]]:text-description [&_[cmdk-group-heading]]:px-3 [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group]:not([hidden])_~[cmdk-group]]:pt-0 [&_[cmdk-input-wrapper]_svg]:w-4 [&_[cmdk-input]]:h-12 [&_[cmdk-item]]:h-9 [&_[cmdk-item]]:px-3 [&_[cmdk-item]_svg]:size-4">
           {children}
         </Command>
@@ -36,7 +36,7 @@ const CommandInput = React.forwardRef<
   React.ElementRef<typeof CommandPrimitive.Input>,
   React.ComponentPropsWithoutRef<typeof CommandPrimitive.Input>
 >(({ className, ...props }, ref) => (
-  <div className="border-default flex h-12 items-center border-b px-3" cmdk-input-wrapper="">
+  <div className="border-default text-md flex h-12 items-center border-b px-3" cmdk-input-wrapper="">
     <Search className="stroke-icon -mr-0.5 ml-1 size-4 shrink-0 stroke-2" />
     <CommandPrimitive.Input
       ref={ref}
@@ -68,7 +68,7 @@ const CommandEmpty = React.forwardRef<
   React.ElementRef<typeof CommandPrimitive.Empty>,
   React.ComponentPropsWithoutRef<typeof CommandPrimitive.Empty>
 >((props, ref) => (
-  <CommandPrimitive.Empty ref={ref} className="text-description py-10 text-center" {...props} />
+  <CommandPrimitive.Empty ref={ref} className="text-description text-md py-10 text-center" {...props} />
 ));
 
 CommandEmpty.displayName = CommandPrimitive.Empty.displayName;
@@ -80,7 +80,7 @@ const CommandGroup = React.forwardRef<
   <CommandPrimitive.Group
     ref={ref}
     className={cn(
-      "[&_[cmdk-group-heading]]:text-description overflow-hidden p-1 [&_[cmdk-group-heading]]:flex [&_[cmdk-group-heading]]:h-9 [&_[cmdk-group-heading]]:items-center [&_[cmdk-group-heading]]:px-3 [&_[cmdk-group-heading]]:font-medium",
+      "[&_[cmdk-group-heading]]:text-description text-md overflow-hidden p-1 [&_[cmdk-group-heading]]:flex [&_[cmdk-group-heading]]:h-9 [&_[cmdk-group-heading]]:items-center [&_[cmdk-group-heading]]:px-3 [&_[cmdk-group-heading]]:font-medium",
       className
     )}
     {...props}
@@ -104,7 +104,7 @@ const CommandItem = React.forwardRef<
   <CommandPrimitive.Item
     ref={ref}
     className={cn(
-      "aria-selected:bg-item-active data-[disabled]:text-disabled ![&>svg]:size-4 relative flex h-9 cursor-pointer select-none items-center gap-2 rounded px-3 outline-none data-[disabled]:pointer-events-none",
+      "aria-selected:bg-item-active text-md data-[disabled]:text-disabled ![&>svg]:size-4 relative flex h-9 cursor-pointer select-none items-center gap-2 rounded px-3 outline-none data-[disabled]:pointer-events-none",
       className
     )}
     {...props}

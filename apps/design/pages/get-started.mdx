@@ -2,6 +2,8 @@
 title: Get started
 ---
 
+import { Cards, Card } from "nextra/components";
+
 # 🚀 Get started
 
 Begin your journey in crafting user-centric products.
@@ -10,21 +12,31 @@ Begin your journey in crafting user-centric products.
 
 Learn design principles and gain access to Figma libraries and resources:
 
-- **🏠 [Foundations](/foundations)**
-- **🔗 [Tokens](/tokens)**
-- **🪄 [Figma libraries](https://www.figma.com/design/Jfto7FUoU7mSpnv9uESD60/%F0%9F%9F%A0-feely---design-system?node-id=163-290&t=oGuXPXbAhQlSN157-1)**
+<Cards className="mt-8">
+  <Card icon={<span>🏠</span>} title="Foundations" href="/foundations" />
+  <Card icon={<span>🔗</span>} title="Tokens" href="/tokens" />
+  <Card
+    icon={<span>🪄</span>}
+    title="Figma libraries"
+    href="https://www.figma.com/design/Jfto7FUoU7mSpnv9uESD60/%F0%9F%9F%A0-feely---design-system?node-id=163-290&t=oGuXPXbAhQlSN157-1"
+  />
+</Cards>
 
 ## Development resources
 
 Learn how to use components, design tokens, and tools.
 
-- **🔗 [Tokens](/tokens)**
-- **💠 [Components](/components)**
-- **🤖 [Github repository](https://github.com/feelyso/feely)**
+<Cards className="mt-8">
+  <Card icon={<span>🔗</span>} title="Tokens" href="/tokens" />
+  <Card icon={<span>💠</span>} title="Components" href="/components" />
+  <Card icon={<span>🤖</span>} title="Github repository" href="https://github.com/feelyso/feely" />
+</Cards>
 
 ## Content resources
 
 Learn product voice and tone, find UI patterns, and use inclusive language:
 
-- **🦄 [Inclusive language](/content/inclusive-language)**
-- **🫂 [Content accessibility](/content/content-accessibility)**
+<Cards className="mt-8">
+  <Card icon={<span>🦄</span>} title="Inclusive language" href="/content/inclusive-language" />
+  <Card icon={<span>🫂</span>} title="Content accessibility" href="/content/content-accessibility" />
+</Cards>

@@ -19,7 +19,7 @@ const Form = FormProvider;
 // Define FormFieldContextValue type
 type FormFieldContextValue<
   TFieldValues extends FieldValues = FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 > = {
   name: TName;
 };
@@ -30,7 +30,7 @@ const FormFieldContext = React.createContext<FormFieldContextValue>({} as FormFi
 // Define and export FormField component
 const FormField = <
   TFieldValues extends FieldValues = FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
   ...props
 }: ControllerProps<TFieldValues, TName>) => {
@@ -80,7 +80,7 @@ const FormItem = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivEl
 
     return (
       <FormItemContext.Provider value={{ id }}>
-        <div ref={ref} className={cn("space-y-3", className)} {...props} />
+        <div ref={ref} className={cn("text-md space-y-3", className)} {...props} />
       </FormItemContext.Provider>
     );
   }
@@ -95,7 +95,12 @@ const FormLabel = React.forwardRef<
   const { error, formItemId } = useFormField();
 
   return (
-    <Label ref={ref} className={cn(error && "text-danger", className)} htmlFor={formItemId} {...props} />
+    <Label
+      ref={ref}
+      className={cn(error && "text-danger text-md", className)}
+      htmlFor={formItemId}
+      {...props}
+    />
   );
 });
 FormLabel.displayName = "FormLabel";
@@ -120,14 +125,15 @@ const FormControl = React.forwardRef<
 FormControl.displayName = "FormControl";
 
 // Define and export FormDescription component
-const FormDescription = React.forwardRef<
-  HTMLParagraphElement,
-  React.HTMLAttributes<HTMLParagraphElement>
->(({ className, ...props }, ref) => {
-  const { formDescriptionId } = useFormField();
+const FormDescription = React.forwardRef<HTMLParagraphElement, React.HTMLAttributes<HTMLParagraphElement>>(
+  ({ className, ...props }, ref) => {
+    const { formDescriptionId } = useFormField();
 
-  return <p ref={ref} id={formDescriptionId} className={cn("text-description", className)} {...props} />;
-});
+    return (
+      <p ref={ref} id={formDescriptionId} className={cn("text-description text-md", className)} {...props} />
+    );
+  }
+);
 FormDescription.displayName = "FormDescription";
 
 // Define and export FormMessage component
@@ -141,7 +147,7 @@ const FormMessage = React.forwardRef<HTMLParagraphElement, React.HTMLAttributes<
     }
 
     return (
-      <p ref={ref} id={formMessageId} className={cn("text-danger font-medium", className)} {...props}>
+      <p ref={ref} id={formMessageId} className={cn("text-danger text-md font-medium", className)} {...props}>
         {body}
       </p>
     );

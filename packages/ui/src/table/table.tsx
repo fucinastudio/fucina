@@ -11,7 +11,7 @@ const TableRoot = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivE
     >
       <div
         // make table scrollable on mobile
-        className={cn("w-full overflow-auto whitespace-nowrap", className)}
+        className={cn("text-md w-full overflow-auto whitespace-nowrap", className)}
         {...props}>
         {children}
       </div>
@@ -33,11 +33,7 @@ Table.displayName = "Table";
 
 const TableHeader = React.forwardRef<HTMLTableSectionElement, React.HTMLAttributes<HTMLTableSectionElement>>(
   ({ className, ...props }, forwardedRef) => (
-    <thead
-      ref={forwardedRef}
-      className={cn("",className)}
-      {...props}
-    />
+    <thead ref={forwardedRef} className={cn("", className)} {...props} />
   )
 );
 TableHeader.displayName = "TableHeader";
@@ -47,7 +43,7 @@ const TableHead = React.forwardRef<HTMLTableCellElement, React.ThHTMLAttributes<
     <th
       ref={forwardedRef}
       className={cn(
-        "border-b-default text-description h-12 px-4 text-left align-middle font-medium [&:has([role=checkbox])]:pr-0 [&_tr]:border-b",
+        "border-b-default text-description text-md h-12 px-4 text-left align-middle font-medium [&:has([role=checkbox])]:pr-0 [&_tr]:border-b",
         className
       )}
       {...props}
@@ -68,7 +64,7 @@ const TableRow = React.forwardRef<HTMLTableRowElement, React.HTMLAttributes<HTML
     <tr
       ref={forwardedRef}
       className={cn(
-        "border-b-default hover:bg-item-hover data-[state=selected]:bg-item-active border-b transition-colors",
+        "border-b-default text-md hover:bg-item-hover data-[state=selected]:bg-item-active border-b transition-colors",
         className
       )}
       {...props}
@@ -79,28 +75,29 @@ TableRow.displayName = "TableRow";
 
 const TableCell = React.forwardRef<HTMLTableCellElement, React.TdHTMLAttributes<HTMLTableCellElement>>(
   ({ className, ...props }, forwardedRef) => (
-    <td
-      ref={forwardedRef}
-      className={cn(
-        "h-12 px-4 py-1 align-middle",
-        className
-      )}
-      {...props}
-    />
+    <td ref={forwardedRef} className={cn("h-12 px-4 py-1 align-middle", className)} {...props} />
   )
 );
 TableCell.displayName = "TableCell";
 
 const TableFooter = React.forwardRef<HTMLTableSectionElement, React.HTMLAttributes<HTMLTableSectionElement>>(
   ({ className, ...props }, forwardedRef) => (
-    <tfoot ref={forwardedRef} className={cn("bg-item-hover w-full font-medium", className)} {...props} />
+    <tfoot
+      ref={forwardedRef}
+      className={cn("bg-item-hover text-md w-full font-medium", className)}
+      {...props}
+    />
   )
 );
 TableFooter.displayName = "TableFooter";
 
 const TableCaption = React.forwardRef<HTMLTableCaptionElement, React.HTMLAttributes<HTMLTableCaptionElement>>(
   ({ className, ...props }, forwardedRef) => (
-    <caption ref={forwardedRef} className={cn("text-description mt-4 px-3 text-center", className)} {...props} />
+    <caption
+      ref={forwardedRef}
+      className={cn("text-description text-md mt-4 px-3 text-center", className)}
+      {...props}
+    />
   )
 );
 TableCaption.displayName = "TableCaption";

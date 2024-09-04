@@ -13,7 +13,7 @@ const Label = React.forwardRef<React.ElementRef<typeof LabelPrimitives.Root>, La
       ref={forwardedRef}
       className={cn(
         // base
-        "text leading-none",
+        "text text-md leading-none",
         // disabled
         {
           "text-disabled": disabled,

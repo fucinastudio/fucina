@@ -8,7 +8,7 @@ const Accordion = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Root>
 >(({ className, ...props }, ref) => {
-  return <AccordionPrimitive.Root ref={ref} className={cn("bg-background", className)} {...props} />;
+  return <AccordionPrimitive.Root ref={ref} className={cn("bg-background text-md", className)} {...props} />;
 });
 Accordion.displayName = "Accordion";
 

@@ -14,14 +14,13 @@ const Card = React.forwardRef<HTMLDivElement, CardProps>(({ className, asChild, 
       ref={forwardedRef}
       className={cn(
         // base
-        "relative w-full rounded-lg border p-6 text-left shadow-sm",
+        "text-md relative w-full rounded-lg border p-6 text-left shadow-sm",
         // background color
         "bg-card",
         // border color
         "border-default",
         className
       )}
-      tremor-id="tremor-raw"
       {...props}
     />
   );

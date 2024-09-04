@@ -39,7 +39,7 @@ const SheetOverlay = React.forwardRef<
       ref={forwardedRef}
       className={cn(
         // base
-        "fixed inset-0 z-50 overflow-y-auto",
+        "text-md fixed inset-0 z-50 overflow-y-auto",
         // background color
         "bg-mask",
         // transition
@@ -68,7 +68,7 @@ const SheetContent = React.forwardRef<
           ref={forwardedRef}
           className={cn(
             // base
-            "fixed inset-y-2 mx-auto flex w-[95vw] flex-1 flex-col overflow-y-auto rounded border p-4 shadow-lg focus:outline-none max-sm:inset-x-2 sm:inset-y-2 sm:right-2 sm:max-w-lg sm:p-6",
+            "text-md fixed inset-y-2 mx-auto flex w-[95vw] flex-1 flex-col overflow-y-auto rounded border p-4 shadow-lg focus:outline-none max-sm:inset-x-2 sm:inset-y-2 sm:right-2 sm:max-w-lg sm:p-6",
             // border color
             "border-default",
             // background color
@@ -132,7 +132,7 @@ const SheetDescription = React.forwardRef<
   return (
     <SheetPrimitives.Description
       ref={forwardedRef}
-      className={cn("text-description", className)}
+      className={cn("text-description text-md", className)}
       {...props}
     />
   );
@@ -144,7 +144,7 @@ const SheetFooter = ({ className, ...props }: React.HTMLAttributes<HTMLDivElemen
   return (
     <div
       className={cn(
-        "border-default flex flex-col-reverse border-t pt-4 sm:flex-row sm:justify-end sm:space-x-2",
+        "border-default text-md flex flex-col-reverse border-t pt-4 sm:flex-row sm:justify-end sm:space-x-2",
         className
       )}
       {...props}

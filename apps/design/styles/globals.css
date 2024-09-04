@@ -10,10 +10,6 @@
     --nextra-primary-saturation: 69%;
   }
 
-  body {
-    font-size: 1rem;
-  }
-
   .logo {
     font-size: 1.5rem;
     @apply font-logo font-medium tracking-tight;

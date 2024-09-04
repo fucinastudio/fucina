@@ -7,7 +7,7 @@
 
 @layer base {
   body {
-    @apply bg-background text text-md font-sans;
+    @apply bg-background text font-sans;
     font-family: "Inter";
   }
   h1 {

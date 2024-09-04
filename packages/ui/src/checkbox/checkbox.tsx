@@ -14,7 +14,7 @@ const Checkbox = React.forwardRef<
       checked={checked}
       className={cn(
         // base
-        "relative inline-flex size-4 shrink-0 appearance-none items-center justify-center rounded-sm border shadow-sm outline-none transition duration-100 enabled:cursor-pointer",
+        "text-md relative inline-flex size-4 shrink-0 appearance-none items-center justify-center rounded-sm border shadow-sm outline-none transition duration-100 enabled:cursor-pointer",
         // text color
         "text-white",
         // background color
@@ -30,8 +30,7 @@ const Checkbox = React.forwardRef<
         // focus
         focusRing,
         className
-      )}
-      tremor-id="tremor-raw">
+      )}>
       <CheckboxPrimitives.Indicator asChild className="flex size-full items-center justify-center">
         {checked === "indeterminate" ? (
           <svg

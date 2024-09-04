@@ -1,7 +1,7 @@
 {
   "name": "@fucina/tailwind",
   "description": "Tailwindcss config for Fucina",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "author": "Federico Kratter Thaler <kkratterf@gmail.com>",
   "homepage": "https://fucina.studio",
   "repository": {
