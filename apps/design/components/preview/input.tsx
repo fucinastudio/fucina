@@ -35,11 +35,7 @@ const InputFormDemo = () => {
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
     toast("You submitted the following values:", {
-      description: (
-        <pre className="border-default bg-subtle mt-2 w-[340px] rounded border p-4">
-          <code className="text">{JSON.stringify(data, null, 2)}</code>
-        </pre>
-      ),
+      description: JSON.stringify(data, null, 2),
     });
   }
 
@@ -53,7 +49,7 @@ const InputFormDemo = () => {
             <FormItem>
               <FormLabel>Username</FormLabel>
               <FormControl>
-                <Input placeholder="@mscott" {...field} className="input-docs" />
+                <Input placeholder="@mscott" {...field} className="patch-input" />
               </FormControl>
               <FormDescription>This is your public display name.</FormDescription>
               <FormMessage />
@@ -68,19 +64,19 @@ const InputFormDemo = () => {
 
 export const InputPreview = () => (
   <Preview>
-    <Input type="email" placeholder="Email" className="input-docs w-80" />
+    <Input type="email" placeholder="Email" className="patch-input w-80" />
   </Preview>
 );
 
 export const InputFile = () => (
   <Preview>
-    <Input type="file" className="input-docs w-80" />
+    <Input type="file" className="patch-input w-80" />
   </Preview>
 );
 
 export const InputDisabled = () => (
   <Preview>
-    <Input placeholder="Email" disabled className="input-docs w-80" />
+    <Input placeholder="Email" disabled className="patch-input w-80" />
   </Preview>
 );
 
@@ -88,7 +84,7 @@ export const InputWithLabel = () => (
   <Preview>
     <div className="grid w-80 max-w-sm items-center gap-3">
       <Label htmlFor="email">Email</Label>
-      <Input type="email" id="email" placeholder="Email" className="input-docs" />
+      <Input type="email" id="email" placeholder="Email" className="patch-input" />
     </div>
   </Preview>
 );
@@ -96,7 +92,7 @@ export const InputWithLabel = () => (
 export const InputWithButton = () => (
   <Preview>
     <div className="flex w-80 max-w-sm items-center space-x-2">
-      <Input type="email" placeholder="Email" className="input-docs" />
+      <Input type="email" placeholder="Email" className="patch-input" />
       <Button type="submit">Subscribe</Button>
     </div>
   </Preview>

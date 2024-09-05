@@ -11,6 +11,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
+  SheetBody,
 } from "@fucina/ui";
 
 export const SheetPreview = () => (
@@ -22,28 +23,23 @@ export const SheetPreview = () => (
       <SheetContent>
         <SheetHeader>
           <SheetTitle>Edit profile</SheetTitle>
-          <SheetDescription>
-            Make changes to your profile here. Click save when you&apos;re done.
-          </SheetDescription>
+          <SheetDescription>Make changes to your profile here. Click save when youre done.</SheetDescription>
         </SheetHeader>
-        <div className="grid gap-4 py-4">
-          <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="name" className="text-right">
-              Name
-            </Label>
-            <Input id="name" defaultValue="Michael Scott" className="input-docs col-span-3" />
+        <SheetBody className="flex w-full flex-col items-start gap-4 py-4">
+          <div className="flex w-full flex-col justify-start gap-2">
+            <Label htmlFor="name">Name</Label>
+            <Input id="name" value="Michael Scott" className="patch-input col-span-3" />
           </div>
-          <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="username" className="text-right">
-              Username
-            </Label>
-            <Input id="username" defaultValue="@mscott" className="input-docs col-span-3" />
+          <div className="flex w-full flex-col justify-start gap-2">
+            <Label htmlFor="username">Username</Label>
+            <Input id="username" value="@mscott" className="patch-input col-span-3" />
           </div>
-        </div>
+        </SheetBody>
         <SheetFooter>
           <SheetClose asChild>
-            <Button type="submit">Save changes</Button>
+            <Button variant="secondary">Cancel</Button>
           </SheetClose>
+          <Button type="submit">Save changes</Button>
         </SheetFooter>
       </SheetContent>
     </Sheet>

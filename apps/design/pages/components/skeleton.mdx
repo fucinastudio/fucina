@@ -3,6 +3,7 @@ title: Skeleton
 ---
 
 import { Tabs, Cards, Card } from "nextra/components";
+
 import {
   SkeletonPreview,
   SkeletonCircle,
@@ -15,27 +16,26 @@ import {
 Use to show a placeholder while content is loading.
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <SkeletonPreview />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy filename="skeleton.tsx"
-    import { Skeleton } from "@fucina/ui/components/skeleton"
+<Tabs.Tab>
+  <SkeletonPreview />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy filename="skeleton.tsx"
+import { Skeleton } from "@fucina/ui"
 
-    export function SkeletonDemo() {
-        return (
-            <div className="flex items-center space-x-4">
-              <Skeleton shape="circle" />
-              <div className="space-y-2">
-                <Skeleton shape="line" className="w-60" />
-                <Skeleton shape="line" className="w-40" />
-              </div>
-            </div>
-        )
-    }
-    ```
-
-  </Tabs.Tab>
+export function SkeletonDemo() {
+  return (
+    <div className="flex items-center space-x-4">
+      <Skeleton shape="circle" />
+      <div className="space-y-2">
+        <Skeleton shape="line" className="w-60" />
+        <Skeleton shape="line" className="w-40" />
+      </div>
+    </div>
+  )
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ## Usage
@@ -58,66 +58,62 @@ Avoid using Skeleton screens for content that loads quickly, as their presence m
 ### Circle
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <SkeletonCircle />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy {4} /shape="circle"/ filename="skeleton.tsx"
-    import { Skeleton } from "@fucina/ui/components/skeleton"
+<Tabs.Tab>
+  <SkeletonCircle />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy /shape="circle"/ filename="skeleton.tsx"
+import { Skeleton } from "@fucina/ui"
 
-    export function SkeletonDemo() {
-        return <Skeleton shape="circle" />
-    }
-    ```
-
-  </Tabs.Tab>
+export function SkeletonDemo() {
+  return <Skeleton shape="circle" />;
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ### Line
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <SkeletonLine />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy {4} /shape="line"/ filename="skeleton.tsx"
-    import { Skeleton } from "@fucina/ui/components/skeleton"
+<Tabs.Tab>
+  <SkeletonLine />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy /shape="line"/ filename="skeleton.tsx"
+import { Skeleton } from "@fucina/ui"
 
-    export function SkeletonDemo() {
-        return <Skeleton shape="line" />
-    }
-    ```
-
-  </Tabs.Tab>
+export function SkeletonDemo() {
+  return <Skeleton shape="line" />
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ### With card
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <SkeletonCard />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy {2,6,7,13,14} /Card/ /CardContent/ filename="skeleton.tsx"
-    import { Skeleton } from "@fucina/ui/components/skeleton"
-    import { Card, CardContent } from "@fucina/ui/components/card"
+<Tabs.Tab>
+  <SkeletonCard />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy /Card/ filename="skeleton.tsx"
+import { Skeleton,  Card } from "@fucina/ui"
 
-    export function SkeletonDemo() {
-        return (
-            <Card>
-                <CardContent className="flex items-center space-x-4">
-                  <Skeleton shape="circle" />
-                  <div className="space-y-2">
-                    <Skeleton shape="line" className="w-60" />
-                    <Skeleton shape="line" className="w-40" />
-                  </div>
-                </CardContent>
-            </Card>
-        )
-    }
-    ```
-
-  </Tabs.Tab>
+export function SkeletonDemo() {
+  return (
+    <Card>
+      <div className="flex items-center space-x-4">
+        <Skeleton shape="circle" />
+        <div className="space-y-2">
+          <Skeleton shape="line" className="w-60" />
+          <Skeleton shape="line" className="w-40" />
+        </div>
+      </div>
+    </Card>
+  )
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ## Useful links
@@ -131,6 +127,6 @@ Avoid using Skeleton screens for content that loads quickly, as their presence m
   />
   <Card
     title="🪄 Figma"
-    href="https://www.figma.com/design/Jfto7FUoU7mSpnv9uESD60/%F0%9F%9F%A0-feely---design-system?node-id=540-8878&t=nua4UmG9Iu1hfUAm-1"
+    href="https://www.figma.com/design/Jfto7FUoU7mSpnv9uESD60/%F0%9F%94%A5-Fucina---Design-System?node-id=639-30188&t=BERFxjM8vy494uCE-1"
   />
 </Cards>

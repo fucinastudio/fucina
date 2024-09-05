@@ -3,6 +3,7 @@ title: Segmented
 ---
 
 import { Tabs, Cards, Card } from "nextra/components";
+
 import { AccessibilityTable } from "@/components/accessibility/accessibility-table.mdx";
 import { segmentedAccessibilityData } from "@/components/accessibility/segmented.tsx";
 import {
@@ -17,28 +18,27 @@ import {
 Used to organize content by grouping similar information on the same area.
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <SegmentedPreview />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy filename="segmented.tsx"
-    import { Segmented, SegmentedContent, SegmentedList, SegmentedTrigger } from "@fucina/ui/components/segmented"
+<Tabs.Tab>
+  <SegmentedPreview />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy filename="segmented.tsx"
+import { Segmented, SegmentedContent, SegmentedList, SegmentedTrigger } from "@fucina/ui"
 
-    export function SegmentedDemo() {
-      return (
-        <Segmented defaultValue="grid">
-          <SegmentedList>
-            <SegmentedTrigger value="grid">Grid</SegmentedTrigger>
-            <SegmentedTrigger value="list">List</SegmentedTrigger>
-          </SegmentedList>
-          <SegmentedContent value="grid">Grid view</SegmentedContent>
-          <SegmentedContent value="list">List view</SegmentedContent>
-        </Segmented>
-      )
-    }
-    ```
-
-  </Tabs.Tab>
+export function SegmentedDemo() {
+  return (
+    <Segmented defaultValue="grid">
+      <SegmentedList>
+        <SegmentedTrigger value="grid">Grid</SegmentedTrigger>
+        <SegmentedTrigger value="list">List</SegmentedTrigger>
+      </SegmentedList>
+      <SegmentedContent value="grid">Grid view</SegmentedContent>
+      <SegmentedContent value="list">List view</SegmentedContent>
+    </Segmented>
+  )
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ## Usage
@@ -59,110 +59,106 @@ Avoid using Segmented Controls when the options represent a workflow or a proces
 ### Default
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <SegmentedPreview />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy filename="segmented.tsx"
-    import { Segmented, SegmentedContent, SegmentedList, SegmentedTrigger } from "@fucina/ui/components/segmented";
+<Tabs.Tab>
+  <SegmentedPreview />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy filename="segmented.tsx"
+import { Segmented, SegmentedContent, SegmentedList, SegmentedTrigger } from "@fucina/ui"
 
-    export function SegmentedDemo() {
-      return (
-        <Segmented defaultValue="grid">
-          <SegmentedList>
-            <SegmentedTrigger value="grid">Grid</SegmentedTrigger>
-            <SegmentedTrigger value="list">List</SegmentedTrigger>
-          </SegmentedList>
-          <SegmentedContent value="grid">Grid view</SegmentedContent>
-          <SegmentedContent value="list">List view</SegmentedContent>
-        </Segmented>
-      )
-    }
-    ```
-
-  </Tabs.Tab>
+export function SegmentedDemo() {
+  return (
+    <Segmented defaultValue="grid">
+      <SegmentedList>
+        <SegmentedTrigger value="grid">Grid</SegmentedTrigger>
+        <SegmentedTrigger value="list">List</SegmentedTrigger>
+      </SegmentedList>
+      <SegmentedContent value="grid">Grid view</SegmentedContent>
+      <SegmentedContent value="list">List view</SegmentedContent>
+    </Segmented>
+  )
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ### Default value
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <SegmentedDefaultValue />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy {5} /defaultValue/ filename="segmented.tsx"
-    import { Segmented, SegmentedContent, SegmentedList, SegmentedTrigger } from "@fucina/ui/components/segmented";
+<Tabs.Tab>
+  <SegmentedDefaultValue />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy /defaultValue/ filename="segmented.tsx"
+import { Segmented, SegmentedContent, SegmentedList, SegmentedTrigger } from "@fucina/ui";
 
-    export function SegmentedDemo() {
-      return (
-        <Segmented defaultValue="list">
-          <SegmentedList>
-            <SegmentedTrigger value="grid">Grid</SegmentedTrigger>
-            <SegmentedTrigger value="list">List</SegmentedTrigger>
-          </SegmentedList>
-          <SegmentedContent value="grid">Grid view</SegmentedContent>
-          <SegmentedContent value="list">List view</SegmentedContent>
-        </Segmented>
-      )
-    }
-    ```
-
-  </Tabs.Tab>
+export function SegmentedDemo() {
+  return (
+    <Segmented defaultValue="list">
+      <SegmentedList>
+        <SegmentedTrigger value="grid">Grid</SegmentedTrigger>
+        <SegmentedTrigger value="list">List</SegmentedTrigger>
+      </SegmentedList>
+      <SegmentedContent value="grid">Grid view</SegmentedContent>
+      <SegmentedContent value="list">List view</SegmentedContent>
+    </Segmented>
+  )
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ### Disabled
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <SegmentedDisabled />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy {8} /disabled/ filename="segmented.tsx"
-    import { Segmented, SegmentedContent, SegmentedList, SegmentedTrigger } from "@fucina/ui/components/segmented";
+<Tabs.Tab>
+  <SegmentedDisabled />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy /disabled/ filename="segmented.tsx"
+import { Segmented, SegmentedContent, SegmentedList, SegmentedTrigger } from "@fucina/ui";
 
-    export function SegmentedDemo() {
-      return (
-        <Segmented defaultValue="grid">
-          <SegmentedList>
-            <SegmentedTrigger value="grid">Grid</SegmentedTrigger>
-            <SegmentedTrigger value="list" disabled>List</SegmentedTrigger>
-          </SegmentedList>
-          <SegmentedContent value="grid">Grid view</SegmentedContent>
-          <SegmentedContent value="list">List view</SegmentedContent>
-        </Segmented>
-      )
-    }
-    ```
-
-  </Tabs.Tab>
+export function SegmentedDemo() {
+  return (
+    <Segmented defaultValue="grid">
+      <SegmentedList>
+        <SegmentedTrigger value="grid">Grid</SegmentedTrigger>
+        <SegmentedTrigger value="list" disabled>List</SegmentedTrigger>
+      </SegmentedList>
+      <SegmentedContent value="grid">Grid view</SegmentedContent>
+      <SegmentedContent value="list">List view</SegmentedContent>
+    </Segmented>
+  )
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ### With icon
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <SegmentedWithIcon />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy {8,9} filename="segmented.tsx"
-    import { Segmented, SegmentedContent, SegmentedList, SegmentedTrigger } from "@fucina/ui/components/segmented";
-    import { Grid, List } from 'lucide-react';
+<Tabs.Tab>
+  <SegmentedWithIcon />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy filename="segmented.tsx"
+import { Segmented, SegmentedContent, SegmentedList, SegmentedTrigger } from "@fucina/ui";
+import { Grid, List } from 'lucide-react'
 
-    export function SegmentedDemo() {
-      return (
-        <Segmented defaultValue="grid">
-          <SegmentedList>
-            <SegmentedTrigger value="grid"><Grid /></SegmentedTrigger>
-            <SegmentedTrigger value="list"><List /></SegmentedTrigger>
-          </SegmentedList>
-          <SegmentedContent value="grid">Grid view</SegmentedContent>
-          <SegmentedContent value="list">List view</SegmentedContent>
-        </Segmented>
-      )
-    }
-    ```
-
-  </Tabs.Tab>
+export function SegmentedDemo() {
+  return (
+    <Segmented defaultValue="grid">
+      <SegmentedList>
+        <SegmentedTrigger value="grid"><Grid /></SegmentedTrigger>
+        <SegmentedTrigger value="list"><List /></SegmentedTrigger>
+      </SegmentedList>
+      <SegmentedContent value="grid">Grid view</SegmentedContent>
+      <SegmentedContent value="list">List view</SegmentedContent>
+    </Segmented>
+  )
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ## Useful links
@@ -176,7 +172,7 @@ Avoid using Segmented Controls when the options represent a workflow or a proces
   />
   <Card
     title="🪄 Figma"
-    href="https://www.figma.com/design/Jfto7FUoU7mSpnv9uESD60/%F0%9F%9F%A0-feely---design-system?node-id=763-3968&t=nua4UmG9Iu1hfUAm-1"
+    href="https://www.figma.com/design/Jfto7FUoU7mSpnv9uESD60/%F0%9F%94%A5-Fucina---Design-System?node-id=763-4078&t=BERFxjM8vy494uCE-1"
   />
   <Card
     title="🐝 API Reference"

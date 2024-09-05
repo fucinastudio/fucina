@@ -65,26 +65,6 @@ export const ToastWithAction = () => {
   );
 };
 
-export const ToastBrand = () => {
-  return (
-    <Preview>
-      <Button
-        variant="secondary"
-        onClick={() => {
-          toast.success("Your message has been sent.", {
-            description: "There was a problem with your request.",
-            action: {
-              label: "Undo",
-              onClick: () => console.log("Undo"),
-            },
-          });
-        }}>
-        Show Toast
-      </Button>
-    </Preview>
-  );
-};
-
 export const ToastDanger = () => {
   return (
     <Preview>

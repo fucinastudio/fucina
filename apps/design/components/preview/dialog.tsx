@@ -35,13 +35,13 @@ export const DialogPreview = () => (
             <Label htmlFor="name" className="text-right">
               Name
             </Label>
-            <Input id="name" defaultValue="Michael Scott" className="input-docs col-span-3" />
+            <Input id="name" defaultValue="Michael Scott" className="patch-input col-span-3" />
           </div>
           <div className="grid grid-cols-4 items-center gap-4">
             <Label htmlFor="username" className="text-right">
               Username
             </Label>
-            <Input id="username" defaultValue="@mscott" className="input-docs col-span-3" />
+            <Input id="username" defaultValue="@mscott" className="patch-input col-span-3" />
           </div>
         </div>
         <DialogFooter>
@@ -70,13 +70,13 @@ export const DialogCustomClose = () => (
             <Label htmlFor="name" className="text-right">
               Name
             </Label>
-            <Input id="name" defaultValue="Michael Scott" className="input-docs col-span-3" />
+            <Input id="name" defaultValue="Michael Scott" className="patch-input col-span-3" />
           </div>
           <div className="grid grid-cols-4 items-center gap-4">
             <Label htmlFor="username" className="text-right">
               Username
             </Label>
-            <Input id="username" defaultValue="@mscott" className="input-docs col-span-3" />
+            <Input id="username" defaultValue="@mscott" className="patch-input col-span-3" />
           </div>
         </div>
         <DialogFooter>

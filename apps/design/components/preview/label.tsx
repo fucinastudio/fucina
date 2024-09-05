@@ -23,7 +23,7 @@ export const LabelWithInput = () => (
   <Preview>
     <div className="grid w-full max-w-sm items-center gap-3">
       <Label htmlFor="email">Email</Label>
-      <Input type="email" id="email" placeholder="Email" className="input-docs" />
+      <Input type="email" id="email" placeholder="Email" className="patch-input" />
     </div>
   </Preview>
 );

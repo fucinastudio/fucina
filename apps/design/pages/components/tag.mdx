@@ -3,6 +3,7 @@ title: Tag
 ---
 
 import { Tabs, Cards, Card } from "nextra/components";
+
 import {
   TagPreview,
   TagBrand,
@@ -22,24 +23,21 @@ import {
 Displays an element for categorizing or markup.
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <TagPreview />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy filename="tag.tsx"
-    import { Tag } from "@fucina/ui/components/tag";
-    import { TagIcon } from 'lucide-react';
+<Tabs.Tab>
+  <TagPreview />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy filename="tag.tsx"
+import { Tag } from "@fucina/ui";
+import { TagIcon } from 'lucide-react';
 
-    export function TagDemo() {
-        return (
-            <Tag>
-                <TagIcon /> Markup
-            </Tag>
-        );
-    }
-    ```
-
-  </Tabs.Tab>
+export function TagDemo() {
+  return (
+    <Tag><TagIcon />Markup</Tag>
+  );
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ## Usage
@@ -62,231 +60,203 @@ Avoid using Tags for long or complex information that would be better served by 
 ### Brand
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <TagBrand />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy {6} /variant="brand"/ filename="tag.tsx"
-    import { Tag } from "@fucina/ui/components/tag";
-    import { TagIcon } from 'lucide-react';
+<Tabs.Tab>
+  <TagBrand />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy /variant="brand"/ filename="tag.tsx"
+import { Tag } from "@fucina/ui";
+import { TagIcon } from 'lucide-react';
 
-    export function TagDemo() {
-        return (
-            <Tag variant="brand">
-                <TagIcon /> Markup
-            </Tag>
-        );
-    }
-    ```
-
-  </Tabs.Tab>
+export function TagDemo() {
+  return (
+    <Tag variant="brand"><TagIcon />Markup</Tag>
+  );
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ### Neutral
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <TagNeutral />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy {6} /variant="neutral"/ filename="tag.tsx"
-    import { Tag } from "@fucina/ui/components/tag";
-    import { TagIcon } from 'lucide-react';
+<Tabs.Tab>
+  <TagNeutral />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy /variant="neutral"/ filename="tag.tsx"
+import { Tag } from "@fucina/ui";
+import { TagIcon } from 'lucide-react';
 
-    export function TagDemo() {
-        return (
-            <Tag variant="neutral">
-                <TagIcon /> Markup
-            </Tag>
-        );
-    }
-    ```
-
-  </Tabs.Tab>
+export function TagDemo() {
+  return (
+    <Tag variant="neutral"><TagIcon />Markup</Tag>
+  );
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ### Red
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <TagRed />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy {6} /variant="red"/ filename="tag.tsx"
-    import { Tag } from "@fucina/ui/components/tag";
-    import { TagIcon } from 'lucide-react';
+<Tabs.Tab>
+  <TagRed />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy /variant="red"/ filename="tag.tsx"
+import { Tag } from "@fucina/ui";
+import { TagIcon } from 'lucide-react';
 
-    export function TagDemo() {
-        return (
-            <Tag variant="red">
-                <TagIcon /> Markup
-            </Tag>
-        );
-    }
-    ```
-
-  </Tabs.Tab>
+export function TagDemo() {
+  return (
+    <Tag variant="red"><TagIcon /> Markup</Tag>
+  );
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ### Amber
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <TagAmber />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy {6} /variant="amber"/ filename="tag.tsx"
-    import { Tag } from "@fucina/ui/components/tag";
-    import { TagIcon } from 'lucide-react';
+<Tabs.Tab>
+  <TagAmber />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy /variant="amber"/ filename="tag.tsx"
+import { Tag } from "@fucina/ui";
+import { TagIcon } from 'lucide-react';
 
-    export function TagDemo() {
-        return (
-            <Tag variant="amber">
-                <TagIcon /> Markup
-            </Tag>
-        );
-    }
-    ```
-
-  </Tabs.Tab>
+export function TagDemo() {
+  return (
+    <Tag variant="amber"><TagIcon />Markup</Tag>
+  );
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ### Emerald
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <TagEmerald />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy {6} /variant="emerald"/ filename="tag.tsx"
-    import { Tag } from "@fucina/ui/components/tag";
-    import { TagIcon } from 'lucide-react';
+<Tabs.Tab>
+  <TagEmerald />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy /variant="emerald"/ filename="tag.tsx"
+import { Tag } from "@fucina/ui";
+import { TagIcon } from 'lucide-react';
 
-    export function TagDemo() {
-        return (
-            <Tag variant="emerald">
-                <TagIcon /> Markup
-            </Tag>
-        );
-    }
-    ```
-
-  </Tabs.Tab>
+export function TagDemo() {
+  return (
+    <Tag variant="emerald"><TagIcon /> Markup</Tag>
+  );
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ### Teal
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <TagTeal />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy {6} /variant="teal"/ filename="tag.tsx"
-    import { Tag } from "@fucina/ui/components/tag";
-    import { TagIcon } from 'lucide-react';
+<Tabs.Tab>
+  <TagTeal />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy /variant="teal"/ filename="tag.tsx"
+import { Tag } from "@fucina/ui";
+import { TagIcon } from 'lucide-react';
 
-    export function TagDemo() {
-        return (
-            <Tag variant="teal">
-                <TagIcon /> Markup
-            </Tag>
-        );
-    }
-    ```
-
-  </Tabs.Tab>
+export function TagDemo() {
+  return (
+    <Tag variant="teal"><TagIcon />Markup</Tag>
+  );
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ### Cyan
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <TagCyan />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy {6} /variant="cyan"/ filename="tag.tsx"
-    import { Tag } from "@fucina/ui/components/tag";
-    import { TagIcon } from 'lucide-react';
+<Tabs.Tab>
+  <TagCyan />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy /variant="cyan"/ filename="tag.tsx"
+import { Tag } from "@fucina/ui";
+import { TagIcon } from 'lucide-react';
 
-    export function TagDemo() {
-        return (
-            <Tag variant="cyan">
-                <TagIcon /> Markup
-            </Tag>
-        );
-    }
-    ```
-
-  </Tabs.Tab>
+export function TagDemo() {
+  return (
+    <Tag variant="cyan"><TagIcon />Markup</Tag>
+  );
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ### Blue
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <TagBlue />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy {6} /variant="blue"/ filename="tag.tsx"
-    import { Tag } from "@fucina/ui/components/tag";
-    import { TagIcon } from 'lucide-react';
+<Tabs.Tab>
+  <TagBlue />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy /variant="blue"/ filename="tag.tsx"
+import { Tag } from "@fucina/ui";
+import { TagIcon } from 'lucide-react'
 
-    export function TagDemo() {
-        return (
-            <Tag variant="blue">
-                <TagIcon /> Markup
-            </Tag>
-        );
-    }
-    ```
-
-  </Tabs.Tab>
+export function TagDemo() {
+  return (
+      <Tag variant="blue">
+          <TagIcon /> Markup
+      </Tag>
+  );
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ### Purple
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <TagPurple />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy {6} /variant="purple"/ filename="tag.tsx"
-    import { Tag } from "@fucina/ui/components/tag";
-    import { TagIcon } from 'lucide-react';
+<Tabs.Tab>
+  <TagPurple />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy /variant="purple"/ filename="tag.tsx"
+import { Tag } from "@fucina/ui";
+import { TagIcon } from 'lucide-react';
 
-    export function TagDemo() {
-        return (
-            <Tag variant="purple">
-                <TagIcon /> Markup
-            </Tag>
-        );
-    }
-    ```
-
-  </Tabs.Tab>
+export function TagDemo() {
+  return (
+    <Tag variant="purple"><TagIcon />Markup</Tag>
+  );
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ### Pink
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <TagPink />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy {6} /variant="pink"/ filename="tag.tsx"
-    import { Tag } from "@fucina/ui/components/tag";
-    import { TagIcon } from 'lucide-react';
+<Tabs.Tab>
+  <TagPink />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy /variant="pink"/ filename="tag.tsx"
+import { Tag } from "@fucina/ui";
+import { TagIcon } from 'lucide-react';
 
-    export function TagDemo() {
-        return (
-            <Tag variant="pink">
-                <TagIcon /> Markup
-            </Tag>
-        );
-    }
-    ```
-
-  </Tabs.Tab>
+export function TagDemo() {
+  return (
+    <Tag variant="pink"><TagIcon />Markup</Tag>
+  );
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ## Useful links
@@ -300,6 +270,6 @@ Avoid using Tags for long or complex information that would be better served by 
   />
   <Card
     title="🪄 Figma"
-    href="https://www.figma.com/design/Jfto7FUoU7mSpnv9uESD60/%F0%9F%9F%A0-feely---design-system?node-id=635-3323&t=nua4UmG9Iu1hfUAm-1"
+    href="https://www.figma.com/design/Jfto7FUoU7mSpnv9uESD60/%F0%9F%94%A5-Fucina---Design-System?node-id=639-31205&t=SkIduRAaGEKfas8z-1"
   />
 </Cards>

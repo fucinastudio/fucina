@@ -1,16 +1,7 @@
 import { User, Lock } from "lucide-react";
 
 import Preview from "@/components/preview/preview";
-import {
-  Button,
-  Input,
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-  Label,
-  Card,
-} from "@fucina/ui";
+import { Button, Input, Tabs, TabsContent, TabsList, TabsTrigger, Label, Card } from "@fucina/ui";
 
 export const TabsPreview = () => (
   <Preview>
@@ -19,22 +10,22 @@ export const TabsPreview = () => (
         <TabsTrigger value="account">Account</TabsTrigger>
         <TabsTrigger value="password">Password</TabsTrigger>
       </TabsList>
-      <TabsContent value="account" className="w-full space-y-4">
-        <div className="mt-2 space-y-2">
+      <TabsContent value="account" className="space-y-4 w-full">
+        <div className="space-y-2 mt-2">
           <div className="space-y-2">
             <p className="text-heading-subsection">Account</p>
             <p className="text-description text-md">
               Make changes to your account here. Click save when you&apos;re done.
             </p>
           </div>
-          <div className="grid gap-2 py-4">
+          <div className="gap-2 grid py-4">
             <div className="space-y-1">
               <Label htmlFor="name">Name</Label>
-              <Input id="name" defaultValue="Michael Scott" className="input-docs" />
+              <Input id="name" defaultValue="Michael Scott" className="patch-input" />
             </div>
             <div className="space-y-1">
               <Label htmlFor="username">Username</Label>
-              <Input id="username" defaultValue="@mscott" className="input-docs" />
+              <Input id="username" defaultValue="@mscott" className="patch-input" />
             </div>
           </div>
         </div>
@@ -42,22 +33,22 @@ export const TabsPreview = () => (
           <Button>Save</Button>
         </div>
       </TabsContent>
-      <TabsContent value="password" className="w-full space-y-4">
-        <div className="mt-2 space-y-2">
+      <TabsContent value="password" className="space-y-4 w-full">
+        <div className="space-y-2 mt-2">
           <div className="space-y-2">
             <p className="text-heading-subsection">Password</p>
             <p className="text-description text-md">
               Change your password here. After saving, you&apos;ll be logged out.
             </p>
           </div>
-          <div className="grid gap-2 py-4">
+          <div className="gap-2 grid py-4">
             <div className="space-y-1">
               <Label htmlFor="current">Current password</Label>
-              <Input id="current" type="password" className="input-docs" />
+              <Input id="current" type="password" className="patch-input" />
             </div>
             <div className="space-y-1">
               <Label htmlFor="new">New password</Label>
-              <Input id="new" type="password" className="input-docs" />
+              <Input id="new" type="password" className="patch-input" />
             </div>
           </div>
         </div>
@@ -136,48 +127,52 @@ export const TabsWithCard = () => (
         <TabsTrigger value="account">Account</TabsTrigger>
         <TabsTrigger value="password">Password</TabsTrigger>
       </TabsList>
-      <TabsContent value="account">
+      <TabsContent value="account" className="space-y-4 w-full">
         <Card>
-          <div>
-            <h3>Account</h3>
-            <p>
-              Make changes to your account here. Click save when you&apos;re done.
-            </p>
-          </div>
           <div className="space-y-2">
-            <div className="space-y-1">
-              <Label htmlFor="name">Name</Label>
-              <Input id="name" defaultValue="Michael Scott" className="input-docs" />
+            <div className="space-y-2">
+              <p className="text-heading-subsection">Account</p>
+              <p className="text-description text-md">
+                Make changes to your account here. Click save when you&apos;re done.
+              </p>
             </div>
-            <div className="space-y-1">
-              <Label htmlFor="username">Username</Label>
-              <Input id="username" defaultValue="@mscott" className="input-docs" />
+            <div className="gap-2 grid py-4">
+              <div className="space-y-1">
+                <Label htmlFor="name">Name</Label>
+                <Input id="name" defaultValue="Michael Scott" className="patch-input" />
+              </div>
+              <div className="space-y-1">
+                <Label htmlFor="username">Username</Label>
+                <Input id="username" defaultValue="@mscott" className="patch-input" />
+              </div>
             </div>
           </div>
-          <div>
+          <div className="flex mt-2">
             <Button>Save</Button>
           </div>
         </Card>
       </TabsContent>
-      <TabsContent value="password">
+      <TabsContent value="password" className="space-y-4 w-full">
         <Card>
-          <div>
-            <h3>Password</h3>
-            <p>
-              Change your password here. After saving, you&apos;ll be logged out.
-            </p>
-          </div>
           <div className="space-y-2">
-            <div className="space-y-1">
-              <Label htmlFor="current">Current password</Label>
-              <Input id="current" type="password" className="input-docs" />
+            <div className="space-y-2">
+              <p className="text-heading-subsection">Password</p>
+              <p className="text-description text-md">
+                Change your password here. After saving, you&apos;ll be logged out.
+              </p>
             </div>
-            <div className="space-y-1">
-              <Label htmlFor="new">New password</Label>
-              <Input id="new" type="password" className="input-docs" />
+            <div className="gap-2 grid py-4">
+              <div className="space-y-1">
+                <Label htmlFor="current">Current password</Label>
+                <Input id="current" type="password" className="patch-input" />
+              </div>
+              <div className="space-y-1">
+                <Label htmlFor="new">New password</Label>
+                <Input id="new" type="password" className="patch-input" />
+              </div>
             </div>
           </div>
-          <div>
+          <div className="flex mt-2">
             <Button>Save</Button>
           </div>
         </Card>

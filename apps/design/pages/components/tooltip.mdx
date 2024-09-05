@@ -13,32 +13,25 @@ import { TooltipPreview, TooltipSide } from "@/components/preview/tooltip.tsx";
 A floating, non-actionable label used to explain a user interface element or feature.
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <TooltipPreview />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy filename="tooltip.tsx"
-    import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@fucina/ui/components/tooltip"
-    import { Button } from "@fucina/ui/components/button"
-    import { FilePlus } from "@fucina/ui/components/icon"
+<Tabs.Tab>
+  <TooltipPreview />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy filename="tooltip.tsx"
+import { Button, Tooltip } from "@fucina/ui"
+import { FilePlus } from "lucide-react"
 
-    export function TooltipDemo() {
-      return (
-        <TooltipProvider>
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <Button variant="secondary" icon={true}><FilePlus /></Button>
-            </TooltipTrigger>
-            <TooltipContent>
-              <p>Add to library</p>
-            </TooltipContent>
-          </Tooltip>
-        </TooltipProvider>
-      )
-    }
-    ```
-
-  </Tabs.Tab>
+export function TooltipDemo() {
+  return (
+    <Tooltip content="Add to library">
+      <Button variant="secondary" icon={true}>
+        <FilePlus />
+      </Button>
+    </Tooltip>
+  )
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ## Usage
@@ -66,95 +59,66 @@ Additionally, refrain from using Tooltips to provide instructions that are compl
 ### Default
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <TooltipPreview />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy filename="tooltip.tsx"
-    import { Tooltip } from "@fucina/ui/components/tooltip"
-    import { Button } from "@fucina/ui/components/button"
-    import { FilePlus } from "@fucina/ui/components/icon"
+<Tabs.Tab>
+  <TooltipPreview />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy filename="tooltip.tsx"
+import { Button, Tooltip } from "@fucina/ui"
+import { FilePlus } from "lucide-react"
 
-    export function TooltipDemo() {
-      return (
-        <TooltipProvider>
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <Button variant="secondary" icon={true}><FilePlus /></Button>
-            </TooltipTrigger>
-            <TooltipContent type="outline">
-              <p>Add to library</p>
-            </TooltipContent>
-          </Tooltip>
-        </TooltipProvider>
-      )
-    }
-    ```
-
-  </Tabs.Tab>
+export function TooltipDemo() {
+  return (
+    <Tooltip content="Add to library">
+      <Button variant="secondary" icon={true}>
+        <FilePlus />
+      </Button>
+    </Tooltip>
+  )
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ### Side
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <TooltipSide />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy {13, 23, 33, 43} /side/ filename="tooltip.tsx"
-    import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@fucina/ui/components/tooltip"
-    import { Button } from "@fucina/ui/components/button"
-    import { FilePlus } from "@fucina/ui/components/icon"
+<Tabs.Tab>
+  <TooltipSide />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy /side/ filename="tooltip.tsx"
+import { Button, Tooltip } from "@fucina/ui"
+import { FilePlus } from "lucide-react"
 
-    export function TooltipDemo() {
-      return (
-        <div className="grid justify-items-center sm:flex gap-5">
-          <TooltipProvider>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <Button variant="secondary" icon={true}><FilePlus /></Button>
-              </TooltipTrigger>
-              <TooltipContent side="top">
-                <p>Add to library</p>
-              </TooltipContent>
-            </Tooltip>
-          </TooltipProvider>
-          <TooltipProvider>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <Button variant="secondary" icon={true}><FilePlus /></Button>
-              </TooltipTrigger>
-              <TooltipContent side="bottom">
-                <p>Add to library</p>
-              </TooltipContent>
-            </Tooltip>
-          </TooltipProvider>
-          <TooltipProvider>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <Button variant="secondary" icon={true}><FilePlus /></Button>
-              </TooltipTrigger>
-              <TooltipContent side="left">
-                <p>Add to library</p>
-              </TooltipContent>
-            </Tooltip>
-          </TooltipProvider>
-          <TooltipProvider>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <Button variant="secondary" icon={true}><FilePlus /></Button>
-              </TooltipTrigger>
-              <TooltipContent side="right">
-                <p>Add to library</p>
-              </TooltipContent>
-            </Tooltip>
-          </TooltipProvider>
-        </div>
-      )
-    }
-    ```
-
-  </Tabs.Tab>
+export function TooltipDemo() {
+  return (
+    <div className="grid justify-items-center sm:flex gap-5">
+        <Tooltip content="Add to library" side="top">
+        <Button variant="secondary" icon={true}>
+          <FilePlus />
+        </Button>
+      </Tooltip>
+      <Tooltip content="Add to library" side="bottom">
+        <Button variant="secondary" icon={true}>
+          <FilePlus />
+        </Button>
+      </Tooltip>
+      <Tooltip content="Add to library" side="left">
+        <Button variant="secondary" icon={true}>
+          <FilePlus />
+        </Button>
+      </Tooltip>
+      <Tooltip content="Add to library" side="right">
+        <Button variant="secondary" icon={true}>
+          <FilePlus />
+        </Button>
+      </Tooltip>
+    </div>
+  )
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ## Useful links
@@ -168,7 +132,7 @@ Additionally, refrain from using Tooltips to provide instructions that are compl
   />
   <Card
     title="🪄 Figma"
-    href="https://www.figma.com/design/Jfto7FUoU7mSpnv9uESD60/%F0%9F%9F%A0-feely---design-system?node-id=540-8886&t=nua4UmG9Iu1hfUAm-1"
+    href="https://www.figma.com/design/Jfto7FUoU7mSpnv9uESD60/%F0%9F%94%A5-Fucina---Design-System?node-id=639-31932&t=SkIduRAaGEKfas8z-1"
   />
   <Card
     title="🐝 API Reference"

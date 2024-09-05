@@ -3,6 +3,7 @@ title: Tabs
 ---
 
 import { Tabs, Cards, Card } from "nextra/components";
+
 import { AccessibilityTable } from "@/components/accessibility/accessibility-table.mdx";
 import { tabsAccessibilityData } from "@/components/accessibility/tabs.tsx";
 import {
@@ -19,77 +20,72 @@ import {
 A set of layered sections of content—known as tab panels—that are displayed one at a time.
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <TabsPreview />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy filename="tabs.tsx"
-    import { Button } from "@fucina/ui/components/button"
-    import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@fucina/ui/components/card"
-    import { Input } from "@fucina/ui/components/input"
-    import { Label } from "@fucina/ui/components/label"
-    import { Tabs, TabsContent, TabsList, TabsTrigger } from "@fucina/ui/components/tabs"
+<Tabs.Tab>
+  <TabsPreview />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy filename="tabs.tsx"
+import { Button, Input, Label, Tabs, TabsContent, TabsList, TabsTrigger, Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@fucina/ui"
 
-    export function TabsDemo() {
-      return (
-        <Tabs defaultValue="account" className="w-96">
-          <TabsList className="w-full">
-            <TabsTrigger value="account">Account</TabsTrigger>
-            <TabsTrigger value="password">Password</TabsTrigger>
-          </TabsList>
-          <TabsContent value="account">
+export function TabsDemo() {
+  return (
+    <Tabs defaultValue="account" className="w-96">
+      <TabsList className="w-full">
+        <TabsTrigger value="account">Account</TabsTrigger>
+        <TabsTrigger value="password">Password</TabsTrigger>
+      </TabsList>
+      <TabsContent value="account">
+        <div>
+          <div>
+            <p>Account</p>
+            <p>
+              Make changes to your account here. Click save when you&apos;re
+              done.
+            </p>
+          </div>
+          <div>
             <div>
-              <div>
-                <p>Account</p>
-                <p>
-                  Make changes to your account here. Click save when you&apos;re
-                  done.
-                </p>
-              </div>
-              <div>
-                <div>
-                  <Label htmlFor="name">Name</Label>
-                  <Input id="name" defaultValue="Michael Scott" />
-                </div>
-                <div>
-                  <Label htmlFor="username">Username</Label>
-                  <Input id="username" defaultValue="@mscott" />
-                </div>
-              </div>
+              <Label htmlFor="name">Name</Label>
+              <Input id="name" defaultValue="Michael Scott" />
             </div>
             <div>
-              <Button>Save</Button>
+              <Label htmlFor="username">Username</Label>
+              <Input id="username" defaultValue="@mscott" />
             </div>
-          </TabsContent>
-          <TabsContent value="password">
+          </div>
+        </div>
+        <div>
+          <Button>Save</Button>
+        </div>
+      </TabsContent>
+      <TabsContent value="password">
+        <div>
+          <div>
+            <p>Password</p>
+            <p>
+              Change your password here. After saving, you'll be logged out.
+            </p>
+          </div>
+          <div>
             <div>
-              <div>
-                <p>Password</p>
-                <p>
-                  Change your password here. After saving, you'll be logged out.
-                </p>
-              </div>
-              <div>
-                <div>
-                  <Label htmlFor="current">Current password</Label>
-                  <Input id="current" type="password" />
-                </div>
-                <div>
-                  <Label htmlFor="new">New password</Label>
-                  <Input id="new" type="password" />
-                </div>
-              </div>
+              <Label htmlFor="current">Current password</Label>
+              <Input id="current" type="password" />
             </div>
             <div>
-              <Button>Save</Button>
+              <Label htmlFor="new">New password</Label>
+              <Input id="new" type="password" />
             </div>
-          </TabsContent>
-        </Tabs>
-      )
-    }
-    ```
-
-  </Tabs.Tab>
+          </div>
+        </div>
+        <div>
+          <Button>Save</Button>
+        </div>
+      </TabsContent>
+    </Tabs>
+  )
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ## Usage
@@ -112,185 +108,180 @@ Avoid using Tabs for unrelated content that doesn’t require a clear separation
 ### Default
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <TabsDefault />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy filename="tabs.tsx"
-    import { Tabs, TabsContent, TabsList, TabsTrigger } from "@fucina/ui/components/tabs"
+<Tabs.Tab>
+  <TabsDefault />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy filename="tabs.tsx"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@fucina/ui"
 
-    export function TabsDemo() {
-      return (
-        <Tabs defaultValue="account" className="w-96">
-          <TabsList>
-            <TabsTrigger value="account">Account</TabsTrigger>
-            <TabsTrigger value="password">Password</TabsTrigger>
-          </TabsList>
-          <TabsContent value="account">Make changes to your account here</TabsContent>
-          <TabsContent value="password">Change your password here</TabsContent>
-        </Tabs>
-      )
-    }
-    ```
-
-  </Tabs.Tab>
+export function TabsDemo() {
+  return (
+    <Tabs defaultValue="account" className="w-96">
+      <TabsList>
+        <TabsTrigger value="account">Account</TabsTrigger>
+        <TabsTrigger value="password">Password</TabsTrigger>
+      </TabsList>
+      <TabsContent value="account">Make changes to your account here</TabsContent>
+      <TabsContent value="password">Change your password here</TabsContent>
+    </Tabs>
+  )
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ### Default value
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <TabsDefaultValue />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy {5} /defaultValue="password"/ filename="tabs.tsx"
-    import { Tabs, TabsContent, TabsList, TabsTrigger } from "@fucina/ui/components/tabs"
+<Tabs.Tab>
+  <TabsDefaultValue />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy /defaultValue="password"/ filename="tabs.tsx"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@fucina/ui"
 
-    export function TabsDemo() {
-      return (
-        <Tabs defaultValue="password" className="w-96">
-          <TabsList>
-            <TabsTrigger value="account">Account</TabsTrigger>
-            <TabsTrigger value="password">Password</TabsTrigger>
-          </TabsList>
-          <TabsContent value="account">Make changes to your account here</TabsContent>
-          <TabsContent value="password">Change your password here</TabsContent>
-        </Tabs>
-      )
-    }
-    ```
-
-  </Tabs.Tab>
+export function TabsDemo() {
+  return (
+    <Tabs defaultValue="password" className="w-96">
+      <TabsList>
+        <TabsTrigger value="account">Account</TabsTrigger>
+        <TabsTrigger value="password">Password</TabsTrigger>
+      </TabsList>
+      <TabsContent value="account">Make changes to your account here</TabsContent>
+      <TabsContent value="password">Change your password here</TabsContent>
+    </Tabs>
+  )
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ### Disabled
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <TabsDisabled />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy {8} /disabled/ filename="tabs.tsx"
-    import { Tabs, TabsContent, TabsList, TabsTrigger } from "@fucina/ui/components/tabs"
+<Tabs.Tab>
+  <TabsDisabled />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy /disabled/ filename="tabs.tsx"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@fucina/ui"
 
-    export function TabsDemo() {
-      return (
-        <Tabs defaultValue="account" className="w-96">
-          <TabsList>
-            <TabsTrigger value="account">Account</TabsTrigger>
-            <TabsTrigger value="password" disabled>Password</TabsTrigger>
-          </TabsList>
-          <TabsContent value="account">Make changes to your account here</TabsContent>
-          <TabsContent value="password">Change your password here</TabsContent>
-        </Tabs>
-      )
-    }
-    ```
-
-  </Tabs.Tab>
+export function TabsDemo() {
+  return (
+    <Tabs defaultValue="account" className="w-96">
+      <TabsList>
+        <TabsTrigger value="account">Account</TabsTrigger>
+        <TabsTrigger value="password" disabled>Password</TabsTrigger>
+      </TabsList>
+      <TabsContent value="account">Make changes to your account here</TabsContent>
+      <TabsContent value="password">Change your password here</TabsContent>
+    </Tabs>
+  )
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ### With icon
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <TabsWithIcon />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy {2,8,9} /User/ /Lock/ filename="tabs.tsx"
-    import { Tabs, TabsContent, TabsList, TabsTrigger } from "@fucina/ui/components/tabs"
-    import { User, Lock } from 'lucide-react';
+<Tabs.Tab>
+  <TabsWithIcon />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy /User/ /Lock/ filename="tabs.tsx"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@fucina/ui"
+import { User, Lock } from 'lucide-react';
 
-    export function TabsDemo() {
-      return (
-        <Tabs defaultValue="account" className="w-96">
-          <TabsList>
-            <TabsTrigger value="account"><User />Account</TabsTrigger>
-            <TabsTrigger value="password"><Lock />Password</TabsTrigger>
-          </TabsList>
-          <TabsContent value="account">Make changes to your account here</TabsContent>
-          <TabsContent value="password">Change your password here</TabsContent>
-        </Tabs>
-      )
-    }
-    ```
-
-  </Tabs.Tab>
+export function TabsDemo() {
+  return (
+    <Tabs defaultValue="account" className="w-96">
+      <TabsList>
+        <TabsTrigger value="account"><User />Account</TabsTrigger>
+        <TabsTrigger value="password"><Lock />Password</TabsTrigger>
+      </TabsList>
+      <TabsContent value="account">Make changes to your account here</TabsContent>
+      <TabsContent value="password">Change your password here</TabsContent>
+    </Tabs>
+  )
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ### With card
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <TabsWithCard />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy filename="tabs.tsx"
-    import { Button } from "@fucina/ui/components/button"
-    import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@fucina/ui/components/card"
-    import { Input } from "@fucina/ui/components/input"
-    import { Label } from "@fucina/ui/components/label"
-    import { Tabs, TabsContent, TabsList, TabsTrigger } from "@fucina/ui/components/tabs"
+<Tabs.Tab>
+  <TabsWithCard />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy filename="tabs.tsx"
+import { Button, Input, Label, Tabs, TabsContent, TabsList, TabsTrigger, Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@fucina/ui"
 
-    export function TabsDemo() {
-      return (
-        <Tabs defaultValue="account" className="w-96">
-          <TabsList>
-            <TabsTrigger value="account">Account</TabsTrigger>
-            <TabsTrigger value="password">Password</TabsTrigger>
-          </TabsList>
-          <TabsContent value="account">
-            <Card>
-              <CardHeader>
-                <CardTitle>Account</CardTitle>
-                <CardDescription>
-                  Make changes to your account here. Click save when you're done.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div>
-                  <Label htmlFor="name">Name</Label>
-                  <Input id="name" defaultValue="Michael Scott" />
-                </div>
-                <div>
-                  <Label htmlFor="username">Username</Label>
-                  <Input id="username" defaultValue="@mscott" />
-                </div>
-              </CardContent>
-              <CardFooter>
-                <Button>Save</Button>
-              </CardFooter>
-            </Card>
-          </TabsContent>
-          <TabsContent value="password">
-            <Card>
-              <CardHeader>
-                <CardTitle>Password</CardTitle>
-                <CardDescription>
-                  Change your password here. After saving, you'll be logged out.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div>
-                  <Label htmlFor="current">Current password</Label>
-                  <Input id="current" type="password" />
-                </div>
-                <div>
-                  <Label htmlFor="new">New password</Label>
-                  <Input id="new" type="password" />
-                </div>
-              </CardContent>
-              <CardFooter>
-                <Button>Save</Button>
-              </CardFooter>
-            </Card>
-          </TabsContent>
-        </Tabs>
-      )
-    }
-    ```
-
-  </Tabs.Tab>
+export function TabsDemo() {
+  return (
+    <Tabs defaultValue="account" className="w-96">
+      <TabsList className="w-full">
+        <TabsTrigger value="account">Account</TabsTrigger>
+        <TabsTrigger value="password">Password</TabsTrigger>
+      </TabsList>
+      <TabsContent value="account" className="w-full space-y-4">
+        <Card>
+          <div className="space-y-2">
+            <div className="space-y-2">
+              <p className="text-heading-subsection">Account</p>
+              <p className="text-description text-md">
+                Make changes to your account here. Click save when you&apos;re done.
+              </p>
+            </div>
+            <div className="grid gap-2 py-4">
+              <div className="space-y-1">
+                <Label htmlFor="name">Name</Label>
+                <Input id="name" defaultValue="Michael Scott" className="patch-input" />
+              </div>
+              <div className="space-y-1">
+                <Label htmlFor="username">Username</Label>
+                <Input id="username" defaultValue="@mscott" className="patch-input" />
+              </div>
+            </div>
+          </div>
+          <div className="flex mt-2">
+            <Button>Save</Button>
+          </div>
+        </Card>
+      </TabsContent>
+      <TabsContent value="password" className="w-full space-y-4">
+        <Card>
+          <div className="space-y-2">
+            <div className="space-y-2">
+              <p className="text-heading-subsection">Password</p>
+              <p className="text-description text-md">
+                Change your password here. After saving, you&apos;ll be logged out.
+              </p>
+            </div>
+            <div className="grid gap-2 py-4">
+              <div className="space-y-1">
+                <Label htmlFor="current">Current password</Label>
+                <Input id="current" type="password" className="patch-input" />
+              </div>
+              <div className="space-y-1">
+                <Label htmlFor="new">New password</Label>
+                <Input id="new" type="password" className="patch-input" />
+              </div>
+            </div>
+          </div>
+          <div className="flex mt-2">
+            <Button>Save</Button>
+          </div>
+        </Card>
+      </TabsContent>
+    </Tabs>
+  )
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ## Useful links
@@ -304,7 +295,7 @@ Avoid using Tabs for unrelated content that doesn’t require a clear separation
   />
   <Card
     title="🪄 Figma"
-    href="https://www.figma.com/design/Jfto7FUoU7mSpnv9uESD60/%F0%9F%9F%A0-feely---design-system?node-id=540-8882&t=nua4UmG9Iu1hfUAm-1"
+    href="https://www.figma.com/design/Jfto7FUoU7mSpnv9uESD60/%F0%9F%94%A5-Fucina---Design-System?node-id=639-31130&t=SkIduRAaGEKfas8z-1"
   />
   <Card
     title="🐝 API Reference"

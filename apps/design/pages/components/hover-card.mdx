@@ -3,6 +3,7 @@ title: Hover Card
 ---
 
 import { Tabs, Cards, Card } from "nextra/components";
+
 import { HoverCardPreview } from "@/components/preview/hover-card.tsx";
 
 # 💠 Hover Card
@@ -10,46 +11,39 @@ import { HoverCardPreview } from "@/components/preview/hover-card.tsx";
 For sighted users to preview content available behind a link.
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <HoverCardPreview />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy filename="hover-card.tsx"
-    import { Avatar, AvatarFallback, AvatarImage } from "@fucina/ui/components/avatar"
-    import { Button } from "@fucina/ui/components/button"
-    import { HoverCard, HoverCardContent, HoverCardTrigger } from "@fucina/ui/components/hover-card"
+<Tabs.Tab>
+<HoverCardPreview />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy filename="hover-card.tsx"
+import { Avatar, AvatarFallback, AvatarImage, Button, HoverCard, HoverCardContent, HoverCardTrigger } from "@fucina/ui"
 
-    export function HoverCardDemo() {
-        return (
-            <HoverCard>
-              <HoverCardTrigger asChild>
-                <Button variant="link">@nextjs</Button>
-              </HoverCardTrigger>
-              <HoverCardContent className="w-80">
-                <div className="flex justify-between space-x-4">
-                  <Avatar>
-                    <AvatarImage src="https://github.com/vercel.png" />
-                    <AvatarFallback>VC</AvatarFallback>
-                  </Avatar>
-                  <div className="space-y-1">
-                    <p className="text-md-semibold">@nextjs</p>
-                    <p className="text-md">
-                      The React Framework – created and maintained by @vercel.
-                    </p>
-                    <div className="flex items-center pt-2">
-                      <span className="text-sm text-description">
-                        Joined December 2021
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </HoverCardContent>
-            </HoverCard>
-        )
-    }
-    ```
-
-  </Tabs.Tab>
+export function HoverCardDemo() {
+  return (
+    <HoverCard>
+      <HoverCardTrigger asChild>
+        <Button variant="link">@nextjs</Button>
+      </HoverCardTrigger>
+      <HoverCardContent className="w-80">
+        <div className="flex justify-between space-x-4">
+          <Avatar>
+            <AvatarImage src="https://github.com/vercel.png" />
+            <AvatarFallback>VC</AvatarFallback>
+          </Avatar>
+          <div className="space-y-1">
+            <p className="text-md-semibold">@nextjs</p>
+            <p className="text-md">The React Framework – created and maintained by @vercel.</p>
+            <div className="flex items-center pt-2">
+              <span className="text-description text-sm">Joined December 2021</span>
+            </div>
+          </div>
+        </div>
+      </HoverCardContent>
+    </HoverCard>
+  )
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ## Usage
@@ -72,46 +66,39 @@ Avoid using Hover Cards for critical information that users must see, as they ar
 ### Default
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <HoverCardPreview />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy filename="hover-card.tsx"
-    import { Avatar, AvatarFallback, AvatarImage } from "@fucina/ui/components/avatar"
-    import { Button } from "@fucina/ui/components/button"
-    import { HoverCard, HoverCardContent, HoverCardTrigger } from "@fucina/ui/components/hover-card"
+<Tabs.Tab>
+<HoverCardPreview />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy filename="hover-card.tsx"
+import { Avatar, AvatarFallback, AvatarImage, Button, HoverCard, HoverCardContent, HoverCardTrigger } from "@fucina/ui"
 
-    export function HoverCardDemo() {
-        return (
-            <HoverCard>
-              <HoverCardTrigger asChild>
-                <Button variant="link">@nextjs</Button>
-              </HoverCardTrigger>
-              <HoverCardContent className="w-80">
-                <div className="flex justify-between space-x-4">
-                  <Avatar>
-                    <AvatarImage src="https://github.com/vercel.png" />
-                    <AvatarFallback>VC</AvatarFallback>
-                  </Avatar>
-                  <div className="space-y-1">
-                    <p className="text-md-semibold">@nextjs</p>
-                    <p className="text-md">
-                      The React Framework – created and maintained by @vercel.
-                    </p>
-                    <div className="flex items-center pt-2">
-                      <span className="text-sm text-description">
-                        Joined December 2021
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </HoverCardContent>
-            </HoverCard>
-        )
-    }
-    ```
-
-  </Tabs.Tab>
+export function HoverCardDemo() {
+  return (
+    <HoverCard>
+      <HoverCardTrigger asChild>
+        <Button variant="link">@nextjs</Button>
+      </HoverCardTrigger>
+      <HoverCardContent className="w-80">
+        <div className="flex justify-between space-x-4">
+          <Avatar>
+            <AvatarImage src="https://github.com/vercel.png" />
+            <AvatarFallback>VC</AvatarFallback>
+          </Avatar>
+          <div className="space-y-1">
+            <p className="text-md-semibold">@nextjs</p>
+            <p className="text-md">The React Framework – created and maintained by @vercel.</p>
+            <div className="flex items-center pt-2">
+              <span className="text-description text-sm">Joined December 2021</span>
+            </div>
+          </div>
+        </div>
+      </HoverCardContent>
+    </HoverCard>
+  )
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ## Useful links
@@ -125,7 +112,7 @@ Avoid using Hover Cards for critical information that users must see, as they ar
   />
   <Card
     title="🪄 Figma"
-    href="https://www.figma.com/design/Jfto7FUoU7mSpnv9uESD60/%F0%9F%9F%A0-feely---design-system?node-id=540-8866&t=nua4UmG9Iu1hfUAm-1"
+    href="https://www.figma.com/design/Jfto7FUoU7mSpnv9uESD60/%F0%9F%94%A5-Fucina---Design-System?node-id=639-22269&t=BERFxjM8vy494uCE-1"
   />
   <Card
     title="🐝 API Reference"

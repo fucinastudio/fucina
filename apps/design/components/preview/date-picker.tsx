@@ -18,7 +18,7 @@ export const DatePickerPreview = () => {
           <Button
             variant="secondary"
             className={cn("w-[280px] justify-start text-left font-normal", !date && "text-description")}>
-            <CalendarIcon />
+            <CalendarIcon className="!stroke-2" />
             {date ? format(date, "PPP") : <span>Pick a date</span>}
           </Button>
         </PopoverTrigger>
@@ -45,7 +45,7 @@ export function DateRangePicker() {
               id="date"
               variant="secondary"
               className={cn("w-80 justify-start text-left font-normal", !date && "text-description")}>
-              <CalendarIcon />
+              <CalendarIcon className="!stroke-2" />
               {date?.from ? (
                 date.to ? (
                   <>

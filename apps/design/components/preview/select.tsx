@@ -44,11 +44,7 @@ const SelectForm = () => {
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
     toast("You submitted the following values:", {
-      description: (
-        <pre className="border-default bg-subtle mt-2 w-[340px] rounded border p-4">
-          <code className="text-white">{JSON.stringify(data, null, 2)}</code>
-        </pre>
-      ),
+      description: JSON.stringify(data, null, 2),
     });
   }
 

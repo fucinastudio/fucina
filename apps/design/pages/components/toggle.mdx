@@ -18,24 +18,23 @@ import {
 A two-state button that can be either on or off.
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <TogglePreview />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy filename="toggle.tsx"
-    import { Bold } from "@fucina/ui/components/icon"
-    import { Toggle } from "@fucina/ui/components/toggle"
+<Tabs.Tab>
+  <TogglePreview />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy filename="toggle.tsx"
+import { Bold } from "lucide-react"
+import { Toggle } from "@fucina/ui"
 
-    export function ToggleDemo() {
-        return (
-            <Toggle aria-label="Toggle bold">
-                <Bold />
-            </Toggle>
-        )
-    }
-    ```
-
-  </Tabs.Tab>
+export function ToggleDemo() {
+  return (
+    <Toggle aria-label="Toggle bold">
+        <Bold />
+    </Toggle>
+  )
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ## Usage
@@ -56,70 +55,67 @@ Avoid using Toggles for actions that require more deliberate consideration or ha
 ### Default
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <ToggleDefault />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy {6} /variant="default"/ filename="toggle.tsx"
-    import { Bold } from "@fucina/ui/components/icon"
-    import { Toggle } from "@fucina/ui/components/toggle"
+<Tabs.Tab>
+  <ToggleDefault />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy /variant="default"/ filename="toggle.tsx"
+import { Bold } from "lucide-react"
+import { Toggle } from "@fucina/ui"
 
-    export function ToggleDemo() {
-        return (
-            <Toggle aria-label="Toggle bold" variant="default">
-                <Bold />
-            </Toggle>
-        )
-    }
-    ```
-
-  </Tabs.Tab>
+export function ToggleDemo() {
+  return (
+    <Toggle aria-label="Toggle bold" variant="default">
+        <Bold />
+    </Toggle>
+  )
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ### With text
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <ToggleWithText />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy {7} /Bold/ filename="toggle.tsx"
-    import { Bold } from "@fucina/ui/components/icon"
-    import { Toggle } from "@fucina/ui/components/toggle"
+<Tabs.Tab>
+  <ToggleWithText />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy /Bold/ filename="toggle.tsx"
+import { Bold } from "lucide-react"
+import { Toggle } from "@fucina/ui"
 
-    export function ToggleDemo() {
-        return (
-            <Toggle aria-label="Toggle bold">
-                <Bold /> Bold
-            </Toggle>
-        )
-    }
-    ```
-
-  </Tabs.Tab>
+export function ToggleDemo() {
+  return (
+    <Toggle aria-label="Toggle bold">
+        <Bold /> Bold
+    </Toggle>
+  )
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ### Disabled
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <ToggleDisabled />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy {6} /disabled/ filename="toggle.tsx"
-    import { Bold } from "@fucina/ui/components/icon"
-    import { Toggle } from "@fucina/ui/components/toggle"
+<Tabs.Tab>
+  <ToggleDisabled />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy /disabled/ filename="toggle.tsx"
+import { Bold } from "lucide-react"
+import { Toggle } from "@fucina/ui"
 
-    export function ToggleDemo() {
-        return (
-            <Toggle aria-label="Toggle bold" disabled>
-                <Bold />
-            </Toggle>
-        )
-    }
-    ```
-
-  </Tabs.Tab>
+export function ToggleDemo() {
+  return (
+    <Toggle aria-label="Toggle bold" disabled>
+        <Bold />
+    </Toggle>
+  )
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ## Useful links
@@ -133,7 +129,7 @@ Avoid using Toggles for actions that require more deliberate consideration or ha
   />
   <Card
     title="🪄 Figma"
-    href="https://www.figma.com/design/Jfto7FUoU7mSpnv9uESD60/%F0%9F%9F%A0-feely---design-system?node-id=540-8885&t=nua4UmG9Iu1hfUAm-1"
+    href="https://www.figma.com/design/Jfto7FUoU7mSpnv9uESD60/%F0%9F%94%A5-Fucina---Design-System?node-id=639-31819&t=SkIduRAaGEKfas8z-1"
   />
   <Card
     title="🐝 API Reference"

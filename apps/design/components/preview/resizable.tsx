@@ -3,7 +3,7 @@ import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from "@fucina/ui
 
 export const ResizablePreview = () => (
   <Preview>
-    <ResizablePanelGroup direction="horizontal" className="border-default max-w-md rounded-lg border">
+    <ResizablePanelGroup direction="horizontal" className="border-default text-md max-w-md rounded-lg border">
       <ResizablePanel defaultSize={50}>
         <div className="flex h-[200px] items-center justify-center p-6">
           <span className="font-semibold">One</span>
@@ -33,7 +33,7 @@ export const ResizableVertical = () => (
   <Preview>
     <ResizablePanelGroup
       direction="vertical"
-      className="border-default min-h-[200px] max-w-md rounded-lg border">
+      className="border-default text-md min-h-[200px] max-w-md rounded-lg border">
       <ResizablePanel defaultSize={25}>
         <div className="flex h-full items-center justify-center p-6">
           <span className="font-semibold">Header</span>
@@ -53,7 +53,7 @@ export const ResizableWithHandle = () => (
   <Preview>
     <ResizablePanelGroup
       direction="horizontal"
-      className="border-default min-h-[200px] max-w-md rounded-lg border">
+      className="border-default text-md min-h-[200px] max-w-md rounded-lg border">
       <ResizablePanel defaultSize={25}>
         <div className="flex h-full items-center justify-center p-6">
           <span className="font-semibold">Sidebar</span>

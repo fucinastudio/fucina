@@ -34,11 +34,7 @@ const FormDemo = () => {
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
     toast("You submitted the following values:", {
-      description: (
-        <pre className="border-default bg-subtle mt-2 w-[340px] rounded border p-4">
-          <code className="text">{JSON.stringify(data, null, 2)}</code>
-        </pre>
-      ),
+      description: JSON.stringify(data, null, 2),
     });
   }
 
@@ -52,7 +48,7 @@ const FormDemo = () => {
             <FormItem>
               <FormLabel>Username</FormLabel>
               <FormControl>
-                <Input placeholder="@mscott" {...field} className="input-docs" />
+                <Input placeholder="@mscott" {...field} className="patch-input" />
               </FormControl>
               <FormDescription>This is your public display name.</FormDescription>
               <FormMessage />

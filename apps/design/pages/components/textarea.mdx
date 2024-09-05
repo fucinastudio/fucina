@@ -3,6 +3,7 @@ title: Textarea
 ---
 
 import { Tabs, Cards, Card } from "nextra/components";
+
 import {
   TextareaPreview,
   TextareaDisabled,
@@ -15,19 +16,18 @@ import {
 A text area lets users enter long form text which spans over multiple lines.
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <TextareaPreview />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy filename="textarea.tsx"
-    import { Textarea } from "@fucina/ui/components/textarea"
+<Tabs.Tab>
+  <TextareaPreview />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy filename="textarea.tsx"
+import { Textarea } from "@fucina/ui"
 
-    export function TextareaDemo() {
-      return <Textarea placeholder="Type your message here." />
-    }
-    ```
-
-  </Tabs.Tab>
+export function TextareaDemo() {
+  return <Textarea placeholder="Type your message here." />
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ## Usage
@@ -52,155 +52,152 @@ Ensure that TextAreas are not so large as to be overwhelming, or so small as to 
 ### Default
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <TextareaPreview />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy filename="textarea.tsx"
-    import { Textarea } from "@fucina/ui/components/textarea"
+<Tabs.Tab>
+  <TextareaPreview />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy filename="textarea.tsx"
+import { Textarea } from "@fucina/ui"
 
-    export function TextareaDemo() {
-      return <Textarea placeholder="Type your message here." />
-    }
-    ```
-
-  </Tabs.Tab>
+export function TextareaDemo() {
+  return <Textarea placeholder="Type your message here." />
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ### Disabled
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <TextareaDisabled />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy {4} /disabled/ filename="textarea.tsx"
-    import { Textarea } from "@fucina/ui/components/textarea"
+<Tabs.Tab>
+  <TextareaDisabled />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy /disabled/ filename="textarea.tsx"
+import { Textarea } from "@fucina/ui"
 
-    export function TextareaDemo() {
-      return <Textarea placeholder="Type your message here." disabled />
-    }
-    ```
-
-  </Tabs.Tab>
+export function TextareaDemo() {
+  return <Textarea placeholder="Type your message here." disabled />
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ### With text
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <TextareaWithText />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy {7,9} filename="textarea.tsx"
-    import { Textarea } from "@fucina/ui/components/textarea"
-    import { Label } from "@fucina/ui/components/label"
+<Tabs.Tab>
+  <TextareaWithText />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy filename="textarea.tsx"
+import { Textarea, Label } from "@fucina/ui"
 
-    export function TextareaDemo() {
-      return (
-        <div className="grid w-full gap-3">
-          <Label htmlFor="message">Bio</Label>
-          <Textarea placeholder="Once upon a time..." id="message" />
-          <span className="text-md text-description">
-            You can @mention other users and organizations.
-          </span>
-        </div>
-      )
-    }
-    ```
-
-  </Tabs.Tab>
+export function TextareaDemo() {
+  return (
+    <div className="grid w-full gap-3">
+      <Label htmlFor="message">Bio</Label>
+      <Textarea placeholder="Once upon a time..." id="message" />
+      <span className="text-md text-description">
+        You can @mention other users and organizations.
+      </span>
+    </div>
+  )
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ### With form
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <TextareaWithForm />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy filename="textarea.tsx"
-    "use client"
+<Tabs.Tab>
+  <TextareaWithForm />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy filename="textarea.tsx"
+"use client"
 
-    import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@fucina/ui/components/form"
-    import { Textarea } from "@fucina/ui/components/textarea"
-    import { Button } from "@fucina/ui/components/button"
-    import { toast } from "@fucina/ui/components/toast/use-toast"
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import * as z from "zod";
 
-    import { zodResolver } from "@hookform/resolvers/zod"
-    import { useForm } from "react-hook-form"
-    import * as z from "zod"
+import {
+  Button,
+  Textarea,
+  Form,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+  toast,
+} from "@fucina/ui";
 
-    const FormSchema = z.object({
-      bio: z
-        .string()
-        .min(10, {
-          message: "Bio must be at least 10 characters.",
-        })
-        .max(160, {
-          message: "Bio must not be longer than 30 characters.",
-        }),
+const FormSchema = z.object({
+bio: z
+.string()
+.min(10, {
+message: "Bio must be at least 10 characters.",
+})
+.max(160, {
+message: "Bio must not be longer than 30 characters.",
+}),
+})
+
+export function TextareaForm() {
+  const form = useForm<z.infer<typeof FormSchema>>({
+    resolver: zodResolver(FormSchema),
+  })
+  function onSubmit(data: z.infer<typeof FormSchema>) {
+    toast({
+      title: "You submitted the following values:",
+      description: JSON.stringify(data, null, 2)
     })
-
-    export function TextareaForm() {
-      const form = useForm<z.infer<typeof FormSchema>>({
-        resolver: zodResolver(FormSchema),
-      })
-
-      function onSubmit(data: z.infer<typeof FormSchema>) {
-        toast({
-          title: "You submitted the following values:",
-          description: (
-            <pre className="mt-2 w-[340px] rounded bg-subtle border border-default p-4">
-              <code className="text">{JSON.stringify(data, null, 2)}</code>
-            </pre>
-          ),
-        })
-      }
-
-      return (
-        <Form {...form}>
-          <form
-            onSubmit={form.handleSubmit(onSubmit)}
-            className="w-full space-y-10"
-          >
-            <div className="space-y-6">
+  }
+  return (
+    <Form {...form}>
+      <form
+        onSubmit={form.handleSubmit(onSubmit)}
+        className="w-full space-y-10"
+      >
+        <div className="space-y-6">
+          <FormItem className="space-y-2">
+            <FormLabel>Name</FormLabel>
+            <FormControl>
+              <Input value="Michael Scott" />
+            </FormControl>
+            <FormMessage />
+          </FormItem>
+          <FormField
+            control={form.control}
+            name="bio"
+            render={({ field }) => (
               <FormItem className="space-y-2">
-                <FormLabel>Name</FormLabel>
+                <FormLabel>Bio</FormLabel>
                 <FormControl>
-                  <Input value="Michael Scott" />
+                  <Textarea
+                    placeholder="Once upon a time..."
+                    className="resize-none"
+                    {...field}
+                  />
                 </FormControl>
+                <FormDescription>
+                  You can <span>@mention</span> other users and organizations.
+                </FormDescription>
                 <FormMessage />
               </FormItem>
-              <FormField
-                control={form.control}
-                name="bio"
-                render={({ field }) => (
-                  <FormItem className="space-y-2">
-                    <FormLabel>Bio</FormLabel>
-                    <FormControl>
-                      <Textarea
-                        placeholder="Once upon a time..."
-                        className="resize-none"
-                        {...field}
-                      />
-                    </FormControl>
-                    <FormDescription>
-                      You can <span>@mention</span> other users and organizations.
-                    </FormDescription>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-            </div>
-            <Button type="submit">Submit</Button>
-          </form>
-        </Form>
-      );
-    }
-    ```
-
-  </Tabs.Tab>
+            )}
+          />
+        </div>
+        <Button type="submit">Submit</Button>
+      </form>
+    </Form>
+  );
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ## Useful links
@@ -214,6 +211,6 @@ Ensure that TextAreas are not so large as to be overwhelming, or so small as to 
   />
   <Card
     title="🪄 Figma"
-    href="https://www.figma.com/design/Jfto7FUoU7mSpnv9uESD60/%F0%9F%9F%A0-feely---design-system?node-id=540-8883&t=nua4UmG9Iu1hfUAm-1"
+    href="https://www.figma.com/design/Jfto7FUoU7mSpnv9uESD60/%F0%9F%94%A5-Fucina---Design-System?node-id=639-31407&t=SkIduRAaGEKfas8z-1"
   />
 </Cards>

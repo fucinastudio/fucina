@@ -3,6 +3,7 @@ title: Dropdown Menu
 ---
 
 import { Tabs, Cards, Card } from "nextra/components";
+
 import { AccessibilityTable } from "@/components/accessibility/accessibility-table.mdx";
 import { dropdownMenuAccessibilityData } from "@/components/accessibility/dropdown-menu.tsx";
 import {
@@ -16,107 +17,112 @@ import {
 Displays a menu to the user — such as a set of actions or functions — triggered by a button.
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <DropdownMenuPreview />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy filename="dropdown-menu.tsx"
-    import { Cloud, CreditCard, Github, Keyboard, LifeBuoy, LogOut, Mail, MessageSquare, Plus, PlusCircle, Settings, User, UserPlus, Users } from "@fucina/ui/components/icon"
-    import { Button } from "@fucina/ui/components/button"
-    import { DropdownMenu, DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem, DropdownMenuLabel, DropdownMenuPortal, DropdownMenuSeparator, DropdownMenuShortcut, DropdownMenuSub, DropdownMenuSubContent, DropdownMenuSubTrigger, DropdownMenuTrigger } from "@fucina/ui/components/dropdown-menu"
+<Tabs.Tab>
+<DropdownMenuPreview />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy filename="dropdown-menu.tsx"
+import { Cloud, CreditCard, Github, Keyboard, LifeBuoy, LogOut, Mail, MessageSquare, Plus, PlusCircle, Settings, User, UserPlus, Users } from "lucide-react"
 
-    export function DropdownMenuDemo() {
-        return (
-            <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                    <Button variant="secondary">Open</Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent className="w-56">
-                    <DropdownMenuLabel>My Account</DropdownMenuLabel>
-                    <DropdownMenuSeparator />
-                    <DropdownMenuGroup>
-                        <DropdownMenuItem>
-                            <User/>
-                            <span>Profile</span>
-                            <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
-                        </DropdownMenuItem>
-                        <DropdownMenuItem>
-                            <CreditCard />
-                            <span>Billing</span>
-                            <DropdownMenuShortcut>⌘B</DropdownMenuShortcut>
-                        </DropdownMenuItem>
-                        <DropdownMenuItem>
-                            <Settings />
-                            <span>Settings</span>
-                            <DropdownMenuShortcut>⌘S</DropdownMenuShortcut>
-                        </DropdownMenuItem>
-                        <DropdownMenuItem>
-                            <Keyboard />
-                            <span>Keyboard shortcuts</span>
-                            <DropdownMenuShortcut>⌘K</DropdownMenuShortcut>
-                        </DropdownMenuItem>
-                    </DropdownMenuGroup>
-                    <DropdownMenuSeparator />
-                    <DropdownMenuGroup>
-                        <DropdownMenuItem>
-                            <Users />
-                            <span>Team</span>
-                        </DropdownMenuItem>
-                        <DropdownMenuSub>
-                            <DropdownMenuSubTrigger>
-                                <UserPlus />
-                                <span>Invite users</span>
-                            </DropdownMenuSubTrigger>
-                            <DropdownMenuPortal>
-                                <DropdownMenuSubContent>
-                                    <DropdownMenuItem>
-                                        <Mail />
-                                        <span>Email</span>
-                                    </DropdownMenuItem>
-                                    <DropdownMenuItem>
-                                        <MessageSquare />
-                                        <span>Message</span>
-                                    </DropdownMenuItem>
-                                    <DropdownMenuSeparator />
-                                    <DropdownMenuItem>
-                                        <PlusCircle />
-                                        <span>More...</span>
-                                    </DropdownMenuItem>
-                                </DropdownMenuSubContent>
-                            </DropdownMenuPortal>
-                        </DropdownMenuSub>
-                        <DropdownMenuItem>
-                            <Plus />
-                            <span>New Team</span>
-                            <DropdownMenuShortcut>⌘+T</DropdownMenuShortcut>
-                        </DropdownMenuItem>
-                    </DropdownMenuGroup>
-                    <DropdownMenuSeparator />
-                    <DropdownMenuItem>
-                        <Github />
-                        <span>GitHub</span>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem>
-                        <LifeBuoy />
-                        <span>Support</span>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem disabled>
-                        <Cloud />
-                        <span>API</span>
-                    </DropdownMenuItem>
-                    <DropdownMenuSeparator />
-                    <DropdownMenuItem>
-                        <LogOut />
-                        <span>Log out</span>
-                        <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
-                    </DropdownMenuItem>
-                </DropdownMenuContent>
-            </DropdownMenu>
-        )
-    }
-    ```
+import {
+  Button,
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuPortal,
+  DropdownMenuSeparator,
+  DropdownMenuShortcut,
+  DropdownMenuSub,
+  DropdownMenuSubContent,
+  DropdownMenuSubTrigger,
+  DropdownMenuTrigger,
+} from "@fucina/ui";
 
-  </Tabs.Tab>
+export function DropdownMenuDemo() {
+  return (
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <Button variant="secondary">Open</Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent className="w-56">
+        <DropdownMenuLabel>My Account</DropdownMenuLabel>
+        <DropdownMenuSeparator />
+        <DropdownMenuGroup>
+          <DropdownMenuItem shortcut="⇧⌘P">
+            <User />
+            <span>Profile</span>
+          </DropdownMenuItem>
+          <DropdownMenuItem shortcut="⌘B">
+            <CreditCard />
+            <span>Billing</span>
+          </DropdownMenuItem>
+          <DropdownMenuItem shortcut="⌘S">
+            <Settings />
+            <span>Settings</span>
+          </DropdownMenuItem>
+          <DropdownMenuItem shortcut="⌘K">
+            <Keyboard />
+            <span>Keyboard shortcuts</span>
+          </DropdownMenuItem>
+        </DropdownMenuGroup>
+        <DropdownMenuSeparator />
+        <DropdownMenuGroup>
+          <DropdownMenuItem>
+            <Users />
+            <span>Team</span>
+          </DropdownMenuItem>
+          <DropdownMenuSubMenu>
+            <DropdownMenuSubMenuTrigger>
+              <UserPlus />
+              <span>Invite users</span>
+            </DropdownMenuSubMenuTrigger>
+            <DropdownMenuSubMenuContent>
+              <DropdownMenuItem>
+                <Mail />
+                <span>Email</span>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <MessageSquare />
+                <span>Message</span>
+              </DropdownMenuItem>
+              <DropdownMenuSeparator />
+              <DropdownMenuItem>
+                <PlusCircle />
+                <span>More...</span>
+              </DropdownMenuItem>
+            </DropdownMenuSubMenuContent>
+          </DropdownMenuSubMenu>
+          <DropdownMenuItem shortcut="⌘+T">
+            <Plus />
+            <span>New Team</span>
+          </DropdownMenuItem>
+        </DropdownMenuGroup>
+        <DropdownMenuSeparator />
+        <DropdownMenuItem>
+          <Github />
+          <span>GitHub</span>
+        </DropdownMenuItem>
+        <DropdownMenuItem>
+          <LifeBuoy />
+          <span>Support</span>
+        </DropdownMenuItem>
+        <DropdownMenuItem disabled>
+          <Cloud />
+          <span>API</span>
+        </DropdownMenuItem>
+        <DropdownMenuSeparator />
+        <DropdownMenuItem shortcut="⇧⌘Q">
+          <LogOut />
+          <span>Log out</span>
+        </DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>
+  )
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ## Usage
@@ -138,206 +144,213 @@ Avoid using Dropdown Menus for critical actions that users need to access freque
 ### Default
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <DropdownMenuPreview />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy filename="dropdown-menu.tsx"
-    import { Cloud, CreditCard, Github, Keyboard, LifeBuoy, LogOut, Mail, MessageSquare, Plus, PlusCircle, Settings, User, UserPlus, Users } from "@fucina/ui/components/icon"
-    import { Button } from "@fucina/ui/components/button"
-    import { DropdownMenu, DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem, DropdownMenuLabel, DropdownMenuPortal, DropdownMenuSeparator, DropdownMenuShortcut, DropdownMenuSub, DropdownMenuSubContent, DropdownMenuSubTrigger, DropdownMenuTrigger } from "@fucina/ui/components/dropdown-menu"
+<Tabs.Tab>
+<DropdownMenuPreview />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy filename="dropdown-menu.tsx"
+import { Cloud, CreditCard, Github, Keyboard, LifeBuoy, LogOut, Mail, MessageSquare, Plus, PlusCircle, Settings, User, UserPlus, Users } from "lucide-react"
 
-    export function DropdownMenuDemo() {
-        return (
-            <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                    <Button variant="secondary">Open</Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent className="w-56">
-                    <DropdownMenuLabel>My Account</DropdownMenuLabel>
-                    <DropdownMenuSeparator />
-                    <DropdownMenuGroup>
-                        <DropdownMenuItem>
-                            <User/>
-                            <span>Profile</span>
-                            <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
-                        </DropdownMenuItem>
-                        <DropdownMenuItem>
-                            <CreditCard />
-                            <span>Billing</span>
-                            <DropdownMenuShortcut>⌘B</DropdownMenuShortcut>
-                        </DropdownMenuItem>
-                        <DropdownMenuItem>
-                            <Settings />
-                            <span>Settings</span>
-                            <DropdownMenuShortcut>⌘S</DropdownMenuShortcut>
-                        </DropdownMenuItem>
-                        <DropdownMenuItem>
-                            <Keyboard />
-                            <span>Keyboard shortcuts</span>
-                            <DropdownMenuShortcut>⌘K</DropdownMenuShortcut>
-                        </DropdownMenuItem>
-                    </DropdownMenuGroup>
-                    <DropdownMenuSeparator />
-                    <DropdownMenuGroup>
-                        <DropdownMenuItem>
-                            <Users />
-                            <span>Team</span>
-                        </DropdownMenuItem>
-                        <DropdownMenuSub>
-                            <DropdownMenuSubTrigger>
-                                <UserPlus />
-                                <span>Invite users</span>
-                            </DropdownMenuSubTrigger>
-                            <DropdownMenuPortal>
-                                <DropdownMenuSubContent>
-                                    <DropdownMenuItem>
-                                        <Mail />
-                                        <span>Email</span>
-                                    </DropdownMenuItem>
-                                    <DropdownMenuItem>
-                                        <MessageSquare />
-                                        <span>Message</span>
-                                    </DropdownMenuItem>
-                                    <DropdownMenuSeparator />
-                                    <DropdownMenuItem>
-                                        <PlusCircle />
-                                        <span>More...</span>
-                                    </DropdownMenuItem>
-                                </DropdownMenuSubContent>
-                            </DropdownMenuPortal>
-                        </DropdownMenuSub>
-                        <DropdownMenuItem>
-                            <Plus />
-                            <span>New Team</span>
-                            <DropdownMenuShortcut>⌘+T</DropdownMenuShortcut>
-                        </DropdownMenuItem>
-                    </DropdownMenuGroup>
-                    <DropdownMenuSeparator />
-                    <DropdownMenuItem>
-                        <Github />
-                        <span>GitHub</span>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem>
-                        <LifeBuoy />
-                        <span>Support</span>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem disabled>
-                        <Cloud />
-                        <span>API</span>
-                    </DropdownMenuItem>
-                    <DropdownMenuSeparator />
-                    <DropdownMenuItem>
-                        <LogOut />
-                        <span>Log out</span>
-                        <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
-                    </DropdownMenuItem>
-                </DropdownMenuContent>
-            </DropdownMenu>
-        )
-    }
-    ```
+import {
+  Button,
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuPortal,
+  DropdownMenuSeparator,
+  DropdownMenuShortcut,
+  DropdownMenuSub,
+  DropdownMenuSubContent,
+  DropdownMenuSubTrigger,
+  DropdownMenuTrigger,
+} from "@fucina/ui";
 
-  </Tabs.Tab>
+export function DropdownMenuDemo() {
+  return (
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <Button variant="secondary">Open</Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent className="w-56">
+        <DropdownMenuLabel>My Account</DropdownMenuLabel>
+        <DropdownMenuSeparator />
+        <DropdownMenuGroup>
+          <DropdownMenuItem shortcut="⇧⌘P">
+            <User />
+            <span>Profile</span>
+          </DropdownMenuItem>
+          <DropdownMenuItem shortcut="⌘B">
+            <CreditCard />
+            <span>Billing</span>
+          </DropdownMenuItem>
+          <DropdownMenuItem shortcut="⌘S">
+            <Settings />
+            <span>Settings</span>
+          </DropdownMenuItem>
+          <DropdownMenuItem shortcut="⌘K">
+            <Keyboard />
+            <span>Keyboard shortcuts</span>
+          </DropdownMenuItem>
+        </DropdownMenuGroup>
+        <DropdownMenuSeparator />
+        <DropdownMenuGroup>
+          <DropdownMenuItem>
+            <Users />
+            <span>Team</span>
+          </DropdownMenuItem>
+          <DropdownMenuSubMenu>
+            <DropdownMenuSubMenuTrigger>
+              <UserPlus />
+              <span>Invite users</span>
+            </DropdownMenuSubMenuTrigger>
+            <DropdownMenuSubMenuContent>
+              <DropdownMenuItem>
+                <Mail />
+                <span>Email</span>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <MessageSquare />
+                <span>Message</span>
+              </DropdownMenuItem>
+              <DropdownMenuSeparator />
+              <DropdownMenuItem>
+                <PlusCircle />
+                <span>More...</span>
+              </DropdownMenuItem>
+            </DropdownMenuSubMenuContent>
+          </DropdownMenuSubMenu>
+          <DropdownMenuItem shortcut="⌘+T">
+            <Plus />
+            <span>New Team</span>
+          </DropdownMenuItem>
+        </DropdownMenuGroup>
+        <DropdownMenuSeparator />
+        <DropdownMenuItem>
+          <Github />
+          <span>GitHub</span>
+        </DropdownMenuItem>
+        <DropdownMenuItem>
+          <LifeBuoy />
+          <span>Support</span>
+        </DropdownMenuItem>
+        <DropdownMenuItem disabled>
+          <Cloud />
+          <span>API</span>
+        </DropdownMenuItem>
+        <DropdownMenuSeparator />
+        <DropdownMenuItem shortcut="⇧⌘Q">
+          <LogOut />
+          <span>Log out</span>
+        </DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>
+  )
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ### Checkboxes
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <DropdownMenuWithCheckboxes />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy filename="dropdown-menu.tsx"
-    "use client"
+<Tabs.Tab>
+<DropdownMenuWithCheckboxes />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy filename="dropdown-menu.tsx"
+"use client"
 
-    import * as React from "react"
-    import { DropdownMenuCheckboxItemProps } from "@radix-ui/react-dropdown-menu"
+import * as React from "react";
+import { DropdownMenuCheckboxItemProps } from "@radix-ui/react-dropdown-menu";
 
-    import { Button } from "@fucina/ui/components/button"
-    import { DropdownMenu, DropdownMenuCheckboxItem, DropdownMenuContent, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "@fucina/ui/components/dropdown-menu"
+import {
+  Button,
+  DropdownMenu,
+  DropdownMenuCheckboxItem,
+  DropdownMenuContent,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@fucina/ui";
 
-    type Checked = DropdownMenuCheckboxItemProps["checked"]
+type Checked = DropdownMenuCheckboxItemProps["checked"]
 
-    export function DropdownMenuCheckboxes() {
-        const [showStatusBar, setShowStatusBar] = React.useState<Checked>(true)
-        const [showActivityBar, setShowActivityBar] = React.useState<Checked>(false)
-        const [showPanel, setShowPanel] = React.useState<Checked>(false)
+export function DropdownMenuCheckboxes() {
+  const [showStatusBar, setShowStatusBar] = React.useState<Checked>(true)
+  const [showActivityBar, setShowActivityBar] = React.useState<Checked>(false)
+  const [showPanel, setShowPanel] = React.useState<Checked>(false)
+  return (
 
-        return (
-            <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                    <Button variant="secondary">Open</Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent className="w-56">
-                    <DropdownMenuLabel>Appearance</DropdownMenuLabel>
-                    <DropdownMenuSeparator />
-                    <DropdownMenuCheckboxItem
-                    checked={showStatusBar}
-                    onCheckedChange={setShowStatusBar}
-                    >
-                        Status Bar
-                    </DropdownMenuCheckboxItem>
-                    <DropdownMenuCheckboxItem
-                    checked={showActivityBar}
-                    onCheckedChange={setShowActivityBar}
-                    disabled
-                    >
-                        Activity Bar
-                    </DropdownMenuCheckboxItem>
-                    <DropdownMenuCheckboxItem
-                    checked={showPanel}
-                    onCheckedChange={setShowPanel}
-                    >
-                        Panel
-                    </DropdownMenuCheckboxItem>
-                </DropdownMenuContent>
-            </DropdownMenu>
-        )
-    }
-    ```
-
-  </Tabs.Tab>
+  <DropdownMenu>
+    <DropdownMenuTrigger asChild>
+      <Button variant="secondary">Open</Button>
+    </DropdownMenuTrigger>
+    <DropdownMenuContent className="w-56">
+      <DropdownMenuLabel>Appearance</DropdownMenuLabel>
+      <DropdownMenuSeparator />
+      <DropdownMenuCheckboxItem checked={showStatusBar} onCheckedChange={setShowStatusBar}>
+        Status Bar
+      </DropdownMenuCheckboxItem>
+      <DropdownMenuCheckboxItem checked={showActivityBar} onCheckedChange={setShowActivityBar} disabled>
+        Activity Bar
+      </DropdownMenuCheckboxItem>
+      <DropdownMenuCheckboxItem checked={showPanel} onCheckedChange={setShowPanel}>
+        Panel
+      </DropdownMenuCheckboxItem>
+    </DropdownMenuContent>
+  </DropdownMenu>
+  )
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ### Radio Group
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <DropdownMenuWithRadioGroup />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy filename="dropdown-menu.tsx"
-    "use client"
+<Tabs.Tab>
+<DropdownMenuWithRadioGroup />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy filename="dropdown-menu.tsx"
+"use client"
 
-    import * as React from "react"
+import * as React from "react";
 
-    import { Button } from "@fucina/ui/components/button"
-    import { DropdownMenu, DropdownMenuContent, DropdownMenuLabel, DropdownMenuRadioGroup, DropdownMenuRadioItem, DropdownMenuSeparator, DropdownMenuTrigger } from "@fucina/ui/components/dropdown-menu"
+import {
+  Button,
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuLabel,
+  DropdownMenuRadioGroup,
+  DropdownMenuRadioItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@fucina/ui";
 
-    export function DropdownMenuRadioGroupDemo() {
-        const [position, setPosition] = React.useState("bottom")
-
-        return (
-            <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                    <Button variant="secondary">Open</Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent className="w-56">
-                    <DropdownMenuLabel>Panel Position</DropdownMenuLabel>
-                    <DropdownMenuSeparator />
-                    <DropdownMenuRadioGroup value={position} onValueChange={setPosition}>
-                    <DropdownMenuRadioItem value="top">Top</DropdownMenuRadioItem>
-                    <DropdownMenuRadioItem value="bottom">Bottom</DropdownMenuRadioItem>
-                    <DropdownMenuRadioItem value="right">Right</DropdownMenuRadioItem>
-                    </DropdownMenuRadioGroup>
-                </DropdownMenuContent>
-            </DropdownMenu>
-        )
-    }
-    ```
-
-  </Tabs.Tab>
+export function DropdownMenuRadioGroupDemo() {
+  const [position, setPosition] = React.useState("bottom");
+  return (
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <Button variant="secondary">Open</Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent className="w-56">
+        <DropdownMenuLabel>Panel Position</DropdownMenuLabel>
+        <DropdownMenuSeparator />
+        <DropdownMenuRadioGroup value={position} onValueChange={setPosition}>
+          <DropdownMenuRadioItem value="top">Top</DropdownMenuRadioItem>
+          <DropdownMenuRadioItem value="bottom">Bottom</DropdownMenuRadioItem>
+          <DropdownMenuRadioItem value="right">Right</DropdownMenuRadioItem>
+        </DropdownMenuRadioGroup>
+      </DropdownMenuContent>
+    </DropdownMenu>
+  );
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ## Useful links
@@ -351,7 +364,7 @@ Avoid using Dropdown Menus for critical actions that users need to access freque
   />
   <Card
     title="🪄 Figma"
-    href="https://www.figma.com/design/Jfto7FUoU7mSpnv9uESD60/%F0%9F%9F%A0-feely---design-system?node-id=540-8864&t=nua4UmG9Iu1hfUAm-1"
+    href="https://www.figma.com/design/Jfto7FUoU7mSpnv9uESD60/%F0%9F%94%A5-Fucina---Design-System?node-id=639-22033&t=BERFxjM8vy494uCE-1"
   />
   <Card
     title="🐝 API Reference"

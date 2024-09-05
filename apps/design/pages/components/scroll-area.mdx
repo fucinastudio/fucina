@@ -3,6 +3,7 @@ title: Scroll Area
 ---
 
 import { Tabs, Cards, Card } from "nextra/components";
+
 import { ScrollAreaPreview, ScrollAreaHorizontal } from "@/components/preview/scroll-area.tsx";
 
 # 💠 Scroll Area
@@ -10,39 +11,36 @@ import { ScrollAreaPreview, ScrollAreaHorizontal } from "@/components/preview/sc
 Augments native scroll functionality for custom, cross-browser styling.
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <ScrollAreaPreview />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy filename="scroll-area.tsx"
-    import * as React from "react"
-    import { ScrollArea } from "@fucina/ui/components/scroll-area"
-    import { Separator } from "@fucina/ui/components/separator"
+<Tabs.Tab>
+  <ScrollAreaPreview />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy filename="scroll-area.tsx"
+import * as React from "react"
 
-    const tags = Array.from({ length: 50 }).map(
-        (_, i, a) => `v1.2.0-beta.${a.length - i}`
-    )
+import { ScrollArea, Separator } from "@fucina/ui";
 
-    export function ScrollAreaDemo() {
-        return (
-            <ScrollArea className="h-72 w-48 rounded border border-default">
-                <div className="p-4">
-                    <h4 className="mb-4 text-md-medium leading-none">Tags</h4>
-                    {tags.map((tag) => (
-                    <>
-                        <div key={tag} className="text-md">
-                        {tag}
-                        </div>
-                        <Separator className="my-2" />
-                    </>
-                    ))}
-                </div>
-            </ScrollArea>
-        )
-    }
-    ```
+const tags = Array.from({ length: 50 }).map(
+(\_, i, a) => `v1.2.0-beta.${a.length - i}`
+)
 
-  </Tabs.Tab>
+export function ScrollAreaDemo() {
+  return (
+    <ScrollArea className="h-72 w-48 rounded border border-default">
+      <div className="p-4">
+        <h4 className="mb-4 text-md-medium leading-none">Tags</h4>
+        {tags.map((tag) => (
+          <>
+            <div key={tag} className="text-md">{tag}</div>
+            <Separator className="my-2" />
+          </>
+        ))}
+      </div>
+    </ScrollArea>
+  )
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ## Usage
@@ -65,102 +63,99 @@ Avoid using a Scroll Area if it significantly alters the default scrolling behav
 ### Default
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <ScrollAreaPreview />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy filename="scroll-area.tsx"
-    import * as React from "react"
-    import { ScrollArea } from "@fucina/ui/components/scroll-area"
-    import { Separator } from "@fucina/ui/components/separator"
+<Tabs.Tab>
+  <ScrollAreaPreview />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy filename="scroll-area.tsx"
+import * as React from "react"
 
-    const tags = Array.from({ length: 50 }).map(
-        (_, i, a) => `v1.2.0-beta.${a.length - i}`
-    )
+import { ScrollArea, Separator } from "@fucina/ui";
 
-    export function ScrollAreaDemo() {
-        return (
-            <ScrollArea className="h-72 w-48 rounded border border-default">
-                <div className="p-4">
-                    <h4 className="mb-4 text-md-medium leading-none">Tags</h4>
-                    {tags.map((tag) => (
-                    <>
-                        <div key={tag} className="text-md">
-                        {tag}
-                        </div>
-                        <Separator className="my-2" />
-                    </>
-                    ))}
-                </div>
-            </ScrollArea>
-        )
-    }
-    ```
+const tags = Array.from({ length: 50 }).map(
+(\_, i, a) => `v1.2.0-beta.${a.length - i}`
+)
 
-  </Tabs.Tab>
+export function ScrollAreaDemo() {
+  return (
+    <ScrollArea className="h-72 w-48 rounded border border-default">
+      <div className="p-4">
+        <h4 className="mb-4 text-md-medium leading-none">Tags</h4>
+        {tags.map((tag) => (
+          <>
+            <div key={tag} className="text-md">{tag}</div>
+            <Separator className="my-2" />
+          </>
+        ))}
+      </div>
+    </ScrollArea>
+  )
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ### Horizontal
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <ScrollAreaHorizontal />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy {46} /orientation="horizontal"/ filename="scroll-area.tsx"
-    import * as React from "react"
-    import Image from "next/image"
-    import { ScrollArea, ScrollBar } from "@fucina/ui/components/scroll-area"
+<Tabs.Tab>
+  <ScrollAreaHorizontal />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy /orientation="horizontal"/ filename="scroll-area.tsx"
+import * as React from "react"
+import Image from "next/image"
 
-    export interface Artwork {
-        artist: string
-        art: string
-    }
+import { ScrollArea, ScrollBar } from "@fucina/ui";
 
-    export const works: Artwork[] = [
-        {
-            artist: "Ornella Binni",
-            art: "https://images.unsplash.com/photo-1465869185982-5a1a7522cbcb?auto=format&fit=crop&w=300&q=80",
-        },
-        {
-            artist: "Tom Byrom",
-            art: "https://images.unsplash.com/photo-1548516173-3cabfa4607e9?auto=format&fit=crop&w=300&q=80",
-        },
-        {
-            artist: "Vladimir Malyavko",
-            art: "https://images.unsplash.com/photo-1494337480532-3725c85fd2ab?auto=format&fit=crop&w=300&q=80",
-        },
-    ]
+export interface Artwork {
+  artist: string
+  art: string
+}
 
-    export function ScrollAreaHorizontalDemo() {
-        return (
-            <ScrollArea className="w-96 whitespace-nowrap rounded border border-default">
-                <div className="flex w-max space-x-4 p-4">
-                    {works.map((artwork) => (
-                    <figure key={artwork.artist} className="shrink-0">
-                        <div className="overflow-hidden rounded">
-                        <Image
-                            src={artwork.art}
-                            alt={`Photo by ${artwork.artist}`}
-                            className="aspect-[3/4] h-fit w-fit object-cover"
-                            width={300}
-                            height={400}
-                        />
-                        </div>
-                        <figcaption className="pt-2 text-sm text-description">
-                        Photo by{' '}
-                        <span className="font-semibold text">{artwork.artist}</span>
-                        </figcaption>
-                    </figure>
-                    ))}
-                </div>
-                <ScrollBar orientation="horizontal" />
-            </ScrollArea>
-        )
-    }
-    ```
+export const works: Artwork[] = [
+  {
+    artist: "Ornella Binni",
+    art: "https://images.unsplash.com/photo-1465869185982-5a1a7522cbcb?auto=format&fit=crop&w=300&q=80",
+  },
+  {
+    artist: "Tom Byrom",
+    art: "https://images.unsplash.com/photo-1548516173-3cabfa4607e9?auto=format&fit=crop&w=300&q=80",
+  },
+  {
+    artist: "Vladimir Malyavko",
+    art: "https://images.unsplash.com/photo-1494337480532-3725c85fd2ab?auto=format&fit=crop&w=300&q=80",
+  },
+]
 
-  </Tabs.Tab>
+export function ScrollAreaHorizontalDemo() {
+  return (
+    <ScrollArea className="w-96 whitespace-nowrap rounded border border-default">
+      <div className="flex w-max space-x-4 p-4">
+        {works.map((artwork) => (
+          <figure key={artwork.artist} className="shrink-0">
+            <div className="overflow-hidden rounded">
+              <Image
+                  src={artwork.art}
+                  alt={`Photo by ${artwork.artist}`}
+                  className="aspect-[3/4] h-fit w-fit object-cover"
+                  width={300}
+                  height={400}
+              />
+            </div>
+            <figcaption className="pt-2 text-sm text-description">
+              Photo by{' '}
+              <span className="font-semibold text">{artwork.artist}</span>
+            </figcaption>
+          </figure>
+        ))}
+      </div>
+      <ScrollBar orientation="horizontal" />
+    </ScrollArea>
+  )
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ## Useful links
@@ -174,7 +169,7 @@ Avoid using a Scroll Area if it significantly alters the default scrolling behav
   />
   <Card
     title="🪄 Figma"
-    href="https://www.figma.com/design/Jfto7FUoU7mSpnv9uESD60/%F0%9F%9F%A0-feely---design-system?node-id=540-8874&t=nua4UmG9Iu1hfUAm-1"
+    href="https://www.figma.com/design/Jfto7FUoU7mSpnv9uESD60/%F0%9F%94%A5-Fucina---Design-System?node-id=639-26055&t=BERFxjM8vy494uCE-1"
   />
   <Card
     title="🐝 API Reference"

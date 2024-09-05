@@ -23,7 +23,7 @@ import {
   FormLabel,
   FormMessage,
   //Toast
-  toast
+  toast,
 } from "@fucina/ui";
 
 const FormSchema = z.object({
@@ -44,11 +44,7 @@ const TextareaFormDemo = () => {
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
     toast("You submitted the following values:", {
-      description: (
-        <pre className="border-default bg-subtle mt-2 w-[340px] rounded border p-4">
-          <code className="text">{JSON.stringify(data, null, 2)}</code>
-        </pre>
-      ),
+      description: JSON.stringify(data, null, 2),
     });
   }
 
@@ -59,7 +55,7 @@ const TextareaFormDemo = () => {
           <FormItem className="space-y-2">
             <FormLabel>Name</FormLabel>
             <FormControl>
-              <Input value="Michael Scott" className="input-docs" />
+              <Input value="Michael Scott" className="patch-input" />
             </FormControl>
             <FormMessage />
           </FormItem>

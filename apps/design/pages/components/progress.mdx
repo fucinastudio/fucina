@@ -3,6 +3,7 @@ title: Progress
 ---
 
 import { Tabs, Cards, Card } from "nextra/components";
+
 import {
   ProgressPreview,
   ProgressDefault,
@@ -16,19 +17,18 @@ import {
 Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <ProgressPreview />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy filename="progress.tsx"
-    import { Progress } from "@fucina/ui/components/progress"
+<Tabs.Tab>
+<ProgressPreview />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy filename="progress.tsx"
+import { Progress } from "@fucina/ui"
 
-    export function ProgressDemo() {
-        return <Progress value={33} />
-    }
-    ```
-
-  </Tabs.Tab>
+export function ProgressDemo() {
+  return <Progress value={33} />
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ## Usage
@@ -51,73 +51,69 @@ Avoid using Progress components for indeterminate processes where the time to co
 ### Default
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <ProgressDefault />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy {4} /status="default"/ filename="progress.tsx"
-    import { Progress } from "@fucina/ui/components/progress"
+<Tabs.Tab>
+  <ProgressDefault />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy /variant="default"/ filename="progress.tsx"
+import { Progress } from "@fucina/ui"
 
-    export function ProgressDemo() {
-        return <Progress status="default" value={33} />
-    }
-    ```
-
-  </Tabs.Tab>
+export function ProgressDemo() {
+  return <Progress variant="default" value={33} />
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ### Brand
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <ProgressBrand />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy {4} /status="brand"/ filename="progress.tsx"
-    import { Progress } from "@fucina/ui/components/progress"
+<Tabs.Tab>
+  <ProgressBrand />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy /variant="brand"/ filename="progress.tsx"
+import { Progress } from "@fucina/ui"
 
-    export function ProgressDemo() {
-        return <Progress status="brand" value={33} />
-    }
-    ```
-
-  </Tabs.Tab>
+export function ProgressDemo() {
+  return <Progress variant="brand" value={33} />
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ### Danger
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <ProgressDanger />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy {4} /status="danger"/ filename="progress.tsx"
-    import { Progress } from "@fucina/ui/components/progress"
+<Tabs.Tab>
+  <ProgressDanger />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy /variant="danger"/ filename="progress.tsx"
+import { Progress } from "@fucina/ui"
 
-    export function ProgressDemo() {
-        return <Progress status="danger" value={33} />
-    }
-    ```
-
-  </Tabs.Tab>
+export function ProgressDemo() {
+  return <Progress variant="danger" value={33} />
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ### Warning
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <ProgressWarning />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy {4} /status="warning"/ filename="progress.tsx"
-    import { Progress } from "@fucina/ui/components/progress"
+<Tabs.Tab>
+  <ProgressWarning />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy /variant="warning"/ filename="progress.tsx"
+import { Progress } from "@fucina/ui"
 
-    export function ProgressDemo() {
-        return <Progress status="warning" value={33} />
-    }
-    ```
-
-  </Tabs.Tab>
+export function ProgressDemo() {
+  return <Progress variant="warning" value={33} />
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ## Useful links
@@ -131,7 +127,7 @@ Avoid using Progress components for indeterminate processes where the time to co
   />
   <Card
     title="🪄 Figma"
-    href="https://www.figma.com/design/Jfto7FUoU7mSpnv9uESD60/%F0%9F%9F%A0-feely---design-system?node-id=540-8872&t=nua4UmG9Iu1hfUAm-1"
+    href="https://www.figma.com/design/Jfto7FUoU7mSpnv9uESD60/%F0%9F%94%A5-Fucina---Design-System?node-id=639-25717&t=BERFxjM8vy494uCE-1"
   />
   <Card
     title="🐝 API Reference"

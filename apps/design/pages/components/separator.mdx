@@ -3,6 +3,7 @@ title: Separator
 ---
 
 import { Tabs, Cards, Card } from "nextra/components";
+
 import { SeparatorPreview, SeparatorHorizontal, SeparatorVertical } from "@/components/preview/separator.tsx";
 
 # 💠 Separator
@@ -10,36 +11,33 @@ import { SeparatorPreview, SeparatorHorizontal, SeparatorVertical } from "@/comp
 Visually or semantically separates content.
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <SeparatorPreview />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy filename="separator.tsx"
-    import { Separator } from "@fucina/ui/components/separator"
+<Tabs.Tab>
+  <SeparatorPreview />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy filename="separator.tsx"
+import { Separator } from "@fucina/ui"
 
-    export function SeparatorDemo() {
-        return (
-            <div>
-              <div className="space-y-1">
-                <h4 className="text-lg-semibold leading-none">Feely Design System</h4>
-                <p className="text-md text-description">
-                  Crafting inclusive experiences for everyone
-                </p>
-              </div>
-              <Separator className="my-4" />
-              <div className="flex h-5 items-center space-x-4 text-md">
-                <div>Blog</div>
-                <Separator orientation="vertical" />
-                <div>Docs</div>
-                <Separator orientation="vertical" />
-                <div>Source</div>
-              </div>
-            </div>
-        )
-    }
-    ```
-
-  </Tabs.Tab>
+export function SeparatorDemo() {
+  return (
+    <div>
+      <div className="space-y-1">
+        <h4 className="text-lg-semibold leading-none">Fucina</h4>
+        <p className="text-md text-description">Open source product foundry</p>
+      </div>
+      <Separator className="my-4" />
+      <div className="flex h-5 items-center space-x-4 text-md">
+        <div>Blog</div>
+        <Separator orientation="vertical" />
+        <div>Docs</div>
+        <Separator orientation="vertical" />
+        <div>Source</div>
+      </div>
+    </div>
+  )
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ## Usage
@@ -62,53 +60,50 @@ Avoid using Separators to decorate the interface or add visual flair; their prim
 ### Horizontal
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <SeparatorHorizontal />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy {7} /orientation="horizontal"/ filename="separator.tsx"
-    import { Separator } from "@fucina/ui/components/separator"
+<Tabs.Tab>
+  <SeparatorHorizontal />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy /orientation="horizontal"/ filename="separator.tsx"
+import { Separator } from "@fucina/ui"
 
-    export function SeparatorDemo() {
-        return (
-            <div>
-                <h4 className="text-lg-semibold leading-none">Feely Design System</h4>
-                <Separator orientation="horizontal" className="my-4" />
-                <p className="text-md text-description">
-                  Crafting inclusive experiences for everyone
-                </p>
-            </div>
-        )
-    }
-    ```
-
-  </Tabs.Tab>
+export function SeparatorDemo() {
+  return (
+    <div>
+      <h4 className="text-lg-semibold leading-none">Fucina</h4>
+      <Separator orientation="horizontal" className="my-4" />
+      <p className="text-md text-description">Open source product foundry
+      </p>
+    </div>
+  )
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ### Vertical
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <SeparatorVertical />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy {7,9} /orientation="vertical"/ filename="separator.tsx"
-    import { Separator } from "@fucina/ui/components/separator"
+<Tabs.Tab>
+  <SeparatorVertical />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy /orientation="vertical"/ filename="separator.tsx"
+import { Separator } from "@fucina/ui"
 
-    export function SeparatorDemo() {
-        return (
-            <div className="flex h-5 items-center space-x-4 text-md">
-              <div>Blog</div>
-              <Separator orientation="vertical" />
-              <div>Docs</div>
-              <Separator orientation="vertical" />
-              <div>Source</div>
-            </div>
-        )
-    }
-    ```
-
-  </Tabs.Tab>
+export function SeparatorDemo() {
+  return (
+    <div className="flex h-5 items-center space-x-4 text-md">
+      <div>Blog</div>
+      <Separator orientation="vertical" />
+      <div>Docs</div>
+      <Separator orientation="vertical" />
+      <div>Source</div>
+    </div>
+  )
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ## Useful links
@@ -122,7 +117,7 @@ Avoid using Separators to decorate the interface or add visual flair; their prim
   />
   <Card
     title="🪄 Figma"
-    href="https://www.figma.com/design/Jfto7FUoU7mSpnv9uESD60/%F0%9F%9F%A0-feely---design-system?node-id=540-8876&t=nua4UmG9Iu1hfUAm-1"
+    href="https://www.figma.com/design/Jfto7FUoU7mSpnv9uESD60/%F0%9F%94%A5-Fucina---Design-System?node-id=639-29721&t=BERFxjM8vy494uCE-1"
   />
   <Card
     title="🐝 API Reference"

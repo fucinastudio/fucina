@@ -3,6 +3,7 @@ title: Popover
 ---
 
 import { Tabs, Cards, Card } from "nextra/components";
+
 import { AccessibilityTable } from "@/components/accessibility/accessibility-table.mdx";
 import { popoverAccessibilityData } from "@/components/accessibility/popover.tsx";
 import { PopoverPreview } from "@/components/preview/popover.tsx";
@@ -12,56 +13,54 @@ import { PopoverPreview } from "@/components/preview/popover.tsx";
 Displays rich content in a portal, triggered by a button.
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <PopoverPreview />
-  </Tabs.Tab>
-  <Tabs.Tab>
-  ```js copy filename="popover.tsx"
-  import { Button } from "@fucina/ui/components/button"
-  import { Input } from "@fucina/ui/components/input"
-  import { Label } from "@fucina/ui/components/label"
-  import { Popover, PopoverContent, PopoverTrigger } from "@fucina/ui/components/popover"
-  export function PopoverDemo() {
-    return (
-        <Popover>
-          <PopoverTrigger asChild>
-            <Button variant="secondary">Open popover</Button>
-          </PopoverTrigger>
-          <PopoverContent className="w-80">
-            <div className="grid gap-4">
-              <div className="grid gap-2">
-                <div className="grid grid-cols-3 items-center gap-4">
-                  <Label htmlFor="width">Width</Label>
-                  <Input id="width" defaultValue="100%" className="col-span-2" />
-                </div>
-                <div className="grid grid-cols-3 items-center gap-4">
-                  <Label htmlFor="maxWidth">Max. width</Label>
-                  <Input
-                    id="maxWidth"
-                    defaultValue="300px"
-                    className="col-span-2"
-                  />
-                </div>
-                <div className="grid grid-cols-3 items-center gap-4">
-                  <Label htmlFor="height">Height</Label>
-                  <Input id="height" defaultValue="25px" className="col-span-2" />
-                </div>
-                <div className="grid grid-cols-3 items-center gap-4">
-                  <Label htmlFor="maxHeight">Max. height</Label>
-                  <Input
-                    id="maxHeight"
-                    defaultValue="none"
-                    className="col-span-2"
-                  />
-                </div>
-              </div>
+<Tabs.Tab>
+<PopoverPreview />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy filename="popover.tsx"
+import { Popover, PopoverContent, PopoverTrigger, Label, Input, Button } from "@fucina/ui"
+
+export function PopoverDemo() {
+  return (
+    <Popover>
+      <PopoverTrigger asChild>
+        <Button variant="secondary">Open popover</Button>
+      </PopoverTrigger>
+      <PopoverContent className="w-80">
+        <div className="grid gap-4">
+          <div className="grid gap-2">
+            <div className="grid grid-cols-3 items-center gap-4">
+              <Label htmlFor="width">Width</Label>
+              <Input id="width" defaultValue="100%" className="col-span-2" />
             </div>
-          </PopoverContent>
-        </Popover>
-    )
-  }
-  ```
-  </Tabs.Tab>
+            <div className="grid grid-cols-3 items-center gap-4">
+              <Label htmlFor="maxWidth">Max. width</Label>
+              <Input
+                id="maxWidth"
+                defaultValue="300px"
+                className="col-span-2"
+              />
+            </div>
+            <div className="grid grid-cols-3 items-center gap-4">
+              <Label htmlFor="height">Height</Label>
+              <Input id="height" defaultValue="25px" className="col-span-2" />
+            </div>
+            <div className="grid grid-cols-3 items-center gap-4">
+              <Label htmlFor="maxHeight">Max. height</Label>
+              <Input
+                id="maxHeight"
+                defaultValue="none"
+                className="col-span-2"
+              />
+            </div>
+          </div>
+        </div>
+      </PopoverContent>
+    </Popover>
+  )
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ## Usage
@@ -84,15 +83,12 @@ Avoid using Popovers for content that should be accessible at all times or for c
 ### Default
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <PopoverPreview />
-  </Tabs.Tab>
-  <Tabs.Tab>
-  ```js copy filename="popover.tsx"
-  import { Button } from "@fucina/ui/components/button"
-  import { Input } from "@fucina/ui/components/input"
-  import { Label } from "@fucina/ui/components/label"
-  import { Popover, PopoverContent, PopoverTrigger } from "@fucina/ui/components/popover"
+<Tabs.Tab>
+<PopoverPreview />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy filename="popover.tsx"
+import { Popover, PopoverContent, PopoverTrigger, Label, Input, Button } from "@fucina/ui"
 
 export function PopoverDemo() {
   return (
@@ -109,7 +105,11 @@ export function PopoverDemo() {
             </div>
             <div className="grid grid-cols-3 items-center gap-4">
               <Label htmlFor="maxWidth">Max. width</Label>
-              <Input id="maxWidth" defaultValue="300px" className="col-span-2" />
+              <Input
+                id="maxWidth"
+                defaultValue="300px"
+                className="col-span-2"
+              />
             </div>
             <div className="grid grid-cols-3 items-center gap-4">
               <Label htmlFor="height">Height</Label>
@@ -117,16 +117,20 @@ export function PopoverDemo() {
             </div>
             <div className="grid grid-cols-3 items-center gap-4">
               <Label htmlFor="maxHeight">Max. height</Label>
-              <Input id="maxHeight" defaultValue="none" className="col-span-2" />
+              <Input
+                id="maxHeight"
+                defaultValue="none"
+                className="col-span-2"
+              />
             </div>
           </div>
         </div>
       </PopoverContent>
     </Popover>
-  );
+  )
 }
-
 ```
+
 </Tabs.Tab>
 </Tabs>
 
@@ -135,18 +139,18 @@ export function PopoverDemo() {
 **Here you go!** Here are all the resources you might need if you are a designer, a developer or a content manager:
 
 <Cards className="mt-8">
-<Card
-  title="🤖 Storybook"
-  href="https://fucina-storybook.vercel.app/?path=/docs/components-popover--documentation"
-/>
-<Card
-  title="🪄 Figma"
-  href="https://www.figma.com/design/Jfto7FUoU7mSpnv9uESD60/%F0%9F%9F%A0-feely---design-system?node-id=540-8871&t=nua4UmG9Iu1hfUAm-1"
-/>
-<Card
-  title="🐝 API Reference"
-  href="https://www.radix-ui.com/primitives/docs/components/popover#api-reference"
-/>
+  <Card
+    title="🤖 Storybook"
+    href="https://fucina-storybook.vercel.app/?path=/docs/components-popover--documentation"
+  />
+  <Card
+    title="🪄 Figma"
+    href="https://www.figma.com/design/Jfto7FUoU7mSpnv9uESD60/%F0%9F%94%A5-Fucina---Design-System?node-id=639-25610&t=BERFxjM8vy494uCE-1"
+  />
+  <Card
+    title="🐝 API Reference"
+    href="https://www.radix-ui.com/primitives/docs/components/popover#api-reference"
+  />
 </Cards>
 
 ## Accessibility
@@ -156,4 +160,3 @@ Adheres to the [Dialog WAI-ARIA design pattern](https://www.w3.org/WAI/ARIA/apg/
 ### Keyboard interactions
 
 <AccessibilityTable rows={popoverAccessibilityData} />
-```

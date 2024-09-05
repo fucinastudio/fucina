@@ -3,312 +3,310 @@ title: Data Table
 ---
 
 import { Tabs, Cards, Card, Steps, Callout } from "nextra/components";
+
 import { DataTablePreview } from "@/components/preview/data-table.tsx";
+import { Alert } from "@fucina/ui";
 
 # 💠 Data Table
 
 Powerful table and datagrids built using TanStack Table.
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <DataTablePreview />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy filename="data-table.tsx"
-    "use client"
+<Tabs.Tab>
+  <DataTablePreview />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy filename="data-table.tsx"
+"use client";
 
-    import * as React from "react"
-    import { ColumnDef, ColumnFiltersState, SortingState, VisibilityState, flexRender, getCoreRowModel, getFilteredRowModel, getPaginationRowModel, getSortedRowModel, useReactTable } from "@tanstack/react-table"
-    import { ArrowUpDown, ChevronDown, MoreHorizontal } from "@fucina/ui/components/icon"
+import * as React from "react";
+import {
+  ColumnDef,
+  ColumnFiltersState,
+  SortingState,
+  VisibilityState,
+  flexRender,
+  getCoreRowModel,
+  getFilteredRowModel,
+  getPaginationRowModel,
+  getSortedRowModel,
+  useReactTable,
+} from "@tanstack/react-table";
+import { ArrowUpDown, ChevronDown, MoreHorizontal } from "lucide-react";
 
-    import { Button } from "@fucina/ui/components/button"
-    import { Checkbox } from "@fucina/ui/components/checkbox"
-    import { DropdownMenu, DropdownMenuCheckboxItem, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "@fucina/ui/components/dropdown-menu"
-    import { Input } from "@fucina/ui/components/input"
-    import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@fucina/ui/components/table"
+import {
+  Button,
+  Input,
+  Checkbox,
+  DropdownMenu,
+  DropdownMenuCheckboxItem,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@fucina/ui";
 
-    const data: Payment[] = [
-      {
-        id: 'm5gr84i9',
-        amount: 316,
-        status: 'success',
-        email: 'ken99@yahoo.com',
-      },
-      {
-        id: '3u1reuv4',
-        amount: 242,
-        status: 'success',
-        email: 'Abe45@gmail.com',
-      },
-      {
-        id: 'derv1ws0',
-        amount: 837,
-        status: 'processing',
-        email: 'Monserrat44@gmail.com',
-      },
-      {
-        id: '5kma53ae',
-        amount: 874,
-        status: 'success',
-        email: 'Silas22@gmail.com',
-      },
-      {
-        id: 'bhqecj4p',
-        amount: 721,
-        status: 'failed',
-        email: 'carmella@hotmail.com',
-      },
-    ];
+const data: Payment[] = [
+{
+id: "m5gr84i9",
+amount: 316,
+status: "success",
+email: "ken99@yahoo.com",
+},
+{
+id: "3u1reuv4",
+amount: 242,
+status: "success",
+email: "Abe45@gmail.com",
+},
+{
+id: "derv1ws0",
+amount: 837,
+status: "processing",
+email: "Monserrat44@gmail.com",
+},
+{
+id: "5kma53ae",
+amount: 874,
+status: "success",
+email: "Silas22@gmail.com",
+},
+{
+id: "bhqecj4p",
+amount: 721,
+status: "failed",
+email: "carmella@hotmail.com",
+},
+];
 
-    export type Payment = {
-      id: string;
-      amount: number;
-      status: 'pending' | 'processing' | 'success' | 'failed';
-      email: string;
-    };
+export type Payment = {
+  id: string;
+  amount: number;
+  status: "pending" | "processing" | "success" | "failed";
+  email: string;
+};
 
-    export const columns: ColumnDef<Payment>[] = [
-      {
-        id: 'select',
-        header: ({ table }) => (
-          <Checkbox
-            checked={
-              table.getIsAllPageRowsSelected() ||
-              (table.getIsSomePageRowsSelected() && 'indeterminate')
-            }
-            onCheckedChange={(value) => table.toggleAllPageRowsSelected(!!value)}
-            aria-label="Select all"
-          />
-        ),
-        cell: ({ row }) => (
-          <Checkbox
-            checked={row.getIsSelected()}
-            onCheckedChange={(value) => row.toggleSelected(!!value)}
-            aria-label="Select row"
-          />
-        ),
-        enableSorting: false,
-        enableHiding: false,
-      },
-      {
-        accessorKey: 'status',
-        header: 'Status',
-        cell: ({ row }) => (
-          <div className="capitalize">{row.getValue('status')}</div>
-        ),
-      },
-      {
-        accessorKey: 'email',
-        header: ({ column }) => {
-          return (
-            <Button
-              variant="text"
-              onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
-            >
-              Email
-              <ArrowUpDown />
-            </Button>
-          );
-        },
-        cell: ({ row }) => <div className="lowercase">{row.getValue('email')}</div>,
-      },
-      {
-        accessorKey: 'amount',
-        header: () => <div className="text-right">Amount</div>,
-        cell: ({ row }) => {
-          const amount = parseFloat(row.getValue('amount'));
-
-          // Format the amount as a dollar amount
-          const formatted = new Intl.NumberFormat('en-US', {
-            style: 'currency',
-            currency: 'USD',
-          }).format(amount);
-
-          return <div className="text-right font-medium">{formatted}</div>;
-        },
-      },
-      {
-        id: 'actions',
-        enableHiding: false,
-        cell: ({ row }) => {
-          const payment = row.original;
-
-          return (
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button variant="secondary" className="h-8 w-8 p-0">
-                  <span className="sr-only">Open menu</span>
-                  <MoreHorizontal />
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="end">
-                <DropdownMenuLabel>Actions</DropdownMenuLabel>
-                <DropdownMenuItem
-                  onClick={() => navigator.clipboard.writeText(payment.id)}
-                >
-                  Copy payment ID
-                </DropdownMenuItem>
-                <DropdownMenuSeparator />
-                <DropdownMenuItem>View customer</DropdownMenuItem>
-                <DropdownMenuItem>View payment details</DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-          );
-        },
-      },
-    ];
-
-    export function DataTableDemo() {
-      const [sorting, setSorting] = React.useState<SortingState>([]);
-      const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
-        []
+export const columns: ColumnDef<Payment>[] = [
+  {
+    id: "select",
+    header: ({ table }) => (
+      <div className="flex h-10 w-6 items-center justify-center">
+        <Checkbox
+          checked={
+            table.getIsAllPageRowsSelected()
+              ? true
+              : table.getIsSomePageRowsSelected()
+                ? "indeterminate"
+                : false
+          }
+          onCheckedChange={(value) => table.toggleAllPageRowsSelected(!!value)}
+          aria-label="Select all"
+        />
+      </div>
+    ),
+    cell: ({ row }) => (
+      <div className="flex h-10 w-6 items-center justify-center">
+        <Checkbox
+          checked={row.getIsSelected()}
+          onCheckedChange={(value) => row.toggleSelected(!!value)}
+          aria-label="Select row"
+        />
+      </div>
+    ),
+    enableSorting: false,
+    enableHiding: false,
+  },
+  {
+    accessorKey: "status",
+    header: "Status",
+    cell: ({ row }) => <div className="capitalize">{row.getValue("status")}</div>,
+  },
+  {
+    accessorKey: "email",
+    header: ({ column }) => {
+      return (
+        <Button variant="text" onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}>
+          Email
+          <ArrowUpDown />
+        </Button>
       );
-      const [columnVisibility, setColumnVisibility] =
-        React.useState<VisibilityState>({});
-      const [rowSelection, setRowSelection] = React.useState({});
+    },
+    cell: ({ row }) => <div className="lowercase">{row.getValue("email")}</div>,
+  },
+  {
+    accessorKey: "amount",
+    header: () => <div className="text-right">Amount</div>,
+    cell: ({ row }) => {
+      const amount = parseFloat(row.getValue("amount"));
 
-      const table = useReactTable({
-        data,
-        columns,
-        onSortingChange: setSorting,
-        onColumnFiltersChange: setColumnFilters,
-        getCoreRowModel: getCoreRowModel(),
-        getPaginationRowModel: getPaginationRowModel(),
-        getSortedRowModel: getSortedRowModel(),
-        getFilteredRowModel: getFilteredRowModel(),
-        onColumnVisibilityChange: setColumnVisibility,
-        onRowSelectionChange: setRowSelection,
-        state: {
-          sorting,
-          columnFilters,
-          columnVisibility,
-          rowSelection,
-        },
-      });
+      // Format the amount as a dollar amount
+      const formatted = new Intl.NumberFormat("en-US", {
+        style: "currency",
+        currency: "USD",
+      }).format(amount);
+
+      return <div className="text-right font-medium">{formatted}</div>;
+    },
+
+},
+{
+id: "actions",
+enableHiding: false,
+cell: ({ row }) => {
+const payment = row.original;
 
       return (
-        <div className="w-full">
-          <div className="flex items-center py-4">
-            <Input
-              placeholder="Filter emails..."
-              value={(table.getColumn('email')?.getFilterValue() as string) ?? ''}
-              onChange={(event) =>
-                table.getColumn('email')?.setFilterValue(event.target.value)
-              }
-              className="max-w-sm"
-            />
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button variant="secondary" className="ml-auto">
-                  Columns
-                  <ChevronDown />
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="end">
-                {table
-                  .getAllColumns()
-                  .filter((column) => column.getCanHide())
-                  .map((column) => {
-                    return (
-                      <DropdownMenuCheckboxItem
-                        key={column.id}
-                        className="capitalize"
-                        checked={column.getIsVisible()}
-                        onCheckedChange={(value) =>
-                          column.toggleVisibility(!!value)
-                        }
-                      >
-                        {column.id}
-                      </DropdownMenuCheckboxItem>
-                    );
-                  })}
-              </DropdownMenuContent>
-            </DropdownMenu>
-          </div>
-          <div className="rounded border border-default">
-            <Table>
-              <TableHeader>
-                {table.getHeaderGroups().map((headerGroup) => (
-                  <TableRow key={headerGroup.id}>
-                    {headerGroup.headers.map((header) => {
-                      return (
-                        <TableHead key={header.id}>
-                          {header.isPlaceholder
-                            ? null
-                            : flexRender(
-                                header.column.columnDef.header,
-                                header.getContext()
-                              )}
-                        </TableHead>
-                      );
-                    })}
-                  </TableRow>
-                ))}
-              </TableHeader>
-              <TableBody>
-                {table.getRowModel().rows?.length ? (
-                  table.getRowModel().rows.map((row) => (
-                    <TableRow
-                      key={row.id}
-                      data-state={row.getIsSelected() && 'selected'}
-                    >
-                      {row.getVisibleCells().map((cell) => (
-                        <TableCell key={cell.id}>
-                          {flexRender(
-                            cell.column.columnDef.cell,
-                            cell.getContext()
-                          )}
-                        </TableCell>
-                      ))}
-                    </TableRow>
-                  ))
-                ) : (
-                  <TableRow>
-                    <TableCell
-                      colSpan={columns.length}
-                      className="h-24 text-center text-description"
-                    >
-                      No results.
-                    </TableCell>
-                  </TableRow>
-                )}
-              </TableBody>
-            </Table>
-          </div>
-          <div className="flex items-center justify-end space-x-2 py-4">
-            <div className="flex-1 text-md text-description">
-              {table.getFilteredSelectedRowModel().rows.length} of{' '}
-              {table.getFilteredRowModel().rows.length} row(s) selected.
-            </div>
-            <div className="space-x-2">
-              <Button
-                variant="secondary"
-                onClick={() => table.previousPage()}
-                disabled={!table.getCanPreviousPage()}
-              >
-                Previous
-              </Button>
-              <Button
-                variant="secondary"
-                onClick={() => table.nextPage()}
-                disabled={!table.getCanNextPage()}
-              >
-                Next
-              </Button>
-            </div>
-          </div>
-        </div>
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button variant="secondary" className="p-0 size-8">
+              <span className="sr-only">Open menu</span>
+              <MoreHorizontal />
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent align="end">
+            <DropdownMenuLabel>Actions</DropdownMenuLabel>
+            <DropdownMenuItem onClick={() => navigator.clipboard.writeText(payment.id)}>
+              Copy payment ID
+            </DropdownMenuItem>
+            <DropdownMenuSeparator />
+            <DropdownMenuItem>View customer</DropdownMenuItem>
+            <DropdownMenuItem>View payment details</DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
       );
-    }
+    },
 
-    export const DataTablePreview = () => (
-      <Preview>
-        <DataTableDemo />
-      </Preview>
-    );
-    ```
+},
+];
 
-  </Tabs.Tab>
+export function DataTableDemo() {
+  const [sorting, setSorting] = React.useState<SortingState>([]);
+  const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>([]);
+  const [columnVisibility, setColumnVisibility] = React.useState<VisibilityState>({});
+  const [rowSelection, setRowSelection] = React.useState({});
+  const table = useReactTable({
+    data,
+    columns,
+    onSortingChange: setSorting,
+    onColumnFiltersChange: setColumnFilters,
+    getCoreRowModel: getCoreRowModel(),
+    getPaginationRowModel: getPaginationRowModel(),
+    getSortedRowModel: getSortedRowModel(),
+    getFilteredRowModel: getFilteredRowModel(),
+    onColumnVisibilityChange: setColumnVisibility,
+    onRowSelectionChange: setRowSelection,
+    state: {
+      sorting,
+      columnFilters,
+      columnVisibility,
+      rowSelection,
+    },
+  });
+  return (
+    <div className="w-full">
+      <div className="flex items-center py-4">
+        <Input
+          placeholder="Filter emails..."
+          value={(table.getColumn("email")?.getFilterValue() as string) ?? ""}
+          onChange={(event) => table.getColumn("email")?.setFilterValue(event.target.value)}
+          className="max-w-sm"
+        />
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button variant="secondary" className="ml-auto">
+              Columns
+              <ChevronDown />
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent align="end">
+            {table
+              .getAllColumns()
+              .filter((column) => column.getCanHide())
+              .map((column) => {
+                return (
+                  <DropdownMenuCheckboxItem
+                    key={column.id}
+                    className="capitalize"
+                    checked={column.getIsVisible()}
+                    onCheckedChange={(value) => column.toggleVisibility(!!value)}>
+                    {column.id}
+                  </DropdownMenuCheckboxItem>
+                );
+              })}
+          </DropdownMenuContent>
+        </DropdownMenu>
+      </div>
+      <div className="border-default border rounded">
+        <Table>
+          <TableHeader>
+            {table.getHeaderGroups().map((headerGroup) => (
+              <TableRow key={headerGroup.id}>
+                {headerGroup.headers.map((header) => {
+                  return (
+                    <TableHead key={header.id}>
+                      {header.isPlaceholder
+                        ? null
+                        : flexRender(header.column.columnDef.header, header.getContext())}
+                    </TableHead>
+                  );
+                })}
+              </TableRow>
+            ))}
+          </TableHeader>
+          <TableBody>
+            {table.getRowModel().rows?.length ? (
+              table.getRowModel().rows.map((row) => (
+                <TableRow key={row.id} data-state={row.getIsSelected() && "selected"}>
+                  {row.getVisibleCells().map((cell) => (
+                    <TableCell key={cell.id}>
+                      {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                    </TableCell>
+                  ))}
+                </TableRow>
+              ))
+            ) : (
+              <TableRow>
+                <TableCell colSpan={columns.length} className="h-24 text-center text-description">
+                  No results.
+                </TableCell>
+              </TableRow>
+            )}
+          </TableBody>
+        </Table>
+      </div>
+      <div className="flex justify-end items-center space-x-2 py-4">
+        <div className="flex-1 text-description text-md">
+          {table.getFilteredSelectedRowModel().rows.length} of {table.getFilteredRowModel().rows.length}{" "}
+          row(s) selected.
+        </div>
+        <div className="space-x-2">
+          <Button
+            variant="secondary"
+            onClick={() => table.previousPage()}
+            disabled={!table.getCanPreviousPage()}>
+            Previous
+          </Button>
+          <Button variant="secondary" onClick={() => table.nextPage()} disabled={!table.getCanNextPage()}>
+            Next
+          </Button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export const DataTablePreview = () => (
+  <DataTableDemo />
+);
+```
+</Tabs.Tab>
 </Tabs>
 
 ## Introduction
@@ -321,10 +319,10 @@ So instead of a data-table component, we thought it would be more helpful to pro
 
 We'll start with the basic `<Table />` component and build a complex data table from scratch.
 
-<Callout type="info" emoji="💡">
-  **Tip**: If you find yourself using the same table in multiple places in your app, you can always extract it
-  into a reusable component.
-</Callout>
+<Alert className="mt-6" variant="brand" title="💡 Tip">
+  If you find yourself using the same table in multiple places in your app, you can always extract it into a
+  reusable component.
+</Alert>
 
 ## Table of contents
 
@@ -404,7 +402,7 @@ Let's start by building a basic table.
 
 First, we'll define our columns.
 
-```js copy {3, 14-27} filename="app/payments/columns.tsx"
+```js copy filename="app/payments/columns.tsx"
 "use client"
 
 import { ColumnDef } from "@tanstack/react-table"
@@ -434,10 +432,10 @@ export const columns: ColumnDef<Payment>[] = [
 ]
 ```
 
-<Callout type="info" emoji="📝">
-  **Note**: Columns are where you define the core of what your table will look like. They define the data that
-  will be displayed, how it will be formatted, sorted and filtered.
-</Callout>
+<Alert className="mt-6" variant="brand" title="📝 Note">
+  Columns are where you define the core of what your table will look like. They define the data that will be
+  displayed, how it will be formatted, sorted and filtered.
+</Alert>
 
 ### `<DataTable />` component
 
@@ -460,7 +458,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@fucina/ui/components/table"
+} from "@fucina/ui"
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[]
@@ -478,7 +476,7 @@ export function DataTable<TData, TValue>({
   })
 
   return (
-    <div className="rounded border border-default">
+    <div className="rounded border overflow-auto border-default">
       <Table>
         <TableHeader>
           {table.getHeaderGroups().map((headerGroup) => (
@@ -526,18 +524,18 @@ export function DataTable<TData, TValue>({
 }
 ```
 
-<Callout type="info" emoji="💡">
-  **Tip**: If you find yourself using `<DataTable />` in multiple places, this is the component you could make reusable by extracting it to `components/data-table.tsx`.
+<Alert className="mt-6" variant="brand" title="💡 Tip">
+  If you find yourself using `<DataTable />` in multiple places, this is the component you could make reusable by extracting it to `components/data-table.tsx`.
 
 `<DataTable columns={columns} data={data} />`
 
-</Callout>
+</Alert>
 
 ### Render the table
 
 Finally, we'll render our table in our page component.
 
-```js copy {22} filename="app/payments/page.tsx"
+```js copy filename="app/payments/page.tsx"
 import { Payment, columns } from "./columns";
 import { DataTable } from "./data-table";
 
@@ -576,7 +574,7 @@ Let's format the amount cell to display the dollar amount. We'll also align the 
 
 Update the `header` and `cell` definitions for amount as follows:
 
-```js copy {4-15} filename="app/payments/columns.tsx"
+```js copy filename="app/payments/columns.tsx"
 export const columns: ColumnDef<Payment>[] = [
   {
     accessorKey: "amount",
@@ -608,13 +606,12 @@ Let's add row actions to our table. We'll use a `<Dropdown />` component for thi
 
 Update our columns definition to add a new `actions` column. The `actions` cell returns a `<Dropdown />` component.
 
-```js copy {4,6-14,18-45} filename="app/payments/columns.tsx"
+```js copy filename="app/payments/columns.tsx"
 "use client";
 
 import { ColumnDef } from "@tanstack/react-table";
-import { MoreHorizontal } from "@fucina/ui/components/icon";
+import { MoreHorizontal } from "lucide-react";
 
-import { Button } from "@fucina/ui/components/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -622,7 +619,8 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@fucina/ui/components/dropdown-menu";
+  Button
+} from "@fucina/ui";
 
 export const columns: ColumnDef<Payment>[] = [
   // ...
@@ -634,7 +632,7 @@ export const columns: ColumnDef<Payment>[] = [
       return (
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button variant="secondary" icon={true} className="p-0">
+            <Button variant="secondary" icon={true}>
               <span className="sr-only">Open menu</span>
               <MoreHorizontal />
             </Button>
@@ -668,7 +666,7 @@ Next, we'll add pagination to our table.
 
 ### Update `<DataTable>`
 
-```js copy {5,17} filename="app/payments/data-table.tsx"
+```js copy filename="app/payments/data-table.tsx"
 import {
   ColumnDef,
   flexRender,
@@ -695,8 +693,8 @@ This will automatically paginate your rows into pages of 10. See the [pagination
 
 We can add pagination controls to our table using the `<Button />` component and the `table.previousPage()`, `table.nextPage()` API methods.
 
-```js copy {1,15,21-39} filename="app/payments/data-table.tsx"
-import { Button } from "@fucina/ui/components/button";
+```js copy filename="app/payments/data-table.tsx"
+import { Button } from "@fucina/ui";
 
 export function DataTable<TData, TValue>({ columns, data }: DataTableProps<TData, TValue>) {
   const table = useReactTable({
@@ -739,7 +737,7 @@ Let's make the email column sortable.
 
 ### Update `<DataTable>`
 
-```js copy {3,6,,10,18,25-28} filename="app/payments/data-table.tsx"
+```js copy filename="app/payments/data-table.tsx"
 "use client"
 
 import * as React from "react"
@@ -785,11 +783,11 @@ export function DataTable<TData, TValue>({
 
 We can now update the `email` header cell to add sorting controls.
 
-```js copy {4,9-19} filename="app/payments/columns.tsx"
+```js copy filename="app/payments/columns.tsx"
 "use client";
 
 import { ColumnDef } from "@tanstack/react-table";
-import { ArrowUpDown, MoreHorizontal } from "@fucina/ui/components/icon";
+import { ArrowUpDown, MoreHorizontal } from "lucide-react";
 
 export const columns: ColumnDef<Payment>[] = [
   {
@@ -818,7 +816,7 @@ Let's add a search input to filter emails in our table.
 
 ### Update `<DataTable>`
 
-```js copy {6,10,17,24-26,35-36,39,45-54} filename="app/payments/data-table.tsx"
+```js copy filename="app/payments/data-table.tsx"
 "use client"
 
 import * as React from "react"
@@ -834,8 +832,8 @@ import {
   useReactTable,
 } from "@tanstack/react-table"
 
-import { Button } from "@fucina/ui/components/button"
-import { Input } from "@fucina/ui/components/input"
+import { Button } from "@fucina/ui"
+import { Input } from "@fucina/ui"
 
 export function DataTable<TData, TValue>({
   columns,
@@ -863,7 +861,7 @@ export function DataTable<TData, TValue>({
 
   return (
     <div>
-      <div className="flex items-center py-4">
+      <div className="flex items-center justify-between gap-1 py-4">
         <Input
           placeholder="Filter emails..."
           value={(table.getColumn("email")?.getFilterValue() as string) ?? ""}
@@ -893,7 +891,7 @@ Adding column visibility is fairly simple using `@tanstack/react-table` visibili
 
 ### Update `<DataTable>`
 
-```js copy {8,18-23,33-34,45,49,64-91} filename="app/payments/data-table.tsx"
+```js copy filename="app/payments/data-table.tsx"
 "use client"
 
 import * as React from "react"
@@ -910,13 +908,13 @@ import {
   useReactTable,
 } from "@tanstack/react-table"
 
-import { Button } from "@fucina/ui/components/button"
 import {
+  Button,
   DropdownMenu,
   DropdownMenuCheckboxItem,
   DropdownMenuContent,
-  DropdownMenuTrigger,
-} from "@fucina/ui/components/dropdown-menu"
+  DropdownMenuTrigger
+} from "@fucina/ui"
 
 export function DataTable<TData, TValue>({
   columns,
@@ -1006,13 +1004,12 @@ Next, we're going to add row selection to our table.
 
 ### Update column definitions
 
-```js copy {6,9-27} filename="app/payments/columns.tsx"
+```js copy filename="app/payments/columns.tsx"
 "use client";
 
 import { ColumnDef } from "@tanstack/react-table";
 
-import { Badge } from "@fucina/ui/components/badge";
-import { Checkbox } from "@fucina/ui/components/checkbox";
+import { Badge, Checkbox } from "@fucina/ui";
 
 export const columns: ColumnDef<Payment>[] = [
   {
@@ -1039,7 +1036,7 @@ export const columns: ColumnDef<Payment>[] = [
 
 ### Update `<DataTable>`
 
-```js copy {11,23,28} filename="app/payments/data-table.tsx"
+```js copy filename="app/payments/data-table.tsx"
 export function DataTable<TData, TValue>({ columns, data }: DataTableProps<TData, TValue>) {
   const [sorting, setSorting] = React.useState < SortingState > [];
   const [columnFilters, setColumnFilters] = React.useState < ColumnFiltersState > [];
@@ -1104,18 +1101,18 @@ import {
   ArrowUp,
   ChevronsUpDown,
   EyeOff,
-} from "@fucina/ui/components/icon"
+} from "lucide-react"
 import { Column } from "@tanstack/react-table"
 
 import { cn } from "@/lib/twMerge"
-import { Button } from "@fucina/ui/components/button"
 import {
+  Button,
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@fucina/ui/components/dropdown-menu"
+  DropdownMenuTrigger
+} from "@fucina/ui"
 
 interface DataTableColumnHeaderProps<TData, TValue>
   extends React.HTMLAttributes<HTMLDivElement> {
@@ -1185,11 +1182,10 @@ export const columns = [
 Add pagination controls to your table including page size and selection count.
 
 ```js copy
-import { ChevronLeft, ChevronRight, ChevronsLeft, ChevronsRight } from "@fucina/ui/components/icon";
+import { ChevronLeft, ChevronRight, ChevronsLeft, ChevronsRight } from "lucide-react";
 import { Table } from "@tanstack/react-table";
 
-import { Button } from "@fucina/ui/components/button";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@fucina/ui/components/select";
+import { Button, Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@fucina/ui";
 
 interface DataTablePaginationProps<TData> {
   table: Table<TData>;
@@ -1279,17 +1275,17 @@ A component to toggle column visibility.
 "use client";
 
 import { DropdownMenuTrigger } from "@radix-ui/react-dropdown-menu";
-import { Settings2 } from "@fucina/ui/components/icon";
+import { Settings2 } from "lucide-react";
 import { Table } from "@tanstack/react-table";
 
-import { Button } from "@fucina/ui/components/button";
 import {
+  Button,
   DropdownMenu,
   DropdownMenuCheckboxItem,
   DropdownMenuContent,
   DropdownMenuLabel,
-  DropdownMenuSeparator,
-} from "@fucina/ui/components/dropdown-menu";
+  DropdownMenuSeparator
+} from "@fucina/ui";
 
 interface DataTableViewOptionsProps<TData> {
   table: Table<TData>;

@@ -33,8 +33,8 @@ module.exports = {
           brand: {
             default: {
               type: "color",
-              value: "#2563eb",
-              description: "The background color of main actions such as primary Buttons.",
+              value: "#c026d3",
+              description: "The background color of brand elements and main actions.",
               $extensions: {
                 variableId: "VariableID:72:36",
               },
@@ -43,7 +43,7 @@ module.exports = {
               original: {
                 type: "color",
                 value: "{foundations.color.brand.600}",
-                description: "The background color of main actions such as primary Buttons.",
+                description: "The background color of brand elements and main actions.",
                 $extensions: {
                   variableId: "VariableID:72:36",
                 },
@@ -60,8 +60,8 @@ module.exports = {
             },
             hover: {
               type: "color",
-              value: "#3b82f6",
-              description: "The hover state color of main actions such as primary Buttons.",
+              value: "#d946ef",
+              description: "The hover state color of brand elements and main actions.",
               $extensions: {
                 variableId: "VariableID:72:37",
               },
@@ -70,7 +70,7 @@ module.exports = {
               original: {
                 type: "color",
                 value: "{foundations.color.brand.500}",
-                description: "The hover state color of main actions such as primary Buttons.",
+                description: "The hover state color of brand elements and main actions.",
                 $extensions: {
                   variableId: "VariableID:72:37",
                 },
@@ -87,8 +87,8 @@ module.exports = {
             },
             active: {
               type: "color",
-              value: "#1d4ed8",
-              description: "The active state (on press) color of main actions such as primary Buttons.",
+              value: "#a21caf",
+              description: "The active state (on press) color of brand elements and main actions.",
               $extensions: {
                 variableId: "VariableID:91:126",
               },
@@ -97,7 +97,7 @@ module.exports = {
               original: {
                 type: "color",
                 value: "{foundations.color.brand.700}",
-                description: "The active state (on press) color of main actions such as primary Buttons.",
+                description: "The active state (on press) color of brand elements and main actions.",
                 $extensions: {
                   variableId: "VariableID:91:126",
                 },
@@ -114,7 +114,7 @@ module.exports = {
             },
             subtlest: {
               type: "color",
-              value: "#eff6ff",
+              value: "#fdf4ff",
               description:
                 "Use for the background of elements used to reinforce our brand, but with less emphasis.",
               $extensions: {
@@ -143,7 +143,7 @@ module.exports = {
             },
             subtle: {
               type: "color",
-              value: "#dbeafe",
+              value: "#fae8ff",
               description:
                 "Use for the background of elements used to reinforce our brand, but with less emphasis.",
               $extensions: {
@@ -525,7 +525,7 @@ module.exports = {
           },
           mask: {
             type: "color",
-            value: "#ffffffe6",
+            value: "#09090b99",
             description:
               "The background color of the mask, used to cover the content below the mask. Dialog, Alert Dialog and other components use this token.",
             $extensions: {
@@ -535,7 +535,7 @@ module.exports = {
             isSource: true,
             original: {
               type: "color",
-              value: "#ffffffe6",
+              value: "#09090b99",
               description:
                 "The background color of the mask, used to cover the content below the mask. Dialog, Alert Dialog and other components use this token.",
               $extensions: {
@@ -610,7 +610,7 @@ module.exports = {
           },
           "item-hover": {
             type: "color",
-            value: "#f4f4f5",
+            value: "#fafafa",
             description:
               "The hover state color of contained elements with a smaller surface area such as secondary Button and Dropdown Menu Item.",
             $extensions: {
@@ -620,7 +620,7 @@ module.exports = {
             isSource: true,
             original: {
               type: "color",
-              value: "{foundations.color.neutral.100}",
+              value: "{foundations.color.neutral.50}",
               description:
                 "The hover state color of contained elements with a smaller surface area such as secondary Button and Dropdown Menu Item.",
               $extensions: {
@@ -637,11 +637,11 @@ module.exports = {
             },
             path: ["tokens", "light", "color", "bg", "item-hover"],
           },
-          "item-selected": {
+          "item-active": {
             type: "color",
-            value: "#e4e4e7",
+            value: "#f4f4f5",
             description:
-              "The selected state color of contained elements with a smaller surface area such as Dropdown Menu Item.",
+              "The active state color of contained elements with a smaller surface area such as Dropdown Menu Item.",
             $extensions: {
               variableId: "VariableID:91:124",
             },
@@ -649,26 +649,26 @@ module.exports = {
             isSource: true,
             original: {
               type: "color",
-              value: "{foundations.color.neutral.200}",
+              value: "{foundations.color.neutral.100}",
               description:
-                "The selected state color of contained elements with a smaller surface area such as Dropdown Menu Item.",
+                "The active state color of contained elements with a smaller surface area such as Dropdown Menu Item.",
               $extensions: {
                 variableId: "VariableID:91:124",
               },
             },
-            name: "TokensLightColorBgItemSelected",
+            name: "TokensLightColorBgItemActive",
             attributes: {
               category: "tokens",
               type: "light",
               item: "color",
               subitem: "bg",
-              state: "item-selected",
+              state: "item-active",
             },
-            path: ["tokens", "light", "color", "bg", "item-selected"],
+            path: ["tokens", "light", "color", "bg", "item-active"],
           },
           inverse: {
             type: "color",
-            value: "#09090b",
+            value: "#18181b",
             description: "The background color for elements that should stand out in the interface.",
             $extensions: {
               variableId: "VariableID:634:2406",
@@ -677,7 +677,7 @@ module.exports = {
             isSource: true,
             original: {
               type: "color",
-              value: "{foundations.color.neutral.950}",
+              value: "{foundations.color.neutral.900}",
               description: "The background color for elements that should stand out in the interface.",
               $extensions: {
                 variableId: "VariableID:634:2406",
@@ -723,7 +723,7 @@ module.exports = {
           utility: {
             slot: {
               type: "color",
-              value: "#ede9fe",
+              value: "#dbeafe",
               description: "Use for background of the Slot component.",
               $extensions: {
                 variableId: "VariableID:1851:7046",
@@ -732,7 +732,7 @@ module.exports = {
               isSource: true,
               original: {
                 type: "color",
-                value: "{foundations.color.violet.100}",
+                value: "{foundations.color.blue.100}",
                 description: "Use for background of the Slot component.",
                 $extensions: {
                   variableId: "VariableID:1851:7046",
@@ -751,470 +751,980 @@ module.exports = {
           },
           chart: {
             red: {
-              type: "color",
-              value: "#fee2e2",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16038",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              default: {
                 type: "color",
-                value: "{foundations.color.red.100}",
+                value: "#ef4444",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2754:16038",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.red.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2754:16038",
+                  },
+                },
+                name: "TokensLightColorBgChartRedDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "bg",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "bg", "chart", "red", "default"],
               },
-              name: "TokensLightColorBgChartRed",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "bg",
-                state: "chart",
-              },
-              path: ["tokens", "light", "color", "bg", "chart", "red"],
-            },
-            orange: {
-              type: "color",
-              value: "#ffedd5",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16039",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              subtlest: {
                 type: "color",
-                value: "{foundations.color.orange.100}",
+                value: "#fef2f2",
                 description: "For data visualisation only.",
                 $extensions: {
-                  variableId: "VariableID:2754:16039",
+                  variableId: "VariableID:8640:10481",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.red.50}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8640:10481",
+                  },
+                },
+                name: "TokensLightColorBgChartRedSubtlest",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "bg",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "bg", "chart", "red", "subtlest"],
               },
-              name: "TokensLightColorBgChartOrange",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "bg",
-                state: "chart",
+              subtle: {
+                type: "color",
+                value: "#fee2e2",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8668:12",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.red.100}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8668:12",
+                  },
+                },
+                name: "TokensLightColorBgChartRedSubtle",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "bg",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "bg", "chart", "red", "subtle"],
               },
-              path: ["tokens", "light", "color", "bg", "chart", "orange"],
             },
             amber: {
-              type: "color",
-              value: "#fef3c7",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16040",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              subtlest: {
                 type: "color",
-                value: "{foundations.color.amber.100}",
+                value: "#fffbeb",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2754:16040",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.amber.50}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2754:16040",
+                  },
+                },
+                name: "TokensLightColorBgChartAmberSubtlest",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "bg",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "bg", "chart", "amber", "subtlest"],
               },
-              name: "TokensLightColorBgChartAmber",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "bg",
-                state: "chart",
-              },
-              path: ["tokens", "light", "color", "bg", "chart", "amber"],
-            },
-            yellow: {
-              type: "color",
-              value: "#fef9c3",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16041",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              default: {
                 type: "color",
-                value: "{foundations.color.yellow.100}",
+                value: "#f59e0b",
                 description: "For data visualisation only.",
                 $extensions: {
-                  variableId: "VariableID:2754:16041",
+                  variableId: "VariableID:8642:12370",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.amber.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12370",
+                  },
+                },
+                name: "TokensLightColorBgChartAmberDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "bg",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "bg", "chart", "amber", "default"],
               },
-              name: "TokensLightColorBgChartYellow",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "bg",
-                state: "chart",
-              },
-              path: ["tokens", "light", "color", "bg", "chart", "yellow"],
-            },
-            lime: {
-              type: "color",
-              value: "#ecfccb",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16042",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              subtle: {
                 type: "color",
-                value: "{foundations.color.lime.100}",
+                value: "#fef3c7",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8670:109",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.amber.100}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8670:109",
+                  },
+                },
+                name: "TokensLightColorBgChartAmberSubtle",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "bg",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "bg", "chart", "amber", "subtle"],
+              },
+            },
+            neutral: {
+              subtlest: {
+                type: "color",
+                value: "#fafafa",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2754:16042",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.neutral.50}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2754:16042",
+                  },
+                },
+                name: "TokensLightColorBgChartNeutralSubtlest",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "bg",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "bg", "chart", "neutral", "subtlest"],
               },
-              name: "TokensLightColorBgChartLime",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "bg",
-                state: "chart",
-              },
-              path: ["tokens", "light", "color", "bg", "chart", "lime"],
-            },
-            green: {
-              type: "color",
-              value: "#dcfce7",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16043",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              default: {
                 type: "color",
-                value: "{foundations.color.green.100}",
+                value: "#71717a",
                 description: "For data visualisation only.",
                 $extensions: {
-                  variableId: "VariableID:2754:16043",
+                  variableId: "VariableID:8642:12372",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.neutral.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12372",
+                  },
+                },
+                name: "TokensLightColorBgChartNeutralDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "bg",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "bg", "chart", "neutral", "default"],
               },
-              name: "TokensLightColorBgChartGreen",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "bg",
-                state: "chart",
+              subtle: {
+                type: "color",
+                value: "#f4f4f5",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8670:93",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.neutral.100}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8670:93",
+                  },
+                },
+                name: "TokensLightColorBgChartNeutralSubtle",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "bg",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "bg", "chart", "neutral", "subtle"],
               },
-              path: ["tokens", "light", "color", "bg", "chart", "green"],
             },
             emerald: {
-              type: "color",
-              value: "#d1fae5",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16044",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              subtlest: {
                 type: "color",
-                value: "{foundations.color.emerald.100}",
+                value: "#ecfdf5",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2754:16044",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.emerald.50}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2754:16044",
+                  },
+                },
+                name: "TokensLightColorBgChartEmeraldSubtlest",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "bg",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "bg", "chart", "emerald", "subtlest"],
               },
-              name: "TokensLightColorBgChartEmerald",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "bg",
-                state: "chart",
+              default: {
+                type: "color",
+                value: "#10b981",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8642:12375",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.emerald.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12375",
+                  },
+                },
+                name: "TokensLightColorBgChartEmeraldDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "bg",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "bg", "chart", "emerald", "default"],
               },
-              path: ["tokens", "light", "color", "bg", "chart", "emerald"],
+              subtle: {
+                type: "color",
+                value: "#d1fae5",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8670:110",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.emerald.100}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8670:110",
+                  },
+                },
+                name: "TokensLightColorBgChartEmeraldSubtle",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "bg",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "bg", "chart", "emerald", "subtle"],
+              },
             },
             teal: {
-              type: "color",
-              value: "#ccfbf1",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16045",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              subtlest: {
                 type: "color",
-                value: "{foundations.color.teal.100}",
+                value: "#f0fdfa",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2754:16045",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.teal.50}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2754:16045",
+                  },
+                },
+                name: "TokensLightColorBgChartTealSubtlest",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "bg",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "bg", "chart", "teal", "subtlest"],
               },
-              name: "TokensLightColorBgChartTeal",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "bg",
-                state: "chart",
+              default: {
+                type: "color",
+                value: "#14b8a6",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8642:12376",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.teal.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12376",
+                  },
+                },
+                name: "TokensLightColorBgChartTealDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "bg",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "bg", "chart", "teal", "default"],
               },
-              path: ["tokens", "light", "color", "bg", "chart", "teal"],
+              subtle: {
+                type: "color",
+                value: "#ccfbf1",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8670:111",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.teal.100}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8670:111",
+                  },
+                },
+                name: "TokensLightColorBgChartTealSubtle",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "bg",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "bg", "chart", "teal", "subtle"],
+              },
             },
             cyan: {
-              type: "color",
-              value: "#cffafe",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16046",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              subtlest: {
                 type: "color",
-                value: "{foundations.color.cyan.100}",
+                value: "#ecfeff",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2754:16046",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.cyan.50}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2754:16046",
+                  },
+                },
+                name: "TokensLightColorBgChartCyanSubtlest",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "bg",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "bg", "chart", "cyan", "subtlest"],
               },
-              name: "TokensLightColorBgChartCyan",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "bg",
-                state: "chart",
-              },
-              path: ["tokens", "light", "color", "bg", "chart", "cyan"],
-            },
-            sky: {
-              type: "color",
-              value: "#e0f2fe",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16047",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              default: {
                 type: "color",
-                value: "{foundations.color.sky.100}",
+                value: "#06b6d4",
                 description: "For data visualisation only.",
                 $extensions: {
-                  variableId: "VariableID:2754:16047",
+                  variableId: "VariableID:8642:12377",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.cyan.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12377",
+                  },
+                },
+                name: "TokensLightColorBgChartCyanDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "bg",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "bg", "chart", "cyan", "default"],
               },
-              name: "TokensLightColorBgChartSky",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "bg",
-                state: "chart",
+              subtle: {
+                type: "color",
+                value: "#cffafe",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8670:112",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.cyan.100}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8670:112",
+                  },
+                },
+                name: "TokensLightColorBgChartCyanSubtle",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "bg",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "bg", "chart", "cyan", "subtle"],
               },
-              path: ["tokens", "light", "color", "bg", "chart", "sky"],
             },
             blue: {
-              type: "color",
-              value: "#dbeafe",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16048",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              subtlest: {
                 type: "color",
-                value: "{foundations.color.blue.100}",
+                value: "#eff6ff",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2754:16048",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.blue.50}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2754:16048",
+                  },
+                },
+                name: "TokensLightColorBgChartBlueSubtlest",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "bg",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "bg", "chart", "blue", "subtlest"],
               },
-              name: "TokensLightColorBgChartBlue",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "bg",
-                state: "chart",
-              },
-              path: ["tokens", "light", "color", "bg", "chart", "blue"],
-            },
-            indigo: {
-              type: "color",
-              value: "#e0e7ff",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16049",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              default: {
                 type: "color",
-                value: "{foundations.color.indigo.100}",
+                value: "#3b82f6",
                 description: "For data visualisation only.",
                 $extensions: {
-                  variableId: "VariableID:2754:16049",
+                  variableId: "VariableID:8642:12379",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.blue.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12379",
+                  },
+                },
+                name: "TokensLightColorBgChartBlueDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "bg",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "bg", "chart", "blue", "default"],
               },
-              name: "TokensLightColorBgChartIndigo",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "bg",
-                state: "chart",
-              },
-              path: ["tokens", "light", "color", "bg", "chart", "indigo"],
-            },
-            violet: {
-              type: "color",
-              value: "#ede9fe",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16050",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              subtle: {
                 type: "color",
-                value: "{foundations.color.violet.100}",
+                value: "#dbeafe",
                 description: "For data visualisation only.",
                 $extensions: {
-                  variableId: "VariableID:2754:16050",
+                  variableId: "VariableID:8670:113",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.blue.100}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8670:113",
+                  },
+                },
+                name: "TokensLightColorBgChartBlueSubtle",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "bg",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "bg", "chart", "blue", "subtle"],
               },
-              name: "TokensLightColorBgChartViolet",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "bg",
-                state: "chart",
-              },
-              path: ["tokens", "light", "color", "bg", "chart", "violet"],
             },
             purple: {
-              type: "color",
-              value: "#f3e8ff",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16051",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              subtlest: {
                 type: "color",
-                value: "{foundations.color.purple.100}",
+                value: "#faf5ff",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2754:16051",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.purple.50}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2754:16051",
+                  },
+                },
+                name: "TokensLightColorBgChartPurpleSubtlest",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "bg",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "bg", "chart", "purple", "subtlest"],
               },
-              name: "TokensLightColorBgChartPurple",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "bg",
-                state: "chart",
-              },
-              path: ["tokens", "light", "color", "bg", "chart", "purple"],
-            },
-            fuchsia: {
-              type: "color",
-              value: "#fae8ff",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16052",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              default: {
                 type: "color",
-                value: "{foundations.color.fuchsia.100}",
+                value: "#a855f7",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8642:12382",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.purple.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12382",
+                  },
+                },
+                name: "TokensLightColorBgChartPurpleDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "bg",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "bg", "chart", "purple", "default"],
+              },
+              subtle: {
+                type: "color",
+                value: "#f3e8ff",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8670:114",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.purple.100}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8670:114",
+                  },
+                },
+                name: "TokensLightColorBgChartPurpleSubtle",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "bg",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "bg", "chart", "purple", "subtle"],
+              },
+            },
+            brand: {
+              subtlest: {
+                type: "color",
+                value: "#fdf4ff",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2754:16052",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.brand.50}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2754:16052",
+                  },
+                },
+                name: "TokensLightColorBgChartBrandSubtlest",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "bg",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "bg", "chart", "brand", "subtlest"],
               },
-              name: "TokensLightColorBgChartFuchsia",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "bg",
-                state: "chart",
+              default: {
+                type: "color",
+                value: "#d946ef",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8642:12383",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.brand.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12383",
+                  },
+                },
+                name: "TokensLightColorBgChartBrandDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "bg",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "bg", "chart", "brand", "default"],
               },
-              path: ["tokens", "light", "color", "bg", "chart", "fuchsia"],
+              subtle: {
+                type: "color",
+                value: "#fae8ff",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8670:86",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.brand.100}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8670:86",
+                  },
+                },
+                name: "TokensLightColorBgChartBrandSubtle",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "bg",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "bg", "chart", "brand", "subtle"],
+              },
             },
             pink: {
-              type: "color",
-              value: "#fce7f3",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16053",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              subtlest: {
                 type: "color",
-                value: "{foundations.color.pink.100}",
+                value: "#fdf2f8",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2754:16053",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.pink.50}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2754:16053",
+                  },
+                },
+                name: "TokensLightColorBgChartPinkSubtlest",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "bg",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "bg", "chart", "pink", "subtlest"],
               },
-              name: "TokensLightColorBgChartPink",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "bg",
-                state: "chart",
+              default: {
+                type: "color",
+                value: "#ec4899",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8642:12384",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.pink.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12384",
+                  },
+                },
+                name: "TokensLightColorBgChartPinkDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "bg",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "bg", "chart", "pink", "default"],
               },
-              path: ["tokens", "light", "color", "bg", "chart", "pink"],
+              subtle: {
+                type: "color",
+                value: "#fce7f3",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8670:115",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.pink.100}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8670:115",
+                  },
+                },
+                name: "TokensLightColorBgChartPinkSubtle",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "bg",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "bg", "chart", "pink", "subtle"],
+              },
             },
-            rose: {
+          },
+          neutral: {
+            default: {
               type: "color",
-              value: "#ffe4e6",
-              description: "For data visualisation only.",
+              value: "#18181b",
+              description: "The background color of main actions such as primary Buttons.",
               $extensions: {
-                variableId: "VariableID:2754:16054",
+                variableId: "VariableID:8609:2624",
               },
               filePath: "tokens.json",
               isSource: true,
               original: {
                 type: "color",
-                value: "{foundations.color.rose.100}",
-                description: "For data visualisation only.",
+                value: "{foundations.color.neutral.900}",
+                description: "The background color of main actions such as primary Buttons.",
                 $extensions: {
-                  variableId: "VariableID:2754:16054",
+                  variableId: "VariableID:8609:2624",
                 },
               },
-              name: "TokensLightColorBgChartRose",
+              name: "TokensLightColorBgNeutralDefault",
               attributes: {
                 category: "tokens",
                 type: "light",
                 item: "color",
                 subitem: "bg",
-                state: "chart",
+                state: "neutral",
               },
-              path: ["tokens", "light", "color", "bg", "chart", "rose"],
+              path: ["tokens", "light", "color", "bg", "neutral", "default"],
             },
+            hover: {
+              type: "color",
+              value: "#27272a",
+              description: "The hover state color of main actions such as primary Buttons.",
+              $extensions: {
+                variableId: "VariableID:8609:2625",
+              },
+              filePath: "tokens.json",
+              isSource: true,
+              original: {
+                type: "color",
+                value: "{foundations.color.neutral.800}",
+                description: "The hover state color of main actions such as primary Buttons.",
+                $extensions: {
+                  variableId: "VariableID:8609:2625",
+                },
+              },
+              name: "TokensLightColorBgNeutralHover",
+              attributes: {
+                category: "tokens",
+                type: "light",
+                item: "color",
+                subitem: "bg",
+                state: "neutral",
+              },
+              path: ["tokens", "light", "color", "bg", "neutral", "hover"],
+            },
+            active: {
+              type: "color",
+              value: "#09090b",
+              description: "The active state (on press) color of main actions such as primary Buttons.",
+              $extensions: {
+                variableId: "VariableID:8609:2626",
+              },
+              filePath: "tokens.json",
+              isSource: true,
+              original: {
+                type: "color",
+                value: "{foundations.color.neutral.950}",
+                description: "The active state (on press) color of main actions such as primary Buttons.",
+                $extensions: {
+                  variableId: "VariableID:8609:2626",
+                },
+              },
+              name: "TokensLightColorBgNeutralActive",
+              attributes: {
+                category: "tokens",
+                type: "light",
+                item: "color",
+                subitem: "bg",
+                state: "neutral",
+              },
+              path: ["tokens", "light", "color", "bg", "neutral", "active"],
+            },
+            disabled: {
+              type: "color",
+              value: "#f4f4f5",
+              description: "The disabled state color of main actions such as primary Buttons.",
+              $extensions: {
+                variableId: "VariableID:8609:2627",
+              },
+              filePath: "tokens.json",
+              isSource: true,
+              original: {
+                type: "color",
+                value: "{foundations.color.neutral.100}",
+                description: "The disabled state color of main actions such as primary Buttons.",
+                $extensions: {
+                  variableId: "VariableID:8609:2627",
+                },
+              },
+              name: "TokensLightColorBgNeutralDisabled",
+              attributes: {
+                category: "tokens",
+                type: "light",
+                item: "color",
+                subitem: "bg",
+                state: "neutral",
+              },
+              path: ["tokens", "light", "color", "bg", "neutral", "disabled"],
+            },
+          },
+          "item-selected": {
+            type: "color",
+            value: "#e4e4e7",
+            description:
+              "The selected state color of contained elements with a smaller surface area such as Dropdown Menu Item.",
+            $extensions: {
+              variableId: "VariableID:8610:19203",
+            },
+            filePath: "tokens.json",
+            isSource: true,
+            original: {
+              type: "color",
+              value: "{foundations.color.neutral.200}",
+              description:
+                "The selected state color of contained elements with a smaller surface area such as Dropdown Menu Item.",
+              $extensions: {
+                variableId: "VariableID:8610:19203",
+              },
+            },
+            name: "TokensLightColorBgItemSelected",
+            attributes: {
+              category: "tokens",
+              type: "light",
+              item: "color",
+              subitem: "bg",
+              state: "item-selected",
+            },
+            path: ["tokens", "light", "color", "bg", "item-selected"],
           },
         },
         border: {
-          default: {
+          item: {
             type: "color",
-            value: "#e4e4e7",
+            value: "#d4d4d8",
             description: "The default color for borders on any element.",
             $extensions: {
               variableId: "VariableID:72:47",
@@ -1223,26 +1733,26 @@ module.exports = {
             isSource: true,
             original: {
               type: "color",
-              value: "{foundations.color.neutral.200}",
+              value: "{foundations.color.neutral.300}",
               description: "The default color for borders on any element.",
               $extensions: {
                 variableId: "VariableID:72:47",
               },
             },
-            name: "TokensLightColorBorderDefault",
+            name: "TokensLightColorBorderItem",
             attributes: {
               category: "tokens",
               type: "light",
               item: "color",
               subitem: "border",
-              state: "default",
+              state: "item",
             },
-            path: ["tokens", "light", "color", "border", "default"],
+            path: ["tokens", "light", "color", "border", "item"],
           },
           brand: {
             default: {
               type: "color",
-              value: "#2563eb",
+              value: "#c026d3",
               description: "Use for borders paired with brand colors.",
               $extensions: {
                 variableId: "VariableID:75:3",
@@ -1269,7 +1779,7 @@ module.exports = {
             },
             hover: {
               type: "color",
-              value: "#3b82f6",
+              value: "#d946ef",
               description: "The hover color for borders paired with brand colors.",
               $extensions: {
                 variableId: "VariableID:75:13",
@@ -1296,7 +1806,7 @@ module.exports = {
             },
             subtlest: {
               type: "color",
-              value: "#bfdbfe",
+              value: "#f5d0fe",
               description:
                 "Use for the border of elements used to reinforce our brand, but with less emphasis.",
               $extensions: {
@@ -1325,7 +1835,7 @@ module.exports = {
             },
             subtle: {
               type: "color",
-              value: "#93c5fd",
+              value: "#f0abfc",
               description:
                 "Use for the border of elements used to reinforce our brand, but with less emphasis.",
               $extensions: {
@@ -1354,7 +1864,7 @@ module.exports = {
             },
             active: {
               type: "color",
-              value: "#1d4ed8",
+              value: "#a21caf",
               description: "The active state (on press) color for borders paired with brand colors.",
               $extensions: {
                 variableId: "VariableID:91:87",
@@ -1665,7 +2175,7 @@ module.exports = {
               path: ["tokens", "light", "color", "border", "warning", "active"],
             },
           },
-          hover: {
+          "item-hover": {
             type: "color",
             value: "#a1a1aa",
             description: "The hover color for borders on any element.",
@@ -1682,20 +2192,20 @@ module.exports = {
                 variableId: "VariableID:497:1525",
               },
             },
-            name: "TokensLightColorBorderHover",
+            name: "TokensLightColorBorderItemHover",
             attributes: {
               category: "tokens",
               type: "light",
               item: "color",
               subitem: "border",
-              state: "hover",
+              state: "item-hover",
             },
-            path: ["tokens", "light", "color", "border", "hover"],
+            path: ["tokens", "light", "color", "border", "item-hover"],
           },
           utility: {
             slot: {
               type: "color",
-              value: "#7c3aed",
+              value: "#2563eb",
               description: "Use for border of the Slot component.",
               $extensions: {
                 variableId: "VariableID:1851:7055",
@@ -1704,7 +2214,7 @@ module.exports = {
               isSource: true,
               original: {
                 type: "color",
-                value: "{foundations.color.violet.600}",
+                value: "{foundations.color.blue.600}",
                 description: "Use for border of the Slot component.",
                 $extensions: {
                   variableId: "VariableID:1851:7055",
@@ -1723,494 +2233,892 @@ module.exports = {
           },
           chart: {
             red: {
-              type: "color",
-              value: "#fca5a5",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16074",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              subtlest: {
                 type: "color",
-                value: "{foundations.color.red.300}",
+                value: "#fecaca",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2754:16074",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.red.200}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2754:16074",
+                  },
+                },
+                name: "TokensLightColorBorderChartRedSubtlest",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "border",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "border", "chart", "red", "subtlest"],
               },
-              name: "TokensLightColorBorderChartRed",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "border",
-                state: "chart",
-              },
-              path: ["tokens", "light", "color", "border", "chart", "red"],
-            },
-            orange: {
-              type: "color",
-              value: "#fdba74",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16079",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              default: {
                 type: "color",
-                value: "{foundations.color.orange.300}",
+                value: "#ef4444",
                 description: "For data visualisation only.",
                 $extensions: {
-                  variableId: "VariableID:2756:16079",
+                  variableId: "VariableID:8642:12403",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.red.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12403",
+                  },
+                },
+                name: "TokensLightColorBorderChartRedDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "border",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "border", "chart", "red", "default"],
               },
-              name: "TokensLightColorBorderChartOrange",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "border",
-                state: "chart",
+              subtle: {
+                type: "color",
+                value: "#fca5a5",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8670:142",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.red.300}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8670:142",
+                  },
+                },
+                name: "TokensLightColorBorderChartRedSubtle",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "border",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "border", "chart", "red", "subtle"],
               },
-              path: ["tokens", "light", "color", "border", "chart", "orange"],
             },
             amber: {
-              type: "color",
-              value: "#fcd34d",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16080",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              subtlest: {
                 type: "color",
-                value: "{foundations.color.amber.300}",
+                value: "#fde68a",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2756:16080",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.amber.200}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2756:16080",
+                  },
+                },
+                name: "TokensLightColorBorderChartAmberSubtlest",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "border",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "border", "chart", "amber", "subtlest"],
               },
-              name: "TokensLightColorBorderChartAmber",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "border",
-                state: "chart",
-              },
-              path: ["tokens", "light", "color", "border", "chart", "amber"],
-            },
-            yellow: {
-              type: "color",
-              value: "#fde047",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16081",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              default: {
                 type: "color",
-                value: "{foundations.color.yellow.300}",
+                value: "#f59e0b",
                 description: "For data visualisation only.",
                 $extensions: {
-                  variableId: "VariableID:2756:16081",
+                  variableId: "VariableID:8642:12405",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.amber.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12405",
+                  },
+                },
+                name: "TokensLightColorBorderChartAmberDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "border",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "border", "chart", "amber", "default"],
               },
-              name: "TokensLightColorBorderChartYellow",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "border",
-                state: "chart",
-              },
-              path: ["tokens", "light", "color", "border", "chart", "yellow"],
-            },
-            lime: {
-              type: "color",
-              value: "#bef264",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16082",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              subtle: {
                 type: "color",
-                value: "{foundations.color.lime.300}",
+                value: "#fcd34d",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8670:143",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.amber.300}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8670:143",
+                  },
+                },
+                name: "TokensLightColorBorderChartAmberSubtle",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "border",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "border", "chart", "amber", "subtle"],
+              },
+            },
+            neutral: {
+              subtlest: {
+                type: "color",
+                value: "#e4e4e7",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2756:16082",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.neutral.200}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2756:16082",
+                  },
+                },
+                name: "TokensLightColorBorderChartNeutralSubtlest",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "border",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "border", "chart", "neutral", "subtlest"],
               },
-              name: "TokensLightColorBorderChartLime",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "border",
-                state: "chart",
-              },
-              path: ["tokens", "light", "color", "border", "chart", "lime"],
-            },
-            green: {
-              type: "color",
-              value: "#86efac",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16083",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              default: {
                 type: "color",
-                value: "{foundations.color.green.300}",
+                value: "#71717a",
                 description: "For data visualisation only.",
                 $extensions: {
-                  variableId: "VariableID:2756:16083",
+                  variableId: "VariableID:8642:12407",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.neutral.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12407",
+                  },
+                },
+                name: "TokensLightColorBorderChartNeutralDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "border",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "border", "chart", "neutral", "default"],
               },
-              name: "TokensLightColorBorderChartGreen",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "border",
-                state: "chart",
+              subtle: {
+                type: "color",
+                value: "#e4e4e7",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8670:135",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.neutral.200}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8670:135",
+                  },
+                },
+                name: "TokensLightColorBorderChartNeutralSubtle",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "border",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "border", "chart", "neutral", "subtle"],
               },
-              path: ["tokens", "light", "color", "border", "chart", "green"],
             },
             emerald: {
-              type: "color",
-              value: "#6ee7b7",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16084",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              subtlest: {
                 type: "color",
-                value: "{foundations.color.emerald.300}",
+                value: "#a7f3d0",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2756:16084",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.emerald.200}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2756:16084",
+                  },
+                },
+                name: "TokensLightColorBorderChartEmeraldSubtlest",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "border",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "border", "chart", "emerald", "subtlest"],
               },
-              name: "TokensLightColorBorderChartEmerald",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "border",
-                state: "chart",
+              default: {
+                type: "color",
+                value: "#10b981",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8642:12409",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.emerald.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12409",
+                  },
+                },
+                name: "TokensLightColorBorderChartEmeraldDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "border",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "border", "chart", "emerald", "default"],
               },
-              path: ["tokens", "light", "color", "border", "chart", "emerald"],
+              subtle: {
+                type: "color",
+                value: "#6ee7b7",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8670:144",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.emerald.300}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8670:144",
+                  },
+                },
+                name: "TokensLightColorBorderChartEmeraldSubtle",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "border",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "border", "chart", "emerald", "subtle"],
+              },
             },
             teal: {
-              type: "color",
-              value: "#5eead4",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16085",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              subtlest: {
                 type: "color",
-                value: "{foundations.color.teal.300}",
+                value: "#99f6e4",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2756:16085",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.teal.200}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2756:16085",
+                  },
+                },
+                name: "TokensLightColorBorderChartTealSubtlest",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "border",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "border", "chart", "teal", "subtlest"],
               },
-              name: "TokensLightColorBorderChartTeal",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "border",
-                state: "chart",
+              default: {
+                type: "color",
+                value: "#14b8a6",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8642:12410",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.teal.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12410",
+                  },
+                },
+                name: "TokensLightColorBorderChartTealDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "border",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "border", "chart", "teal", "default"],
               },
-              path: ["tokens", "light", "color", "border", "chart", "teal"],
+              subtle: {
+                type: "color",
+                value: "#5eead4",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8670:145",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.teal.300}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8670:145",
+                  },
+                },
+                name: "TokensLightColorBorderChartTealSubtle",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "border",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "border", "chart", "teal", "subtle"],
+              },
             },
             cyan: {
-              type: "color",
-              value: "#67e8f9",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16086",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              subtlest: {
                 type: "color",
-                value: "{foundations.color.cyan.300}",
+                value: "#a5f3fc",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2756:16086",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.cyan.200}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2756:16086",
+                  },
+                },
+                name: "TokensLightColorBorderChartCyanSubtlest",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "border",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "border", "chart", "cyan", "subtlest"],
               },
-              name: "TokensLightColorBorderChartCyan",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "border",
-                state: "chart",
-              },
-              path: ["tokens", "light", "color", "border", "chart", "cyan"],
-            },
-            sky: {
-              type: "color",
-              value: "#7dd3fc",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16087",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              default: {
                 type: "color",
-                value: "{foundations.color.sky.300}",
+                value: "#06b6d4",
                 description: "For data visualisation only.",
                 $extensions: {
-                  variableId: "VariableID:2756:16087",
+                  variableId: "VariableID:8642:12411",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.cyan.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12411",
+                  },
+                },
+                name: "TokensLightColorBorderChartCyanDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "border",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "border", "chart", "cyan", "default"],
               },
-              name: "TokensLightColorBorderChartSky",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "border",
-                state: "chart",
+              subtle: {
+                type: "color",
+                value: "#67e8f9",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8670:146",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.cyan.300}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8670:146",
+                  },
+                },
+                name: "TokensLightColorBorderChartCyanSubtle",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "border",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "border", "chart", "cyan", "subtle"],
               },
-              path: ["tokens", "light", "color", "border", "chart", "sky"],
             },
             blue: {
-              type: "color",
-              value: "#93c5fd",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16088",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              subtlest: {
                 type: "color",
-                value: "{foundations.color.blue.300}",
+                value: "#bfdbfe",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2756:16088",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.blue.200}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2756:16088",
+                  },
+                },
+                name: "TokensLightColorBorderChartBlueSubtlest",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "border",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "border", "chart", "blue", "subtlest"],
               },
-              name: "TokensLightColorBorderChartBlue",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "border",
-                state: "chart",
-              },
-              path: ["tokens", "light", "color", "border", "chart", "blue"],
-            },
-            indigo: {
-              type: "color",
-              value: "#a5b4fc",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16089",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              default: {
                 type: "color",
-                value: "{foundations.color.indigo.300}",
+                value: "#3b82f6",
                 description: "For data visualisation only.",
                 $extensions: {
-                  variableId: "VariableID:2756:16089",
+                  variableId: "VariableID:8642:12413",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.blue.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12413",
+                  },
+                },
+                name: "TokensLightColorBorderChartBlueDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "border",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "border", "chart", "blue", "default"],
               },
-              name: "TokensLightColorBorderChartIndigo",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "border",
-                state: "chart",
-              },
-              path: ["tokens", "light", "color", "border", "chart", "indigo"],
-            },
-            violet: {
-              type: "color",
-              value: "#c4b5fd",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16090",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              subtle: {
                 type: "color",
-                value: "{foundations.color.violet.300}",
+                value: "#93c5fd",
                 description: "For data visualisation only.",
                 $extensions: {
-                  variableId: "VariableID:2756:16090",
+                  variableId: "VariableID:8670:147",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.blue.300}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8670:147",
+                  },
+                },
+                name: "TokensLightColorBorderChartBlueSubtle",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "border",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "border", "chart", "blue", "subtle"],
               },
-              name: "TokensLightColorBorderChartViolet",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "border",
-                state: "chart",
-              },
-              path: ["tokens", "light", "color", "border", "chart", "violet"],
             },
             purple: {
-              type: "color",
-              value: "#d8b4fe",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16091",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              subtlest: {
                 type: "color",
-                value: "{foundations.color.purple.300}",
+                value: "#e9d5ff",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2756:16091",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.purple.200}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2756:16091",
+                  },
+                },
+                name: "TokensLightColorBorderChartPurpleSubtlest",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "border",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "border", "chart", "purple", "subtlest"],
               },
-              name: "TokensLightColorBorderChartPurple",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "border",
-                state: "chart",
-              },
-              path: ["tokens", "light", "color", "border", "chart", "purple"],
-            },
-            fuchsia: {
-              type: "color",
-              value: "#f0abfc",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16092",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              default: {
                 type: "color",
-                value: "{foundations.color.fuchsia.300}",
+                value: "#a855f7",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8642:12416",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.purple.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12416",
+                  },
+                },
+                name: "TokensLightColorBorderChartPurpleDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "border",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "border", "chart", "purple", "default"],
+              },
+              subtle: {
+                type: "color",
+                value: "#d8b4fe",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8670:148",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.purple.300}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8670:148",
+                  },
+                },
+                name: "TokensLightColorBorderChartPurpleSubtle",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "border",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "border", "chart", "purple", "subtle"],
+              },
+            },
+            brand: {
+              subtlest: {
+                type: "color",
+                value: "#f5d0fe",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2756:16092",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.brand.200}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2756:16092",
+                  },
+                },
+                name: "TokensLightColorBorderChartBrandSubtlest",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "border",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "border", "chart", "brand", "subtlest"],
               },
-              name: "TokensLightColorBorderChartFuchsia",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "border",
-                state: "chart",
+              default: {
+                type: "color",
+                value: "#d946ef",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8642:12417",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.brand.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12417",
+                  },
+                },
+                name: "TokensLightColorBorderChartBrandDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "border",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "border", "chart", "brand", "default"],
               },
-              path: ["tokens", "light", "color", "border", "chart", "fuchsia"],
+              subtle: {
+                type: "color",
+                value: "#f0abfc",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8670:128",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.brand.300}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8670:128",
+                  },
+                },
+                name: "TokensLightColorBorderChartBrandSubtle",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "border",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "border", "chart", "brand", "subtle"],
+              },
             },
             pink: {
-              type: "color",
-              value: "#f9a8d4",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16093",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              subtlest: {
                 type: "color",
-                value: "{foundations.color.pink.300}",
+                value: "#fbcfe8",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2756:16093",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.pink.200}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2756:16093",
+                  },
+                },
+                name: "TokensLightColorBorderChartPinkSubtlest",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "border",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "border", "chart", "pink", "subtlest"],
               },
-              name: "TokensLightColorBorderChartPink",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "border",
-                state: "chart",
-              },
-              path: ["tokens", "light", "color", "border", "chart", "pink"],
-            },
-            rose: {
-              type: "color",
-              value: "#fda4af",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16094",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              default: {
                 type: "color",
-                value: "{foundations.color.rose.300}",
+                value: "#ec4899",
                 description: "For data visualisation only.",
                 $extensions: {
-                  variableId: "VariableID:2756:16094",
+                  variableId: "VariableID:8642:12418",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.pink.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12418",
+                  },
+                },
+                name: "TokensLightColorBorderChartPinkDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "border",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "border", "chart", "pink", "default"],
               },
-              name: "TokensLightColorBorderChartRose",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "border",
-                state: "chart",
+              subtle: {
+                type: "color",
+                value: "#f9a8d4",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8670:149",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.pink.300}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8670:149",
+                  },
+                },
+                name: "TokensLightColorBorderChartPinkSubtle",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "border",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "border", "chart", "pink", "subtle"],
               },
-              path: ["tokens", "light", "color", "border", "chart", "rose"],
             },
           },
-        },
-        text: {
-          description: {
+          default: {
             type: "color",
-            value: "#71717a",
-            description: "Use for text with a secondary level of prominence.",
+            value: "#e4e4e7",
+            description: "The default color for borders of the grids.",
             $extensions: {
-              variableId: "VariableID:75:28",
+              variableId: "VariableID:8371:252",
             },
             filePath: "tokens.json",
             isSource: true,
             original: {
               type: "color",
-              value: "{foundations.color.neutral.500}",
-              description: "Use for text with a secondary level of prominence.",
+              value: "{foundations.color.neutral.200}",
+              description: "The default color for borders of the grids.",
               $extensions: {
-                variableId: "VariableID:75:28",
+                variableId: "VariableID:8371:252",
               },
             },
-            name: "TokensLightColorTextDescription",
+            name: "TokensLightColorBorderDefault",
             attributes: {
               category: "tokens",
               type: "light",
               item: "color",
-              subitem: "text",
-              state: "description",
+              subitem: "border",
+              state: "default",
             },
-            path: ["tokens", "light", "color", "text", "description"],
+            path: ["tokens", "light", "color", "border", "default"],
           },
+          disabled: {
+            type: "color",
+            value: "#d4d4d8",
+            description: "The disabled color for borders on any element.",
+            $extensions: {
+              variableId: "VariableID:8612:4647",
+            },
+            filePath: "tokens.json",
+            isSource: true,
+            original: {
+              type: "color",
+              value: "{foundations.color.neutral.300}",
+              description: "The disabled color for borders on any element.",
+              $extensions: {
+                variableId: "VariableID:8612:4647",
+              },
+            },
+            name: "TokensLightColorBorderDisabled",
+            attributes: {
+              category: "tokens",
+              type: "light",
+              item: "color",
+              subitem: "border",
+              state: "disabled",
+            },
+            path: ["tokens", "light", "color", "border", "disabled"],
+          },
+        },
+        text: {
           default: {
             type: "color",
             value: "#18181b",
@@ -2237,6 +3145,33 @@ module.exports = {
               state: "default",
             },
             path: ["tokens", "light", "color", "text", "default"],
+          },
+          description: {
+            type: "color",
+            value: "#52525b",
+            description: "Use for text with a secondary level of prominence.",
+            $extensions: {
+              variableId: "VariableID:75:28",
+            },
+            filePath: "tokens.json",
+            isSource: true,
+            original: {
+              type: "color",
+              value: "{foundations.color.neutral.600}",
+              description: "Use for text with a secondary level of prominence.",
+              $extensions: {
+                variableId: "VariableID:75:28",
+              },
+            },
+            name: "TokensLightColorTextDescription",
+            attributes: {
+              category: "tokens",
+              type: "light",
+              item: "color",
+              subitem: "text",
+              state: "description",
+            },
+            path: ["tokens", "light", "color", "text", "description"],
           },
           placeholder: {
             type: "color",
@@ -2266,6 +3201,33 @@ module.exports = {
               state: "placeholder",
             },
             path: ["tokens", "light", "color", "text", "placeholder"],
+          },
+          disabled: {
+            type: "color",
+            value: "#a1a1aa",
+            description: "Use for disabled text.",
+            $extensions: {
+              variableId: "VariableID:8612:2504",
+            },
+            filePath: "tokens.json",
+            isSource: true,
+            original: {
+              type: "color",
+              value: "{foundations.color.neutral.400}",
+              description: "Use for disabled text.",
+              $extensions: {
+                variableId: "VariableID:8612:2504",
+              },
+            },
+            name: "TokensLightColorTextDisabled",
+            attributes: {
+              category: "tokens",
+              type: "light",
+              item: "color",
+              subitem: "text",
+              state: "disabled",
+            },
+            path: ["tokens", "light", "color", "text", "disabled"],
           },
           inverse: {
             type: "color",
@@ -2297,7 +3259,7 @@ module.exports = {
           brand: {
             default: {
               type: "color",
-              value: "#2563eb",
+              value: "#c026d3",
               description: "Use for text links.",
               $extensions: {
                 variableId: "VariableID:75:34",
@@ -2324,7 +3286,7 @@ module.exports = {
             },
             hover: {
               type: "color",
-              value: "#3b82f6",
+              value: "#d946ef",
               description: "The hover state color for text links.",
               $extensions: {
                 variableId: "VariableID:75:35",
@@ -2351,7 +3313,7 @@ module.exports = {
             },
             active: {
               type: "color",
-              value: "#1d4ed8",
+              value: "#a21caf",
               description: "The active state (on press) color for text links.",
               $extensions: {
                 variableId: "VariableID:75:36",
@@ -2375,6 +3337,33 @@ module.exports = {
                 state: "brand",
               },
               path: ["tokens", "light", "color", "text", "brand", "active"],
+            },
+            strong: {
+              type: "color",
+              value: "#86198f",
+              description: "Use for text on bg-brand-subtle and subtles, like badge and alert.",
+              $extensions: {
+                variableId: "VariableID:487:11553",
+              },
+              filePath: "tokens.json",
+              isSource: true,
+              original: {
+                type: "color",
+                value: "{foundations.color.brand.800}",
+                description: "Use for text on bg-brand-subtle and subtles, like badge and alert.",
+                $extensions: {
+                  variableId: "VariableID:487:11553",
+                },
+              },
+              name: "TokensLightColorTextBrandStrong",
+              attributes: {
+                category: "tokens",
+                type: "light",
+                item: "color",
+                subitem: "text",
+                state: "brand",
+              },
+              path: ["tokens", "light", "color", "text", "brand", "strong"],
             },
             inverse: {
               type: "color",
@@ -2402,33 +3391,6 @@ module.exports = {
                 state: "brand",
               },
               path: ["tokens", "light", "color", "text", "brand", "inverse"],
-            },
-            strong: {
-              type: "color",
-              value: "#1e40af",
-              description: "Use for text on bg-brand-subtle and subtles, like badge and alert.",
-              $extensions: {
-                variableId: "VariableID:487:11553",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
-                type: "color",
-                value: "{foundations.color.brand.800}",
-                description: "Use for text on bg-brand-subtle and subtles, like badge and alert.",
-                $extensions: {
-                  variableId: "VariableID:487:11553",
-                },
-              },
-              name: "TokensLightColorTextBrandStrong",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "text",
-                state: "brand",
-              },
-              path: ["tokens", "light", "color", "text", "brand", "strong"],
             },
           },
           danger: {
@@ -2708,7 +3670,7 @@ module.exports = {
           utility: {
             slot: {
               type: "color",
-              value: "#7c3aed",
+              value: "#2563eb",
               description: "Use for text of the Slot component.",
               $extensions: {
                 variableId: "VariableID:1851:7053",
@@ -2717,7 +3679,7 @@ module.exports = {
               isSource: true,
               original: {
                 type: "color",
-                value: "{foundations.color.violet.600}",
+                value: "{foundations.color.blue.600}",
                 description: "Use for text of the Slot component.",
                 $extensions: {
                   variableId: "VariableID:1851:7053",
@@ -2736,463 +3698,564 @@ module.exports = {
           },
           chart: {
             red: {
-              type: "color",
-              value: "#991b1b",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16056",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              strong: {
                 type: "color",
-                value: "{foundations.color.red.800}",
+                value: "#7f1d1d",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2754:16056",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.red.900}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2754:16056",
+                  },
+                },
+                name: "TokensLightColorTextChartRedStrong",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "text",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "text", "chart", "red", "strong"],
               },
-              name: "TokensLightColorTextChartRed",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "text",
-                state: "chart",
-              },
-              path: ["tokens", "light", "color", "text", "chart", "red"],
-            },
-            orange: {
-              type: "color",
-              value: "#9a3412",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16057",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              default: {
                 type: "color",
-                value: "{foundations.color.orange.800}",
+                value: "#ef4444",
                 description: "For data visualisation only.",
                 $extensions: {
-                  variableId: "VariableID:2754:16057",
+                  variableId: "VariableID:8642:12386",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.red.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12386",
+                  },
+                },
+                name: "TokensLightColorTextChartRedDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "text",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "text", "chart", "red", "default"],
               },
-              name: "TokensLightColorTextChartOrange",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "text",
-                state: "chart",
-              },
-              path: ["tokens", "light", "color", "text", "chart", "orange"],
             },
             amber: {
-              type: "color",
-              value: "#92400e",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16058",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              strong: {
                 type: "color",
-                value: "{foundations.color.amber.800}",
+                value: "#78350f",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2754:16058",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.amber.900}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2754:16058",
+                  },
+                },
+                name: "TokensLightColorTextChartAmberStrong",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "text",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "text", "chart", "amber", "strong"],
               },
-              name: "TokensLightColorTextChartAmber",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "text",
-                state: "chart",
-              },
-              path: ["tokens", "light", "color", "text", "chart", "amber"],
-            },
-            yellow: {
-              type: "color",
-              value: "#854d0e",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16059",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              default: {
                 type: "color",
-                value: "{foundations.color.yellow.800}",
+                value: "#f59e0b",
                 description: "For data visualisation only.",
                 $extensions: {
-                  variableId: "VariableID:2754:16059",
+                  variableId: "VariableID:8642:12388",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.amber.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12388",
+                  },
+                },
+                name: "TokensLightColorTextChartAmberDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "text",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "text", "chart", "amber", "default"],
               },
-              name: "TokensLightColorTextChartYellow",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "text",
-                state: "chart",
-              },
-              path: ["tokens", "light", "color", "text", "chart", "yellow"],
             },
-            lime: {
-              type: "color",
-              value: "#3f6212",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16060",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+            neutral: {
+              strong: {
                 type: "color",
-                value: "{foundations.color.lime.800}",
+                value: "#18181b",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2754:16060",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.neutral.900}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2754:16060",
+                  },
+                },
+                name: "TokensLightColorTextChartNeutralStrong",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "text",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "text", "chart", "neutral", "strong"],
               },
-              name: "TokensLightColorTextChartLime",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "text",
-                state: "chart",
-              },
-              path: ["tokens", "light", "color", "text", "chart", "lime"],
-            },
-            green: {
-              type: "color",
-              value: "#166534",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16061",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              default: {
                 type: "color",
-                value: "{foundations.color.green.800}",
+                value: "#71717a",
                 description: "For data visualisation only.",
                 $extensions: {
-                  variableId: "VariableID:2754:16061",
+                  variableId: "VariableID:8642:12390",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.neutral.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12390",
+                  },
+                },
+                name: "TokensLightColorTextChartNeutralDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "text",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "text", "chart", "neutral", "default"],
               },
-              name: "TokensLightColorTextChartGreen",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "text",
-                state: "chart",
-              },
-              path: ["tokens", "light", "color", "text", "chart", "green"],
             },
             emerald: {
-              type: "color",
-              value: "#065f46",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16062",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              strong: {
                 type: "color",
-                value: "{foundations.color.emerald.800}",
+                value: "#064e3b",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2754:16062",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.emerald.900}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2754:16062",
+                  },
+                },
+                name: "TokensLightColorTextChartEmeraldStrong",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "text",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "text", "chart", "emerald", "strong"],
               },
-              name: "TokensLightColorTextChartEmerald",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "text",
-                state: "chart",
+              default: {
+                type: "color",
+                value: "#10b981",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8642:12392",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.emerald.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12392",
+                  },
+                },
+                name: "TokensLightColorTextChartEmeraldDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "text",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "text", "chart", "emerald", "default"],
               },
-              path: ["tokens", "light", "color", "text", "chart", "emerald"],
             },
             teal: {
-              type: "color",
-              value: "#115e59",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16063",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              strong: {
                 type: "color",
-                value: "{foundations.color.teal.800}",
+                value: "#134e4a",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2754:16063",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.teal.900}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2754:16063",
+                  },
+                },
+                name: "TokensLightColorTextChartTealStrong",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "text",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "text", "chart", "teal", "strong"],
               },
-              name: "TokensLightColorTextChartTeal",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "text",
-                state: "chart",
+              default: {
+                type: "color",
+                value: "#14b8a6",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8642:12393",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.teal.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12393",
+                  },
+                },
+                name: "TokensLightColorTextChartTealDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "text",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "text", "chart", "teal", "default"],
               },
-              path: ["tokens", "light", "color", "text", "chart", "teal"],
             },
             cyan: {
-              type: "color",
-              value: "#155e75",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16064",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              strong: {
                 type: "color",
-                value: "{foundations.color.cyan.800}",
+                value: "#164e63",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2754:16064",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.cyan.900}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2754:16064",
+                  },
+                },
+                name: "TokensLightColorTextChartCyanStrong",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "text",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "text", "chart", "cyan", "strong"],
               },
-              name: "TokensLightColorTextChartCyan",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "text",
-                state: "chart",
-              },
-              path: ["tokens", "light", "color", "text", "chart", "cyan"],
-            },
-            sky: {
-              type: "color",
-              value: "#075985",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16065",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              default: {
                 type: "color",
-                value: "{foundations.color.sky.800}",
+                value: "#06b6d4",
                 description: "For data visualisation only.",
                 $extensions: {
-                  variableId: "VariableID:2754:16065",
+                  variableId: "VariableID:8642:12394",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.cyan.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12394",
+                  },
+                },
+                name: "TokensLightColorTextChartCyanDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "text",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "text", "chart", "cyan", "default"],
               },
-              name: "TokensLightColorTextChartSky",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "text",
-                state: "chart",
-              },
-              path: ["tokens", "light", "color", "text", "chart", "sky"],
             },
             blue: {
-              type: "color",
-              value: "#1e40af",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16066",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              strong: {
                 type: "color",
-                value: "{foundations.color.blue.800}",
+                value: "#1e3a8a",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2754:16066",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.blue.900}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2754:16066",
+                  },
+                },
+                name: "TokensLightColorTextChartBlueStrong",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "text",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "text", "chart", "blue", "strong"],
               },
-              name: "TokensLightColorTextChartBlue",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "text",
-                state: "chart",
-              },
-              path: ["tokens", "light", "color", "text", "chart", "blue"],
-            },
-            indigo: {
-              type: "color",
-              value: "#3730a3",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16067",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              default: {
                 type: "color",
-                value: "{foundations.color.indigo.800}",
+                value: "#3b82f6",
                 description: "For data visualisation only.",
                 $extensions: {
-                  variableId: "VariableID:2754:16067",
+                  variableId: "VariableID:8642:12396",
                 },
-              },
-              name: "TokensLightColorTextChartIndigo",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "text",
-                state: "chart",
-              },
-              path: ["tokens", "light", "color", "text", "chart", "indigo"],
-            },
-            violet: {
-              type: "color",
-              value: "#5b21b6",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16068",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
-                type: "color",
-                value: "{foundations.color.violet.800}",
-                description: "For data visualisation only.",
-                $extensions: {
-                  variableId: "VariableID:2754:16068",
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.blue.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12396",
+                  },
                 },
+                name: "TokensLightColorTextChartBlueDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "text",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "text", "chart", "blue", "default"],
               },
-              name: "TokensLightColorTextChartViolet",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "text",
-                state: "chart",
-              },
-              path: ["tokens", "light", "color", "text", "chart", "violet"],
             },
             purple: {
-              type: "color",
-              value: "#6b21a8",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16069",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              strong: {
                 type: "color",
-                value: "{foundations.color.purple.800}",
+                value: "#581c87",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2754:16069",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.purple.900}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2754:16069",
+                  },
+                },
+                name: "TokensLightColorTextChartPurpleStrong",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "text",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "text", "chart", "purple", "strong"],
               },
-              name: "TokensLightColorTextChartPurple",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "text",
-                state: "chart",
-              },
-              path: ["tokens", "light", "color", "text", "chart", "purple"],
-            },
-            fuchsia: {
-              type: "color",
-              value: "#86198f",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16070",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              default: {
                 type: "color",
-                value: "{foundations.color.fuchsia.800}",
+                value: "#a855f7",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8642:12399",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.purple.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12399",
+                  },
+                },
+                name: "TokensLightColorTextChartPurpleDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "text",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "text", "chart", "purple", "default"],
+              },
+            },
+            brand: {
+              strong: {
+                type: "color",
+                value: "#701a75",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2754:16070",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.brand.900}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2754:16070",
+                  },
+                },
+                name: "TokensLightColorTextChartBrandStrong",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "text",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "text", "chart", "brand", "strong"],
               },
-              name: "TokensLightColorTextChartFuchsia",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "text",
-                state: "chart",
+              default: {
+                type: "color",
+                value: "#d946ef",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8642:12400",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.brand.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12400",
+                  },
+                },
+                name: "TokensLightColorTextChartBrandDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "text",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "text", "chart", "brand", "default"],
               },
-              path: ["tokens", "light", "color", "text", "chart", "fuchsia"],
             },
             pink: {
-              type: "color",
-              value: "#9d174d",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16071",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              strong: {
                 type: "color",
-                value: "{foundations.color.pink.800}",
+                value: "#831843",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2754:16071",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.pink.900}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2754:16071",
+                  },
+                },
+                name: "TokensLightColorTextChartPinkStrong",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "text",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "text", "chart", "pink", "strong"],
               },
-              name: "TokensLightColorTextChartPink",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "text",
-                state: "chart",
-              },
-              path: ["tokens", "light", "color", "text", "chart", "pink"],
-            },
-            rose: {
-              type: "color",
-              value: "#9f1239",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16072",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              default: {
                 type: "color",
-                value: "{foundations.color.rose.800}",
+                value: "#ec4899",
                 description: "For data visualisation only.",
                 $extensions: {
-                  variableId: "VariableID:2754:16072",
+                  variableId: "VariableID:8642:12401",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.pink.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12401",
+                  },
+                },
+                name: "TokensLightColorTextChartPinkDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "text",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "text", "chart", "pink", "default"],
               },
-              name: "TokensLightColorTextChartRose",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "text",
-                state: "chart",
-              },
-              path: ["tokens", "light", "color", "text", "chart", "rose"],
             },
           },
         },
@@ -3254,7 +4317,7 @@ module.exports = {
           brand: {
             default: {
               type: "color",
-              value: "#2563eb",
+              value: "#c026d3",
               description: "Use for icons that need to pull more focus.",
               $extensions: {
                 variableId: "VariableID:75:53",
@@ -3281,7 +4344,7 @@ module.exports = {
             },
             hover: {
               type: "color",
-              value: "#3b82f6",
+              value: "#d946ef",
               description: "The hover color for icons that need to pull more focus.",
               $extensions: {
                 variableId: "VariableID:75:54",
@@ -3308,7 +4371,7 @@ module.exports = {
             },
             active: {
               type: "color",
-              value: "#1d4ed8",
+              value: "#a21caf",
               description: "The active state (on press) color for icons that need to pull more focus.",
               $extensions: {
                 variableId: "VariableID:75:55",
@@ -3335,7 +4398,7 @@ module.exports = {
             },
             strong: {
               type: "color",
-              value: "#1e40af",
+              value: "#86198f",
               description: "Use for icon on bg-brand-subtle and subtles, like badge and alert.",
               $extensions: {
                 variableId: "VariableID:632:1808",
@@ -3720,7 +4783,7 @@ module.exports = {
           utility: {
             slot: {
               type: "color",
-              value: "#7c3aed",
+              value: "#2563eb",
               description: "Use for icon of the Slot component.",
               $extensions: {
                 variableId: "VariableID:1851:7054",
@@ -3729,7 +4792,7 @@ module.exports = {
               isSource: true,
               original: {
                 type: "color",
-                value: "{foundations.color.violet.600}",
+                value: "{foundations.color.blue.600}",
                 description: "Use for icon of the Slot component.",
                 $extensions: {
                   variableId: "VariableID:1851:7054",
@@ -3748,464 +4811,592 @@ module.exports = {
           },
           chart: {
             red: {
-              type: "color",
-              value: "#991b1b",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16096",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              strong: {
                 type: "color",
-                value: "{foundations.color.red.800}",
+                value: "#7f1d1d",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2756:16096",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.red.900}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2756:16096",
+                  },
+                },
+                name: "TokensLightColorIconChartRedStrong",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "icon",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "icon", "chart", "red", "strong"],
               },
-              name: "TokensLightColorIconChartRed",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "icon",
-                state: "chart",
-              },
-              path: ["tokens", "light", "color", "icon", "chart", "red"],
-            },
-            orange: {
-              type: "color",
-              value: "#9a3412",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16097",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              default: {
                 type: "color",
-                value: "{foundations.color.orange.800}",
+                value: "#ef4444",
                 description: "For data visualisation only.",
                 $extensions: {
-                  variableId: "VariableID:2756:16097",
+                  variableId: "VariableID:8642:12420",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.red.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12420",
+                  },
+                },
+                name: "TokensLightColorIconChartRedDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "icon",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "icon", "chart", "red", "default"],
               },
-              name: "TokensLightColorIconChartOrange",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "icon",
-                state: "chart",
-              },
-              path: ["tokens", "light", "color", "icon", "chart", "orange"],
             },
             amber: {
-              type: "color",
-              value: "#92400e",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16098",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              strong: {
                 type: "color",
-                value: "{foundations.color.amber.800}",
+                value: "#78350f",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2756:16098",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.amber.900}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2756:16098",
+                  },
+                },
+                name: "TokensLightColorIconChartAmberStrong",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "icon",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "icon", "chart", "amber", "strong"],
               },
-              name: "TokensLightColorIconChartAmber",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "icon",
-                state: "chart",
-              },
-              path: ["tokens", "light", "color", "icon", "chart", "amber"],
-            },
-            yellow: {
-              type: "color",
-              value: "#854d0e",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16099",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              default: {
                 type: "color",
-                value: "{foundations.color.yellow.800}",
+                value: "#f59e0b",
                 description: "For data visualisation only.",
                 $extensions: {
-                  variableId: "VariableID:2756:16099",
+                  variableId: "VariableID:8642:12422",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.amber.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12422",
+                  },
+                },
+                name: "TokensLightColorIconChartAmberDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "icon",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "icon", "chart", "amber", "default"],
               },
-              name: "TokensLightColorIconChartYellow",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "icon",
-                state: "chart",
-              },
-              path: ["tokens", "light", "color", "icon", "chart", "yellow"],
             },
-            lime: {
-              type: "color",
-              value: "#3f6212",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16100",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+            neutral: {
+              strong: {
                 type: "color",
-                value: "{foundations.color.lime.800}",
+                value: "#18181b",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2756:16100",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.neutral.900}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2756:16100",
+                  },
+                },
+                name: "TokensLightColorIconChartNeutralStrong",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "icon",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "icon", "chart", "neutral", "strong"],
               },
-              name: "TokensLightColorIconChartLime",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "icon",
-                state: "chart",
-              },
-              path: ["tokens", "light", "color", "icon", "chart", "lime"],
-            },
-            green: {
-              type: "color",
-              value: "#166534",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16101",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              default: {
                 type: "color",
-                value: "{foundations.color.green.800}",
+                value: "#71717a",
                 description: "For data visualisation only.",
                 $extensions: {
-                  variableId: "VariableID:2756:16101",
+                  variableId: "VariableID:8642:12424",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.neutral.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12424",
+                  },
+                },
+                name: "TokensLightColorIconChartNeutralDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "icon",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "icon", "chart", "neutral", "default"],
               },
-              name: "TokensLightColorIconChartGreen",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "icon",
-                state: "chart",
-              },
-              path: ["tokens", "light", "color", "icon", "chart", "green"],
             },
             emerald: {
-              type: "color",
-              value: "#065f46",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16102",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              strong: {
                 type: "color",
-                value: "{foundations.color.emerald.800}",
+                value: "#064e3b",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2756:16102",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.emerald.900}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2756:16102",
+                  },
+                },
+                name: "TokensLightColorIconChartEmeraldStrong",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "icon",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "icon", "chart", "emerald", "strong"],
               },
-              name: "TokensLightColorIconChartEmerald",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "icon",
-                state: "chart",
+              default: {
+                type: "color",
+                value: "#10b981",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8642:12426",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.emerald.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12426",
+                  },
+                },
+                name: "TokensLightColorIconChartEmeraldDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "icon",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "icon", "chart", "emerald", "default"],
               },
-              path: ["tokens", "light", "color", "icon", "chart", "emerald"],
             },
             teal: {
-              type: "color",
-              value: "#115e59",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16103",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              strong: {
                 type: "color",
-                value: "{foundations.color.teal.800}",
+                value: "#134e4a",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2756:16103",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.teal.900}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2756:16103",
+                  },
+                },
+                name: "TokensLightColorIconChartTealStrong",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "icon",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "icon", "chart", "teal", "strong"],
               },
-              name: "TokensLightColorIconChartTeal",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "icon",
-                state: "chart",
+              default: {
+                type: "color",
+                value: "#14b8a6",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8642:12427",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.teal.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12427",
+                  },
+                },
+                name: "TokensLightColorIconChartTealDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "icon",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "icon", "chart", "teal", "default"],
               },
-              path: ["tokens", "light", "color", "icon", "chart", "teal"],
             },
             cyan: {
-              type: "color",
-              value: "#155e75",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16104",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              strong: {
                 type: "color",
-                value: "{foundations.color.cyan.800}",
+                value: "#164e63",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2756:16104",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.cyan.900}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2756:16104",
+                  },
+                },
+                name: "TokensLightColorIconChartCyanStrong",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "icon",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "icon", "chart", "cyan", "strong"],
               },
-              name: "TokensLightColorIconChartCyan",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "icon",
-                state: "chart",
-              },
-              path: ["tokens", "light", "color", "icon", "chart", "cyan"],
-            },
-            sky: {
-              type: "color",
-              value: "#075985",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16105",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              default: {
                 type: "color",
-                value: "{foundations.color.sky.800}",
+                value: "#06b6d4",
                 description: "For data visualisation only.",
                 $extensions: {
-                  variableId: "VariableID:2756:16105",
+                  variableId: "VariableID:8642:12428",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.cyan.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12428",
+                  },
+                },
+                name: "TokensLightColorIconChartCyanDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "icon",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "icon", "chart", "cyan", "default"],
               },
-              name: "TokensLightColorIconChartSky",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "icon",
-                state: "chart",
-              },
-              path: ["tokens", "light", "color", "icon", "chart", "sky"],
             },
             blue: {
-              type: "color",
-              value: "#1e40af",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16106",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              strong: {
                 type: "color",
-                value: "{foundations.color.blue.800}",
+                value: "#1e3a8a",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2756:16106",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.blue.900}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2756:16106",
+                  },
+                },
+                name: "TokensLightColorIconChartBlueStrong",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "icon",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "icon", "chart", "blue", "strong"],
               },
-              name: "TokensLightColorIconChartBlue",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "icon",
-                state: "chart",
-              },
-              path: ["tokens", "light", "color", "icon", "chart", "blue"],
-            },
-            indigo: {
-              type: "color",
-              value: "#3730a3",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16107",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              default: {
                 type: "color",
-                value: "{foundations.color.indigo.800}",
+                value: "#3b82f6",
                 description: "For data visualisation only.",
                 $extensions: {
-                  variableId: "VariableID:2756:16107",
+                  variableId: "VariableID:8642:12430",
                 },
-              },
-              name: "TokensLightColorIconChartIndigo",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "icon",
-                state: "chart",
-              },
-              path: ["tokens", "light", "color", "icon", "chart", "indigo"],
-            },
-            violet: {
-              type: "color",
-              value: "#5b21b6",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16108",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
-                type: "color",
-                value: "{foundations.color.violet.800}",
-                description: "For data visualisation only.",
-                $extensions: {
-                  variableId: "VariableID:2756:16108",
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.blue.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12430",
+                  },
                 },
+                name: "TokensLightColorIconChartBlueDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "icon",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "icon", "chart", "blue", "default"],
               },
-              name: "TokensLightColorIconChartViolet",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "icon",
-                state: "chart",
-              },
-              path: ["tokens", "light", "color", "icon", "chart", "violet"],
             },
             purple: {
-              type: "color",
-              value: "#6b21a8",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16109",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              strong: {
                 type: "color",
-                value: "{foundations.color.purple.800}",
+                value: "#581c87",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2756:16109",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.purple.900}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2756:16109",
+                  },
+                },
+                name: "TokensLightColorIconChartPurpleStrong",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "icon",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "icon", "chart", "purple", "strong"],
               },
-              name: "TokensLightColorIconChartPurple",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "icon",
-                state: "chart",
-              },
-              path: ["tokens", "light", "color", "icon", "chart", "purple"],
-            },
-            fuchsia: {
-              type: "color",
-              value: "#86198f",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16110",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              default: {
                 type: "color",
-                value: "{foundations.color.fuchsia.800}",
+                value: "#a855f7",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8642:12433",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.purple.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12433",
+                  },
+                },
+                name: "TokensLightColorIconChartPurpleDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "icon",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "icon", "chart", "purple", "default"],
+              },
+            },
+            brand: {
+              strong: {
+                type: "color",
+                value: "#701a75",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2756:16110",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.brand.900}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2756:16110",
+                  },
+                },
+                name: "TokensLightColorIconChartBrandStrong",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "icon",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "icon", "chart", "brand", "strong"],
               },
-              name: "TokensLightColorIconChartFuchsia",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "icon",
-                state: "chart",
+              default: {
+                type: "color",
+                value: "#d946ef",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8642:12434",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.brand.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12434",
+                  },
+                },
+                name: "TokensLightColorIconChartBrandDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "icon",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "icon", "chart", "brand", "default"],
               },
-              path: ["tokens", "light", "color", "icon", "chart", "fuchsia"],
             },
             pink: {
-              type: "color",
-              value: "#9d174d",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16111",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              strong: {
                 type: "color",
-                value: "{foundations.color.pink.800}",
+                value: "#831843",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2756:16111",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.pink.900}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2756:16111",
+                  },
+                },
+                name: "TokensLightColorIconChartPinkStrong",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "icon",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "icon", "chart", "pink", "strong"],
               },
-              name: "TokensLightColorIconChartPink",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "icon",
-                state: "chart",
-              },
-              path: ["tokens", "light", "color", "icon", "chart", "pink"],
-            },
-            rose: {
-              type: "color",
-              value: "#9f1239",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16112",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              default: {
                 type: "color",
-                value: "{foundations.color.rose.800}",
+                value: "#ec4899",
                 description: "For data visualisation only.",
                 $extensions: {
-                  variableId: "VariableID:2756:16112",
+                  variableId: "VariableID:8642:12435",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.pink.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12435",
+                  },
+                },
+                name: "TokensLightColorIconChartPinkDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "light",
+                  item: "color",
+                  subitem: "icon",
+                  state: "chart",
+                },
+                path: ["tokens", "light", "color", "icon", "chart", "pink", "default"],
               },
-              name: "TokensLightColorIconChartRose",
-              attributes: {
-                category: "tokens",
-                type: "light",
-                item: "color",
-                subitem: "icon",
-                state: "chart",
-              },
-              path: ["tokens", "light", "color", "icon", "chart", "rose"],
             },
+          },
+          disabled: {
+            type: "color",
+            value: "#a1a1aa",
+            description: "The disabled state color for icons.",
+            $extensions: {
+              variableId: "VariableID:8612:4648",
+            },
+            filePath: "tokens.json",
+            isSource: true,
+            original: {
+              type: "color",
+              value: "{foundations.color.neutral.400}",
+              description: "The disabled state color for icons.",
+              $extensions: {
+                variableId: "VariableID:8612:4648",
+              },
+            },
+            name: "TokensLightColorIconDisabled",
+            attributes: {
+              category: "tokens",
+              type: "light",
+              item: "color",
+              subitem: "icon",
+              state: "disabled",
+            },
+            path: ["tokens", "light", "color", "icon", "disabled"],
           },
         },
       },
@@ -4241,7 +5432,7 @@ module.exports = {
           sm: {
             type: "dimension",
             value: "4px",
-            description: "Use in small size components, such as Checkbox and Segmented.",
+            description: "Use in small size components, such as Checkbox and Tag.",
             $extensions: {
               variableId: "VariableID:1830:17744",
             },
@@ -4250,7 +5441,7 @@ module.exports = {
             original: {
               type: "dimension",
               value: "4px",
-              description: "Use in small size components, such as Checkbox and Segmented.",
+              description: "Use in small size components, such as Checkbox and Tag.",
               $extensions: {
                 variableId: "VariableID:1830:17744",
               },
@@ -6166,83 +7357,31 @@ module.exports = {
         },
       },
       opacity: {
-        100: {
+        0: {
           type: "dimension",
-          value: "100px",
-          description: "Apply to content that is completely visible.",
+          value: "0px",
+          description: "Apply to content that is completely invisible.",
           $extensions: {
-            variableId: "VariableID:1708:14183",
+            variableId: "VariableID:1846:18013",
           },
           filePath: "tokens.json",
           isSource: true,
           original: {
             type: "dimension",
-            value: "100px",
-            description: "Apply to content that is completely visible.",
+            value: "0px",
+            description: "Apply to content that is completely invisible.",
             $extensions: {
-              variableId: "VariableID:1708:14183",
+              variableId: "VariableID:1846:18013",
             },
           },
-          name: "TokensLightOpacity100",
+          name: "TokensLightOpacity0",
           attributes: {
             category: "tokens",
             type: "light",
             item: "opacity",
-            subitem: "100",
+            subitem: "0",
           },
-          path: ["tokens", "light", "opacity", "100"],
-        },
-        80: {
-          type: "dimension",
-          value: "80px",
-          description: "Apply to content when in an hover state.",
-          $extensions: {
-            variableId: "VariableID:1708:14184",
-          },
-          filePath: "tokens.json",
-          isSource: true,
-          original: {
-            type: "dimension",
-            value: "80px",
-            description: "Apply to content when in an hover state.",
-            $extensions: {
-              variableId: "VariableID:1708:14184",
-            },
-          },
-          name: "TokensLightOpacity80",
-          attributes: {
-            category: "tokens",
-            type: "light",
-            item: "opacity",
-            subitem: "80",
-          },
-          path: ["tokens", "light", "opacity", "80"],
-        },
-        50: {
-          type: "dimension",
-          value: "50px",
-          description: "Apply to content when in a disabled state.",
-          $extensions: {
-            variableId: "VariableID:1708:14185",
-          },
-          filePath: "tokens.json",
-          isSource: true,
-          original: {
-            type: "dimension",
-            value: "50px",
-            description: "Apply to content when in a disabled state.",
-            $extensions: {
-              variableId: "VariableID:1708:14185",
-            },
-          },
-          name: "TokensLightOpacity50",
-          attributes: {
-            category: "tokens",
-            type: "light",
-            item: "opacity",
-            subitem: "50",
-          },
-          path: ["tokens", "light", "opacity", "50"],
+          path: ["tokens", "light", "opacity", "0"],
         },
         30: {
           type: "dimension",
@@ -6270,38 +7409,90 @@ module.exports = {
           },
           path: ["tokens", "light", "opacity", "30"],
         },
-        0: {
+        50: {
           type: "dimension",
-          value: "0px",
-          description: "Apply to content that is completely invisible.",
+          value: "50px",
+          description: "Apply to content when in a disabled state.",
           $extensions: {
-            variableId: "VariableID:1846:18013",
+            variableId: "VariableID:1708:14185",
           },
           filePath: "tokens.json",
           isSource: true,
           original: {
             type: "dimension",
-            value: "0px",
-            description: "Apply to content that is completely invisible.",
+            value: "50px",
+            description: "Apply to content when in a disabled state.",
             $extensions: {
-              variableId: "VariableID:1846:18013",
+              variableId: "VariableID:1708:14185",
             },
           },
-          name: "TokensLightOpacity0",
+          name: "TokensLightOpacity50",
           attributes: {
             category: "tokens",
             type: "light",
             item: "opacity",
-            subitem: "0",
+            subitem: "50",
           },
-          path: ["tokens", "light", "opacity", "0"],
+          path: ["tokens", "light", "opacity", "50"],
+        },
+        80: {
+          type: "dimension",
+          value: "80px",
+          description: "Apply to content when in an hover state.",
+          $extensions: {
+            variableId: "VariableID:1708:14184",
+          },
+          filePath: "tokens.json",
+          isSource: true,
+          original: {
+            type: "dimension",
+            value: "80px",
+            description: "Apply to content when in an hover state.",
+            $extensions: {
+              variableId: "VariableID:1708:14184",
+            },
+          },
+          name: "TokensLightOpacity80",
+          attributes: {
+            category: "tokens",
+            type: "light",
+            item: "opacity",
+            subitem: "80",
+          },
+          path: ["tokens", "light", "opacity", "80"],
+        },
+        100: {
+          type: "dimension",
+          value: "100px",
+          description: "Apply to content that is completely visible.",
+          $extensions: {
+            variableId: "VariableID:1708:14183",
+          },
+          filePath: "tokens.json",
+          isSource: true,
+          original: {
+            type: "dimension",
+            value: "100px",
+            description: "Apply to content that is completely visible.",
+            $extensions: {
+              variableId: "VariableID:1708:14183",
+            },
+          },
+          name: "TokensLightOpacity100",
+          attributes: {
+            category: "tokens",
+            type: "light",
+            item: "opacity",
+            subitem: "100",
+          },
+          path: ["tokens", "light", "opacity", "100"],
         },
       },
       font: {
         family: {
           sans: {
             type: "string",
-            value: "Geist",
+            value: "Inter",
             description: "The default interface font of the system.",
             $extensions: {
               variableId: "VariableID:4313:2601",
@@ -6310,7 +7501,7 @@ module.exports = {
             isSource: true,
             original: {
               type: "string",
-              value: "Geist",
+              value: "Inter",
               description: "The default interface font of the system.",
               $extensions: {
                 variableId: "VariableID:4313:2601",
@@ -6328,8 +7519,8 @@ module.exports = {
           },
           mono: {
             type: "string",
-            value: "Geist Mono",
-            description: "Used for code, pre and kbd elements in typography.",
+            value: "SF Mono",
+            description: "Use for code, pre and kbd elements in typography.",
             $extensions: {
               variableId: "VariableID:4313:2602",
             },
@@ -6337,8 +7528,8 @@ module.exports = {
             isSource: true,
             original: {
               type: "string",
-              value: "Geist Mono",
-              description: "Used for code, pre and kbd elements in typography.",
+              value: "SF Mono",
+              description: "Use for code, pre and kbd elements in typography.",
               $extensions: {
                 variableId: "VariableID:4313:2602",
               },
@@ -6352,6 +7543,60 @@ module.exports = {
               state: "mono",
             },
             path: ["tokens", "light", "font", "family", "mono"],
+          },
+          brand: {
+            type: "string",
+            value: "Clash Grotesk",
+            description: "Use for brand elements in typography.",
+            $extensions: {
+              variableId: "VariableID:8610:18948",
+            },
+            filePath: "tokens.json",
+            isSource: true,
+            original: {
+              type: "string",
+              value: "Clash Grotesk",
+              description: "Use for brand elements in typography.",
+              $extensions: {
+                variableId: "VariableID:8610:18948",
+              },
+            },
+            name: "TokensLightFontFamilyBrand",
+            attributes: {
+              category: "tokens",
+              type: "light",
+              item: "font",
+              subitem: "family",
+              state: "brand",
+            },
+            path: ["tokens", "light", "font", "family", "brand"],
+          },
+          logo: {
+            type: "string",
+            value: "Clash Display",
+            description: "Use for logo elements in typography.",
+            $extensions: {
+              variableId: "VariableID:8610:18949",
+            },
+            filePath: "tokens.json",
+            isSource: true,
+            original: {
+              type: "string",
+              value: "Clash Display",
+              description: "Use for logo elements in typography.",
+              $extensions: {
+                variableId: "VariableID:8610:18949",
+              },
+            },
+            name: "TokensLightFontFamilyLogo",
+            attributes: {
+              category: "tokens",
+              type: "light",
+              item: "font",
+              subitem: "family",
+              state: "logo",
+            },
+            path: ["tokens", "light", "font", "family", "logo"],
           },
         },
         weight: {
@@ -7053,8 +8298,8 @@ module.exports = {
           brand: {
             default: {
               type: "color",
-              value: "#2563eb",
-              description: "The background color of main actions such as primary Buttons.",
+              value: "#c026d3",
+              description: "The background color of brand elements and main actions.",
               $extensions: {
                 variableId: "VariableID:72:36",
               },
@@ -7063,7 +8308,7 @@ module.exports = {
               original: {
                 type: "color",
                 value: "{foundations.color.brand.600}",
-                description: "The background color of main actions such as primary Buttons.",
+                description: "The background color of brand elements and main actions.",
                 $extensions: {
                   variableId: "VariableID:72:36",
                 },
@@ -7080,8 +8325,8 @@ module.exports = {
             },
             hover: {
               type: "color",
-              value: "#1d4ed8",
-              description: "The hover state color of main actions such as primary Buttons.",
+              value: "#a21caf",
+              description: "The hover state color of brand elements and main actions.",
               $extensions: {
                 variableId: "VariableID:72:37",
               },
@@ -7090,7 +8335,7 @@ module.exports = {
               original: {
                 type: "color",
                 value: "{foundations.color.brand.700}",
-                description: "The hover state color of main actions such as primary Buttons.",
+                description: "The hover state color of brand elements and main actions.",
                 $extensions: {
                   variableId: "VariableID:72:37",
                 },
@@ -7107,8 +8352,8 @@ module.exports = {
             },
             active: {
               type: "color",
-              value: "#3b82f6",
-              description: "The active state (on press) color of main actions such as primary Buttons.",
+              value: "#d946ef",
+              description: "The active state (on press) color of brand elements and main actions.",
               $extensions: {
                 variableId: "VariableID:91:126",
               },
@@ -7117,7 +8362,7 @@ module.exports = {
               original: {
                 type: "color",
                 value: "{foundations.color.brand.500}",
-                description: "The active state (on press) color of main actions such as primary Buttons.",
+                description: "The active state (on press) color of brand elements and main actions.",
                 $extensions: {
                   variableId: "VariableID:91:126",
                 },
@@ -7134,7 +8379,7 @@ module.exports = {
             },
             subtlest: {
               type: "color",
-              value: "#172554",
+              value: "#4a044e",
               description:
                 "Use for the background of elements used to reinforce our brand, but with less emphasis.",
               $extensions: {
@@ -7163,7 +8408,7 @@ module.exports = {
             },
             subtle: {
               type: "color",
-              value: "#172554",
+              value: "#4a044e",
               description:
                 "Use for the background of elements used to reinforce our brand, but with less emphasis.",
               $extensions: {
@@ -7193,7 +8438,7 @@ module.exports = {
           },
           elevated: {
             type: "color",
-            value: "#09090b",
+            value: "#18181b",
             description:
               "The background color for elements with a different height than the interface, such as a Dialog box, Tooltip, or Dropdown Menu.",
             $extensions: {
@@ -7203,7 +8448,7 @@ module.exports = {
             isSource: true,
             original: {
               type: "color",
-              value: "{foundations.color.neutral.950}",
+              value: "{foundations.color.neutral.900}",
               description:
                 "The background color for elements with a different height than the interface, such as a Dialog box, Tooltip, or Dropdown Menu.",
               $extensions: {
@@ -7545,7 +8790,7 @@ module.exports = {
           },
           mask: {
             type: "color",
-            value: "#09090be6",
+            value: "#18181be6",
             description:
               "The background color of the mask, used to cover the content below the mask. Dialog, Alert Dialog and other components use this token.",
             $extensions: {
@@ -7555,7 +8800,7 @@ module.exports = {
             isSource: true,
             original: {
               type: "color",
-              value: "#09090be6",
+              value: "#18181be6",
               description:
                 "The background color of the mask, used to cover the content below the mask. Dialog, Alert Dialog and other components use this token.",
               $extensions: {
@@ -7657,11 +8902,11 @@ module.exports = {
             },
             path: ["tokens", "dark", "color", "bg", "item-hover"],
           },
-          "item-selected": {
+          "item-active": {
             type: "color",
             value: "#27272a",
             description:
-              "The selected state color of contained elements with a smaller surface area such as Dropdown Menu Item.",
+              "The active state color of contained elements with a smaller surface area such as Dropdown Menu Item.",
             $extensions: {
               variableId: "VariableID:91:124",
             },
@@ -7671,24 +8916,24 @@ module.exports = {
               type: "color",
               value: "{foundations.color.neutral.800}",
               description:
-                "The selected state color of contained elements with a smaller surface area such as Dropdown Menu Item.",
+                "The active state color of contained elements with a smaller surface area such as Dropdown Menu Item.",
               $extensions: {
                 variableId: "VariableID:91:124",
               },
             },
-            name: "TokensDarkColorBgItemSelected",
+            name: "TokensDarkColorBgItemActive",
             attributes: {
               category: "tokens",
               type: "dark",
               item: "color",
               subitem: "bg",
-              state: "item-selected",
+              state: "item-active",
             },
-            path: ["tokens", "dark", "color", "bg", "item-selected"],
+            path: ["tokens", "dark", "color", "bg", "item-active"],
           },
           inverse: {
             type: "color",
-            value: "#ffffff",
+            value: "#fafafa",
             description: "The background color for elements that should stand out in the interface.",
             $extensions: {
               variableId: "VariableID:634:2406",
@@ -7697,7 +8942,7 @@ module.exports = {
             isSource: true,
             original: {
               type: "color",
-              value: "{foundations.color.neutral.0}",
+              value: "{foundations.color.neutral.50}",
               description: "The background color for elements that should stand out in the interface.",
               $extensions: {
                 variableId: "VariableID:634:2406",
@@ -7743,7 +8988,7 @@ module.exports = {
           utility: {
             slot: {
               type: "color",
-              value: "#2e1065",
+              value: "#172554",
               description: "Use for background of the Slot component.",
               $extensions: {
                 variableId: "VariableID:1851:7046",
@@ -7752,7 +8997,7 @@ module.exports = {
               isSource: true,
               original: {
                 type: "color",
-                value: "{foundations.color.violet.950}",
+                value: "{foundations.color.blue.950}",
                 description: "Use for background of the Slot component.",
                 $extensions: {
                   variableId: "VariableID:1851:7046",
@@ -7771,470 +9016,980 @@ module.exports = {
           },
           chart: {
             red: {
-              type: "color",
-              value: "#450a0a",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16038",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              default: {
                 type: "color",
-                value: "{foundations.color.red.950}",
+                value: "#ef4444",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2754:16038",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.red.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2754:16038",
+                  },
+                },
+                name: "TokensDarkColorBgChartRedDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "bg",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "bg", "chart", "red", "default"],
               },
-              name: "TokensDarkColorBgChartRed",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "bg",
-                state: "chart",
-              },
-              path: ["tokens", "dark", "color", "bg", "chart", "red"],
-            },
-            orange: {
-              type: "color",
-              value: "#431407",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16039",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              subtlest: {
                 type: "color",
-                value: "{foundations.color.orange.950}",
+                value: "#450a0a",
                 description: "For data visualisation only.",
                 $extensions: {
-                  variableId: "VariableID:2754:16039",
+                  variableId: "VariableID:8640:10481",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.red.950}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8640:10481",
+                  },
+                },
+                name: "TokensDarkColorBgChartRedSubtlest",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "bg",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "bg", "chart", "red", "subtlest"],
               },
-              name: "TokensDarkColorBgChartOrange",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "bg",
-                state: "chart",
+              subtle: {
+                type: "color",
+                value: "#450a0a",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8668:12",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.red.950}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8668:12",
+                  },
+                },
+                name: "TokensDarkColorBgChartRedSubtle",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "bg",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "bg", "chart", "red", "subtle"],
               },
-              path: ["tokens", "dark", "color", "bg", "chart", "orange"],
             },
             amber: {
-              type: "color",
-              value: "#451a03",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16040",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              subtlest: {
                 type: "color",
-                value: "{foundations.color.amber.950}",
+                value: "#451a03",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2754:16040",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.amber.950}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2754:16040",
+                  },
+                },
+                name: "TokensDarkColorBgChartAmberSubtlest",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "bg",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "bg", "chart", "amber", "subtlest"],
               },
-              name: "TokensDarkColorBgChartAmber",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "bg",
-                state: "chart",
-              },
-              path: ["tokens", "dark", "color", "bg", "chart", "amber"],
-            },
-            yellow: {
-              type: "color",
-              value: "#422006",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16041",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              default: {
                 type: "color",
-                value: "{foundations.color.yellow.950}",
+                value: "#f59e0b",
                 description: "For data visualisation only.",
                 $extensions: {
-                  variableId: "VariableID:2754:16041",
+                  variableId: "VariableID:8642:12370",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.amber.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12370",
+                  },
+                },
+                name: "TokensDarkColorBgChartAmberDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "bg",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "bg", "chart", "amber", "default"],
               },
-              name: "TokensDarkColorBgChartYellow",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "bg",
-                state: "chart",
-              },
-              path: ["tokens", "dark", "color", "bg", "chart", "yellow"],
-            },
-            lime: {
-              type: "color",
-              value: "#1a2e05",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16042",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              subtle: {
                 type: "color",
-                value: "{foundations.color.lime.950}",
+                value: "#451a03",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8670:109",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.amber.950}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8670:109",
+                  },
+                },
+                name: "TokensDarkColorBgChartAmberSubtle",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "bg",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "bg", "chart", "amber", "subtle"],
+              },
+            },
+            neutral: {
+              subtlest: {
+                type: "color",
+                value: "#09090b",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2754:16042",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.neutral.950}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2754:16042",
+                  },
+                },
+                name: "TokensDarkColorBgChartNeutralSubtlest",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "bg",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "bg", "chart", "neutral", "subtlest"],
               },
-              name: "TokensDarkColorBgChartLime",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "bg",
-                state: "chart",
-              },
-              path: ["tokens", "dark", "color", "bg", "chart", "lime"],
-            },
-            green: {
-              type: "color",
-              value: "#052e16",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16043",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              default: {
                 type: "color",
-                value: "{foundations.color.green.950}",
+                value: "#71717a",
                 description: "For data visualisation only.",
                 $extensions: {
-                  variableId: "VariableID:2754:16043",
+                  variableId: "VariableID:8642:12372",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.neutral.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12372",
+                  },
+                },
+                name: "TokensDarkColorBgChartNeutralDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "bg",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "bg", "chart", "neutral", "default"],
               },
-              name: "TokensDarkColorBgChartGreen",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "bg",
-                state: "chart",
+              subtle: {
+                type: "color",
+                value: "#09090b",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8670:93",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.neutral.950}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8670:93",
+                  },
+                },
+                name: "TokensDarkColorBgChartNeutralSubtle",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "bg",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "bg", "chart", "neutral", "subtle"],
               },
-              path: ["tokens", "dark", "color", "bg", "chart", "green"],
             },
             emerald: {
-              type: "color",
-              value: "#022c22",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16044",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              subtlest: {
                 type: "color",
-                value: "{foundations.color.emerald.950}",
+                value: "#022c22",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2754:16044",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.emerald.950}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2754:16044",
+                  },
+                },
+                name: "TokensDarkColorBgChartEmeraldSubtlest",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "bg",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "bg", "chart", "emerald", "subtlest"],
               },
-              name: "TokensDarkColorBgChartEmerald",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "bg",
-                state: "chart",
+              default: {
+                type: "color",
+                value: "#10b981",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8642:12375",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.emerald.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12375",
+                  },
+                },
+                name: "TokensDarkColorBgChartEmeraldDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "bg",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "bg", "chart", "emerald", "default"],
               },
-              path: ["tokens", "dark", "color", "bg", "chart", "emerald"],
+              subtle: {
+                type: "color",
+                value: "#022c22",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8670:110",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.emerald.950}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8670:110",
+                  },
+                },
+                name: "TokensDarkColorBgChartEmeraldSubtle",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "bg",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "bg", "chart", "emerald", "subtle"],
+              },
             },
             teal: {
-              type: "color",
-              value: "#042f2e",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16045",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              subtlest: {
                 type: "color",
-                value: "{foundations.color.teal.950}",
+                value: "#042f2e",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2754:16045",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.teal.950}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2754:16045",
+                  },
+                },
+                name: "TokensDarkColorBgChartTealSubtlest",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "bg",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "bg", "chart", "teal", "subtlest"],
               },
-              name: "TokensDarkColorBgChartTeal",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "bg",
-                state: "chart",
+              default: {
+                type: "color",
+                value: "#14b8a6",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8642:12376",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.teal.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12376",
+                  },
+                },
+                name: "TokensDarkColorBgChartTealDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "bg",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "bg", "chart", "teal", "default"],
               },
-              path: ["tokens", "dark", "color", "bg", "chart", "teal"],
+              subtle: {
+                type: "color",
+                value: "#042f2e",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8670:111",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.teal.950}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8670:111",
+                  },
+                },
+                name: "TokensDarkColorBgChartTealSubtle",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "bg",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "bg", "chart", "teal", "subtle"],
+              },
             },
             cyan: {
-              type: "color",
-              value: "#083344",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16046",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              subtlest: {
                 type: "color",
-                value: "{foundations.color.cyan.950}",
+                value: "#083344",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2754:16046",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.cyan.950}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2754:16046",
+                  },
+                },
+                name: "TokensDarkColorBgChartCyanSubtlest",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "bg",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "bg", "chart", "cyan", "subtlest"],
               },
-              name: "TokensDarkColorBgChartCyan",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "bg",
-                state: "chart",
-              },
-              path: ["tokens", "dark", "color", "bg", "chart", "cyan"],
-            },
-            sky: {
-              type: "color",
-              value: "#082f49",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16047",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              default: {
                 type: "color",
-                value: "{foundations.color.sky.950}",
+                value: "#06b6d4",
                 description: "For data visualisation only.",
                 $extensions: {
-                  variableId: "VariableID:2754:16047",
+                  variableId: "VariableID:8642:12377",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.cyan.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12377",
+                  },
+                },
+                name: "TokensDarkColorBgChartCyanDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "bg",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "bg", "chart", "cyan", "default"],
               },
-              name: "TokensDarkColorBgChartSky",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "bg",
-                state: "chart",
+              subtle: {
+                type: "color",
+                value: "#083344",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8670:112",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.cyan.950}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8670:112",
+                  },
+                },
+                name: "TokensDarkColorBgChartCyanSubtle",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "bg",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "bg", "chart", "cyan", "subtle"],
               },
-              path: ["tokens", "dark", "color", "bg", "chart", "sky"],
             },
             blue: {
-              type: "color",
-              value: "#172554",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16048",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              subtlest: {
                 type: "color",
-                value: "{foundations.color.blue.950}",
+                value: "#172554",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2754:16048",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.blue.950}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2754:16048",
+                  },
+                },
+                name: "TokensDarkColorBgChartBlueSubtlest",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "bg",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "bg", "chart", "blue", "subtlest"],
               },
-              name: "TokensDarkColorBgChartBlue",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "bg",
-                state: "chart",
-              },
-              path: ["tokens", "dark", "color", "bg", "chart", "blue"],
-            },
-            indigo: {
-              type: "color",
-              value: "#1e1b4b",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16049",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              default: {
                 type: "color",
-                value: "{foundations.color.indigo.950}",
+                value: "#3b82f6",
                 description: "For data visualisation only.",
                 $extensions: {
-                  variableId: "VariableID:2754:16049",
+                  variableId: "VariableID:8642:12379",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.blue.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12379",
+                  },
+                },
+                name: "TokensDarkColorBgChartBlueDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "bg",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "bg", "chart", "blue", "default"],
               },
-              name: "TokensDarkColorBgChartIndigo",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "bg",
-                state: "chart",
-              },
-              path: ["tokens", "dark", "color", "bg", "chart", "indigo"],
-            },
-            violet: {
-              type: "color",
-              value: "#2e1065",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16050",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              subtle: {
                 type: "color",
-                value: "{foundations.color.violet.950}",
+                value: "#172554",
                 description: "For data visualisation only.",
                 $extensions: {
-                  variableId: "VariableID:2754:16050",
+                  variableId: "VariableID:8670:113",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.blue.950}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8670:113",
+                  },
+                },
+                name: "TokensDarkColorBgChartBlueSubtle",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "bg",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "bg", "chart", "blue", "subtle"],
               },
-              name: "TokensDarkColorBgChartViolet",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "bg",
-                state: "chart",
-              },
-              path: ["tokens", "dark", "color", "bg", "chart", "violet"],
             },
             purple: {
-              type: "color",
-              value: "#3b0764",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16051",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              subtlest: {
                 type: "color",
-                value: "{foundations.color.purple.950}",
+                value: "#3b0764",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2754:16051",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.purple.950}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2754:16051",
+                  },
+                },
+                name: "TokensDarkColorBgChartPurpleSubtlest",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "bg",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "bg", "chart", "purple", "subtlest"],
               },
-              name: "TokensDarkColorBgChartPurple",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "bg",
-                state: "chart",
-              },
-              path: ["tokens", "dark", "color", "bg", "chart", "purple"],
-            },
-            fuchsia: {
-              type: "color",
-              value: "#4a044e",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16052",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              default: {
                 type: "color",
-                value: "{foundations.color.fuchsia.950}",
+                value: "#a855f7",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8642:12382",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.purple.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12382",
+                  },
+                },
+                name: "TokensDarkColorBgChartPurpleDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "bg",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "bg", "chart", "purple", "default"],
+              },
+              subtle: {
+                type: "color",
+                value: "#3b0764",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8670:114",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.purple.950}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8670:114",
+                  },
+                },
+                name: "TokensDarkColorBgChartPurpleSubtle",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "bg",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "bg", "chart", "purple", "subtle"],
+              },
+            },
+            brand: {
+              subtlest: {
+                type: "color",
+                value: "#4a044e",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2754:16052",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.brand.950}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2754:16052",
+                  },
+                },
+                name: "TokensDarkColorBgChartBrandSubtlest",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "bg",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "bg", "chart", "brand", "subtlest"],
               },
-              name: "TokensDarkColorBgChartFuchsia",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "bg",
-                state: "chart",
+              default: {
+                type: "color",
+                value: "#d946ef",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8642:12383",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.brand.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12383",
+                  },
+                },
+                name: "TokensDarkColorBgChartBrandDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "bg",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "bg", "chart", "brand", "default"],
               },
-              path: ["tokens", "dark", "color", "bg", "chart", "fuchsia"],
+              subtle: {
+                type: "color",
+                value: "#4a044e",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8670:86",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.brand.950}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8670:86",
+                  },
+                },
+                name: "TokensDarkColorBgChartBrandSubtle",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "bg",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "bg", "chart", "brand", "subtle"],
+              },
             },
             pink: {
-              type: "color",
-              value: "#500724",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16053",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              subtlest: {
                 type: "color",
-                value: "{foundations.color.pink.950}",
+                value: "#500724",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2754:16053",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.pink.950}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2754:16053",
+                  },
+                },
+                name: "TokensDarkColorBgChartPinkSubtlest",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "bg",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "bg", "chart", "pink", "subtlest"],
               },
-              name: "TokensDarkColorBgChartPink",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "bg",
-                state: "chart",
+              default: {
+                type: "color",
+                value: "#ec4899",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8642:12384",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.pink.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12384",
+                  },
+                },
+                name: "TokensDarkColorBgChartPinkDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "bg",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "bg", "chart", "pink", "default"],
               },
-              path: ["tokens", "dark", "color", "bg", "chart", "pink"],
+              subtle: {
+                type: "color",
+                value: "#500724",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8670:115",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.pink.950}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8670:115",
+                  },
+                },
+                name: "TokensDarkColorBgChartPinkSubtle",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "bg",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "bg", "chart", "pink", "subtle"],
+              },
             },
-            rose: {
+          },
+          neutral: {
+            default: {
               type: "color",
-              value: "#4c0519",
-              description: "For data visualisation only.",
+              value: "#fafafa",
+              description: "The background color of main actions such as primary Buttons.",
               $extensions: {
-                variableId: "VariableID:2754:16054",
+                variableId: "VariableID:8609:2624",
               },
               filePath: "tokens.json",
               isSource: true,
               original: {
                 type: "color",
-                value: "{foundations.color.rose.950}",
-                description: "For data visualisation only.",
+                value: "{foundations.color.neutral.50}",
+                description: "The background color of main actions such as primary Buttons.",
                 $extensions: {
-                  variableId: "VariableID:2754:16054",
+                  variableId: "VariableID:8609:2624",
                 },
               },
-              name: "TokensDarkColorBgChartRose",
+              name: "TokensDarkColorBgNeutralDefault",
               attributes: {
                 category: "tokens",
                 type: "dark",
                 item: "color",
                 subitem: "bg",
-                state: "chart",
+                state: "neutral",
               },
-              path: ["tokens", "dark", "color", "bg", "chart", "rose"],
+              path: ["tokens", "dark", "color", "bg", "neutral", "default"],
             },
+            hover: {
+              type: "color",
+              value: "#e4e4e7",
+              description: "The hover state color of main actions such as primary Buttons.",
+              $extensions: {
+                variableId: "VariableID:8609:2625",
+              },
+              filePath: "tokens.json",
+              isSource: true,
+              original: {
+                type: "color",
+                value: "{foundations.color.neutral.200}",
+                description: "The hover state color of main actions such as primary Buttons.",
+                $extensions: {
+                  variableId: "VariableID:8609:2625",
+                },
+              },
+              name: "TokensDarkColorBgNeutralHover",
+              attributes: {
+                category: "tokens",
+                type: "dark",
+                item: "color",
+                subitem: "bg",
+                state: "neutral",
+              },
+              path: ["tokens", "dark", "color", "bg", "neutral", "hover"],
+            },
+            active: {
+              type: "color",
+              value: "#ffffff",
+              description: "The active state (on press) color of main actions such as primary Buttons.",
+              $extensions: {
+                variableId: "VariableID:8609:2626",
+              },
+              filePath: "tokens.json",
+              isSource: true,
+              original: {
+                type: "color",
+                value: "{foundations.color.neutral.0}",
+                description: "The active state (on press) color of main actions such as primary Buttons.",
+                $extensions: {
+                  variableId: "VariableID:8609:2626",
+                },
+              },
+              name: "TokensDarkColorBgNeutralActive",
+              attributes: {
+                category: "tokens",
+                type: "dark",
+                item: "color",
+                subitem: "bg",
+                state: "neutral",
+              },
+              path: ["tokens", "dark", "color", "bg", "neutral", "active"],
+            },
+            disabled: {
+              type: "color",
+              value: "#27272a",
+              description: "The disabled state color of main actions such as primary Buttons.",
+              $extensions: {
+                variableId: "VariableID:8609:2627",
+              },
+              filePath: "tokens.json",
+              isSource: true,
+              original: {
+                type: "color",
+                value: "{foundations.color.neutral.800}",
+                description: "The disabled state color of main actions such as primary Buttons.",
+                $extensions: {
+                  variableId: "VariableID:8609:2627",
+                },
+              },
+              name: "TokensDarkColorBgNeutralDisabled",
+              attributes: {
+                category: "tokens",
+                type: "dark",
+                item: "color",
+                subitem: "bg",
+                state: "neutral",
+              },
+              path: ["tokens", "dark", "color", "bg", "neutral", "disabled"],
+            },
+          },
+          "item-selected": {
+            type: "color",
+            value: "#3f3f46",
+            description:
+              "The selected state color of contained elements with a smaller surface area such as Dropdown Menu Item.",
+            $extensions: {
+              variableId: "VariableID:8610:19203",
+            },
+            filePath: "tokens.json",
+            isSource: true,
+            original: {
+              type: "color",
+              value: "{foundations.color.neutral.700}",
+              description:
+                "The selected state color of contained elements with a smaller surface area such as Dropdown Menu Item.",
+              $extensions: {
+                variableId: "VariableID:8610:19203",
+              },
+            },
+            name: "TokensDarkColorBgItemSelected",
+            attributes: {
+              category: "tokens",
+              type: "dark",
+              item: "color",
+              subitem: "bg",
+              state: "item-selected",
+            },
+            path: ["tokens", "dark", "color", "bg", "item-selected"],
           },
         },
         border: {
-          default: {
+          item: {
             type: "color",
-            value: "#27272a",
+            value: "#3f3f46",
             description: "The default color for borders on any element.",
             $extensions: {
               variableId: "VariableID:72:47",
@@ -8243,26 +9998,26 @@ module.exports = {
             isSource: true,
             original: {
               type: "color",
-              value: "{foundations.color.neutral.800}",
+              value: "{foundations.color.neutral.700}",
               description: "The default color for borders on any element.",
               $extensions: {
                 variableId: "VariableID:72:47",
               },
             },
-            name: "TokensDarkColorBorderDefault",
+            name: "TokensDarkColorBorderItem",
             attributes: {
               category: "tokens",
               type: "dark",
               item: "color",
               subitem: "border",
-              state: "default",
+              state: "item",
             },
-            path: ["tokens", "dark", "color", "border", "default"],
+            path: ["tokens", "dark", "color", "border", "item"],
           },
           brand: {
             default: {
               type: "color",
-              value: "#2563eb",
+              value: "#c026d3",
               description: "Use for borders paired with brand colors.",
               $extensions: {
                 variableId: "VariableID:75:3",
@@ -8289,7 +10044,7 @@ module.exports = {
             },
             hover: {
               type: "color",
-              value: "#1d4ed8",
+              value: "#a21caf",
               description: "The hover color for borders paired with brand colors.",
               $extensions: {
                 variableId: "VariableID:75:13",
@@ -8316,7 +10071,7 @@ module.exports = {
             },
             subtlest: {
               type: "color",
-              value: "#1e40af",
+              value: "#86198f",
               description:
                 "Use for the border of elements used to reinforce our brand, but with less emphasis.",
               $extensions: {
@@ -8345,7 +10100,7 @@ module.exports = {
             },
             subtle: {
               type: "color",
-              value: "#1e40af",
+              value: "#86198f",
               description:
                 "Use for the border of elements used to reinforce our brand, but with less emphasis.",
               $extensions: {
@@ -8374,7 +10129,7 @@ module.exports = {
             },
             active: {
               type: "color",
-              value: "#3b82f6",
+              value: "#d946ef",
               description: "The active state (on press) color for borders paired with brand colors.",
               $extensions: {
                 variableId: "VariableID:91:87",
@@ -8685,7 +10440,7 @@ module.exports = {
               path: ["tokens", "dark", "color", "border", "warning", "active"],
             },
           },
-          hover: {
+          "item-hover": {
             type: "color",
             value: "#52525b",
             description: "The hover color for borders on any element.",
@@ -8702,20 +10457,20 @@ module.exports = {
                 variableId: "VariableID:497:1525",
               },
             },
-            name: "TokensDarkColorBorderHover",
+            name: "TokensDarkColorBorderItemHover",
             attributes: {
               category: "tokens",
               type: "dark",
               item: "color",
               subitem: "border",
-              state: "hover",
+              state: "item-hover",
             },
-            path: ["tokens", "dark", "color", "border", "hover"],
+            path: ["tokens", "dark", "color", "border", "item-hover"],
           },
           utility: {
             slot: {
               type: "color",
-              value: "#8b5cf6",
+              value: "#3b82f6",
               description: "Use for border of the Slot component.",
               $extensions: {
                 variableId: "VariableID:1851:7055",
@@ -8724,7 +10479,7 @@ module.exports = {
               isSource: true,
               original: {
                 type: "color",
-                value: "{foundations.color.violet.500}",
+                value: "{foundations.color.blue.500}",
                 description: "Use for border of the Slot component.",
                 $extensions: {
                   variableId: "VariableID:1851:7055",
@@ -8743,464 +10498,889 @@ module.exports = {
           },
           chart: {
             red: {
-              type: "color",
-              value: "#991b1b",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16074",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              subtlest: {
                 type: "color",
-                value: "{foundations.color.red.800}",
+                value: "#991b1b",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2754:16074",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.red.800}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2754:16074",
+                  },
+                },
+                name: "TokensDarkColorBorderChartRedSubtlest",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "border",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "border", "chart", "red", "subtlest"],
               },
-              name: "TokensDarkColorBorderChartRed",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "border",
-                state: "chart",
-              },
-              path: ["tokens", "dark", "color", "border", "chart", "red"],
-            },
-            orange: {
-              type: "color",
-              value: "#9a3412",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16079",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              default: {
                 type: "color",
-                value: "{foundations.color.orange.800}",
+                value: "#ef4444",
                 description: "For data visualisation only.",
                 $extensions: {
-                  variableId: "VariableID:2756:16079",
+                  variableId: "VariableID:8642:12403",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.red.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12403",
+                  },
+                },
+                name: "TokensDarkColorBorderChartRedDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "border",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "border", "chart", "red", "default"],
               },
-              name: "TokensDarkColorBorderChartOrange",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "border",
-                state: "chart",
+              subtle: {
+                type: "color",
+                value: "#991b1b",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8670:142",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.red.800}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8670:142",
+                  },
+                },
+                name: "TokensDarkColorBorderChartRedSubtle",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "border",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "border", "chart", "red", "subtle"],
               },
-              path: ["tokens", "dark", "color", "border", "chart", "orange"],
             },
             amber: {
-              type: "color",
-              value: "#92400e",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16080",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              subtlest: {
                 type: "color",
-                value: "{foundations.color.amber.800}",
+                value: "#92400e",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2756:16080",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.amber.800}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2756:16080",
+                  },
+                },
+                name: "TokensDarkColorBorderChartAmberSubtlest",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "border",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "border", "chart", "amber", "subtlest"],
               },
-              name: "TokensDarkColorBorderChartAmber",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "border",
-                state: "chart",
-              },
-              path: ["tokens", "dark", "color", "border", "chart", "amber"],
-            },
-            yellow: {
-              type: "color",
-              value: "#854d0e",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16081",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              default: {
                 type: "color",
-                value: "{foundations.color.yellow.800}",
+                value: "#f59e0b",
                 description: "For data visualisation only.",
                 $extensions: {
-                  variableId: "VariableID:2756:16081",
+                  variableId: "VariableID:8642:12405",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.amber.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12405",
+                  },
+                },
+                name: "TokensDarkColorBorderChartAmberDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "border",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "border", "chart", "amber", "default"],
               },
-              name: "TokensDarkColorBorderChartYellow",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "border",
-                state: "chart",
-              },
-              path: ["tokens", "dark", "color", "border", "chart", "yellow"],
-            },
-            lime: {
-              type: "color",
-              value: "#3f6212",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16082",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              subtle: {
                 type: "color",
-                value: "{foundations.color.lime.800}",
+                value: "#92400e",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8670:143",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.amber.800}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8670:143",
+                  },
+                },
+                name: "TokensDarkColorBorderChartAmberSubtle",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "border",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "border", "chart", "amber", "subtle"],
+              },
+            },
+            neutral: {
+              subtlest: {
+                type: "color",
+                value: "#27272a",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2756:16082",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.neutral.800}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2756:16082",
+                  },
+                },
+                name: "TokensDarkColorBorderChartNeutralSubtlest",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "border",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "border", "chart", "neutral", "subtlest"],
               },
-              name: "TokensDarkColorBorderChartLime",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "border",
-                state: "chart",
-              },
-              path: ["tokens", "dark", "color", "border", "chart", "lime"],
-            },
-            green: {
-              type: "color",
-              value: "#166534",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16083",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              default: {
                 type: "color",
-                value: "{foundations.color.green.800}",
+                value: "#71717a",
                 description: "For data visualisation only.",
                 $extensions: {
-                  variableId: "VariableID:2756:16083",
+                  variableId: "VariableID:8642:12407",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.neutral.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12407",
+                  },
+                },
+                name: "TokensDarkColorBorderChartNeutralDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "border",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "border", "chart", "neutral", "default"],
               },
-              name: "TokensDarkColorBorderChartGreen",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "border",
-                state: "chart",
+              subtle: {
+                type: "color",
+                value: "#27272a",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8670:135",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.neutral.800}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8670:135",
+                  },
+                },
+                name: "TokensDarkColorBorderChartNeutralSubtle",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "border",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "border", "chart", "neutral", "subtle"],
               },
-              path: ["tokens", "dark", "color", "border", "chart", "green"],
             },
             emerald: {
-              type: "color",
-              value: "#065f46",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16084",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              subtlest: {
                 type: "color",
-                value: "{foundations.color.emerald.800}",
+                value: "#065f46",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2756:16084",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.emerald.800}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2756:16084",
+                  },
+                },
+                name: "TokensDarkColorBorderChartEmeraldSubtlest",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "border",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "border", "chart", "emerald", "subtlest"],
               },
-              name: "TokensDarkColorBorderChartEmerald",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "border",
-                state: "chart",
+              default: {
+                type: "color",
+                value: "#10b981",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8642:12409",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.emerald.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12409",
+                  },
+                },
+                name: "TokensDarkColorBorderChartEmeraldDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "border",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "border", "chart", "emerald", "default"],
               },
-              path: ["tokens", "dark", "color", "border", "chart", "emerald"],
+              subtle: {
+                type: "color",
+                value: "#065f46",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8670:144",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.emerald.800}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8670:144",
+                  },
+                },
+                name: "TokensDarkColorBorderChartEmeraldSubtle",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "border",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "border", "chart", "emerald", "subtle"],
+              },
             },
             teal: {
-              type: "color",
-              value: "#115e59",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16085",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              subtlest: {
                 type: "color",
-                value: "{foundations.color.teal.800}",
+                value: "#115e59",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2756:16085",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.teal.800}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2756:16085",
+                  },
+                },
+                name: "TokensDarkColorBorderChartTealSubtlest",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "border",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "border", "chart", "teal", "subtlest"],
               },
-              name: "TokensDarkColorBorderChartTeal",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "border",
-                state: "chart",
+              default: {
+                type: "color",
+                value: "#14b8a6",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8642:12410",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.teal.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12410",
+                  },
+                },
+                name: "TokensDarkColorBorderChartTealDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "border",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "border", "chart", "teal", "default"],
               },
-              path: ["tokens", "dark", "color", "border", "chart", "teal"],
+              subtle: {
+                type: "color",
+                value: "#115e59",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8670:145",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.teal.800}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8670:145",
+                  },
+                },
+                name: "TokensDarkColorBorderChartTealSubtle",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "border",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "border", "chart", "teal", "subtle"],
+              },
             },
             cyan: {
-              type: "color",
-              value: "#155e75",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16086",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              subtlest: {
                 type: "color",
-                value: "{foundations.color.cyan.800}",
+                value: "#155e75",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2756:16086",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.cyan.800}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2756:16086",
+                  },
+                },
+                name: "TokensDarkColorBorderChartCyanSubtlest",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "border",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "border", "chart", "cyan", "subtlest"],
               },
-              name: "TokensDarkColorBorderChartCyan",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "border",
-                state: "chart",
-              },
-              path: ["tokens", "dark", "color", "border", "chart", "cyan"],
-            },
-            sky: {
-              type: "color",
-              value: "#075985",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16087",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              default: {
                 type: "color",
-                value: "{foundations.color.sky.800}",
+                value: "#06b6d4",
                 description: "For data visualisation only.",
                 $extensions: {
-                  variableId: "VariableID:2756:16087",
+                  variableId: "VariableID:8642:12411",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.cyan.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12411",
+                  },
+                },
+                name: "TokensDarkColorBorderChartCyanDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "border",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "border", "chart", "cyan", "default"],
               },
-              name: "TokensDarkColorBorderChartSky",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "border",
-                state: "chart",
+              subtle: {
+                type: "color",
+                value: "#155e75",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8670:146",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.cyan.800}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8670:146",
+                  },
+                },
+                name: "TokensDarkColorBorderChartCyanSubtle",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "border",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "border", "chart", "cyan", "subtle"],
               },
-              path: ["tokens", "dark", "color", "border", "chart", "sky"],
             },
             blue: {
-              type: "color",
-              value: "#1e40af",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16088",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              subtlest: {
                 type: "color",
-                value: "{foundations.color.blue.800}",
+                value: "#1e40af",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2756:16088",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.blue.800}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2756:16088",
+                  },
+                },
+                name: "TokensDarkColorBorderChartBlueSubtlest",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "border",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "border", "chart", "blue", "subtlest"],
               },
-              name: "TokensDarkColorBorderChartBlue",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "border",
-                state: "chart",
-              },
-              path: ["tokens", "dark", "color", "border", "chart", "blue"],
-            },
-            indigo: {
-              type: "color",
-              value: "#3730a3",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16089",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              default: {
                 type: "color",
-                value: "{foundations.color.indigo.800}",
+                value: "#3b82f6",
                 description: "For data visualisation only.",
                 $extensions: {
-                  variableId: "VariableID:2756:16089",
+                  variableId: "VariableID:8642:12413",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.blue.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12413",
+                  },
+                },
+                name: "TokensDarkColorBorderChartBlueDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "border",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "border", "chart", "blue", "default"],
               },
-              name: "TokensDarkColorBorderChartIndigo",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "border",
-                state: "chart",
-              },
-              path: ["tokens", "dark", "color", "border", "chart", "indigo"],
-            },
-            violet: {
-              type: "color",
-              value: "#5b21b6",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16090",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              subtle: {
                 type: "color",
-                value: "{foundations.color.violet.800}",
+                value: "#1e40af",
                 description: "For data visualisation only.",
                 $extensions: {
-                  variableId: "VariableID:2756:16090",
+                  variableId: "VariableID:8670:147",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.blue.800}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8670:147",
+                  },
+                },
+                name: "TokensDarkColorBorderChartBlueSubtle",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "border",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "border", "chart", "blue", "subtle"],
               },
-              name: "TokensDarkColorBorderChartViolet",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "border",
-                state: "chart",
-              },
-              path: ["tokens", "dark", "color", "border", "chart", "violet"],
             },
             purple: {
-              type: "color",
-              value: "#6b21a8",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16091",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              subtlest: {
                 type: "color",
-                value: "{foundations.color.purple.800}",
+                value: "#6b21a8",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2756:16091",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.purple.800}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2756:16091",
+                  },
+                },
+                name: "TokensDarkColorBorderChartPurpleSubtlest",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "border",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "border", "chart", "purple", "subtlest"],
               },
-              name: "TokensDarkColorBorderChartPurple",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "border",
-                state: "chart",
-              },
-              path: ["tokens", "dark", "color", "border", "chart", "purple"],
-            },
-            fuchsia: {
-              type: "color",
-              value: "#86198f",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16092",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              default: {
                 type: "color",
-                value: "{foundations.color.fuchsia.800}",
+                value: "#a855f7",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8642:12416",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.purple.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12416",
+                  },
+                },
+                name: "TokensDarkColorBorderChartPurpleDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "border",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "border", "chart", "purple", "default"],
+              },
+              subtle: {
+                type: "color",
+                value: "#6b21a8",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8670:148",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.purple.800}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8670:148",
+                  },
+                },
+                name: "TokensDarkColorBorderChartPurpleSubtle",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "border",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "border", "chart", "purple", "subtle"],
+              },
+            },
+            brand: {
+              subtlest: {
+                type: "color",
+                value: "#86198f",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2756:16092",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.brand.800}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2756:16092",
+                  },
+                },
+                name: "TokensDarkColorBorderChartBrandSubtlest",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "border",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "border", "chart", "brand", "subtlest"],
               },
-              name: "TokensDarkColorBorderChartFuchsia",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "border",
-                state: "chart",
+              default: {
+                type: "color",
+                value: "#d946ef",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8642:12417",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.brand.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12417",
+                  },
+                },
+                name: "TokensDarkColorBorderChartBrandDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "border",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "border", "chart", "brand", "default"],
               },
-              path: ["tokens", "dark", "color", "border", "chart", "fuchsia"],
+              subtle: {
+                type: "color",
+                value: "#86198f",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8670:128",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.brand.800}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8670:128",
+                  },
+                },
+                name: "TokensDarkColorBorderChartBrandSubtle",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "border",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "border", "chart", "brand", "subtle"],
+              },
             },
             pink: {
-              type: "color",
-              value: "#9d174d",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16093",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              subtlest: {
                 type: "color",
-                value: "{foundations.color.pink.800}",
+                value: "#9d174d",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2756:16093",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.pink.800}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2756:16093",
+                  },
+                },
+                name: "TokensDarkColorBorderChartPinkSubtlest",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "border",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "border", "chart", "pink", "subtlest"],
               },
-              name: "TokensDarkColorBorderChartPink",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "border",
-                state: "chart",
-              },
-              path: ["tokens", "dark", "color", "border", "chart", "pink"],
-            },
-            rose: {
-              type: "color",
-              value: "#9f1239",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16094",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              default: {
                 type: "color",
-                value: "{foundations.color.rose.800}",
+                value: "#ec4899",
                 description: "For data visualisation only.",
                 $extensions: {
-                  variableId: "VariableID:2756:16094",
+                  variableId: "VariableID:8642:12418",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.pink.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12418",
+                  },
+                },
+                name: "TokensDarkColorBorderChartPinkDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "border",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "border", "chart", "pink", "default"],
               },
-              name: "TokensDarkColorBorderChartRose",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "border",
-                state: "chart",
+              subtle: {
+                type: "color",
+                value: "#9d174d",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8670:149",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.pink.800}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8670:149",
+                  },
+                },
+                name: "TokensDarkColorBorderChartPinkSubtle",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "border",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "border", "chart", "pink", "subtle"],
               },
-              path: ["tokens", "dark", "color", "border", "chart", "rose"],
             },
+          },
+          default: {
+            type: "color",
+            value: "#27272a",
+            description: "The default color for borders of the grids.",
+            $extensions: {
+              variableId: "VariableID:8371:252",
+            },
+            filePath: "tokens.json",
+            isSource: true,
+            original: {
+              type: "color",
+              value: "{foundations.color.neutral.800}",
+              description: "The default color for borders of the grids.",
+              $extensions: {
+                variableId: "VariableID:8371:252",
+              },
+            },
+            name: "TokensDarkColorBorderDefault",
+            attributes: {
+              category: "tokens",
+              type: "dark",
+              item: "color",
+              subitem: "border",
+              state: "default",
+            },
+            path: ["tokens", "dark", "color", "border", "default"],
+          },
+          disabled: {
+            type: "color",
+            value: "#3f3f46",
+            description: "The disabled color for borders on any element.",
+            $extensions: {
+              variableId: "VariableID:8612:4647",
+            },
+            filePath: "tokens.json",
+            isSource: true,
+            original: {
+              type: "color",
+              value: "{foundations.color.neutral.700}",
+              description: "The disabled color for borders on any element.",
+              $extensions: {
+                variableId: "VariableID:8612:4647",
+              },
+            },
+            name: "TokensDarkColorBorderDisabled",
+            attributes: {
+              category: "tokens",
+              type: "dark",
+              item: "color",
+              subitem: "border",
+              state: "disabled",
+            },
+            path: ["tokens", "dark", "color", "border", "disabled"],
           },
         },
         text: {
@@ -9317,7 +11497,7 @@ module.exports = {
           brand: {
             default: {
               type: "color",
-              value: "#3b82f6",
+              value: "#d946ef",
               description: "Use for text links.",
               $extensions: {
                 variableId: "VariableID:75:34",
@@ -9344,7 +11524,7 @@ module.exports = {
             },
             hover: {
               type: "color",
-              value: "#2563eb",
+              value: "#c026d3",
               description: "The hover state color for text links.",
               $extensions: {
                 variableId: "VariableID:75:35",
@@ -9371,7 +11551,7 @@ module.exports = {
             },
             active: {
               type: "color",
-              value: "#60a5fa",
+              value: "#e879f9",
               description: "The active state (on press) color for text links.",
               $extensions: {
                 variableId: "VariableID:75:36",
@@ -9425,7 +11605,7 @@ module.exports = {
             },
             strong: {
               type: "color",
-              value: "#93c5fd",
+              value: "#f0abfc",
               description: "Use for text on bg-brand-subtle and subtles, like badge and alert.",
               $extensions: {
                 variableId: "VariableID:487:11553",
@@ -9728,7 +11908,7 @@ module.exports = {
           utility: {
             slot: {
               type: "color",
-              value: "#8b5cf6",
+              value: "#3b82f6",
               description: "Use for text of the Slot component.",
               $extensions: {
                 variableId: "VariableID:1851:7053",
@@ -9737,7 +11917,7 @@ module.exports = {
               isSource: true,
               original: {
                 type: "color",
-                value: "{foundations.color.violet.500}",
+                value: "{foundations.color.blue.500}",
                 description: "Use for text of the Slot component.",
                 $extensions: {
                   variableId: "VariableID:1851:7053",
@@ -9756,464 +11936,592 @@ module.exports = {
           },
           chart: {
             red: {
-              type: "color",
-              value: "#fca5a5",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16056",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              strong: {
                 type: "color",
-                value: "{foundations.color.red.300}",
+                value: "#fca5a5",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2754:16056",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.red.300}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2754:16056",
+                  },
+                },
+                name: "TokensDarkColorTextChartRedStrong",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "text",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "text", "chart", "red", "strong"],
               },
-              name: "TokensDarkColorTextChartRed",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "text",
-                state: "chart",
-              },
-              path: ["tokens", "dark", "color", "text", "chart", "red"],
-            },
-            orange: {
-              type: "color",
-              value: "#fdba74",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16057",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              default: {
                 type: "color",
-                value: "{foundations.color.orange.300}",
+                value: "#ef4444",
                 description: "For data visualisation only.",
                 $extensions: {
-                  variableId: "VariableID:2754:16057",
+                  variableId: "VariableID:8642:12386",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.red.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12386",
+                  },
+                },
+                name: "TokensDarkColorTextChartRedDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "text",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "text", "chart", "red", "default"],
               },
-              name: "TokensDarkColorTextChartOrange",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "text",
-                state: "chart",
-              },
-              path: ["tokens", "dark", "color", "text", "chart", "orange"],
             },
             amber: {
-              type: "color",
-              value: "#fcd34d",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16058",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              strong: {
                 type: "color",
-                value: "{foundations.color.amber.300}",
+                value: "#fcd34d",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2754:16058",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.amber.300}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2754:16058",
+                  },
+                },
+                name: "TokensDarkColorTextChartAmberStrong",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "text",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "text", "chart", "amber", "strong"],
               },
-              name: "TokensDarkColorTextChartAmber",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "text",
-                state: "chart",
-              },
-              path: ["tokens", "dark", "color", "text", "chart", "amber"],
-            },
-            yellow: {
-              type: "color",
-              value: "#fde047",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16059",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              default: {
                 type: "color",
-                value: "{foundations.color.yellow.300}",
+                value: "#f59e0b",
                 description: "For data visualisation only.",
                 $extensions: {
-                  variableId: "VariableID:2754:16059",
+                  variableId: "VariableID:8642:12388",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.amber.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12388",
+                  },
+                },
+                name: "TokensDarkColorTextChartAmberDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "text",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "text", "chart", "amber", "default"],
               },
-              name: "TokensDarkColorTextChartYellow",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "text",
-                state: "chart",
-              },
-              path: ["tokens", "dark", "color", "text", "chart", "yellow"],
             },
-            lime: {
-              type: "color",
-              value: "#bef264",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16060",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+            neutral: {
+              strong: {
                 type: "color",
-                value: "{foundations.color.lime.300}",
+                value: "#d4d4d8",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2754:16060",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.neutral.300}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2754:16060",
+                  },
+                },
+                name: "TokensDarkColorTextChartNeutralStrong",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "text",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "text", "chart", "neutral", "strong"],
               },
-              name: "TokensDarkColorTextChartLime",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "text",
-                state: "chart",
-              },
-              path: ["tokens", "dark", "color", "text", "chart", "lime"],
-            },
-            green: {
-              type: "color",
-              value: "#86efac",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16061",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              default: {
                 type: "color",
-                value: "{foundations.color.green.300}",
+                value: "#71717a",
                 description: "For data visualisation only.",
                 $extensions: {
-                  variableId: "VariableID:2754:16061",
+                  variableId: "VariableID:8642:12390",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.neutral.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12390",
+                  },
+                },
+                name: "TokensDarkColorTextChartNeutralDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "text",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "text", "chart", "neutral", "default"],
               },
-              name: "TokensDarkColorTextChartGreen",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "text",
-                state: "chart",
-              },
-              path: ["tokens", "dark", "color", "text", "chart", "green"],
             },
             emerald: {
-              type: "color",
-              value: "#6ee7b7",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16062",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              strong: {
                 type: "color",
-                value: "{foundations.color.emerald.300}",
+                value: "#6ee7b7",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2754:16062",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.emerald.300}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2754:16062",
+                  },
+                },
+                name: "TokensDarkColorTextChartEmeraldStrong",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "text",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "text", "chart", "emerald", "strong"],
               },
-              name: "TokensDarkColorTextChartEmerald",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "text",
-                state: "chart",
+              default: {
+                type: "color",
+                value: "#10b981",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8642:12392",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.emerald.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12392",
+                  },
+                },
+                name: "TokensDarkColorTextChartEmeraldDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "text",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "text", "chart", "emerald", "default"],
               },
-              path: ["tokens", "dark", "color", "text", "chart", "emerald"],
             },
             teal: {
-              type: "color",
-              value: "#5eead4",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16063",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              strong: {
                 type: "color",
-                value: "{foundations.color.teal.300}",
+                value: "#5eead4",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2754:16063",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.teal.300}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2754:16063",
+                  },
+                },
+                name: "TokensDarkColorTextChartTealStrong",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "text",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "text", "chart", "teal", "strong"],
               },
-              name: "TokensDarkColorTextChartTeal",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "text",
-                state: "chart",
+              default: {
+                type: "color",
+                value: "#14b8a6",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8642:12393",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.teal.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12393",
+                  },
+                },
+                name: "TokensDarkColorTextChartTealDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "text",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "text", "chart", "teal", "default"],
               },
-              path: ["tokens", "dark", "color", "text", "chart", "teal"],
             },
             cyan: {
-              type: "color",
-              value: "#67e8f9",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16064",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              strong: {
                 type: "color",
-                value: "{foundations.color.cyan.300}",
+                value: "#67e8f9",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2754:16064",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.cyan.300}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2754:16064",
+                  },
+                },
+                name: "TokensDarkColorTextChartCyanStrong",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "text",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "text", "chart", "cyan", "strong"],
               },
-              name: "TokensDarkColorTextChartCyan",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "text",
-                state: "chart",
-              },
-              path: ["tokens", "dark", "color", "text", "chart", "cyan"],
-            },
-            sky: {
-              type: "color",
-              value: "#7dd3fc",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16065",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              default: {
                 type: "color",
-                value: "{foundations.color.sky.300}",
+                value: "#06b6d4",
                 description: "For data visualisation only.",
                 $extensions: {
-                  variableId: "VariableID:2754:16065",
+                  variableId: "VariableID:8642:12394",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.cyan.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12394",
+                  },
+                },
+                name: "TokensDarkColorTextChartCyanDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "text",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "text", "chart", "cyan", "default"],
               },
-              name: "TokensDarkColorTextChartSky",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "text",
-                state: "chart",
-              },
-              path: ["tokens", "dark", "color", "text", "chart", "sky"],
             },
             blue: {
-              type: "color",
-              value: "#93c5fd",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16066",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              strong: {
                 type: "color",
-                value: "{foundations.color.blue.300}",
+                value: "#93c5fd",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2754:16066",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.blue.300}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2754:16066",
+                  },
+                },
+                name: "TokensDarkColorTextChartBlueStrong",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "text",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "text", "chart", "blue", "strong"],
               },
-              name: "TokensDarkColorTextChartBlue",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "text",
-                state: "chart",
-              },
-              path: ["tokens", "dark", "color", "text", "chart", "blue"],
-            },
-            indigo: {
-              type: "color",
-              value: "#a5b4fc",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16067",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              default: {
                 type: "color",
-                value: "{foundations.color.indigo.300}",
+                value: "#3b82f6",
                 description: "For data visualisation only.",
                 $extensions: {
-                  variableId: "VariableID:2754:16067",
+                  variableId: "VariableID:8642:12396",
                 },
-              },
-              name: "TokensDarkColorTextChartIndigo",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "text",
-                state: "chart",
-              },
-              path: ["tokens", "dark", "color", "text", "chart", "indigo"],
-            },
-            violet: {
-              type: "color",
-              value: "#c4b5fd",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16068",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
-                type: "color",
-                value: "{foundations.color.violet.300}",
-                description: "For data visualisation only.",
-                $extensions: {
-                  variableId: "VariableID:2754:16068",
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.blue.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12396",
+                  },
                 },
+                name: "TokensDarkColorTextChartBlueDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "text",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "text", "chart", "blue", "default"],
               },
-              name: "TokensDarkColorTextChartViolet",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "text",
-                state: "chart",
-              },
-              path: ["tokens", "dark", "color", "text", "chart", "violet"],
             },
             purple: {
-              type: "color",
-              value: "#d8b4fe",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16069",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              strong: {
                 type: "color",
-                value: "{foundations.color.purple.300}",
+                value: "#d8b4fe",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2754:16069",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.purple.300}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2754:16069",
+                  },
+                },
+                name: "TokensDarkColorTextChartPurpleStrong",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "text",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "text", "chart", "purple", "strong"],
               },
-              name: "TokensDarkColorTextChartPurple",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "text",
-                state: "chart",
-              },
-              path: ["tokens", "dark", "color", "text", "chart", "purple"],
-            },
-            fuchsia: {
-              type: "color",
-              value: "#f0abfc",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16070",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              default: {
                 type: "color",
-                value: "{foundations.color.fuchsia.300}",
+                value: "#a855f7",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8642:12399",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.purple.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12399",
+                  },
+                },
+                name: "TokensDarkColorTextChartPurpleDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "text",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "text", "chart", "purple", "default"],
+              },
+            },
+            brand: {
+              strong: {
+                type: "color",
+                value: "#f0abfc",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2754:16070",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.brand.300}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2754:16070",
+                  },
+                },
+                name: "TokensDarkColorTextChartBrandStrong",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "text",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "text", "chart", "brand", "strong"],
               },
-              name: "TokensDarkColorTextChartFuchsia",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "text",
-                state: "chart",
+              default: {
+                type: "color",
+                value: "#d946ef",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8642:12400",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.brand.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12400",
+                  },
+                },
+                name: "TokensDarkColorTextChartBrandDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "text",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "text", "chart", "brand", "default"],
               },
-              path: ["tokens", "dark", "color", "text", "chart", "fuchsia"],
             },
             pink: {
-              type: "color",
-              value: "#f9a8d4",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16071",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              strong: {
                 type: "color",
-                value: "{foundations.color.pink.300}",
+                value: "#f9a8d4",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2754:16071",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.pink.300}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2754:16071",
+                  },
+                },
+                name: "TokensDarkColorTextChartPinkStrong",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "text",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "text", "chart", "pink", "strong"],
               },
-              name: "TokensDarkColorTextChartPink",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "text",
-                state: "chart",
-              },
-              path: ["tokens", "dark", "color", "text", "chart", "pink"],
-            },
-            rose: {
-              type: "color",
-              value: "#fda4af",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2754:16072",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              default: {
                 type: "color",
-                value: "{foundations.color.rose.300}",
+                value: "#ec4899",
                 description: "For data visualisation only.",
                 $extensions: {
-                  variableId: "VariableID:2754:16072",
+                  variableId: "VariableID:8642:12401",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.pink.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12401",
+                  },
+                },
+                name: "TokensDarkColorTextChartPinkDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "text",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "text", "chart", "pink", "default"],
               },
-              name: "TokensDarkColorTextChartRose",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "text",
-                state: "chart",
-              },
-              path: ["tokens", "dark", "color", "text", "chart", "rose"],
             },
+          },
+          disabled: {
+            type: "color",
+            value: "#52525b",
+            description: "Use for disabled text.",
+            $extensions: {
+              variableId: "VariableID:8612:2504",
+            },
+            filePath: "tokens.json",
+            isSource: true,
+            original: {
+              type: "color",
+              value: "{foundations.color.neutral.600}",
+              description: "Use for disabled text.",
+              $extensions: {
+                variableId: "VariableID:8612:2504",
+              },
+            },
+            name: "TokensDarkColorTextDisabled",
+            attributes: {
+              category: "tokens",
+              type: "dark",
+              item: "color",
+              subitem: "text",
+              state: "disabled",
+            },
+            path: ["tokens", "dark", "color", "text", "disabled"],
           },
         },
         icon: {
@@ -10274,7 +12582,7 @@ module.exports = {
           brand: {
             default: {
               type: "color",
-              value: "#3b82f6",
+              value: "#d946ef",
               description: "Use for icons that need to pull more focus.",
               $extensions: {
                 variableId: "VariableID:75:53",
@@ -10301,7 +12609,7 @@ module.exports = {
             },
             hover: {
               type: "color",
-              value: "#2563eb",
+              value: "#c026d3",
               description: "The hover color for icons that need to pull more focus.",
               $extensions: {
                 variableId: "VariableID:75:54",
@@ -10328,7 +12636,7 @@ module.exports = {
             },
             active: {
               type: "color",
-              value: "#60a5fa",
+              value: "#e879f9",
               description: "The active state (on press) color for icons that need to pull more focus.",
               $extensions: {
                 variableId: "VariableID:75:55",
@@ -10355,7 +12663,7 @@ module.exports = {
             },
             strong: {
               type: "color",
-              value: "#93c5fd",
+              value: "#f0abfc",
               description: "Use for icon on bg-brand-subtle and subtles, like badge and alert.",
               $extensions: {
                 variableId: "VariableID:632:1808",
@@ -10740,7 +13048,7 @@ module.exports = {
           utility: {
             slot: {
               type: "color",
-              value: "#8b5cf6",
+              value: "#3b82f6",
               description: "Use for icon of the Slot component.",
               $extensions: {
                 variableId: "VariableID:1851:7054",
@@ -10749,7 +13057,7 @@ module.exports = {
               isSource: true,
               original: {
                 type: "color",
-                value: "{foundations.color.violet.500}",
+                value: "{foundations.color.blue.500}",
                 description: "Use for icon of the Slot component.",
                 $extensions: {
                   variableId: "VariableID:1851:7054",
@@ -10768,464 +13076,592 @@ module.exports = {
           },
           chart: {
             red: {
-              type: "color",
-              value: "#fca5a5",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16096",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              strong: {
                 type: "color",
-                value: "{foundations.color.red.300}",
+                value: "#fca5a5",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2756:16096",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.red.300}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2756:16096",
+                  },
+                },
+                name: "TokensDarkColorIconChartRedStrong",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "icon",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "icon", "chart", "red", "strong"],
               },
-              name: "TokensDarkColorIconChartRed",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "icon",
-                state: "chart",
-              },
-              path: ["tokens", "dark", "color", "icon", "chart", "red"],
-            },
-            orange: {
-              type: "color",
-              value: "#fdba74",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16097",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              default: {
                 type: "color",
-                value: "{foundations.color.orange.300}",
+                value: "#ef4444",
                 description: "For data visualisation only.",
                 $extensions: {
-                  variableId: "VariableID:2756:16097",
+                  variableId: "VariableID:8642:12420",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.red.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12420",
+                  },
+                },
+                name: "TokensDarkColorIconChartRedDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "icon",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "icon", "chart", "red", "default"],
               },
-              name: "TokensDarkColorIconChartOrange",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "icon",
-                state: "chart",
-              },
-              path: ["tokens", "dark", "color", "icon", "chart", "orange"],
             },
             amber: {
-              type: "color",
-              value: "#fcd34d",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16098",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              strong: {
                 type: "color",
-                value: "{foundations.color.amber.300}",
+                value: "#fcd34d",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2756:16098",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.amber.300}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2756:16098",
+                  },
+                },
+                name: "TokensDarkColorIconChartAmberStrong",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "icon",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "icon", "chart", "amber", "strong"],
               },
-              name: "TokensDarkColorIconChartAmber",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "icon",
-                state: "chart",
-              },
-              path: ["tokens", "dark", "color", "icon", "chart", "amber"],
-            },
-            yellow: {
-              type: "color",
-              value: "#fde047",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16099",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              default: {
                 type: "color",
-                value: "{foundations.color.yellow.300}",
+                value: "#f59e0b",
                 description: "For data visualisation only.",
                 $extensions: {
-                  variableId: "VariableID:2756:16099",
+                  variableId: "VariableID:8642:12422",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.amber.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12422",
+                  },
+                },
+                name: "TokensDarkColorIconChartAmberDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "icon",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "icon", "chart", "amber", "default"],
               },
-              name: "TokensDarkColorIconChartYellow",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "icon",
-                state: "chart",
-              },
-              path: ["tokens", "dark", "color", "icon", "chart", "yellow"],
             },
-            lime: {
-              type: "color",
-              value: "#bef264",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16100",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+            neutral: {
+              strong: {
                 type: "color",
-                value: "{foundations.color.lime.300}",
+                value: "#d4d4d8",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2756:16100",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.neutral.300}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2756:16100",
+                  },
+                },
+                name: "TokensDarkColorIconChartNeutralStrong",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "icon",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "icon", "chart", "neutral", "strong"],
               },
-              name: "TokensDarkColorIconChartLime",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "icon",
-                state: "chart",
-              },
-              path: ["tokens", "dark", "color", "icon", "chart", "lime"],
-            },
-            green: {
-              type: "color",
-              value: "#86efac",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16101",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              default: {
                 type: "color",
-                value: "{foundations.color.green.300}",
+                value: "#71717a",
                 description: "For data visualisation only.",
                 $extensions: {
-                  variableId: "VariableID:2756:16101",
+                  variableId: "VariableID:8642:12424",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.neutral.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12424",
+                  },
+                },
+                name: "TokensDarkColorIconChartNeutralDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "icon",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "icon", "chart", "neutral", "default"],
               },
-              name: "TokensDarkColorIconChartGreen",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "icon",
-                state: "chart",
-              },
-              path: ["tokens", "dark", "color", "icon", "chart", "green"],
             },
             emerald: {
-              type: "color",
-              value: "#6ee7b7",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16102",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              strong: {
                 type: "color",
-                value: "{foundations.color.emerald.300}",
+                value: "#6ee7b7",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2756:16102",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.emerald.300}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2756:16102",
+                  },
+                },
+                name: "TokensDarkColorIconChartEmeraldStrong",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "icon",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "icon", "chart", "emerald", "strong"],
               },
-              name: "TokensDarkColorIconChartEmerald",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "icon",
-                state: "chart",
+              default: {
+                type: "color",
+                value: "#10b981",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8642:12426",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.emerald.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12426",
+                  },
+                },
+                name: "TokensDarkColorIconChartEmeraldDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "icon",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "icon", "chart", "emerald", "default"],
               },
-              path: ["tokens", "dark", "color", "icon", "chart", "emerald"],
             },
             teal: {
-              type: "color",
-              value: "#5eead4",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16103",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              strong: {
                 type: "color",
-                value: "{foundations.color.teal.300}",
+                value: "#5eead4",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2756:16103",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.teal.300}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2756:16103",
+                  },
+                },
+                name: "TokensDarkColorIconChartTealStrong",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "icon",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "icon", "chart", "teal", "strong"],
               },
-              name: "TokensDarkColorIconChartTeal",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "icon",
-                state: "chart",
+              default: {
+                type: "color",
+                value: "#14b8a6",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8642:12427",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.teal.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12427",
+                  },
+                },
+                name: "TokensDarkColorIconChartTealDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "icon",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "icon", "chart", "teal", "default"],
               },
-              path: ["tokens", "dark", "color", "icon", "chart", "teal"],
             },
             cyan: {
-              type: "color",
-              value: "#67e8f9",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16104",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              strong: {
                 type: "color",
-                value: "{foundations.color.cyan.300}",
+                value: "#67e8f9",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2756:16104",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.cyan.300}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2756:16104",
+                  },
+                },
+                name: "TokensDarkColorIconChartCyanStrong",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "icon",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "icon", "chart", "cyan", "strong"],
               },
-              name: "TokensDarkColorIconChartCyan",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "icon",
-                state: "chart",
-              },
-              path: ["tokens", "dark", "color", "icon", "chart", "cyan"],
-            },
-            sky: {
-              type: "color",
-              value: "#7dd3fc",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16105",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              default: {
                 type: "color",
-                value: "{foundations.color.sky.300}",
+                value: "#06b6d4",
                 description: "For data visualisation only.",
                 $extensions: {
-                  variableId: "VariableID:2756:16105",
+                  variableId: "VariableID:8642:12428",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.cyan.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12428",
+                  },
+                },
+                name: "TokensDarkColorIconChartCyanDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "icon",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "icon", "chart", "cyan", "default"],
               },
-              name: "TokensDarkColorIconChartSky",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "icon",
-                state: "chart",
-              },
-              path: ["tokens", "dark", "color", "icon", "chart", "sky"],
             },
             blue: {
-              type: "color",
-              value: "#93c5fd",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16106",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              strong: {
                 type: "color",
-                value: "{foundations.color.blue.300}",
+                value: "#93c5fd",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2756:16106",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.blue.300}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2756:16106",
+                  },
+                },
+                name: "TokensDarkColorIconChartBlueStrong",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "icon",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "icon", "chart", "blue", "strong"],
               },
-              name: "TokensDarkColorIconChartBlue",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "icon",
-                state: "chart",
-              },
-              path: ["tokens", "dark", "color", "icon", "chart", "blue"],
-            },
-            indigo: {
-              type: "color",
-              value: "#a5b4fc",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16107",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              default: {
                 type: "color",
-                value: "{foundations.color.indigo.300}",
+                value: "#3b82f6",
                 description: "For data visualisation only.",
                 $extensions: {
-                  variableId: "VariableID:2756:16107",
+                  variableId: "VariableID:8642:12430",
                 },
-              },
-              name: "TokensDarkColorIconChartIndigo",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "icon",
-                state: "chart",
-              },
-              path: ["tokens", "dark", "color", "icon", "chart", "indigo"],
-            },
-            violet: {
-              type: "color",
-              value: "#c4b5fd",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16108",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
-                type: "color",
-                value: "{foundations.color.violet.300}",
-                description: "For data visualisation only.",
-                $extensions: {
-                  variableId: "VariableID:2756:16108",
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.blue.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12430",
+                  },
                 },
+                name: "TokensDarkColorIconChartBlueDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "icon",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "icon", "chart", "blue", "default"],
               },
-              name: "TokensDarkColorIconChartViolet",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "icon",
-                state: "chart",
-              },
-              path: ["tokens", "dark", "color", "icon", "chart", "violet"],
             },
             purple: {
-              type: "color",
-              value: "#d8b4fe",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16109",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              strong: {
                 type: "color",
-                value: "{foundations.color.purple.300}",
+                value: "#d8b4fe",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2756:16109",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.purple.300}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2756:16109",
+                  },
+                },
+                name: "TokensDarkColorIconChartPurpleStrong",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "icon",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "icon", "chart", "purple", "strong"],
               },
-              name: "TokensDarkColorIconChartPurple",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "icon",
-                state: "chart",
-              },
-              path: ["tokens", "dark", "color", "icon", "chart", "purple"],
-            },
-            fuchsia: {
-              type: "color",
-              value: "#f0abfc",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16110",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              default: {
                 type: "color",
-                value: "{foundations.color.fuchsia.300}",
+                value: "#a855f7",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8642:12433",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.purple.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12433",
+                  },
+                },
+                name: "TokensDarkColorIconChartPurpleDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "icon",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "icon", "chart", "purple", "default"],
+              },
+            },
+            brand: {
+              strong: {
+                type: "color",
+                value: "#f0abfc",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2756:16110",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.brand.300}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2756:16110",
+                  },
+                },
+                name: "TokensDarkColorIconChartBrandStrong",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "icon",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "icon", "chart", "brand", "strong"],
               },
-              name: "TokensDarkColorIconChartFuchsia",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "icon",
-                state: "chart",
+              default: {
+                type: "color",
+                value: "#d946ef",
+                description: "For data visualisation only.",
+                $extensions: {
+                  variableId: "VariableID:8642:12434",
+                },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.brand.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12434",
+                  },
+                },
+                name: "TokensDarkColorIconChartBrandDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "icon",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "icon", "chart", "brand", "default"],
               },
-              path: ["tokens", "dark", "color", "icon", "chart", "fuchsia"],
             },
             pink: {
-              type: "color",
-              value: "#f9a8d4",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16111",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              strong: {
                 type: "color",
-                value: "{foundations.color.pink.300}",
+                value: "#f9a8d4",
                 description: "For data visualisation only.",
                 $extensions: {
                   variableId: "VariableID:2756:16111",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.pink.300}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:2756:16111",
+                  },
+                },
+                name: "TokensDarkColorIconChartPinkStrong",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "icon",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "icon", "chart", "pink", "strong"],
               },
-              name: "TokensDarkColorIconChartPink",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "icon",
-                state: "chart",
-              },
-              path: ["tokens", "dark", "color", "icon", "chart", "pink"],
-            },
-            rose: {
-              type: "color",
-              value: "#fda4af",
-              description: "For data visualisation only.",
-              $extensions: {
-                variableId: "VariableID:2756:16112",
-              },
-              filePath: "tokens.json",
-              isSource: true,
-              original: {
+              default: {
                 type: "color",
-                value: "{foundations.color.rose.300}",
+                value: "#ec4899",
                 description: "For data visualisation only.",
                 $extensions: {
-                  variableId: "VariableID:2756:16112",
+                  variableId: "VariableID:8642:12435",
                 },
+                filePath: "tokens.json",
+                isSource: true,
+                original: {
+                  type: "color",
+                  value: "{foundations.color.pink.500}",
+                  description: "For data visualisation only.",
+                  $extensions: {
+                    variableId: "VariableID:8642:12435",
+                  },
+                },
+                name: "TokensDarkColorIconChartPinkDefault",
+                attributes: {
+                  category: "tokens",
+                  type: "dark",
+                  item: "color",
+                  subitem: "icon",
+                  state: "chart",
+                },
+                path: ["tokens", "dark", "color", "icon", "chart", "pink", "default"],
               },
-              name: "TokensDarkColorIconChartRose",
-              attributes: {
-                category: "tokens",
-                type: "dark",
-                item: "color",
-                subitem: "icon",
-                state: "chart",
-              },
-              path: ["tokens", "dark", "color", "icon", "chart", "rose"],
             },
+          },
+          disabled: {
+            type: "color",
+            value: "#52525b",
+            description: "The disabled state color for icons.",
+            $extensions: {
+              variableId: "VariableID:8612:4648",
+            },
+            filePath: "tokens.json",
+            isSource: true,
+            original: {
+              type: "color",
+              value: "{foundations.color.neutral.600}",
+              description: "The disabled state color for icons.",
+              $extensions: {
+                variableId: "VariableID:8612:4648",
+              },
+            },
+            name: "TokensDarkColorIconDisabled",
+            attributes: {
+              category: "tokens",
+              type: "dark",
+              item: "color",
+              subitem: "icon",
+              state: "disabled",
+            },
+            path: ["tokens", "dark", "color", "icon", "disabled"],
           },
         },
       },
@@ -11261,7 +13697,7 @@ module.exports = {
           sm: {
             type: "dimension",
             value: "4px",
-            description: "Use in small size components, such as Checkbox and Segmented.",
+            description: "Use in small size components, such as Checkbox and Tag.",
             $extensions: {
               variableId: "VariableID:1830:17744",
             },
@@ -11270,7 +13706,7 @@ module.exports = {
             original: {
               type: "dimension",
               value: "4px",
-              description: "Use in small size components, such as Checkbox and Segmented.",
+              description: "Use in small size components, such as Checkbox and Tag.",
               $extensions: {
                 variableId: "VariableID:1830:17744",
               },
@@ -12233,7 +14669,7 @@ module.exports = {
           path: ["tokens", "dark", "space", "96"],
         },
       },
-      breakpoint: {
+      screen: {
         xs: {
           type: "dimension",
           value: "390px",
@@ -12253,14 +14689,14 @@ module.exports = {
               variableId: "VariableID:233:721",
             },
           },
-          name: "TokensDarkBreakpointXs",
+          name: "TokensDarkScreenXs",
           attributes: {
             category: "tokens",
             type: "dark",
-            item: "breakpoint",
+            item: "screen",
             subitem: "xs",
           },
-          path: ["tokens", "dark", "breakpoint", "xs"],
+          path: ["tokens", "dark", "screen", "xs"],
         },
         sm: {
           type: "dimension",
@@ -12281,14 +14717,14 @@ module.exports = {
               variableId: "VariableID:233:730",
             },
           },
-          name: "TokensDarkBreakpointSm",
+          name: "TokensDarkScreenSm",
           attributes: {
             category: "tokens",
             type: "dark",
-            item: "breakpoint",
+            item: "screen",
             subitem: "sm",
           },
-          path: ["tokens", "dark", "breakpoint", "sm"],
+          path: ["tokens", "dark", "screen", "sm"],
         },
         md: {
           type: "dimension",
@@ -12309,14 +14745,14 @@ module.exports = {
               variableId: "VariableID:233:731",
             },
           },
-          name: "TokensDarkBreakpointMd",
+          name: "TokensDarkScreenMd",
           attributes: {
             category: "tokens",
             type: "dark",
-            item: "breakpoint",
+            item: "screen",
             subitem: "md",
           },
-          path: ["tokens", "dark", "breakpoint", "md"],
+          path: ["tokens", "dark", "screen", "md"],
         },
         lg: {
           type: "dimension",
@@ -12337,14 +14773,14 @@ module.exports = {
               variableId: "VariableID:233:732",
             },
           },
-          name: "TokensDarkBreakpointLg",
+          name: "TokensDarkScreenLg",
           attributes: {
             category: "tokens",
             type: "dark",
-            item: "breakpoint",
+            item: "screen",
             subitem: "lg",
           },
-          path: ["tokens", "dark", "breakpoint", "lg"],
+          path: ["tokens", "dark", "screen", "lg"],
         },
         xl: {
           type: "dimension",
@@ -12365,14 +14801,14 @@ module.exports = {
               variableId: "VariableID:233:733",
             },
           },
-          name: "TokensDarkBreakpointXl",
+          name: "TokensDarkScreenXl",
           attributes: {
             category: "tokens",
             type: "dark",
-            item: "breakpoint",
+            item: "screen",
             subitem: "xl",
           },
-          path: ["tokens", "dark", "breakpoint", "xl"],
+          path: ["tokens", "dark", "screen", "xl"],
         },
         "2xl": {
           type: "dimension",
@@ -12393,14 +14829,14 @@ module.exports = {
               variableId: "VariableID:233:735",
             },
           },
-          name: "TokensDarkBreakpoint2xl",
+          name: "TokensDarkScreen2xl",
           attributes: {
             category: "tokens",
             type: "dark",
-            item: "breakpoint",
+            item: "screen",
             subitem: "2xl",
           },
-          path: ["tokens", "dark", "breakpoint", "2xl"],
+          path: ["tokens", "dark", "screen", "2xl"],
         },
       },
       size: {
@@ -13186,111 +15622,7 @@ module.exports = {
         },
       },
       opacity: {
-        visible: {
-          type: "dimension",
-          value: "100px",
-          description: "Apply to content that is completely visible.",
-          $extensions: {
-            variableId: "VariableID:1708:14183",
-          },
-          filePath: "tokens.json",
-          isSource: true,
-          original: {
-            type: "dimension",
-            value: "100px",
-            description: "Apply to content that is completely visible.",
-            $extensions: {
-              variableId: "VariableID:1708:14183",
-            },
-          },
-          name: "TokensDarkOpacityVisible",
-          attributes: {
-            category: "tokens",
-            type: "dark",
-            item: "opacity",
-            subitem: "visible",
-          },
-          path: ["tokens", "dark", "opacity", "visible"],
-        },
-        hover: {
-          type: "dimension",
-          value: "80px",
-          description: "Apply to content when in an hover state.",
-          $extensions: {
-            variableId: "VariableID:1708:14184",
-          },
-          filePath: "tokens.json",
-          isSource: true,
-          original: {
-            type: "dimension",
-            value: "80px",
-            description: "Apply to content when in an hover state.",
-            $extensions: {
-              variableId: "VariableID:1708:14184",
-            },
-          },
-          name: "TokensDarkOpacityHover",
-          attributes: {
-            category: "tokens",
-            type: "dark",
-            item: "opacity",
-            subitem: "hover",
-          },
-          path: ["tokens", "dark", "opacity", "hover"],
-        },
-        disabled: {
-          type: "dimension",
-          value: "50px",
-          description: "Apply to content when in a disabled state.",
-          $extensions: {
-            variableId: "VariableID:1708:14185",
-          },
-          filePath: "tokens.json",
-          isSource: true,
-          original: {
-            type: "dimension",
-            value: "50px",
-            description: "Apply to content when in a disabled state.",
-            $extensions: {
-              variableId: "VariableID:1708:14185",
-            },
-          },
-          name: "TokensDarkOpacityDisabled",
-          attributes: {
-            category: "tokens",
-            type: "dark",
-            item: "opacity",
-            subitem: "disabled",
-          },
-          path: ["tokens", "dark", "opacity", "disabled"],
-        },
-        loading: {
-          type: "dimension",
-          value: "30px",
-          description: "Apply to content when in a loading state.",
-          $extensions: {
-            variableId: "VariableID:1846:18012",
-          },
-          filePath: "tokens.json",
-          isSource: true,
-          original: {
-            type: "dimension",
-            value: "30px",
-            description: "Apply to content when in a loading state.",
-            $extensions: {
-              variableId: "VariableID:1846:18012",
-            },
-          },
-          name: "TokensDarkOpacityLoading",
-          attributes: {
-            category: "tokens",
-            type: "dark",
-            item: "opacity",
-            subitem: "loading",
-          },
-          path: ["tokens", "dark", "opacity", "loading"],
-        },
-        invisible: {
+        0: {
           type: "dimension",
           value: "0px",
           description: "Apply to content that is completely invisible.",
@@ -13307,21 +15639,125 @@ module.exports = {
               variableId: "VariableID:1846:18013",
             },
           },
-          name: "TokensDarkOpacityInvisible",
+          name: "TokensDarkOpacity0",
           attributes: {
             category: "tokens",
             type: "dark",
             item: "opacity",
-            subitem: "invisible",
+            subitem: "0",
           },
-          path: ["tokens", "dark", "opacity", "invisible"],
+          path: ["tokens", "dark", "opacity", "0"],
+        },
+        30: {
+          type: "dimension",
+          value: "30px",
+          description: "Apply to content when in a loading state.",
+          $extensions: {
+            variableId: "VariableID:1846:18012",
+          },
+          filePath: "tokens.json",
+          isSource: true,
+          original: {
+            type: "dimension",
+            value: "30px",
+            description: "Apply to content when in a loading state.",
+            $extensions: {
+              variableId: "VariableID:1846:18012",
+            },
+          },
+          name: "TokensDarkOpacity30",
+          attributes: {
+            category: "tokens",
+            type: "dark",
+            item: "opacity",
+            subitem: "30",
+          },
+          path: ["tokens", "dark", "opacity", "30"],
+        },
+        50: {
+          type: "dimension",
+          value: "50px",
+          description: "Apply to content when in a disabled state.",
+          $extensions: {
+            variableId: "VariableID:1708:14185",
+          },
+          filePath: "tokens.json",
+          isSource: true,
+          original: {
+            type: "dimension",
+            value: "50px",
+            description: "Apply to content when in a disabled state.",
+            $extensions: {
+              variableId: "VariableID:1708:14185",
+            },
+          },
+          name: "TokensDarkOpacity50",
+          attributes: {
+            category: "tokens",
+            type: "dark",
+            item: "opacity",
+            subitem: "50",
+          },
+          path: ["tokens", "dark", "opacity", "50"],
+        },
+        80: {
+          type: "dimension",
+          value: "80px",
+          description: "Apply to content when in an hover state.",
+          $extensions: {
+            variableId: "VariableID:1708:14184",
+          },
+          filePath: "tokens.json",
+          isSource: true,
+          original: {
+            type: "dimension",
+            value: "80px",
+            description: "Apply to content when in an hover state.",
+            $extensions: {
+              variableId: "VariableID:1708:14184",
+            },
+          },
+          name: "TokensDarkOpacity80",
+          attributes: {
+            category: "tokens",
+            type: "dark",
+            item: "opacity",
+            subitem: "80",
+          },
+          path: ["tokens", "dark", "opacity", "80"],
+        },
+        100: {
+          type: "dimension",
+          value: "100px",
+          description: "Apply to content that is completely visible.",
+          $extensions: {
+            variableId: "VariableID:1708:14183",
+          },
+          filePath: "tokens.json",
+          isSource: true,
+          original: {
+            type: "dimension",
+            value: "100px",
+            description: "Apply to content that is completely visible.",
+            $extensions: {
+              variableId: "VariableID:1708:14183",
+            },
+          },
+          name: "TokensDarkOpacity100",
+          attributes: {
+            category: "tokens",
+            type: "dark",
+            item: "opacity",
+            subitem: "100",
+          },
+          path: ["tokens", "dark", "opacity", "100"],
         },
       },
       font: {
         family: {
           sans: {
             type: "string",
-            value: "Geist",
+            value: "Inter",
             description: "The default interface font of the system.",
             $extensions: {
               variableId: "VariableID:4313:2601",
@@ -13330,7 +15766,7 @@ module.exports = {
             isSource: true,
             original: {
               type: "string",
-              value: "Geist",
+              value: "Inter",
               description: "The default interface font of the system.",
               $extensions: {
                 variableId: "VariableID:4313:2601",
@@ -13348,8 +15784,8 @@ module.exports = {
           },
           mono: {
             type: "string",
-            value: "Geist Mono",
-            description: "Used for code, pre and kbd elements in typography.",
+            value: "SF Mono",
+            description: "Use for code, pre and kbd elements in typography.",
             $extensions: {
               variableId: "VariableID:4313:2602",
             },
@@ -13357,8 +15793,8 @@ module.exports = {
             isSource: true,
             original: {
               type: "string",
-              value: "Geist Mono",
-              description: "Used for code, pre and kbd elements in typography.",
+              value: "SF Mono",
+              description: "Use for code, pre and kbd elements in typography.",
               $extensions: {
                 variableId: "VariableID:4313:2602",
               },
@@ -13372,6 +15808,60 @@ module.exports = {
               state: "mono",
             },
             path: ["tokens", "dark", "font", "family", "mono"],
+          },
+          brand: {
+            type: "string",
+            value: "Clash Grotesk",
+            description: "Use for brand elements in typography.",
+            $extensions: {
+              variableId: "VariableID:8610:18948",
+            },
+            filePath: "tokens.json",
+            isSource: true,
+            original: {
+              type: "string",
+              value: "Clash Grotesk",
+              description: "Use for brand elements in typography.",
+              $extensions: {
+                variableId: "VariableID:8610:18948",
+              },
+            },
+            name: "TokensDarkFontFamilyBrand",
+            attributes: {
+              category: "tokens",
+              type: "dark",
+              item: "font",
+              subitem: "family",
+              state: "brand",
+            },
+            path: ["tokens", "dark", "font", "family", "brand"],
+          },
+          logo: {
+            type: "string",
+            value: "Clash Display",
+            description: "Use for logo elements in typography.",
+            $extensions: {
+              variableId: "VariableID:8610:18949",
+            },
+            filePath: "tokens.json",
+            isSource: true,
+            original: {
+              type: "string",
+              value: "Clash Display",
+              description: "Use for logo elements in typography.",
+              $extensions: {
+                variableId: "VariableID:8610:18949",
+              },
+            },
+            name: "TokensDarkFontFamilyLogo",
+            attributes: {
+              category: "tokens",
+              type: "dark",
+              item: "font",
+              subitem: "family",
+              state: "logo",
+            },
+            path: ["tokens", "dark", "font", "family", "logo"],
           },
         },
         weight: {

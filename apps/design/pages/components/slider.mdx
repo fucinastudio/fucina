@@ -3,6 +3,7 @@ title: Slider
 ---
 
 import { Tabs, Cards, Card } from "nextra/components";
+
 import { AccessibilityTable } from "@/components/accessibility/accessibility-table.mdx";
 import { sliderAccessibilityData } from "@/components/accessibility/slider.tsx";
 import { SliderPreview, SliderRange, SliderStep, SliderOverlap } from "@/components/preview/slider.tsx";
@@ -12,25 +13,24 @@ import { SliderPreview, SliderRange, SliderStep, SliderOverlap } from "@/compone
 An input where the user selects a value from within a given range.
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <SliderPreview />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy filename="slider.tsx"
-    import { Slider } from "@fucina/ui/components/slider"
+<Tabs.Tab>
+  <SliderPreview />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy filename="slider.tsx"
+import { Slider } from "@fucina/ui"
 
-    export function SliderDemo() {
-        return (
-            <Slider
-              defaultValue={[25]}
-              max={100}
-              step={1}
-            />
-        )
-    }
-    ```
-
-  </Tabs.Tab>
+export function SliderDemo() {
+  return (
+    <Slider
+      defaultValue={[25]}
+      max={100}
+      step={1}
+    />
+  )
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ## Usage
@@ -52,25 +52,24 @@ Avoid using Sliders for binary inputs, precise value entry (where a text box or 
 ### Default
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <SliderPreview />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy filename="slider.tsx"
-    import { Slider } from "@fucina/ui/components/slider"
+<Tabs.Tab>
+  <SliderPreview />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy filename="slider.tsx"
+import { Slider } from "@fucina/ui"
 
-    export function SliderDemo() {
-        return (
-            <Slider
-              defaultValue={[25]}
-              max={100}
-              step={1}
-            />
-        )
-    }
-    ```
-
-  </Tabs.Tab>
+export function SliderDemo() {
+  return (
+    <Slider
+      defaultValue={[25]}
+      max={100}
+      step={1}
+    />
+  )
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ### Range
@@ -78,25 +77,24 @@ Avoid using Sliders for binary inputs, precise value entry (where a text box or 
 Add multiple `values` to create a range slider.
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <SliderRange />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy {6} /[25, 75]/ filename="slider.tsx"
-    import { Slider } from "@fucina/ui/components/slider"
+<Tabs.Tab>
+  <SliderRange />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy /[25, 75]/ filename="slider.tsx"
+import { Slider } from "@fucina/ui"
 
-    export function SliderDemo() {
-        return (
-            <Slider
-              defaultValue={[25, 75]}
-              max={100}
-              step={1}
-            />
-        )
-    }
-    ```
-
-  </Tabs.Tab>
+export function SliderDemo() {
+  return (
+    <Slider
+      defaultValue={[25, 75]}
+      max={100}
+      step={1}
+    />
+  )
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ### Step size
@@ -104,25 +102,24 @@ Add multiple `values` to create a range slider.
 Use the `step` prop to increase the stepping interval.
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <SliderStep />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy {8} /step/ filename="slider.tsx"
-    import { Slider } from "@fucina/ui/components/slider"
+<Tabs.Tab>
+  <SliderStep />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy /step/ filename="slider.tsx"
+import { Slider } from "@fucina/ui"
 
-    export function SliderDemo() {
-        return (
-            <Slider
-              defaultValue={[50]}
-              max={100}
-              step={10}
-            />
-        )
-    }
-    ```
-
-  </Tabs.Tab>
+export function SliderDemo() {
+  return (
+    <Slider
+      defaultValue={[50]}
+      max={100}
+      step={10}
+    />
+  )
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ### Prevent thumb overlap
@@ -130,26 +127,25 @@ Use the `step` prop to increase the stepping interval.
 Use `minStepsBetweenThumbs` to avoid thumbs with equal values.
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <SliderOverlap />
-  </Tabs.Tab>
-  <Tabs.Tab>
-    ```js copy {9} /minStepsBetweenThumbs/ filename="slider.tsx"
-    import { Slider } from "@fucina/ui/components/slider"
+<Tabs.Tab>
+  <SliderOverlap />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy /minStepsBetweenThumbs/ filename="slider.tsx"
+import { Slider } from "@fucina/ui"
 
-    export function SliderDemo() {
-        return (
-            <Slider
-              defaultValue={[25, 75]}
-              step={10}
-              max={100}
-              minStepsBetweenThumbs={1}
-            />
-        )
-    }
-    ```
-
-  </Tabs.Tab>
+export function SliderDemo() {
+  return (
+    <Slider
+      defaultValue={[25, 75]}
+      step={10}
+      max={100}
+      minStepsBetweenThumbs={1}
+    />
+  )
+}
+```
+</Tabs.Tab>
 </Tabs>
 
 ## Useful links
@@ -163,7 +159,7 @@ Use `minStepsBetweenThumbs` to avoid thumbs with equal values.
   />
   <Card
     title="🪄 Figma"
-    href="https://www.figma.com/design/Jfto7FUoU7mSpnv9uESD60/%F0%9F%9F%A0-feely---design-system?node-id=540-8879&t=nua4UmG9Iu1hfUAm-1"
+    href="https://www.figma.com/design/Jfto7FUoU7mSpnv9uESD60/%F0%9F%94%A5-Fucina---Design-System?node-id=639-30286&t=BERFxjM8vy494uCE-1"
   />
   <Card
     title="🐝 API Reference"

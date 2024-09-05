@@ -3,6 +3,7 @@ title: Toast
 ---
 
 import { Tabs, Cards, Card } from "nextra/components";
+
 import { AccessibilityTable } from "@/components/accessibility/accessibility-table.mdx";
 import { toastAccessibilityData } from "@/components/accessibility/toast.tsx";
 import {
@@ -10,7 +11,6 @@ import {
   ToastSimple,
   ToastWithTitle,
   ToastWithAction,
-  ToastBrand,
   ToastDanger,
   ToastWarning,
 } from "@/components/preview/toast.tsx";
@@ -20,31 +20,26 @@ import {
 A succinct message that is displayed temporarily.
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <ToastPreview />
-  </Tabs.Tab>
-  <Tabs.Tab>
-  ```js copy filename="toast.tsx"
-  "use client"
-  import { Button } from "@fucina/ui/components/button"
-  import { toast } from "@fucina/ui/components/toast"
+<Tabs.Tab>
+  <ToastPreview />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy filename="toast.tsx"
+"use client"
+import { Button, toast } from "@fucina/ui"
 
 export function ToastDemo() {
-
-    return (
-        <Button
-          variant="secondary"
-          onClick={() => {
-            toast("Your message has been sent.");
-          }}>
-        >
-          Show Toast
-        </Button>
-    )
-
+  return (
+    <Button
+      variant="secondary"
+      onClick={() => {
+        toast("Your message has been sent.");
+      }}>
+      > Show Toast
+    </Button>
+  );
 }
-
-````
+```
 </Tabs.Tab>
 </Tabs>
 
@@ -55,6 +50,7 @@ The Toast component displays a brief, auto-expiring message to provide feedback 
 They are commonly used to confirm that an action has been completed successfully, to report a minor error, or to convey short, informative messages.
 
 ### When to use
+
 - **Feedback after an action**: Utilize Toasts to confirm actions such as saving a form, sending a message, or copying data to the clipboard.
 - **Transient information**: Use Toasts to display temporary information that does not require user action and is not critical to the task at hand.
 - **Non-disruptive alerts**: Employ Toasts for alerts that need to be noticed but do not require immediate user attention, allowing users to continue their current task without interruption.
@@ -71,206 +67,153 @@ Avoid using Toasts for critical errors or information that requires immediate ac
   <ToastSimple />
 </Tabs.Tab>
 <Tabs.Tab>
-```js copy {13} /description/ filename="toast.tsx"
+```js copy /description/ filename="toast.tsx"
 "use client"
-import { Button } from "@fucina/ui/components/button"
-import { toast } from "@fucina/ui/components/toast"
+import { Button, toast } from "@fucina/ui"
 
 export function ToastDemo() {
-
   return (
-      <Button
-          variant="secondary"
-          onClick={() => {
-            toast("Your message has been sent.");
-          }}>
-          >
-              Show Toast
-      </Button>
+    <Button
+      variant="secondary"
+      onClick={() => {
+        toast("Your message has been sent.");
+      }}>
+      {" "}
+      > Show Toast
+    </Button>
   )
 }
-````
-
-  </Tabs.Tab>
+```
+</Tabs.Tab>
 </Tabs>
 
 ### With title
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <ToastWithTitle/>
-  </Tabs.Tab>
-  <Tabs.Tab>
-  ```js copy {13} /title/ filename="toast.tsx"
-  "use client"
-  import { Button } from "@fucina/ui/components/button"
-  import { toast } from "@fucina/ui/components/toast"
+<Tabs.Tab>
+  <ToastWithTitle/>
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy /title/ filename="toast.tsx"
+"use client"
+import { Button, toast } from "@fucina/ui"
 
 export function ToastDemo() {
-
-    return (
-        <Button
-          variant="secondary"
-          onClick={() => {
-            toast("Your message has been sent.", {
-              description: "There was a problem with your request.",
-            });
-          }}>
-        >
-          Show Toast
-        </Button>
-    )
-
+  return (
+    <Button
+      variant="secondary"
+      onClick={() => {
+        toast("Your message has been sent.", {
+          description: "There was a problem with your request.",
+        });
+      }}>
+    >
+      Show Toast
+    </Button>
+  )
 }
-
-````
+```
 </Tabs.Tab>
 </Tabs>
 
 ### With action
+
 <Tabs items={['Preview', 'Code']}>
 <Tabs.Tab>
   <ToastWithAction />
 </Tabs.Tab>
 <Tabs.Tab>
-```js copy {15} /action/ filename="toast.tsx"
+```js copy /action/ filename="toast.tsx"
 "use client"
-import { Button } from "@fucina/ui/components/button"
-import { toast } from "@fucina/ui/components/toast/use-toast"
+import { Button, toast } from "@fucina/ui"
 
 export function ToastDemo() {
-const { toast } = useToast()
-
+  const { toast } = useToast()
   return (
-      <Button
-          variant="secondary"
-          onClick={() => {
-            toast("Your message has been sent.", {
-              description: "There was a problem with your request.",
-              action: {
-                label: "Undo",
-                onClick: () => console.log("Undo"),
-              },
-            });
-          }}>
-      >
-        Show Toast
-      </Button>
+    <Button
+      variant="secondary"
+      onClick={() => {
+        toast("Your message has been sent.", {
+          description: "There was a problem with your request.",
+          action: {
+            label: "Undo",
+            onClick: () => console.log("Undo"),
+          },
+        });
+      }}>
+      {" "}
+      > Show Toast
+    </Button>
   )
 }
-````
-
-  </Tabs.Tab>
-</Tabs>
-
-### Brand
-
-<Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <ToastBrand />
-  </Tabs.Tab>
-  <Tabs.Tab>
-  ```js copy {16} /status: "brand"/ filename="toast.tsx"
-  "use client"
-  import { Button } from "@fucina/ui/components/button"
-  import { useToast } from "@fucina/ui/components/toast/use-toast"
-
-export function ToastDemo() {
-const { toast } = useToast()
-
-    return (
-        <Button
-            variant="secondary"
-            onClick={() => {
-              toast.success("Your message has been sent.", {
-                description: "There was a problem with your request.",
-                action: {
-                  label: "Undo",
-                  onClick: () => console.log("Undo"),
-                },
-              });
-            }}>
-            >
-                Show Toast
-        </Button>
-    )
-
-}
-
-````
+```
 </Tabs.Tab>
 </Tabs>
 
 ### Danger
+
 <Tabs items={['Preview', 'Code']}>
 <Tabs.Tab>
   <ToastDanger />
 </Tabs.Tab>
 <Tabs.Tab>
-```js copy {16} /status: "danger"/ filename="toast.tsx"
+```js copy /status: "danger"/ filename="toast.tsx"
 "use client"
-import { Button } from "@fucina/ui/components/button"
-import { useToast } from "@fucina/ui/components/toast/use-toast"
+import { Button, useToast } from "@fucina/ui"
 
 export function ToastDemo() {
-const { toast } = useToast()
-
+  const { toast } = useToast()
   return (
-      <Button
-          variant="secondary"
-          onClick={() => {
-            toast.error("Your message has been sent.", {
-              description: "There was a problem with your request.",
-              action: {
-                label: "Undo",
-                onClick: () => console.log("Undo"),
-              },
-            });
-          }}>
-          >
-              Show Toast
-      </Button>
+    <Button
+      variant="secondary"
+      onClick={() => {
+        toast.error("Your message has been sent.", {
+          description: "There was a problem with your request.",
+          action: {
+            label: "Undo",
+            onClick: () => console.log("Undo"),
+          },
+        });
+      }}>
+      {" "}
+      > Show Toast
+    </Button>
   )
 }
-````
-
-  </Tabs.Tab>
+```
+</Tabs.Tab>
 </Tabs>
 
 ### Warning
 
 <Tabs items={['Preview', 'Code']}>
-  <Tabs.Tab>
-    <ToastWarning />
-  </Tabs.Tab>
-  <Tabs.Tab>
-  ```js copy {16} /status: "warning"/ filename="toast.tsx"
-  "use client"
-  import { Button } from "@fucina/ui/components/button"
-  import { useToast } from "@fucina/ui/components/toast/use-toast"
+<Tabs.Tab>
+  <ToastWarning />
+</Tabs.Tab>
+<Tabs.Tab>
+```js copy /status: "warning"/ filename="toast.tsx"
+"use client"
+import { Button, useToast } from "@fucina/ui"
 
 export function ToastDemo() {
-const { toast } = useToast()
-
-    return (
-        <Button
-            variant="secondary"
-            onClick={() => {
-              toast.warning("Your message has been sent.", {
-                description: "There was a problem with your request.",
-                action: {
-                  label: "Undo",
-                  onClick: () => console.log("Undo"),
-                },
-              });
-            }}>
-            >
-                Show Toast
-        </Button>
-    )
-
+  const { toast } = useToast()
+  return (
+    <Button
+      variant="secondary"
+      onClick={() => {
+        toast.warning("Your message has been sent.", {
+          description: "There was a problem with your request.",
+          action: {
+            label: "Undo",
+            onClick: () => console.log("Undo"),
+          },
+        });
+      }}>
+      >
+      Show Toast
+    </Button>
+  )
 }
-
 ```
 </Tabs.Tab>
 </Tabs>
@@ -280,18 +223,18 @@ const { toast } = useToast()
 **Here you go!** Here are all the resources you might need if you are a designer, a developer or a content manager:
 
 <Cards className="mt-8">
-<Card
-  title="🤖 Storybook"
-  href="https://www.stories.fusillo.design/?path=/docs/components-toast--documentation"
-/>
-<Card
-  title="🪄 Figma"
-  href="https://www.figma.com/file/acdO58jx9zgGfkKu6htrx2/%F0%9F%8D%9D-Fusillo-Design-System?type=design&node-id=540%3A8884&mode=design&t=Aq9znIDZ1U4lgvQV-1"
-/>
-<Card
-  title="🐝 API Reference"
-  href="https://www.radix-ui.com/primitives/docs/components/toast#api-reference"
-/>
+  <Card
+    title="🤖 Storybook"
+    href="https://www.stories.fusillo.design/?path=/docs/components-toast--documentation"
+  />
+  <Card
+    title="🪄 Figma"
+    href="https://www.figma.com/design/Jfto7FUoU7mSpnv9uESD60/%F0%9F%94%A5-Fucina---Design-System?node-id=639-31590&t=SkIduRAaGEKfas8z-1"
+  />
+  <Card
+    title="🐝 API Reference"
+    href="https://www.radix-ui.com/primitives/docs/components/toast#api-reference"
+  />
 </Cards>
 
 ## Accessibility
@@ -325,4 +268,3 @@ When providing an icon (or font icon), remember to label it correctly for screen
 ### Keyboard interactions
 
 <AccessibilityTable rows={toastAccessibilityData} />
-```
