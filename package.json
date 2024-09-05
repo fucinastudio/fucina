@@ -13,7 +13,7 @@
     "build:design": "turbo run build --filter=@fucina/design",
     "build:storybook": "turbo run build --filter=@fucina/storybook",
     "build:docs": "turbo run build --filter=@fucina/docs",
-    "build:ui": "turbo run build --filter=@fucina/ui",
+    "build:ui": "NODE_OPTIONS=\"--max-old-space-size=8192\" turbo run build --filter=@fucina/ui",
     "build:utils": "turbo run build --filter=@fucina/utils",
     "build:visualizations": "turbo run build --filter=@fucina/visualizations",
     "deploy": "turbo run deploy",

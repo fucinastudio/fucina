@@ -2,7 +2,12 @@
 title: Color
 ---
 
-import { TokensColor, TokensColorNeutral } from "@/components/tokens/color.mdx";
+import {
+  TokensColor,
+  TokensColorNeutral,
+  TokensColorChart,
+  TokenColorChartSingleColor,
+} from "@/components/tokens/color.mdx";
 
 # 🎨 Color
 
@@ -24,7 +29,7 @@ import { TokensColor, TokensColorNeutral } from "@/components/tokens/color.mdx";
 
 ### Chart
 
-<TokensColor type="bg" color="chart" gianni="red" />
+<TokensColorChart type="bg" role="chart" />
 
 ## Text
 
@@ -44,7 +49,7 @@ import { TokensColor, TokensColorNeutral } from "@/components/tokens/color.mdx";
 
 ### Chart
 
-<TokensColor type="text" color="chart" />
+<TokensColorChart type="text" role="chart" />
 
 ## Border
 
@@ -64,7 +69,7 @@ import { TokensColor, TokensColorNeutral } from "@/components/tokens/color.mdx";
 
 ### Chart
 
-<TokensColor type="border" color="chart" />
+<TokensColorChart type="border" role="chart" />
 
 ## Icon
 
@@ -82,6 +87,6 @@ import { TokensColor, TokensColorNeutral } from "@/components/tokens/color.mdx";
 
 <TokensColor type="icon" color="warning" />
 
-### chart
+### Chart
 
-<TokensColor type="icon" color="chart" />
+<TokensColorChart type="icon" role="chart" />
