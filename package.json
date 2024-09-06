@@ -29,7 +29,7 @@
     "start": "turbo run start",
     "check-types": "tsc --noEmit",
     "publish-tailwind": "turbo run build --filter='@fucina/tailwind' && cd packages/tailwind && npm publish && cd ../../",
-    "publish-ui": "turbo build --filter='@fucina/ui' && cd packages/ui && npm publish && cd ../../",
+    "publish-ui": "NODE_OPTIONS=\"--max-old-space-size=8192\" turbo build --filter='@fucina/ui' && cd packages/ui && npm publish && cd ../../",
     "publish-utils": "turbo build --filter='@fucina/utils' && cd packages/utils && npm publish && cd ../../",
     "publish-visualizations": "turbo build --filter='@fucina/visualizations' && cd packages/visualizations && npm publish && cd ../../"
   },
