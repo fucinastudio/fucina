@@ -5,7 +5,7 @@ import { sans, brand, logo } from "@/styles/fonts/font";
 import "@/styles/globals.css";
 
 export const metadata: Metadata = {
-  title: "Fucina",
+  title: "Fucina - Open source product foundry",
   description: "Open source product foundry",
 };
 
