@@ -43,4 +43,4 @@ const Cursor = () => {
   );
 };
 
-export default Cursor;
+export { Cursor };
