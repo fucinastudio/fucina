@@ -155,12 +155,12 @@ const DropdownMenuCheckboxItem = React.forwardRef<
     shortcut?: string;
     hint?: string;
   }
->(({ className, hint, shortcut, children, checked, ...props }, forwardedRef) => (
+>(({ className, children, checked, ...props }, forwardedRef) => (
   <DropdownMenuPrimitives.CheckboxItem
     ref={forwardedRef}
     className={cn(
       // base
-      "data-[state=checked]:text-brand text-md relative flex h-9 cursor-pointer select-none items-center gap-2 rounded-sm py-1 pl-8 pr-1.5 outline-none transition-colors [&>svg]:size-4",
+      "data-[state=checked]:text-brand text-md relative flex h-9 cursor-pointer select-none items-center gap-2 rounded-sm py-1 pl-3 pr-8 outline-none transition-colors [&>svg]:size-4",
       // disabled
       "data-[disabled]:text-disabled data-[disabled]:pointer-events-none data-[disabled]:hover:bg-none",
       // focus
@@ -171,18 +171,12 @@ const DropdownMenuCheckboxItem = React.forwardRef<
     )}
     checked={checked}
     {...props}>
-    <span className="absolute left-2 flex size-4 items-center justify-center">
+    <span className="absolute right-3 flex size-4 items-center justify-center">
       <DropdownMenuPrimitives.ItemIndicator>
         <Check aria-hidden="true" className="text-brand size-full shrink-0" />
       </DropdownMenuPrimitives.ItemIndicator>
     </span>
     {children}
-    {hint && <span className={cn("text-description ml-auto pr-1 text-sm")}>{hint}</span>}
-    {shortcut && (
-      <span className={cn("text-description ml-auto pr-1 text-sm tracking-widest opacity-70")}>
-        {shortcut}
-      </span>
-    )}
   </DropdownMenuPrimitives.CheckboxItem>
 ));
 DropdownMenuCheckboxItem.displayName = "DropdownMenuCheckboxItem";
@@ -193,12 +187,12 @@ const DropdownMenuRadioItem = React.forwardRef<
     shortcut?: string;
     hint?: string;
   }
->(({ className, hint, shortcut, children, ...props }, forwardedRef) => (
+>(({ className, children, ...props }, forwardedRef) => (
   <DropdownMenuPrimitives.RadioItem
     ref={forwardedRef}
     className={cn(
       // base
-      "group/DropdownMenuRadioItem text-md data-[state=checked]:text-brand relative flex h-9 cursor-pointer select-none items-center gap-2 rounded-sm py-1 pl-8 pr-1.5 outline-none transition-colors [&>svg]:size-4",
+      "group/DropdownMenuRadioItem text-md data-[state=checked]:text-brand relative flex h-9 cursor-pointer select-none items-center gap-2 rounded-sm py-1 pl-3 pr-8 outline-none transition-colors [&>svg]:size-4",
       // disabled
       "data-[disabled]:text-disabled data-[disabled]:pointer-events-none data-[disabled]:hover:bg-none",
       // focus
@@ -208,19 +202,13 @@ const DropdownMenuRadioItem = React.forwardRef<
       className
     )}
     {...props}>
-    <span className="absolute left-3 flex size-2 items-center justify-center">
+    <span className="absolute right-3 flex size-2 items-center justify-center">
       <Circle
         aria-hidden="true"
         className="text-brand size-full shrink-0 fill-current group-data-[state=checked]/DropdownMenuRadioItem:flex group-data-[state=unchecked]/DropdownMenuRadioItem:hidden"
       />
     </span>
     {children}
-    {hint && <span className={cn("text-description ml-auto pr-1 text-sm")}>{hint}</span>}
-    {shortcut && (
-      <span className={cn("text-description ml-auto pr-1 text-sm tracking-widest opacity-70")}>
-        {shortcut}
-      </span>
-    )}
   </DropdownMenuPrimitives.RadioItem>
 ));
 DropdownMenuRadioItem.displayName = "DropdownMenuRadioItem";

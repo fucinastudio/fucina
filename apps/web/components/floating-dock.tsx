@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import Link from "next/link";
 import { Flame, X } from "lucide-react";
 
-import { cn } from "@fucina/utils";
+import { cn, focusRing } from "@fucina/utils";
 import { AnimatePresence, MotionValue, motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 
 export const FloatingDock = ({
@@ -31,7 +31,7 @@ const FloatingDockMobile = ({
 }) => {
   const [open, setOpen] = useState(false);
   return (
-    <div className={cn("absolute bottom-6 right-6 block md:hidden", className)}>
+    <div className={cn("fixed bottom-6 right-6 z-50 block md:hidden", className)}>
       <AnimatePresence>
         {open && (
           <motion.div layoutId="nav" className="absolute inset-x-0 bottom-full mb-2 flex flex-col gap-2">
@@ -84,7 +84,7 @@ const FloatingDockDesktop = ({
 }) => {
   const mouseX = useMotionValue(Infinity);
   return (
-    <motion.div className="absolute bottom-5 w-full">
+    <motion.div className="fixed bottom-5 z-50 w-full">
       <motion.div
         onMouseMove={(e) => mouseX.set(e.pageX)}
         onMouseLeave={() => mouseX.set(Infinity)}
@@ -150,7 +150,7 @@ function IconContainer({
   const [hovered, setHovered] = useState(false);
 
   return (
-    <Link href={href}>
+    <Link href={href} className={cn("rounded-full", focusRing)}>
       <motion.div
         ref={ref}
         style={{ width, height }}
@@ -163,7 +163,7 @@ function IconContainer({
               initial={{ opacity: 0, y: 10, x: "-50%" }}
               animate={{ opacity: 1, y: 0, x: "-50%" }}
               exit={{ opacity: 0, y: 2, x: "-50%" }}
-              className="absolute -top-8 left-1/2 w-fit -translate-x-1/2 whitespace-pre rounded-md border border-gray-200 bg-gray-100 px-2 py-0.5 text-xs text-neutral-700 dark:border-neutral-900 dark:bg-neutral-800 dark:text-white">
+              className="bg-inverse text-inverse text-md absolute -top-9 left-1/2 w-fit -translate-x-1/2 whitespace-pre rounded border px-2 py-0.5 shadow-sm">
               {title}
             </motion.div>
           )}

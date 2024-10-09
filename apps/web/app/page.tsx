@@ -4,9 +4,8 @@ import * as React from "react";
 import Image from "next/image";
 import { HomeIcon, Terminal, Github } from "lucide-react";
 
-import { cn } from "@fucina/utils";
 import { FloatingDock } from "@/components/floating-dock";
-import { GridPattern } from "@/components/grid-pattern";
+import { TextHoverEffect } from "@/components/text-hover";
 
 export default function Home() {
   const links = [
@@ -32,22 +31,12 @@ export default function Home() {
     },
   ];
   return (
-    <main className="h-screen w-screen">
-      <div className="bg-background relative flex size-full flex-col items-center justify-center overflow-hidden md:shadow-xl">
-        <span className="font-logo brand-gradient pointer-events-none z-10 whitespace-pre-wrap text-center text-7xl font-medium leading-none sm:text-8xl">
-          Fucina
-        </span>
-        <p className="text pt-4 text-center text-lg font-medium sm:text-xl">Open source product foundry</p>
+    <main className="h-screen w-screen bg-gradient-to-b from-white/0 to-fuchsia-600/[0.07]">
+      <div className="relative z-40 flex h-screen items-center justify-center">
+        <TextHoverEffect text="FUCINA" />
       </div>
-      <GridPattern
-        width={40}
-        height={40}
-        x={-1}
-        y={-1}
-        strokeDasharray={"4 2"}
-        className={cn("[mask-image:radial-gradient(765px_circle_at_center,white,transparent)]")}
-      />
       <FloatingDock items={links} />
+      <button></button>
     </main>
   );
 }
