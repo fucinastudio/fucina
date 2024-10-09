@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
+
 import { ToastProvider } from "@fucina/ui/src/toast";
 import { ThemeProvider } from "@/components/theme-provider";
+import Cursor from "@/components/cursor";
 import { sans, brand, logo } from "@/styles/fonts/font";
 import "@/styles/globals.css";
 
 export const metadata: Metadata = {
-  title: "Fucina",
+  title: "Fucina - Open source product foundry",
   description: "Open source product foundry",
 };
 
@@ -21,6 +23,7 @@ export default function RootLayout({
           {children}
         </ThemeProvider>
         <ToastProvider />
+        <Cursor />
       </body>
     </html>
   );
