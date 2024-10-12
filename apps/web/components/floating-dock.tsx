@@ -1,7 +1,6 @@
 import { useRef, useState } from "react";
 import Link from "next/link";
 import { AnimatePresence, MotionValue, motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { Flame, X } from "lucide-react";
 
 import { cn, focusRing } from "@fucina/utils";
 import { Popover } from "@/components/popover";
@@ -21,6 +20,7 @@ export const FloatingDock = ({
   );
 };
 
+/*
 const FloatingDockMobile = ({
   items,
   className,
@@ -33,7 +33,7 @@ const FloatingDockMobile = ({
     <div className={cn("fixed bottom-6 right-6 z-50 block md:hidden", className)}>
       <AnimatePresence>
         {open && (
-          <motion.div layoutId="nav" className="absolute inset-x-0 bottom-full mb-2 flex flex-col gap-2">
+          <motion.div layoutId="nav" className="bottom-full absolute inset-x-0 flex flex-col gap-2 mb-2">
             {items.map((item, idx) => (
               <motion.div
                 key={item.title}
@@ -53,7 +53,7 @@ const FloatingDockMobile = ({
                 <Link
                   href={item.href}
                   key={item.title}
-                  className="border-default bg-elevated flex size-10 items-center justify-center rounded-full border shadow-sm">
+                  className="flex justify-center items-center border-default bg-elevated shadow-sm border rounded-full size-10">
                   <div className="size-4">{item.icon}</div>
                 </Link>
               </motion.div>
@@ -63,16 +63,17 @@ const FloatingDockMobile = ({
       </AnimatePresence>
       <button
         onClick={() => setOpen(!open)}
-        className="border-default bg-elevated flex size-10 items-center justify-center rounded-full border shadow-sm">
+        className="flex justify-center items-center border-default bg-elevated shadow-sm border rounded-full size-10">
         {open ? (
-          <X className="size-5 text-neutral-500 dark:text-neutral-400" />
+          <X className="text-neutral-500 dark:text-neutral-400 size-5" />
         ) : (
-          <Flame className="size-5 text-neutral-500 dark:text-neutral-400" />
+          <Flame className="text-neutral-500 dark:text-neutral-400 size-5" />
         )}
       </button>
     </div>
   );
 };
+*/
 
 const FloatingDockDesktop = ({
   items,
