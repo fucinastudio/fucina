@@ -1,7 +1,6 @@
 import { metadata } from "@/lib/metadata";
 import { ToastProvider } from "@fucina/ui/src/toast";
 import { ThemeProvider } from "@/components/theme-provider";
-import { Cursor } from "@/components/cursor";
 import { sans, brand, logo } from "@/styles/fonts/font";
 import "@/styles/globals.css";
 
@@ -19,7 +18,6 @@ export default function RootLayout({
           {children}
         </ThemeProvider>
         <ToastProvider />
-        <Cursor />
       </body>
     </html>
   );

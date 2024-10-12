@@ -8,4 +8,7 @@
   .brand-gradient {
     @apply inline-block bg-gradient-to-r from-violet-100 via-fuchsia-600 via-40% to-purple-950 bg-clip-text text-transparent;
   }
+  .border-grid {
+    @apply border-zinc-100 dark:border-zinc-900;
+  }
 }
