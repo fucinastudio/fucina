@@ -10,6 +10,7 @@
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf .next"
   },
   "dependencies": {
+    "@floating-ui/react": "^0.26.24",
     "@fucina/tailwind": "*",
     "@fucina/tsconfig": "*",
     "@fucina/ui": "*",

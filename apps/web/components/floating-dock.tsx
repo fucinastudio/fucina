@@ -1,23 +1,22 @@
 import { useRef, useState } from "react";
 import Link from "next/link";
+import { AnimatePresence, MotionValue, motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { Flame, X } from "lucide-react";
 
 import { cn, focusRing } from "@fucina/utils";
-import { AnimatePresence, MotionValue, motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+import { Popover } from "@/components/popover";
 
 export const FloatingDock = ({
   items,
-  desktopClassName,
-  mobileClassName,
 }: {
-  items: { title: string; icon: React.ReactNode; href: string }[];
-  desktopClassName?: string;
-  mobileClassName?: string;
+  items: { title: string; icon: React.ReactNode; children?: React.ReactNode; link: boolean; href?: string }[];
 }) => {
   return (
     <>
-      <FloatingDockDesktop items={items} className={desktopClassName} />
-      <FloatingDockMobile items={items} className={mobileClassName} />
+      <FloatingDockDesktop items={items} />
+      {/* 
+      <FloatingDockMobile items={items} />
+      */}
     </>
   );
 };
@@ -77,10 +76,8 @@ const FloatingDockMobile = ({
 
 const FloatingDockDesktop = ({
   items,
-  className,
 }: {
-  items: { title: string; icon: React.ReactNode; href: string }[];
-  className?: string;
+  items: { title: string; icon: React.ReactNode; children?: React.ReactNode; link: boolean; href?: string }[];
 }) => {
   const mouseX = useMotionValue(Infinity);
   return (
@@ -89,8 +86,7 @@ const FloatingDockDesktop = ({
         onMouseMove={(e) => mouseX.set(e.pageX)}
         onMouseLeave={() => mouseX.set(Infinity)}
         className={cn(
-          "bg-elevated border-default mx-auto hidden h-[58px] w-fit items-end gap-4 rounded-2xl border px-4 pb-2 shadow-lg md:flex",
-          className
+          "bg-elevated border-default mx-auto hidden h-[58px] w-fit items-end gap-4 rounded-2xl border px-4 pb-2 shadow-lg backdrop-blur md:flex"
         )}>
         {items.map((item) => (
           <IconContainer mouseX={mouseX} key={item.title} {...item} />
@@ -104,12 +100,16 @@ function IconContainer({
   mouseX,
   title,
   icon,
+  children,
+  link,
   href,
 }: {
   mouseX: MotionValue;
   title: string;
   icon: React.ReactNode;
-  href: string;
+  children?: React.ReactNode;
+  link: boolean;
+  href?: string;
 }) {
   const ref = useRef<HTMLDivElement>(null);
 
@@ -150,30 +150,70 @@ function IconContainer({
   const [hovered, setHovered] = useState(false);
 
   return (
-    <Link href={href} className={cn("rounded-full", focusRing)}>
-      <motion.div
-        ref={ref}
-        style={{ width, height }}
-        onMouseEnter={() => setHovered(true)}
-        onMouseLeave={() => setHovered(false)}
-        className="border-item relative flex aspect-square items-center justify-center rounded-full border bg-zinc-50 shadow-sm dark:bg-zinc-800">
-        <AnimatePresence>
-          {hovered && (
+    <>
+      {link ? (
+        <Link href={href || "/"} target="_blank" className={cn("rounded-full", focusRing)}>
+          <motion.div
+            ref={ref}
+            style={{ width, height }}
+            onMouseEnter={() => setHovered(true)}
+            onMouseLeave={() => setHovered(false)}
+            className="relative flex aspect-square items-center justify-center rounded-full border border-fuchsia-200 bg-fuchsia-100 shadow-sm dark:border-fuchsia-900 dark:bg-fuchsia-950">
+            <AnimatePresence>
+              {hovered && (
+                <motion.div
+                  initial={{ opacity: 0, y: 10, x: "-50%" }}
+                  animate={{ opacity: 1, y: 0, x: "-50%" }}
+                  exit={{ opacity: 0, y: 2, x: "-50%" }}
+                  className="bg-inverse text-inverse text-md absolute -top-9 left-1/2 w-fit -translate-x-1/2 whitespace-pre rounded border px-2 py-0.5 shadow-sm">
+                  {title}
+                </motion.div>
+              )}
+            </AnimatePresence>
             <motion.div
-              initial={{ opacity: 0, y: 10, x: "-50%" }}
-              animate={{ opacity: 1, y: 0, x: "-50%" }}
-              exit={{ opacity: 0, y: 2, x: "-50%" }}
-              className="bg-inverse text-inverse text-md absolute -top-9 left-1/2 w-fit -translate-x-1/2 whitespace-pre rounded border px-2 py-0.5 shadow-sm">
-              {title}
+              style={{ width: widthIcon, height: heightIcon }}
+              className="flex items-center justify-center">
+              {icon}
             </motion.div>
-          )}
-        </AnimatePresence>
-        <motion.div
-          style={{ width: widthIcon, height: heightIcon }}
-          className="flex items-center justify-center">
-          {icon}
-        </motion.div>
-      </motion.div>
-    </Link>
+          </motion.div>
+        </Link>
+      ) : (
+        <Popover
+          title={title}
+          trigger={
+            <motion.div
+              ref={ref}
+              style={{ width, height }}
+              onMouseEnter={(e) => {
+                e.stopPropagation();
+                setHovered(true);
+              }}
+              onMouseLeave={(e) => {
+                e.stopPropagation();
+                setHovered(false);
+              }}
+              className="relative flex aspect-square items-center justify-center rounded-full border border-fuchsia-200 bg-fuchsia-100 shadow-sm dark:border-fuchsia-900 dark:bg-fuchsia-950">
+              <AnimatePresence>
+                {hovered && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10, x: "-50%" }}
+                    animate={{ opacity: 1, y: 0, x: "-50%" }}
+                    exit={{ opacity: 0, y: 2, x: "-50%" }}
+                    className="bg-inverse text-inverse text-md absolute -top-9 left-1/2 w-fit -translate-x-1/2 whitespace-pre rounded-full border px-2.5 py-0.5 shadow-sm">
+                    {title}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+              <motion.div
+                style={{ width: widthIcon, height: heightIcon }}
+                className="flex items-center justify-center">
+                {icon}
+              </motion.div>
+            </motion.div>
+          }>
+          {children}
+        </Popover>
+      )}
+    </>
   );
 }

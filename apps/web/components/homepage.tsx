@@ -1,34 +1,38 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
-import { HomeIcon, Terminal, Github } from "lucide-react";
+import { Flame, ScrollText, LayoutGrid, Github } from "lucide-react";
 
 import { FloatingDock } from "@/components/floating-dock";
 import { TextHoverEffect } from "@/components/text-hover";
-import Test from "@/components/test";
+import { Manifesto, About, Products } from "@/components/desktop";
 
-export const Homepage = () => {
+export default function Homepage() {
   const links = [
     {
-      title: "Home",
-      icon: <HomeIcon className="size-full text-neutral-500 dark:text-neutral-300" />,
-      href: "#",
+      title: "About",
+      icon: <Flame className="size-full text-fuchsia-800 dark:text-fuchsia-300" />,
+      children: <About />,
+      link: false,
+    },
+    {
+      title: "Manifesto",
+      icon: <ScrollText className="size-full text-fuchsia-800 dark:text-fuchsia-300" />,
+      children: <Manifesto />,
+      link: false,
     },
     {
       title: "Products",
-      icon: <Terminal className="size-full text-neutral-500 dark:text-neutral-300" />,
-      href: "#",
+      icon: <LayoutGrid className="size-full text-fuchsia-800 dark:text-fuchsia-300" />,
+      children: <Products />,
+      link: false,
     },
-    {
-      title: "Aceternity UI",
-      icon: <Image src="" width={20} height={20} alt="Aceternity Logo" />,
-      href: "#",
-    },
+
     {
       title: "GitHub",
-      icon: <Github className="size-full text-neutral-500 dark:text-neutral-300" />,
-      href: "#",
+      icon: <Github className="size-full text-fuchsia-800 dark:text-fuchsia-300" />,
+      link: true,
+      href: "https://github.com/fucinastudio",
     },
   ];
   return (
@@ -37,7 +41,6 @@ export const Homepage = () => {
         <TextHoverEffect text="FUCINA" />
       </div>
       <FloatingDock items={links} />
-      <Test />
     </main>
   );
-};
+}

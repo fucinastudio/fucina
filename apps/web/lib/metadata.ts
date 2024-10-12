@@ -1,51 +1,42 @@
-import type { Metadata } from 'next';
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'Feely - User feedbacks get real by being rewarded',
-  description:
-    "Feely is a spot where user thoughts become a treasure. More than giving users a voice: it's encouraging them to listen to each other, through conversations and rewarding. The result? A product actually built for your people. And they will feel part of it.",
-  keywords: [
-    'Feely',
-    'User Feedbacks',
-    'Feedback Boards',
-    'Public roadmap',
-    'Community',
-  ],
-  metadataBase: new URL('https://www.feely.so'),
+  title: "Fucina - Open source product foundry",
+  description: "An opensource product foundry",
+  keywords: ["Fucina", "Opensource", "Product Foundry"],
+  metadataBase: new URL("https://www.fucina.studio"),
   alternates: {
-    canonical: 'https://www.feely.so',
+    canonical: "https://www.fucina.studio",
   },
   openGraph: {
-    title: 'Feely - User feedbacks get real by being rewarded',
-    description:
-      "Feely is a spot where user thoughts become a treasure. More than giving users a voice: it's encouraging them to listen to each other, through conversations and rewarding. The result? A product actually built for your people. And they will feel part of it.",
-    url: 'https://www.feely.so',
-    siteName: 'Feely',
+    title: "Fucina - Open source product foundry",
+    description: "An opensource product foundry",
+    url: "https://www.fucina.studio",
+    siteName: "Fucina",
     images: [
       {
-        url: 'https://www.feely.so/assets/og.png',
+        url: "https://www.fucina.studio/assets/og.png",
         width: 800,
         height: 600,
       },
       {
-        url: 'https://wwww.feely.so/assets/og-alt.png',
+        url: "https://wwww.fucina.studio/assets/og-alt.png",
         width: 1800,
         height: 1600,
-        alt: "Feely is a spot where user thoughts become a treasure. More than giving users a voice: it's encouraging them to listen to each other, through conversations and rewarding. The result? A product actually built for your people. And they will feel part of it.",
+        alt: "An opensource product foundry",
       },
     ],
-    locale: 'en_US',
-    type: 'website',
+    locale: "en_US",
+    type: "website",
   },
   twitter: {
-    title: 'Feely - User feedbacks get real by being rewarded',
-    description:
-      "Feely is a spot where user thoughts become a treasure. More than giving users a voice: it's encouraging them to listen to each other, through conversations and rewarding. The result? A product actually built for your people. And they will feel part of it.",
-    card: 'summary_large_image',
+    title: "Fucina - Open source product foundry",
+    description: "An opensource product foundry",
+    card: "summary_large_image",
     images: [
       {
-        url: 'https://www.feely.so/assets/twitter-og.png',
-        alt: 'Feely Logo',
+        url: "https://www.fucina.studio/assets/twitter-og.png",
+        alt: "An opensource product foundry",
       },
     ],
   },
