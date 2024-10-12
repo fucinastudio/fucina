@@ -21,7 +21,7 @@ const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
           // background color
           "bg-item",
           // placeholder color
-          "placeholder:text-placeholder",
+          "placeholder:text-placeholder placeholder:text-md",
           // disabled
           "disabled:border-disabled disabled:bg-neutral-disabled disabled:text-disabled",
           // focus
