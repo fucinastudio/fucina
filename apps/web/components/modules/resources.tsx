@@ -5,13 +5,20 @@ import { Button } from "@fucina/ui";
 import EmptyRaw from "@/components/modules/resources-blocks/empty-raw";
 import Title from "@/components/modules/resources-blocks/title";
 import { DoubleCard, SingleCard } from "@/components/modules/resources-blocks/cards";
-import { FirstIllustration, SecondIllustration, ThirdIllustration } from "@/components/illustrations";
+import {
+  FifthIllustration,
+  FirstIllustration,
+  FourthIllustration,
+  SecondIllustration,
+  SixthIllustration,
+  ThirdIllustration,
+} from "@/components/illustrations";
 import WithButton from "@/components/modules/resources-blocks/with-button";
 import { GithubIcon } from "@/components/social-icons";
 
 export default function Resources() {
   return (
-    <section id="resources" className="border-grid w-screen border-t">
+    <section id="resources" className="border-grid border-t w-screen">
       <EmptyRaw />
       <Title
         title={
@@ -45,6 +52,22 @@ export default function Resources() {
         secondDescription="Build UIs without the grunt work"
         secondIllustration={<ThirdIllustration />}
         secondHref="https://www.stories.fucina.studio/?path=%2Fdocs%2Fwelcome--documentation"
+      />
+      <SingleCard
+        title="Product template"
+        description="Opensource product template"
+        illustration={<FourthIllustration />}
+        href="https://github.com/fucinastudio/product-template"
+      />
+      <DoubleCard
+        firstTitle="Website template"
+        firstDescription="Opensource website template"
+        firstIllustration={<FifthIllustration />}
+        firstHref="https://github.com/fucinastudio/website-template"
+        secondTitle="Docs template"
+        secondDescription="Opensource docs template"
+        secondIllustration={<SixthIllustration />}
+        secondHref="https://github.com/fucinastudio/docs-template"
       />
       <EmptyRaw />
       <WithButton

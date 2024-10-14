@@ -4,28 +4,43 @@ import Link from "next/link";
 import { Tag, Button } from "@fucina/ui";
 import { cn, focusRing } from "@fucina/utils";
 import { GridPattern } from "@/components/grid-pattern";
+import { FadeText } from "@/components/text-fadeup";
 
 export default function Hero() {
   return (
-    <section id="hero" className="relative z-20 w-screen bg-gradient-to-b from-white/0 to-fuchsia-600/[0.07]">
-      <div className="relative z-20 mx-auto grid w-full max-w-screen-lg justify-items-center px-6 pb-56 pt-48 sm:px-6 sm:pb-64 sm:pt-56">
+    <section id="hero" className="relative z-20 bg-gradient-to-b from-white/0 to-fuchsia-600/[0.07] w-screen">
+      <div className="relative z-20 justify-items-center grid mx-auto px-6 sm:px-6 pt-48 sm:pt-56 pb-56 sm:pb-64 w-full max-w-screen-lg">
         <Link href="https://feely.so" className={cn("rounded-full", focusRing)}>
-          <Tag variant="brand" className="text-md rounded-full">
+          <Tag variant="brand" className="rounded-full text-md">
             🔥 Feely out now
           </Tag>
         </Link>
-        <div className="mt-6 grid max-w-screen-md justify-items-center gap-4 text-center sm:mt-8 sm:gap-6">
-          <h1 className="font-brand text-6xl font-medium sm:text-8xl">
-            Open source <br />
-            <span className="brand-gradient">product foundry</span>
-          </h1>
-          <p className="text-description max-w-screen-sm text-lg">
-            Our mission is to simplify product development by creating tools that help early-stage companies
-            launch quickly.
-          </p>
+        <div className="justify-items-center gap-4 sm:gap-6 grid mt-6 sm:mt-8 max-w-screen-md text-center">
+          <FadeText
+            className="font-brand font-medium text-6xl sm:text-8xl"
+            direction="up"
+            framerProps={{
+              show: { transition: { delay: 0.2, duration: 0.8 } },
+            }}
+            text={
+              <>
+                Open source <br />
+                <span className="brand-gradient">product foundry</span>
+              </>
+            }
+          />
+          <FadeText
+            className="max-w-screen-sm text-description text-lg"
+            direction="up"
+            framerProps={{
+              show: { transition: { delay: 0.4, duration: 0.8 } },
+            }}
+            text="Our mission is to simplify product development by creating tools that help early-stage companies
+            launch quickly."
+          />
         </div>
         <div className="mt-10">
-          <Button asChild className="font-brand text-lg font-medium">
+          <Button asChild className="font-brand font-medium text-lg">
             <Link href="https://feely.so">Start with Feely</Link>
           </Button>
         </div>

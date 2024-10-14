@@ -19,13 +19,13 @@ export const TextRevealByWord: FC<TextRevealByWordProps> = ({ text, className })
   const words = text.split(" ");
 
   return (
-    <div ref={targetRef} className={cn("relative z-0 h-[200vh]", className)}>
+    <div ref={targetRef} className={cn("relative z-0 h-[300vh]", className)}>
       <div
-        className={"sticky top-0 mx-auto flex h-1/2 max-w-screen-xl items-center bg-transparent px-4 py-20"}>
+        className={"sticky top-0 mx-auto flex h-1/2 max-w-screen-lg items-center bg-transparent px-4 py-40"}>
         <p
           ref={targetRef}
           className={
-            "font-brand flex flex-wrap p-5 text-3xl font-normal text-zinc-950/20 md:p-8 md:text-3xl lg:p-10 lg:text-4xl xl:text-5xl dark:text-white/30"
+            "font-brand flex flex-wrap p-5 text-2xl font-normal text-zinc-950/20 md:p-8 md:text-3xl lg:p-10 lg:text-4xl xl:text-5xl dark:text-white/30"
           }>
           {words.map((word, i) => {
             const start = i / words.length;
