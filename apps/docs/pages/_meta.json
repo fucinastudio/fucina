@@ -1,6 +1,9 @@
 {
   "index": "Welcome",
-  "primary": "Primary page",
+  "get-started": "Get Started",
+  "validate": "Validate",
+  "create": "Create",
+  "launch": "Launch",
   "404": {
     "type": "page",
     "theme": {

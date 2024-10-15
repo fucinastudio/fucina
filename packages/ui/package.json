@@ -1,7 +1,7 @@
 {
   "name": "@fucina/ui",
   "description": "UI components for Fucina",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "sideEffects": false,
   "author": "Federico Kratter Thaler <kkratterf@gmail.com>",
   "homepage": "https://fucina.studio",
